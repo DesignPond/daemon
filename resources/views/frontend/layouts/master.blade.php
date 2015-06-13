@@ -17,6 +17,7 @@
     <link rel="stylesheet" type="text/css" href="<?php echo asset('frontend/css/jquery.fancybox.css');?>">
     <link rel="stylesheet" type="text/css" href="<?php echo asset('frontend/css/annotator.min.css'); ?>">
     <link rel="stylesheet" type="text/css" href="<?php echo asset('frontend/css/style.css');?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo asset('frontend/css/frontend.css');?>">
     <link rel="stylesheet" type="text/css" href="<?php echo asset('frontend/css/guides.css');?>">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 
@@ -38,68 +39,68 @@
 
 </head>
 
-<body role="document">
+<body class="Site" role="document">
 
 <!-- device test, don't remove. javascript needed! -->
 <span class="visible-xs"></span><span class="visible-sm"></span><span class="visible-md"></span><span class="visible-lg"></span>
 <!-- device test end -->
-
-<div id="k-head" class="container"><!-- container + head wrapper -->
-    <div class="row"><!-- row -->
-        <nav class="k-functional-navig"><!-- functional navig -->
-        <!--
-            <ul class="list-inline pull-right">
-                <li><a target="_blank" href="http://www2.unine.ch">Unine</a></li>
-                <li><a target="_blank" href="https://claroline.unine.ch/">Claroline</a></li>
-                <li><a target="_blank" href="http://www.unine.ch/pidho">Horaires des cours</a></li>
-            </ul>
-        -->
-        </nav><!-- functional navig end -->
-        <div class="col-lg-12">
-            <div id="k-site-logo" class="pull-left"><!-- site logo -->
-                <h1 class="k-logo">
-                    <a href="{{ url('/') }}" title="Home Page">
-                        <img src="{{ asset('frontend/images/logo.png') }}" alt="Site Logo" class="img-responsive" />
-                    </a>
-                </h1>
-                <a id="mobile-nav-switch" href="#drop-down-left"><span class="alter-menu-icon"></span></a><!-- alternative menu button -->
-            </div><!-- site logo end -->
-
-            <!-- Navigation  -->
-            @include('frontend.partials.navigation')
-
-        </div>
-    </div><!-- row end -->
-</div><!-- container + head wrapper end -->
-
-<div id="k-body"><!-- content wrapper -->
-    <div class="container"><!-- container -->
-
+<div class="Site-content">
+    <div id="k-head" class="container"><!-- container + head wrapper -->
         <div class="row"><!-- row -->
-            <div id="k-top-search" class="col-lg-12 clearfix"><!-- top search -->
+            <nav class="k-functional-navig"><!-- functional navig -->
+            <!--
+                <ul class="list-inline pull-right">
+                    <li><a target="_blank" href="http://www2.unine.ch">Unine</a></li>
+                    <li><a target="_blank" href="https://claroline.unine.ch/">Claroline</a></li>
+                    <li><a target="_blank" href="http://www.unine.ch/pidho">Horaires des cours</a></li>
+                </ul>
+            -->
+            </nav><!-- functional navig end -->
+            <div class="col-lg-12">
+                <div id="k-site-logo" class="pull-left"><!-- site logo -->
+                    <h1 class="k-logo">
+                        <a href="{{ url('/') }}" title="Home Page">
+                            <img src="{{ asset('frontend/images/logo.png') }}" alt="Site Logo" class="img-responsive" />
+                        </a>
+                    </h1>
+                    <a id="mobile-nav-switch" href="#drop-down-left"><span class="alter-menu-icon"></span></a><!-- alternative menu button -->
+                </div><!-- site logo end -->
 
-                <!-- Search  -->
-                @include('frontend.partials.search')
+                <!-- Navigation  -->
+                @include('frontend.partials.navigation')
 
-            </div><!-- top search end -->
-            <div class="k-breadcrumbs col-lg-12 clearfix"><!-- breadcrumbs -->
-
-                <!-- breadcrumbs  -->
-                @include('frontend.partials.breadcrumbs')
-
-                <!-- message error  -->
-                @include('frontend.partials.message')
-
-            </div><!-- breadcrumbs end -->
+            </div>
         </div><!-- row end -->
+    </div><!-- container + head wrapper end -->
 
-        <!-- Contenu -->
-        @yield('content')
-        <!-- Fin contenu -->
+    <div id="k-body"><!-- content wrapper -->
+        <div class="container"><!-- container -->
 
-    </div><!-- container end -->
-</div><!-- content wrapper end -->
+            <div class="row"><!-- row -->
+                <div id="k-top-search" class="col-lg-12 clearfix"><!-- top search -->
 
+                    <!-- Search  -->
+    {{--                @include('frontend.partials.search')--}}
+
+                </div><!-- top search end -->
+                <div class="k-breadcrumbs col-lg-12 clearfix"><!-- breadcrumbs -->
+
+                    <!-- breadcrumbs  -->
+                    @include('frontend.partials.breadcrumbs')
+
+                    <!-- message error  -->
+                    @include('frontend.partials.message')
+
+                </div><!-- breadcrumbs end -->
+            </div><!-- row end -->
+
+            <!-- Contenu -->
+            @yield('content')
+            <!-- Fin contenu -->
+
+        </div><!-- container end -->
+    </div><!-- content wrapper end -->
+</div>
 <div id="k-footer"><!-- footer -->
     <div class="container"><!-- container -->
         <div class="row no-gutter"><!-- row -->

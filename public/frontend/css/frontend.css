@@ -1,0 +1,33 @@
+.form-horizontal .control-label {
+    text-align: right;
+    padding: 10px 5px 5px;
+}
+
+.form-horizontal .radio, .form-horizontal .checkbox {
+    line-height: 20px;
+    min-height: 20px;
+    padding-top: 0;
+}
+
+.panel {
+    border-radius: 0px;
+}
+
+.panel-default > .panel-heading {
+    background-color: #efefef;
+}
+
+.auth-form{
+    margin-top: 20px;
+}
+
+.Site {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.Site-content {
+    flex: 1;
+   background: #f9f9f9;
+}

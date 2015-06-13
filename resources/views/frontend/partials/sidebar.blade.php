@@ -21,7 +21,7 @@
                     </form>
                 </li><!-- widget end -->
                 <li class="widget-container widget_text"><!-- widget -->
-                    <a href="#" class="custom-button cb-green" title="S'identifier">
+                    <a href="{{ url('auth/login') }}" class="custom-button cb-green" title="S'identifier">
                         <i class="custom-button-icon fa fa-check-square-o"></i>
                             <span class="custom-button-wrap">
                                 <span class="custom-button-title">Login</span>

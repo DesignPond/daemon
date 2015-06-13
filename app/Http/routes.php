@@ -17,8 +17,11 @@ Route::get('home', function () {
 
 // Site routes...
 Route::get('/', ['uses' => 'HomeController@index']);
+Route::get('page/{slug}', ['uses' => 'HomeController@page']);
 Route::get('contact', ['uses' => 'HomeController@contact']);
 Route::post('sendMessage', ['uses' => 'HomeController@sendMessage']);
+
+//Route::get('contact', ['uses' => 'PageController@contact']);
 
 // Administration routes...
 Route::get('admin', [ 'middleware' => 'auth', 'uses' => 'AdminController@index']);
