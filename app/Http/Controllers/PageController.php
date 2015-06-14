@@ -4,11 +4,20 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Cours\Page\Repo\PageInterface;
+
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 class PageController extends Controller
 {
+    protected $page;
+
+    public function __construct(PageInterface $page)
+    {
+        $this->page = $page;
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -16,7 +25,9 @@ class PageController extends Controller
      */
     public function index()
     {
-        //
+        $pages = $this->page->getAll();
+
+        return view('backend.pages.index')->with(array( 'pages' => $pages ));
     }
 
     /**
@@ -26,7 +37,7 @@ class PageController extends Controller
      */
     public function create()
     {
-        //
+        return view('backend.pages.create');
     }
 
     /**

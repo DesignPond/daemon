@@ -21,7 +21,14 @@ Route::get('page/{slug}', ['uses' => 'HomeController@page']);
 Route::get('contact', ['uses' => 'HomeController@contact']);
 Route::post('sendMessage', ['uses' => 'HomeController@sendMessage']);
 
-//Route::get('contact', ['uses' => 'PageController@contact']);
+//Route::get('contact', ['uses' => 'PageController@index']);
+
+// Admin routes
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
+{
+    //Route::get('page', ['uses' => 'PageController@index']);
+    Route::resource('page', 'PageController');
+});
 
 // Administration routes...
 Route::get('admin', [ 'middleware' => 'auth', 'uses' => 'AdminController@index']);

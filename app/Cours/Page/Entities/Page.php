@@ -19,6 +19,7 @@ class Page extends Node {
     */
     protected $table = 'pages';
     protected $dates = ['deleted_at'];
+    protected $fillable = ['auteur','ouvrage','page','paragraphe','title','content','parent_id','lft','rgt','depth'];
 
     //////////////////////////////////////////////////////////////////////////////
 

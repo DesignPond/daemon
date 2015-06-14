@@ -1,7 +1,7 @@
 <?php namespace App\Cours\Page\Repo;
 
 use App\Cours\Page\Repo\PageInterface;
-use App\Cours\Page\Entities\Pages as M;
+use App\Cours\Page\Entities\Page as M;
 
 class PageEloquent implements PageInterface{
 
@@ -19,7 +19,7 @@ class PageEloquent implements PageInterface{
 
     public function find($id){
 
-        return $this->page->with(array(''))->findOrFail($id);
+        return $this->page->findOrFail($id);
     }
 
     public function create(array $data){
@@ -28,7 +28,7 @@ class PageEloquent implements PageInterface{
             'auteur'     => $data['auteur'],
             'ouvrage'    => $data['ouvrage'],
             'page'       => $data['page'],
-            'paragraphe'  => $data['paragraphe'],
+            'paragraphe' => $data['paragraphe'],
             'title'      => $data['title'],
             'content'    => $data['content'],
             'created_at' => date('Y-m-d G:i:s'),

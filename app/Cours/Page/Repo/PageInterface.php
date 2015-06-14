@@ -1,8 +1,8 @@
-<?php namespace App\Cours\Categorie\Repo;
+<?php namespace App\Cours\Page\Repo;
 
-interface CategorieInterface {
+interface PageInterface {
 
-    public function getAll($pid);
+    public function getAll();
     public function find($id);
     public function create(array $data);
     public function update(array $data);
