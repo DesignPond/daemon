@@ -40,6 +40,11 @@ class PageEloquent implements PageInterface{
             return false;
         }
 
+        if($data['parent_id'] > 0){
+            $parent = $this->page->findOrFail($data['parent_id']);
+            $page->makeChildOf($parent);
+        }
+
         return $page;
 
     }
@@ -57,6 +62,11 @@ class PageEloquent implements PageInterface{
 
         $page->updated_at = date('Y-m-d G:i:s');
         $page->save();
+
+        if($data['parent_id'] > 0){
+            $parent = $this->page->findOrFail($data['parent_id']);
+            $page->makeChildOf($parent);
+        }
 
         return $page;
     }

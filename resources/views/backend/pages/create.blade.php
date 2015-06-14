@@ -24,7 +24,7 @@
                         <div class="col-sm-4">
 
                             <select class="form-control" name="parent_id">
-
+                                <option value="0">Base</option>
                                 @if(!empty($pages))
                                     @foreach($pages as $page)
                                         <option value="{{ $page->parent_id }}">{{ $page->title }}</option>

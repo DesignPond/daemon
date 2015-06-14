@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Cours\Page\Repo\PageInterface;
-
+use App\Http\Requests\CreatePage;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -37,7 +37,9 @@ class PageController extends Controller
      */
     public function create()
     {
-        return view('backend.pages.create');
+        $pages = $this->page->getAll();
+        
+        return view('backend.pages.create')->with(['pages' => $pages]);
     }
 
     /**
@@ -45,9 +47,14 @@ class PageController extends Controller
      *
      * @return Response
      */
-    public function store()
+    public function store(CreatePage $request)
     {
-        //
+        echo '<pre>';
+        print_r($request->all());
+        echo '</pre>';exit;
+        $page = $this->page->create($request->all());
+
+        return redirect('admin/page/'.$page->id);
     }
 
     /**
@@ -58,7 +65,10 @@ class PageController extends Controller
      */
     public function show($id)
     {
-        //
+        $page    = $this->page->find($id);
+        $parents = $this->page->getAll();
+
+        return view('backend.pages.show')->with(array( 'page' => $page ,'parents' => $parents));
     }
 
     /**
@@ -78,9 +88,15 @@ class PageController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function update($id)
+    public function update($id, Request $request)
     {
-        //
+/*        echo '<pre>';
+        print_r($request->all());
+        echo '</pre>';exit;*/
+
+        $page = $this->page->update($request->all());
+
+        return redirect('admin/page/'.$page->id);
     }
 
     /**
