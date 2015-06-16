@@ -49,9 +49,6 @@ class PageController extends Controller
      */
     public function store(CreatePage $request)
     {
-        echo '<pre>';
-        print_r($request->all());
-        echo '</pre>';exit;
         $page = $this->page->create($request->all());
 
         return redirect('admin/page/'.$page->id);

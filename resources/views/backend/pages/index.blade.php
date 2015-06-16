@@ -16,6 +16,13 @@
             </div>
             <div class="panel-body">
                 <div class="table-responsive">
+                    <?php
+
+                        echo '<pre>';
+                        print_r($pages->first()->getDescendantsAndSelf()->toHierarchy());
+                        echo '</pre>';
+
+                    ?>
                     <table class="table" style="margin-bottom: 0px;" id="generic">
                         <thead>
                         <tr>

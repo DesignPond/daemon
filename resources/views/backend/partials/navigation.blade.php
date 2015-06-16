@@ -9,6 +9,9 @@
         <li class="<?php echo (Request::is('admin') ? 'active' : '' ); ?>"><a href="{{ url('admin') }}">
              <i class="fa fa-home"></i> <span>Accueil</span></a>
         </li>
+        <li class="<?php echo (Request::is('page') || Request::is('page/*') ? 'active' : '' ); ?>"><a href="{{ url('admin/page') }}">
+                <i class="fa fa-edit"></i> <span>Pages</span></a>
+        </li>
     </ul>
     <!-- END SIDEBAR MENU -->
 </nav>
