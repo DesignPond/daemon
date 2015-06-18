@@ -18,9 +18,34 @@
                 <div class="table-responsive">
                     <?php
 
-                        echo '<pre>';
-                        print_r($pages->first()->getDescendantsAndSelf()->toHierarchy());
-                        echo '</pre>';
+                    function renderNode($node) {
+                        if( $node->isLeaf() ) {
+                            return '<li>' . $node->title . '</li>';
+                        } else {
+                            $html = '<li>' . $node->title;
+
+                            $html .= '<ul>';
+
+                            foreach($node->children as $child)
+                                $html .= renderNode($child);
+
+                            $html .= '</ul>';
+
+                            $html .= '</li>';
+                        }
+
+                        return $html;
+                    }
+
+
+                     echo renderNode($pages->first());
+
+
+
+                        //echo '<pre>';
+                        //print_r($root);
+                    //print_r($pages->first()->getDescendantsAndSelf()->toHierarchy()->toArray());
+                        //echo '</pre>';
 
                     ?>
                     <table class="table" style="margin-bottom: 0px;" id="generic">

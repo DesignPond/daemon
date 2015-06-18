@@ -26,8 +26,9 @@ class PageController extends Controller
     public function index()
     {
         $pages = $this->page->getAll();
+        $root  = $this->page->getTree();
 
-        return view('backend.pages.index')->with(array( 'pages' => $pages ));
+        return view('backend.pages.index')->with(array( 'pages' => $pages, 'root' => $root ));
     }
 
     /**

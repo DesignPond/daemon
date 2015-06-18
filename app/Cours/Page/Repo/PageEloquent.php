@@ -17,6 +17,16 @@ class PageEloquent implements PageInterface{
         return $this->page->all();
     }
 
+    public function getTree(){
+
+        return $this->page->getNestedList('title');
+    }
+
+    public function getRoot(){
+
+        return $this->page->roots();
+    }
+
     public function find($id){
 
         return $this->page->findOrFail($id);
