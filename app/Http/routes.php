@@ -26,8 +26,8 @@ Route::post('sendMessage', ['uses' => 'HomeController@sendMessage']);
 // Admin routes
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
 {
-    //Route::get('page', ['uses' => 'PageController@index']);
     Route::resource('page', 'PageController');
+    Route::post('hierarchy', ['uses' => 'PageController@hierarchy']);
 });
 
 // Administration routes...

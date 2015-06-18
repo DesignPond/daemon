@@ -107,4 +107,15 @@ class PageController extends Controller
     {
         //
     }
+
+    public function hierarchy(Request $request)
+    {
+        $data = $request->input('data');
+
+        echo '<pre>';
+        print_r($data);
+        echo '</pre>';
+
+    }
+    
 }

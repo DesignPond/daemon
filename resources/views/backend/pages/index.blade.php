@@ -14,40 +14,52 @@
             <div class="panel-heading">
                 <h4><i class="fa fa-tasks"></i> &nbsp;Pages</h4>
             </div>
+
+            <div class="col-md-12"><textarea id="nestable_list_2_output" style="width:100%" rows="3" class="form-group"></textarea></div>
             <div class="panel-body">
                 <div class="table-responsive">
+
                     <?php
 
-                    function renderNode($node) {
-                        if( $node->isLeaf() ) {
-                            return '<li>' . $node->title . '</li>';
-                        } else {
-                            $html = '<li>' . $node->title;
-
-                            $html .= '<ul>';
+                    function renderNode($node)
+                    {
+                        if( $node->isLeaf() )
+                        {
+                            return '<li class="dd-item" data-id="'.$node->id.'"><div class="dd-handle">' . $node->title . '</div></li>';
+                        }
+                        else
+                        {
+                            $html = '<li class="dd-item" data-id="'.$node->id.'"><div class="dd-handle">' . $node->title.'</div>';
+                            $html .= '<ol class="dd-list">';
 
                             foreach($node->children as $child)
                                 $html .= renderNode($child);
 
-                            $html .= '</ul>';
-
+                            $html .= '</ol>';
                             $html .= '</li>';
                         }
-
                         return $html;
                     }
 
-
-                     echo renderNode($pages->first());
-
-
-
-                        //echo '<pre>';
-                        //print_r($root);
+                    //echo '<pre>';
+                    //print_r($root);
                     //print_r($pages->first()->getDescendantsAndSelf()->toHierarchy()->toArray());
-                        //echo '</pre>';
+                    //echo '</pre>';
 
                     ?>
+
+
+                    <div class="panel panel-primary">
+                        <div class="panel-heading"><h4>Nestable List 2</h4></div>
+                        <div class="panel-body">
+                            <div class="dd" id="nestable_list_2" style="height: auto;">
+                                <ol class="dd-list">
+                                    <?php echo renderNode($pages->first()); ?>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+
                     <table class="table" style="margin-bottom: 0px;" id="generic">
                         <thead>
                         <tr>

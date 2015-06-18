@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="<?php echo asset('backend/css/chosen.css');?>">
     <link rel="stylesheet" href="<?php echo asset('backend/css/chosen-bootstrap.css');?>">
     <link rel="stylesheet" href="<?php echo asset('backend/css/admin.css');?>">
+
+    <link rel='stylesheet' type='text/css' href="<?php echo asset('backend/plugins/form-nestable/jquery.nestable.css');?>" />
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries. Placeholdr.js enables the placeholder attribute -->
     <!--[if lt IE 9]>
     <link rel="stylesheet" href="<?php echo asset('backend/css/styles.ie8.css');?>">
@@ -105,9 +107,11 @@
 <script type='text/javascript' src="<?php echo asset('backend/plugins/datatables/jquery.dataTables.min.js');?>"></script>
 <script type='text/javascript' src="<?php echo asset('backend/plugins/datatables/dataTables.bootstrap.js');?>"></script>
 <script type='text/javascript' src="<?php echo asset('backend/plugins/form-datepicker/js/bootstrap-datepicker.js');?>"></script>
+<script type='text/javascript' src="<?php echo asset('backend/plugins/form-nestable/jquery.nestable.min.js');?>"></script>
 <script type="text/javascript" src="<?php echo asset('backend/js/datatables.js');?>"></script>
 <script type="text/javascript" src="<?php echo asset('backend/js/application.js');?>"></script>
 <script type='text/javascript' src="<?php echo asset('backend/plugins/bootbox/bootbox.min.js');?>"></script>
+<script type='text/javascript' src="<?php echo asset('backend/js/nestable.js');?>"></script>
 <script type="text/javascript" src="<?php echo asset('backend/js/admin.js');?>"></script>
 
 </body>
