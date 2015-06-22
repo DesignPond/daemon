@@ -2,7 +2,7 @@
 namespace App\Cours\Groupe\Repo;
 
 use App\Cours\Groupe\Repo\GroupeInterface;
-use App\Cours\Groupe\Entities\Groupes as M;
+use App\Cours\Groupe\Entities\Groupe as M;
 
 class GroupeEloquent implements GroupeInterface
 {

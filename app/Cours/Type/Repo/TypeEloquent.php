@@ -2,7 +2,7 @@
 namespace App\Cours\Type\Repo;
 
 use App\Cours\Type\Repo\TypeInterface;
-use App\Cours\Type\Entities\Types as M;
+use App\Cours\Type\Entities\Type as M;
 
 class TypeEloquent implements TypeInterface
 {

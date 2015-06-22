@@ -5,7 +5,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Groupe extends Model
 {
-    public $timestamps = false;
+    public $timestamps  = false;
 	protected $fillable = ['title'];
 
+    public function getSlugAttribute()
+    {
+        return str_slug($this->title);
+    }
 }

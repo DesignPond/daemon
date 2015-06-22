@@ -1,35 +1,6 @@
 $(function(){
 
     var url  = location.protocol + "//" + location.host+"/";
-/*    //$.i18n.load(i18n_dict);
-    var content = $('#content').annotator();
-
-    content.annotator('addPlugin','Permissions', {
-        user: 1,
-        permissions: {
-            'read':   [],
-            'update': [],
-            'delete': [],
-            'admin':  []
-        },
-        showViewPermissionsCheckbox: false,
-        showEditPermissionsCheckbox: false
-    });
-
-    content.annotator('addPlugin','Categories',{
-        regle     :'annotator-hl-regle',
-        destacat  :'annotator-hl-destacat',
-        subratllat:'annotator-hl-subratllat'
-    });
-
-    content.annotator('addPlugin', 'Store', {
-        // The endpoint of the store on your server.
-        prefix: url + 'api',
-        // Attach the uri of the current page to all annotations to allow search.
-        annotationData: { 'uri': url + '/loi' },
-        // This will perform a "search" action when the plugin loads.
-        loadFromSearch: {'limit': 20, 'uri': url}
-    });*/
 
     $('.fancybox').fancybox({
         autoSize:false

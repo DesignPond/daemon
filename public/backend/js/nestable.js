@@ -35,8 +35,9 @@ $(function(){
         group: 1
     }).on('change', updateOutput);
 
-    // output initial serialised data
-    updateOutput($('#nestable_list_2').data('output', $('#nestable_list_2_output')));
-
+    if($('#nestable_list_2').length){
+        // output initial serialised data
+        updateOutput($('#nestable_list_2').data('output', $('#nestable_list_2_output')));
+    }
 
 });

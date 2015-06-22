@@ -4,16 +4,22 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Cours\Projet\Repo\ProjetInterface;
+use App\Cours\Groupe\Repo\GroupeInterface;
+use App\Cours\Type\Repo\TypeInterface;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 class ProjetController extends Controller
 {
     protected $projet;
+    protected $groupe;
+    protected $type;
 
-    public function __construct(ProjetInterface $projet)
+    public function __construct(ProjetInterface $projet, GroupeInterface $groupe, TypeInterface $type)
     {
         $this->projet = $projet;
+        $this->groupe = $groupe;
+        $this->type   = $type;
     }
 
 
@@ -24,9 +30,12 @@ class ProjetController extends Controller
      */
     public function index()
     {
-        $projet = $this->projet->find(1);
+        $groupes = $this->groupe->getAll()->lists('title','id')->all();
+        $types   = $this->type->getAll()->lists('title','id')->all();
 
-        return view('backend.projets.index')->with(array( 'projet' => $projet ));
+        $projet  = $this->projet->find(1);
+
+        return view('backend.projets.index')->with(array( 'projet' => $projet, 'groupes' => $groupes, 'types' => $types ));
     }
 
     /**

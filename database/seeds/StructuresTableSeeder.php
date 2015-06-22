@@ -19,7 +19,7 @@ class StructuresTableSeeder extends Seeder
             ['projet_id' => 1, 'user_id' => 1, 'type_id' => 2, 'groupe_id' => 1, 'rang' => 2, 'content' => 'Loi fédérale'],
             ['projet_id' => 1, 'user_id' => 1, 'type_id' => 3, 'groupe_id' => 1, 'rang' => 3, 'content' => 'sur les cartels et autres restrictions à la concurrence'],
             ['projet_id' => 1, 'user_id' => 1, 'type_id' => 4, 'groupe_id' => 1, 'rang' => 4, 'content' => 'Loi sur les cartels'],
-            ['projet_id' => 1, 'user_id' => 1, 'type_id' => 5, 'groupe_id' => 1, 'rang' => 5, 'content' => 'LCart)'],
+            ['projet_id' => 1, 'user_id' => 1, 'type_id' => 5, 'groupe_id' => 1, 'rang' => 5, 'content' => 'LCart'],
             ['projet_id' => 1, 'user_id' => 1, 'type_id' => 6, 'groupe_id' => 1, 'rang' => 6, 'content' => 'du 6 octobre 1995 (Etat le 1er décembre 2014)'],
 
             ['projet_id' => 1, 'user_id' => 1, 'type_id' => 7,  'groupe_id' => 2, 'rang' => 7,  'content'   => 'L\'Assemblée fédérale de la Confédération suisse,'],

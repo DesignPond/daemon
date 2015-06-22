@@ -7,6 +7,25 @@ class Projet extends Model
 {
 	protected $fillable = ['title','user_id'];
 
+    public function getStructureGroupeAttribute()
+    {
+        if(isset($this->structures) && !$this->structures->isEmpty())
+        {
+            $collection = new \Illuminate\Database\Eloquent\Collection;
+
+            foreach($this->structures as $structure)
+            {
+                $structure->load('type','groupe');
+                $categories[$structure->groupe->slug]['title'] = $structure->groupe->title;
+                $categories[$structure->groupe->slug]['types'][$structure->type->slug] = $structure->type->title;
+            }
+
+            return $collection->make($categories);
+        }
+
+        return [];
+    }
+
     /**
      * Structures
      *

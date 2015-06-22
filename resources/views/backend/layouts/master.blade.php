@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="<?php echo asset('backend/css/chosen.css');?>">
     <link rel="stylesheet" href="<?php echo asset('backend/css/chosen-bootstrap.css');?>">
     <link rel="stylesheet" href="<?php echo asset('backend/css/admin.css');?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo asset('frontend/css/guides.css');?>">
+    <link rel="stylesheet" href="<?php echo asset('backend/css/types.css');?>">
 
     <link rel='stylesheet' type='text/css' href="<?php echo asset('backend/plugins/form-nestable/jquery.nestable.css');?>" />
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries. Placeholdr.js enables the placeholder attribute -->
@@ -113,6 +115,13 @@
 <script type='text/javascript' src="<?php echo asset('backend/plugins/bootbox/bootbox.min.js');?>"></script>
 <script type='text/javascript' src="<?php echo asset('backend/js/nestable.js');?>"></script>
 <script type="text/javascript" src="<?php echo asset('backend/js/admin.js');?>"></script>
+
+<!-- jQuery plugins -->
+<script src="<?php echo asset('frontend/js/jquery/jquery.fancybox.js');?>"></script>
+<script src="<?php echo asset('frontend/js/jquery/jquery.i18n.min.js');?>"></script>
+<script src="<?php echo asset('frontend/js/jquery/jquery.expose.js');?>"></script>
+<script src="<?php echo asset('frontend/js/jquery/jquery.lockfixed.js');?>"></script>
+<script src="<?php echo asset('frontend/js/annotator/annotator.js');?>"></script>
 
 </body>
 </html>
