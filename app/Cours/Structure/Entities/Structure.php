@@ -12,8 +12,11 @@ class Structure extends Model
     {
         $this->load('type');
         $type = $this->type->slug;
+        $description = $this->type->description;
 
-        printf( "<span class='class_type class_type_%d' id='$type'>%s</span> ", $this->type_id, $this->content);
+        $popover = ' tabindex="0" data-trigger="focus" data-toggle="popover" data-placement="top" title="'.$this->type->title.'" data-content="'.$description.'" ';
+
+        printf( "<span %s class='class_type class_type_%d' id='$type'>%s</span> ",$popover, $this->type_id, $this->content);
     }
 
     /**

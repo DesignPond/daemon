@@ -31,18 +31,31 @@
                         <div class="col-md-10">
                             <div id="content">
                             <?php
-                                $popover = ' tabindex="0" data-trigger="focus" data-toggle="popover" data-placement="top" ';
-                                $structures = $projet->structures->groupBy('groupe_id');
+                                $popover      = ' tabindex="0" data-trigger="focus" data-toggle="popover" data-placement="top" ';
+                                $structures   = $projet->structures->groupBy('groupe_id');
+
                                 foreach($structures as $groupe => $structure){
-                                    echo '<div '.$popover.' id="'.str_slug($groupes[$groupe]).'" title="'.$groupes[$groupe].'" data-content="Détermination">';
-                                        $structure->sortBy('rang');
-                                        foreach($structure as $item)
-                                        {
+                                    $groupe_item = $groupes->where('id',$groupe)->first();
+
+                                    echo '<div '.$popover.' id="'.str_slug($groupe_item->title).'" title="'.$groupe_item->title.'" data-content="'.$groupe_item->description.'">';
+                                    $structure->sortBy('rang');
+                                    foreach($structure as $item)
+                                    {
+                                        $item->load('type','groupe');
+
+                                        if($item->type->gabarit == 'arret'){
                                             echo $item->content_text;
                                             echo ($item->type_id == 3 ? '<br/>' : '');
                                         }
+                                        else
+                                        {
+                                            echo $item->content;
+                                        }
+
+                                    }
                                     echo '</div>';
                                 }
+
                             ?>
                             </div>
                         </div>

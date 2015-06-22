@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Type extends Model
 {
-	protected $fillable = ['title'];
+	protected $fillable = ['title','description','gabarit'];
     public $timestamps  = false;
 
     public function getSlugAttribute()

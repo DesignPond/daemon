@@ -30,8 +30,8 @@ class ProjetController extends Controller
      */
     public function index()
     {
-        $groupes = $this->groupe->getAll()->lists('title','id')->all();
-        $types   = $this->type->getAll()->lists('title','id')->all();
+        $groupes = $this->groupe->getAll();
+        $types   = $this->type->getAll();
 
         $projet  = $this->projet->find(1);
 

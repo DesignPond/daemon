@@ -19,7 +19,7 @@ class CreateStructuresTable extends Migration
             $table->integer('type_id');
             $table->integer('groupe_id');
             $table->integer('rang');
-            $table->text('content');
+            $table->longText('content');
             $table->timestamps();
         });
     }
