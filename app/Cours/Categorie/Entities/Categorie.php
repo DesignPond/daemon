@@ -3,8 +3,6 @@
 use Illuminate\Database\Eloquent\Model;
 
 class Categories extends Model {
-
-	protected $fillable = ['pid','user_id','deleted','title','image','ismain','hideOnSite'];
-
-
+    public $timestamps = false;
+	protected $fillable = ['title'];
 }

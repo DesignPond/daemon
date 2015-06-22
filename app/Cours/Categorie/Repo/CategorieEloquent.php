@@ -1,7 +1,7 @@
 <?php namespace App\Cours\Categorie\Repo;
 
 use App\Cours\Categorie\Repo\CategorieInterface;
-use App\Cours\Categorie\Entities\Categories as M;
+use App\Cours\Categorie\Entities\Categorie as M;
 
 class CategorieEloquent implements CategorieInterface{
 
@@ -25,14 +25,7 @@ class CategorieEloquent implements CategorieInterface{
     public function create(array $data){
 
         $categorie = $this->categorie->create(array(
-            'pid'        => $data['pid'],
-            'user_id'    => $data['user_id'],
-            'title'      => $data['title'],
-            'image'      => $data['image'],
-            'ismain'     => $data['ismain'],
-            'hideOnSite' => $data['hideOnSite'],
-            'created_at' => date('Y-m-d G:i:s'),
-            'updated_at' => date('Y-m-d G:i:s')
+            'title' => $data['title']
         ));
 
         if( ! $categorie )
@@ -54,8 +47,6 @@ class CategorieEloquent implements CategorieInterface{
         }
 
         $categorie->fill($data);
-
-        $categorie->updated_at = date('Y-m-d G:i:s');
         $categorie->save();
 
         return $categorie;

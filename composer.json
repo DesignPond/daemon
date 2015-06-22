@@ -13,6 +13,7 @@
         "baum/baum": "~1.1"
     },
     "require-dev": {
+        "laracasts/generators": "~1.1",
         "fzaninotto/faker": "~1.4",
         "mockery/mockery": "0.9.*",
         "phpunit/phpunit": "~4.0",

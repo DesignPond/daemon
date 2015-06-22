@@ -1,6 +1,6 @@
-<?php namespace App\Cours\Categorie\Repo;
+<?php namespace App\Cours\Structure\Repo;
 
-interface CategorieInterface {
+interface StructureInterface {
 
     public function getAll();
     public function find($id);

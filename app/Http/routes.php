@@ -28,6 +28,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
 {
     Route::resource('page', 'PageController');
     Route::post('hierarchy', ['uses' => 'PageController@hierarchy']);
+
+    Route::resource('projet', 'ProjetController');
 });
 
 // Administration routes...

@@ -10,12 +10,17 @@
             </div>
         </div>
 
+        <div class="row">
+            <div class="col-md-12">
+                <textarea id="nestable_list_2_output" style="width:100%" rows="3" class="form-group"></textarea>
+            </div>
+        </div>
+
         <div class="panel panel-midnightblue">
             <div class="panel-heading">
                 <h4><i class="fa fa-tasks"></i> &nbsp;Pages</h4>
             </div>
 
-            <div class="col-md-12"><textarea id="nestable_list_2_output" style="width:100%" rows="3" class="form-group"></textarea></div>
             <div class="panel-body">
                 <div class="table-responsive">
 
@@ -48,7 +53,7 @@
 
                     ?>
 
-
+                    @if(!$pages->isEmpty())
                     <div class="panel panel-primary">
                         <div class="panel-heading"><h4>Nestable List 2</h4></div>
                         <div class="panel-body">
@@ -59,6 +64,7 @@
                             </div>
                         </div>
                     </div>
+                    @endif
 
                     <table class="table" style="margin-bottom: 0px;" id="generic">
                         <thead>
