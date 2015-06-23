@@ -13,7 +13,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $page =  new \App\Cours\Page\Entities\Page();
+        $root  = $page->whereNull('parent_id')->orderBy('rang','asc')->get();
+
+        view()->share('hierarchy', $root);
     }
 
     /**

@@ -28,30 +28,21 @@ class PageWorkerTest extends TestCase
         $data = [
             [
                 'id' => 14 ,
-                'children' =>  [
-                    'id' => 1 ,
-                    'children' => [
-                        ['id' => 2],
-                        ['id' => 3]
-                    ]
-                ],
-
-                'id' => 5 ,
-                'children' => [
+                'children' =>
+                 [
                     [
-                        'id' => 6,
-                        'children' => [
-                            ['id' => 7],
-                            ['id' => 8],
-                        ]
+                        'id' => 1 ,
+                        'children' => [['id' => 2],['id' => 3]]
                     ],
-                    ['id' => 9,
-                        'children' => [
-                            ['id' => 10],
-                            ['id' => 11],
-                        ]
+                    [
+                        'id' => 5 ,
+                        'children' => [['id' => 6],['id' => 7]]
                     ],
-                ]
+                    [
+                        'id' => 8 ,
+                        'children' => [['id' => 9],['id' => 10]]
+                    ]
+                 ]
             ]
         ];
 

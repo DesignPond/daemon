@@ -6,16 +6,24 @@ use Illuminate\Http\Request;
 use Mail;
 use App\Http\Requests;
 use App\Http\Requests\SendMessage;
+use App\Cours\Page\Repo\PageInterface;
 use App\Http\Controllers\Controller;
 
 class HomeController extends Controller
 {
+    protected $page;
+
+    public function __construct(PageInterface $page)
+    {
+        $this->page = $page;
+    }
+
     /**
      * Display a listing of the resource.
      *
      * @return Response
      */
-    public function index()
+    public function accueil()
     {
         return view('frontend.index');
     }
@@ -58,7 +66,9 @@ class HomeController extends Controller
      */
     public function page($slug)
     {
-        return view('frontend.page');
+        $page = $this->page->getBySlug($slug);
+
+        return view('frontend.page')->with(['page' => $page]);
     }
 
     /**

@@ -32,6 +32,16 @@ class PageEloquent implements PageInterface{
         return $this->page->findOrFail($id);
     }
 
+    public function getBySlug($slug)
+    {
+        return $this->page->where('slug','=',$slug)->first();
+    }
+
+    public function buildTree($data)
+    {
+        return $this->page->buildTree($data);
+    }
+
     public function create(array $data){
 
         $page = $this->page->create(array(

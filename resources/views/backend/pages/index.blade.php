@@ -10,11 +10,6 @@
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-md-12">
-                <textarea id="nestable_list_2_output" style="width:100%" rows="3" class="form-group"></textarea>
-            </div>
-        </div>
 
         <div class="panel panel-midnightblue">
             <div class="panel-heading">
@@ -30,11 +25,11 @@
                     {
                         if( $node->isLeaf() )
                         {
-                            return '<li class="dd-item" data-id="'.$node->id.'"><div class="dd-handle">' . $node->title . '</div></li>';
+                            return '<li class="dd-item" data-id="'.$node->id.'"><div class="dd-handle"><a href="admin/page/'.$node->id.'">' . $node->title . '</a></div></li>';
                         }
                         else
                         {
-                            $html = '<li class="dd-item" data-id="'.$node->id.'"><div class="dd-handle">' . $node->title.'</div>';
+                            $html = '<li class="dd-item" data-id="'.$node->id.'"><div class="dd-handle"><a href="admin/page/'.$node->id.'">' . $node->title.'</a></div>';
                             $html .= '<ol class="dd-list">';
 
                             foreach($node->children as $child)
@@ -46,24 +41,20 @@
                         return $html;
                     }
 
-                    //echo '<pre>';
-                   // print_r($root);
-                    //print_r($pages->first()->getDescendantsAndSelf()->toHierarchy()->toArray());
-                   // echo '</pre>';
-
                     ?>
 
                     @if(!$root->isEmpty())
-                    <div class="panel panel-primary">
-                        <div class="panel-heading"><h4>Nestable List 2</h4></div>
+                    <div class="panel">
                         <div class="panel-body">
-                            @foreach($root as $page)
-                            <div class="dd nestable_list" id="nestable_list_2" style="height: auto;">
+                            <div id="nestable" class="dd nestable_list" style="height: auto;">
+
                                 <ol class="dd-list">
-                                    <?php echo renderNode($page); ?>
+                                    @foreach($root as $page)
+                                        <?php echo renderNode($page); ?>
+                                    @endforeach
                                 </ol>
+
                             </div>
-                            @endforeach
                         </div>
                     </div>
                     @endif

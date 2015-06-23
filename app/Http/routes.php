@@ -16,7 +16,8 @@ Route::get('home', function () {
 });
 
 // Site routes...
-Route::get('/', ['uses' => 'HomeController@index']);
+Route::get('/', ['uses' => 'HomeController@accueil']);
+Route::get('accueil', ['uses' => 'HomeController@accueil']);
 Route::get('page/{slug}', ['uses' => 'HomeController@page']);
 Route::get('contact', ['uses' => 'HomeController@contact']);
 Route::post('sendMessage', ['uses' => 'HomeController@sendMessage']);

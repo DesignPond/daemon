@@ -19,20 +19,23 @@ class PageWorker{
         {
             foreach($nodes as $node)
             {
-                if(isset($node['id']))
-                {
-                    $data[] = array_merge($data,['id' => $node['id']]);
-                }
+                $page = $this->page->find($node['id']);
 
-                if(!empty($node['children']))
+                $data[$node['id']]['id']         = $node['id'];
+                $data[$node['id']]['auteur']     = $page->auteur;
+                $data[$node['id']]['title']      = $page->title;
+                $data[$node['id']]['slug']       = $page->slug;
+                $data[$node['id']]['ouvrage']    = $page->ouvrage;
+                $data[$node['id']]['page']       = $page->page;
+                $data[$node['id']]['paragraphe'] = $page->paragraphe;
+                $data[$node['id']]['content']    = $page->content;
+
+                if(isset($node['children']) && !empty($node['children']))
                 {
-                    foreach($node['children'] as $child)
-                        $data[] = array_merge($data, $this->prepareTree($child));
+                    $children = $this->prepareTree($node['children']);
+                    $data[$node['id']]['children'] = $children;
                 }
             }
-        }
-        else{
-            $data[] = array_merge($data,['id' => $node['id']]);
         }
 
         return $data;

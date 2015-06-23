@@ -24,11 +24,13 @@ class CreatePagesTable extends Migration {
             $table->integer('depth')->nullable();
 
             // Add needed columns here (f.ex: name, slug, path, etc.)
+            $table->integer('rang')->nullable();
             $table->string('auteur');
             $table->string('ouvrage');
             $table->string('page');
             $table->string('paragraphe');
             $table->string('title');
+            $table->string('slug');
             $table->longText('content');
             $table->softDeletes();
             $table->timestamps();

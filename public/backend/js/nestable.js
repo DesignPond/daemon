@@ -19,7 +19,7 @@ $(function(){
             dataType: "json",
             type    : 'POST',
             url     : base_url + 'admin/hierarchy',
-            data    : { data : data , _token: $("meta[name='token']").attr('content') },
+            data    : { data : data, _token: $("meta[name='token']").attr('content') },
             success: function(data) {
                 console.log('added');
             },
@@ -31,11 +31,11 @@ $(function(){
     }
 
     // activate Nestable for list 1
-    $('.nestable_list').nestable().on('change', updateOutput);
+    //$('.nestable_list').nestable().on('change', updateOutput);
 
-    if($('.nestable_list').length){
+/*    if($('.nestable_list').length){
         // output initial serialised data
-        updateOutput($('#nestable_list_2').data('output', $('#nestable_list_2_output')));
-    }
+        updateOutput($('#nestable').data('output', $('#nestable-output')));
+    }*/
 
 });

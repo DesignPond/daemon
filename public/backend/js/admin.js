@@ -3,6 +3,7 @@ $( function() {
     $('.redactor').redactor({
         minHeight  : 150,
         maxHeight: 300,
+        plugins: ['addmodal'],
         fileUpload : 'uploadRedactor',
         buttons    : ['html','|','formatting','bold','italic','|','unorderedlist','orderedlist','outdent','indent','|','image','file','link','alignment']
     });
