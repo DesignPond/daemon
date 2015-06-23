@@ -114,9 +114,11 @@
 <script type="text/javascript" src="<?php echo asset('backend/js/application.js');?>"></script>
 <script type='text/javascript' src="<?php echo asset('backend/plugins/bootbox/bootbox.min.js');?>"></script>
 <script type='text/javascript' src="<?php echo asset('backend/js/nestable.js');?>"></script>
+<script type='text/javascript' src="<?php echo asset('backend/js/Sortable.min.js');?>"></script>
 <script type="text/javascript" src="<?php echo asset('backend/js/admin.js');?>"></script>
 
 <!-- jQuery plugins -->
+
 <script src="<?php echo asset('frontend/js/jquery/jquery.fancybox.js');?>"></script>
 <script src="<?php echo asset('frontend/js/jquery/jquery.i18n.min.js');?>"></script>
 <script src="<?php echo asset('frontend/js/jquery/jquery.expose.js');?>"></script>

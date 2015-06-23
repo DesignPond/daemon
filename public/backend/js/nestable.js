@@ -31,11 +31,9 @@ $(function(){
     }
 
     // activate Nestable for list 1
-    $('#nestable_list_2').nestable({
-        group: 1
-    }).on('change', updateOutput);
+    $('.nestable_list').nestable().on('change', updateOutput);
 
-    if($('#nestable_list_2').length){
+    if($('.nestable_list').length){
         // output initial serialised data
         updateOutput($('#nestable_list_2').data('output', $('#nestable_list_2_output')));
     }

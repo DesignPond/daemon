@@ -47,21 +47,23 @@
                     }
 
                     //echo '<pre>';
-                    //print_r($root);
+                   // print_r($root);
                     //print_r($pages->first()->getDescendantsAndSelf()->toHierarchy()->toArray());
-                    //echo '</pre>';
+                   // echo '</pre>';
 
                     ?>
 
-                    @if(!$pages->isEmpty())
+                    @if(!$root->isEmpty())
                     <div class="panel panel-primary">
                         <div class="panel-heading"><h4>Nestable List 2</h4></div>
                         <div class="panel-body">
-                            <div class="dd" id="nestable_list_2" style="height: auto;">
+                            @foreach($root as $page)
+                            <div class="dd nestable_list" id="nestable_list_2" style="height: auto;">
                                 <ol class="dd-list">
-                                    <?php echo renderNode($pages->first()); ?>
+                                    <?php echo renderNode($page); ?>
                                 </ol>
                             </div>
+                            @endforeach
                         </div>
                     </div>
                     @endif

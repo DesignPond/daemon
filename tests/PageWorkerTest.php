@@ -26,17 +26,31 @@ class PageWorkerTest extends TestCase
     {
 
         $data = [
-            'id' => 14 ,
-            'children' => [
-                'id' => 1 ,
-                'children' => [
-                    ['id' => 2],
-                    ['id' => 3],
+            [
+                'id' => 14 ,
+                'children' =>  [
+                    'id' => 1 ,
+                    'children' => [
+                        ['id' => 2],
+                        ['id' => 3]
+                    ]
                 ],
+
                 'id' => 5 ,
                 'children' => [
-                    ['id' => 6],
-                    ['id' => 7],
+                    [
+                        'id' => 6,
+                        'children' => [
+                            ['id' => 7],
+                            ['id' => 8],
+                        ]
+                    ],
+                    ['id' => 9,
+                        'children' => [
+                            ['id' => 10],
+                            ['id' => 11],
+                        ]
+                    ],
                 ]
             ]
         ];
@@ -44,6 +58,9 @@ class PageWorkerTest extends TestCase
         $expected = [];
 
         $result = $this->worker->prepareTree($data);
+        echo '<pre>';
+        print_r($result);
+        echo '</pre>';exit;
 
         $this->assertEquals($result,$expected);
     }

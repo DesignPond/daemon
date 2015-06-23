@@ -17,7 +17,17 @@ $(function(){
         var $test = $('#' +anchor), o = $test.offset().top - 300;
         $('html, body').animate({ scrollTop: o }, 500, function(){
             $test.popover('show');
-            //$test.expose({padding: 4});
+            $test.addClass("warning");
+        });
+    });
+
+    $(".text_content").click(function(e) {
+        e.preventDefault();
+        $(".text_content").removeClass("warning");
+        var anchor = $(this).data('anchor');
+        var $test  = $('#' +anchor);
+        var o = $test.offset().top - 300;
+        $('html, body').animate({ scrollTop: o }, 500, function(){
             $test.addClass("warning");
         });
     });

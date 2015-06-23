@@ -45,7 +45,7 @@ class ProjetController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**

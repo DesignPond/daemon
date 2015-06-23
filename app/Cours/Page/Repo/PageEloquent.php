@@ -24,7 +24,7 @@ class PageEloquent implements PageInterface{
 
     public function getRoot(){
 
-        return $this->page->roots();
+        return $this->page->whereNull('parent_id')->get();
     }
 
     public function find($id){

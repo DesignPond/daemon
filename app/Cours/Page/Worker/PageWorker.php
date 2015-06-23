@@ -12,7 +12,30 @@ class PageWorker{
     }
 
     public function prepareTree($nodes){
-        return true;
+
+        $data = [];
+
+        if(is_array($nodes))
+        {
+            foreach($nodes as $node)
+            {
+                if(isset($node['id']))
+                {
+                    $data[] = array_merge($data,['id' => $node['id']]);
+                }
+
+                if(!empty($node['children']))
+                {
+                    foreach($node['children'] as $child)
+                        $data[] = array_merge($data, $this->prepareTree($child));
+                }
+            }
+        }
+        else{
+            $data[] = array_merge($data,['id' => $node['id']]);
+        }
+
+        return $data;
 
     }
 

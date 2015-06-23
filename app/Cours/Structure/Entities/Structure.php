@@ -10,13 +10,20 @@ class Structure extends Model
 
     public function getContentTextAttribute()
     {
-        $this->load('type');
-        $type = $this->type->slug;
-        $description = $this->type->description;
+        if($this->type_id > 0)
+        {
+            $this->load('type');
+            $type        = $this->type->slug;
+            $description = $this->type->description;
 
-        $popover = ' tabindex="0" data-trigger="focus" data-toggle="popover" data-placement="top" title="'.$this->type->title.'" data-content="'.$description.'" ';
+            $popover = ' tabindex="0" data-trigger="focus" data-toggle="popover" data-placement="top" title="'.$this->type->title.'" data-content="'.$description.'" ';
 
-        printf( "<span %s class='class_type class_type_%d' id='$type'>%s</span> ",$popover, $this->type_id, $this->content);
+            printf( "<span %s class='class_type class_type_%d' id='$type'>%s</span> ",$popover, $this->type_id, $this->content);
+        }
+        else
+        {
+            return $this->content;
+        }
     }
 
     /**

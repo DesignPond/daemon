@@ -15,9 +15,21 @@ class Projet extends Model
 
             foreach($this->structures as $structure)
             {
-                $structure->load('type','groupe');
+                $structure->load('groupe');
                 $categories[$structure->groupe->slug]['title'] = $structure->groupe->title;
-                $categories[$structure->groupe->slug]['types'][$structure->type->slug] = $structure->type->title;
+
+                if($structure->type_id > 0)
+                {
+                    $structure->load('type');
+                    if($structure->type->gabarit == 'arret')
+                    {
+                        $categories[$structure->groupe->slug]['types'][$structure->type->slug] = $structure->type->title;
+                    }
+                    else
+                    {
+                        $categories[$structure->groupe->slug]['types']['text_'.$structure->id] = 'Paragraphe '.$structure->id;
+                    }
+                }
             }
 
             return $collection->make($categories);

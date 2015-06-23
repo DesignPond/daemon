@@ -28,6 +28,9 @@ class TypesTableSeeder extends Seeder
             ['gabarit' => 'arret', 'title' => 'Réf. au Message du CF', 'description' => 'Réf. au Message du CF'],
             ['gabarit' => 'arret', 'title' => 'Verbe', 'description' => 'verbe marquant la décision de l\'organe qui l\'édicte. Ainsi l\'Assemblée fédérale ou le Conseil fédéral «arrête ». Dans la terminologie propre au droit, le verbe « arrêter » (« beschliessen » ; « decretare ») désigne l\'acte par lequel une autorité législative ou judiciaire prend une décision. C\'est de là que viennent d\'ailleurs les termes « arrêté » désignant un type d\'acte législatif et « arrêt » désignant un type de décision judiciaire.' ],
             ['gabarit' => 'text',  'title' => '',  'description' => ''],
+            ['gabarit' => 'text',  'title' => 'Clause d\'exécution',  'description' => 'Clause d\'exécution'],
+            ['gabarit' => 'text',  'title' => 'Clause abrogatoire',  'description' => 'Clause abrogatoire'],
+            ['gabarit' => 'text',  'title' => 'Règles de droit intemporel',  'description' => 'Règles de droit intemporel'],
         );
 
         // Uncomment the below to run the seeder
