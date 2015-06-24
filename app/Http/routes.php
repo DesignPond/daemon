@@ -22,8 +22,13 @@ Route::get('page/{slug}', ['uses' => 'HomeController@page']);
 Route::get('contact', ['uses' => 'HomeController@contact']);
 Route::post('sendMessage', ['uses' => 'HomeController@sendMessage']);
 
-//Route::get('contact', ['uses' => 'PageController@index']);
+Route::get('imageJson/{id?}', ['uses' => 'UploadController@imageJson']);
+Route::get('fileJson/{id?}', ['uses' => 'UploadController@fileJson']);
 
+Route::post('uploadFileRedactor/{id?}', 'UploadController@uploadFileRedactor');
+Route::post('uploadRedactor/{id?}', 'UploadController@uploadRedactor');
+
+//Route::get('contact', ['uses' => 'PageController@index']);
 // Admin routes
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
 {
@@ -32,6 +37,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
     Route::get('build', ['uses' => 'PageController@build']);
 
     Route::resource('projet', 'ProjetController');
+
 });
 
 // Administration routes...

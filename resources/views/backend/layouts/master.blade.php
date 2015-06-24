@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Methodologie | administration">
     <meta name="author" content="Cindy Leschaud | @DesignPond">
-    <meta name="token" content="<?php echo csrf_token(); ?>">
+    <meta name="_token" content="<?php echo csrf_token(); ?>">
 
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css">
     <link rel="stylesheet" href="<?php echo asset('backend/css/styles.css?=121');?>">
     <link rel="stylesheet" href="<?php echo asset('backend/js/vendor/redactor/redactor.css'); ?>">
     <link rel='stylesheet' type='text/css' href="//cdn.datatables.net/plug-ins/f2c75b7247b/integration/bootstrap/3/dataTables.bootstrap.css" />
@@ -106,6 +107,8 @@
 <script type="text/javascript" src="<?php echo asset('backend/js/vendor/redactor/redactor.js');?>"></script>
 <script type="text/javascript" src="<?php echo asset('backend/js/vendor/redactor/fr.js');?>"></script>
 <script type="text/javascript" src="<?php echo asset('backend/js/vendor/redactor/addmodal.js');?>"></script>
+<script type="text/javascript" src="<?php echo asset('backend/js/vendor/redactor/imagemanager.js');?>"></script>
+<script type="text/javascript" src="<?php echo asset('backend/js/vendor/redactor/filemanager.js');?>"></script>
 <script type='text/javascript' src="<?php echo asset('backend/plugins/form-multiselect/js/jquery.multi-select.js');?>"></script>
 <script type='text/javascript' src="<?php echo asset('backend/plugins/datatables/jquery.dataTables.min.js');?>"></script>
 <script type='text/javascript' src="<?php echo asset('backend/plugins/datatables/dataTables.bootstrap.js');?>"></script>

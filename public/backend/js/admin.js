@@ -1,10 +1,14 @@
 $( function() {
 
     $('.redactor').redactor({
-        minHeight  : 150,
-        maxHeight: 300,
-        plugins: ['addmodal'],
-        fileUpload : 'uploadRedactor',
+        minHeight  : 250,
+        maxHeight: 450,
+        focus: true,
+        plugins: ['advanced','imagemanager','filemanager'],
+        fileUpload : 'uploadFileRedactor?_token=' + $('meta[name="_token"]').attr('content'),
+        imageUpload: 'uploadRedactor?_token=' + $('meta[name="_token"]').attr('content'),
+        imageManagerJson: 'imageJson',
+        fileManagerJson: 'fileJson',
         buttons    : ['html','|','formatting','bold','italic','|','unorderedlist','orderedlist','outdent','indent','|','image','file','link','alignment']
     });
 

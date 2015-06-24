@@ -1,49 +1,71 @@
-if (typeof RedactorPlugins === 'undefined') var RedactorPlugins = {};
+if (!RedactorPlugins) var RedactorPlugins = {};
 
-RedactorPlugins.addmodal = {
+RedactorPlugins.advanced = function()
+{
+    return {
+        getTemplate: function()
+        {
+            return String()
+                + '<section id="redactor-modal-advanced">'
+                + '<label>Choix</label>'
+                + '<div id="redactor-image-manager-box"></div>'
+                + '</section>';
+        },
+        init: function ()
+        {
+            var button = this.button.add('advanced', 'Advanced');
+            this.button.addCallback(button, this.advanced.show);
 
-	init: function()
-	{
-		var callback = $.proxy(function()
-		{
-			this.selectionSave();
+            // make your added button as Font Awesome's icon
+            this.button.setAwesome('advanced', 'fa-flag');
+        },
+        show: function()
+        {
+            this.modal.addTemplate('advanced', this.advanced.getTemplate());
+            this.modal.load('advanced', 'Advanced Modal', 400);
+            this.modal.createCancelButton();
 
-			var sel  = this.getSelection();		
-			var text = sel.toString();
+            var button = this.modal.createActionButton('Insert');
+            button.on('click', this.advanced.insert);
 
-			$('#redactor_modal #mymodal-link').click($.proxy(function()
-			{				
-				this.insertFromMyModal(text);
-				return false;
+            $.ajax({
+                dataType: "json",
+                cache: false,
+                url: this.opts.imageManagerJson,
+                success: $.proxy(function(data)
+                {
+                    $.each(data, $.proxy(function(key, val)
+                    {
+                        // title
+                        var thumbtitle = '';
+                        if (typeof val.title !== 'undefined') thumbtitle = val.title;
 
-			}, this));
-		}, this);
+                        var img = $('<img src="' + val.thumb + '" rel="' + val.image + '" data-thumb="' + val.thumb + '" title="' + thumbtitle + '" style="max-width: 100px; height: auto; cursor: pointer;" />');
+                        $('#redactor-image-manager-box').append(img);
+                        $(img).click($.proxy(this.imagemanager.insert, this));
 
-		this.buttonAdd('addmodal', 'Ajouter lien vers un projet', $.proxy(function()
-		{			
-			this.modalInit('Ajouter lien vers un projet', '#mymodal', 500, callback);
-			
-		}, this));
+                    }, this));
 
-		this.buttonAddSeparatorBefore('addmodal');
 
-	},
-	insertFromMyModal: function(html)
-	{
-		var _self = this;
-		
-		var id  = $('#redactor_link_addmodal').val();
-		var url = $('#redactor_link_addmodal_url').val();
-		
-		var a = '<a href="'+ url + '/' + id + '" class="popup_modal">' + html + '</a>';
-			
-		_self.selectionRestore();
-		
-		if(id)
-		{
-			_self.execCommand('inserthtml', a);
-			_self.modalClose();
-		}
-	}
+                }, this)
+            });
 
-}
+            this.selection.save();
+            this.modal.show();
+
+            $('#mymodal-textarea').focus();
+        },
+        insert: function()
+        {
+            var html = $('#mymodal-textarea').val();
+
+            this.modal.close();
+            this.selection.restore();
+
+            this.insert.html(html);
+
+            this.code.sync();
+
+        }
+    };
+};
