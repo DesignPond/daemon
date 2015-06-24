@@ -40,59 +40,21 @@
                 </li><!-- widget end -->
             </ul><!-- widgets end -->
         </li><!-- widgets list end -->
-    @elseif(Request::is('content'))
-        <li class="widget-container widget_up_events"><!-- widget -->
-            <h1 class="title-widget">Annonces</h1>
-            <ul class="list-unstyled">
-                <li class="up-event-wrap">
-                    <h1 class="title-median"><a href="#" title="Annual alumni game">Lectures préparatoires</a></h1>
-                    <div class="up-event-meta clearfix">
-                        <div class="up-event-date">Oct 9, 2015</div>
-                    </div>
-                    <p>Lectures préparatoires pour le cours du 9 octobre<br/>
-                        <a href="#" class="moretag" title="read more">Plus</a>
-                    </p>
-                </li>
-                <li class="up-event-wrap">
-                    <h1 class="title-median"><a href="#" title="School talents gathering">Inscriptions</a></h1>
-                    <div class="up-event-meta clearfix">
-                        <div class="up-event-date">Aou 25, 2015</div><div class="up-event-time">8:30 - 18:30</div>
-                    </div>
-                    <p>Inscriptions pour les visites du Parlement<br/>
-                        <a href="#" class="moretag" title="read more">Plus</a>
-                    </p>
-                </li>
-            </ul>
-        </li>
+    @elseif(Request::is('page/*'))
+
+        <?php
+            $helper = new \App\Helper\Helper();
+            foreach($siblings as $node){
+                echo $helper->renderSidebar($node, $page);
+            }
+        ?>
         <li class="widget-container widget_text"><!-- widget -->
             <a href="#" class="custom-button cb-yellow" title="Un problème?">
                 <i class="custom-button-icon fa fa-question-circle"></i>
-                <span class="custom-button-wrap">
-                    <span class="custom-button-title">Un problème?</span>
-                    <span class="custom-button-tagline">Contacter un assistant</span>
-                </span>
-                <em></em>
-            </a>
-        </li><!-- widget end -->
-    @else
-        <li class="widget-container widget_nav_menu"><!-- widget -->
-            <h1 class="title-widget">La recherche juridique</h1>
-            <h6><a href="#">La législation suisse</a></h6>
-            <ul>
-                <li><a href="{{ url('detail') }}" title="menu item">La législation fédérale</a></li>
-                <li><a href="{{ url('loi') }}" title="menu item">La structure d’une loi fédérale</a></li>
-                <li><a href="#" title="menu item">Les législations cantonales</a></li>
-            </ul>
-            <h6><a href="#">La jurisprudence</a></h6>
-            <h6><a href="#">La doctrine</a></h6>
-        </li>
-        <li class="widget-container widget_text"><!-- widget -->
-            <a href="#" class="custom-button cb-yellow" title="Un problème?">
-                <i class="custom-button-icon fa fa-question-circle"></i>
-                <span class="custom-button-wrap">
-                    <span class="custom-button-title">Un problème?</span>
-                    <span class="custom-button-tagline">Contacter un assistant</span>
-                </span>
+            <span class="custom-button-wrap">
+                <span class="custom-button-title">Un problème?</span>
+                <span class="custom-button-tagline">Contacter un assistant</span>
+            </span>
                 <em></em>
             </a>
         </li><!-- widget end -->

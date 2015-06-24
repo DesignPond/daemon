@@ -276,7 +276,7 @@ span.alter-menu-icon { display: block; width: 24px; height: 24px; background: ur
 /* == END 404 Error == */
 
 /* == widgets global == */
-li.widget-container:not(:first-child) { margin-top: 60px; }
+li.widget-container:not(:first-child) { margin-top: 10px; }
 .widget_archive ul, .widget_categories ul, .widget_pages ul, .widget_meta ul, .widget_nav_menu ul { padding-left: 0; list-style: none outside none; }
 .widget_archive ul li, .widget_categories ul li, .widget_pages ul li, .widget_meta ul li, .widget_nav_menu ul li { font-size: 12px; line-height: 20px; font-weight: 700; text-transform: uppercase; padding-left: 12px; position: relative; }
 .widget_archive ul li:before, .widget_categories ul li:before, .widget_pages ul li:before, .widget_meta ul li:before, .widget_nav_menu ul li:before { content: ""; position: absolute; width: 3px; height: 3px; left: 0; top: 7px; background-color: rgba( 0, 0, 0, 0.3 ); }
