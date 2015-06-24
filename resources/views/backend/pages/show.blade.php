@@ -74,12 +74,12 @@
                         </div>
                     </div>
 
-                    <div class="form-group">
+{{--                    <div class="form-group">
                         <label for="paragraphe" class="col-sm-3 control-label">Paragraphe</label>
                         <div class="col-sm-7">
                             {!! Form::textarea('paragraphe', $page->paragraphe , array('class' => 'form-control  redactor', 'cols' => '50' , 'rows' => '4' )) !!}
                         </div>
-                    </div>
+                    </div>--}}
 
                     <div class="form-group">
                         <label for="content" class="col-sm-3 control-label">Contenu</label>

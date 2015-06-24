@@ -7,7 +7,9 @@ RedactorPlugins.advanced = function()
         {
             return String()
                 + '<section id="redactor-modal-advanced">'
-                + '<label>Choix</label>'
+                + '<label>Titre du bouton</label>'
+                + '<input type="text" value="" id="mymodal-text">'
+                + '<label>Choix de l\'image</label>'
                 + '<div id="redactor-image-manager-box"></div>'
                 + '</section>';
         },
@@ -22,7 +24,7 @@ RedactorPlugins.advanced = function()
         show: function()
         {
             this.modal.addTemplate('advanced', this.advanced.getTemplate());
-            this.modal.load('advanced', 'Advanced Modal', 400);
+            this.modal.load('advanced', 'Advanced Modal', 600);
             this.modal.createCancelButton();
 
             var button = this.modal.createActionButton('Insert');
@@ -40,9 +42,9 @@ RedactorPlugins.advanced = function()
                         var thumbtitle = '';
                         if (typeof val.title !== 'undefined') thumbtitle = val.title;
 
-                        var img = $('<img src="' + val.thumb + '" rel="' + val.image + '" data-thumb="' + val.thumb + '" title="' + thumbtitle + '" style="max-width: 100px; height: auto; cursor: pointer;" />');
+                        var img = $('<img src="' + val.thumb + '" rel="' + val.image + '" data-thumb="' + val.thumb + '" title="' + thumbtitle + '" style="max-width: 100px; height: auto; cursor: pointer;margin:5px;" />');
                         $('#redactor-image-manager-box').append(img);
-                        $(img).click($.proxy(this.imagemanager.insert, this));
+                        $(img).click($.proxy(this.advanced.insert, this));
 
                     }, this));
 
@@ -55,14 +57,16 @@ RedactorPlugins.advanced = function()
 
             $('#mymodal-textarea').focus();
         },
-        insert: function()
+        insert: function(e)
         {
-            var html = $('#mymodal-textarea').val();
+            var html = $('#mymodal-text').val();
+            //var html = '<img data-thumb="' + $(e.target).data('thumb') + '" src="' + $(e.target).attr('rel') + '" alt="' + $(e.target).attr('title') + '">';
+            var button = '<a title="'+ html +'" href="' + $(e.target).attr('rel') + '" class="fancybox btn btn-danger">'+ html +'</a>';
 
             this.modal.close();
             this.selection.restore();
 
-            this.insert.html(html);
+            this.insert.html(button);
 
             this.code.sync();
 
