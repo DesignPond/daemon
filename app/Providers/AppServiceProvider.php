@@ -35,6 +35,8 @@ class AppServiceProvider extends ServiceProvider
         $this->registerGroupeService();
         $this->registerProjetService();
 
+        $this->registerBoxService();
+
     }
 
     /**
@@ -113,6 +115,17 @@ class AppServiceProvider extends ServiceProvider
         $this->app->singleton('App\Cours\Projet\Repo\ProjetInterface', function()
         {
             return new \App\Cours\Projet\Repo\ProjetEloquent(new \App\Cours\Projet\Entities\Projet);
+        });
+    }
+
+    /**
+     * Box
+     */
+    protected function registerBoxService(){
+
+        $this->app->singleton('App\Cours\Box\Repo\BoxInterface', function()
+        {
+            return new \App\Cours\Box\Repo\BoxEloquent(new \App\Cours\Box\Entities\Box);
         });
     }
 

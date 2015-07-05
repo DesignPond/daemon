@@ -37,8 +37,13 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
     Route::get('build', ['uses' => 'PageController@build']);
 
     Route::resource('projet', 'ProjetController');
-
+    Route::resource('schemas', 'SchemaController');
 });
+
+Route::post('box/{id}', ['uses' => 'BoxController@update']);
+
+Route::resource('box', 'BoxController');
+Route::resource('arrow', 'ArrowController');
 
 // Administration routes...
 Route::get('admin', [ 'middleware' => 'auth', 'uses' => 'AdminController@index']);
