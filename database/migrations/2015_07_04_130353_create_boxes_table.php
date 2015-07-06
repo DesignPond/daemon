@@ -16,13 +16,13 @@ class CreateBoxesTable extends Migration {
 			$table->increments('id');
 			$table->integer('top');
 			$table->integer('left');
-			$table->integer('no');
+			$table->integer('no')->nullable();
 			$table->integer('width');
 			$table->integer('height');
-			$table->string('couleur');
-			$table->text('text');
-			$table->string('border');
-			$table->integer('zindex');
+			$table->string('couleur')->nullable();
+			$table->text('text')->nullable();
+			$table->string('border')->nullable();
+			$table->integer('zindex')->nullable();
 		});
 	}
 

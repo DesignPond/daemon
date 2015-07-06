@@ -1,13 +1,17 @@
 #compose{
-    background: #e8e8e8;
-    border: 1px solid #dfdfdf;
-    min-height: 300px;
-    width: 100%;
-    margin-bottom: 20px;
-    position: relative;
+
 }
 
 #compose .box{
     position: absolute;
     padding: 10px;
+}
+
+#application{
+    background: #e8e8e8;
+    border: 1px solid #dfdfdf;
+    min-height: 300px;
+    width: 100%;
+    margin: 20px 0;
+    position: relative;
 }

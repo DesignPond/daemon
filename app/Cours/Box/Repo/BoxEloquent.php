@@ -27,13 +27,13 @@ class BoxEloquent implements BoxInterface{
         $Box = $this->Box->create(array(
             'top'     => $data['top'],
             'left'    => $data['left'],
-            'no'      => $data['no'],
+            'no'      => (isset($data['no']) ? $data['no'] : ''),
             'width'   => $data['width'],
             'height'  => $data['height'],
-            'couleur' => $data['couleur'],
-            'text'    => $data['text'],
-            'border'  => $data['border'],
-            'zindex'  => $data['zindex']
+            'couleur' => (isset($data['couleur']) ? $data['couleur'] : ''),
+            'text'    => (isset($data['text']) ? $data['text'] : ''),
+            'border'  => (isset($data['border']) ? $data['border'] : ''),
+            'zindex'  => (isset($data['zindex']) ? $data['zindex'] : ''),
         ));
 
         if( ! $Box )

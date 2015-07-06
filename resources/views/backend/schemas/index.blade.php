@@ -5,10 +5,13 @@
         <div class="col-md-12">
 
             <div id="compose">
+                <button v-on="click: createBox" class="btn btn-default">Create</button>
 
-                <div v-repeat="box: boxes" id="box_@{{ box.id }}" class="box"
-                     style="background-color:#fff; border:2px solid #cbcbcb ;width:@{{ box.width }}px; height:@{{ box.height }}px;z-index:1;top:@{{ box.top }}px;left: @{{ box.left }}px;">
-                    <div class="inner">@{{ box.text }}</div>
+                <div id="application">
+                    <div v-repeat="box: boxes" id="box_@{{ box.id }}" class="box"
+                         style="background-color:#fff; border:2px solid #cbcbcb ;width:@{{ box.width }}px; height:@{{ box.height }}px;z-index:1;top:@{{ box.top }}px;left: @{{ box.left }}px;">
+                        <div class="inner">@{{ box.text }}</div>
+                    </div>
                 </div>
 
             </div>

@@ -27,32 +27,59 @@ new Vue({
 
     ready: function(){
 
-        var self = this;
-
-        this.boxes.forEach(function(box)
-        {
-            var current = 'box_' + box.id;
-
-            $('#'+current).draggable({
-                grid: [ 10,10 ],
-                containment: 'parent',
-                start: function()
-                {
-                },
-                drag: function( event, ui )
-                {
-                },
-                stop: function(event, ui)
-                {
-                    self.updateCoordinates(ui);
-                }
-            });
-
-        });
-
+        this.draggableBox();
     },
 
     methods: {
+
+        draggableBox: function(){
+
+            var self = this;
+
+            this.boxes.forEach(function(box)
+            {
+                var current = 'box_' + box.id;
+
+                $('#'+current).draggable({
+                    grid: [ 10,10 ],
+                    containment: 'parent',
+                    start: function() {},
+                    drag: function( event, ui ) {},
+                    stop: function(event, ui)
+                    {
+                        self.updateCoordinates(ui);
+                    }
+                });
+            });
+
+        },
+
+        createBox: function(){
+
+            var data = {
+                method : 'PUT' , _token: $("meta[name='_token']").attr('content') ,
+                width  : 100,
+                height : 100,
+                top    : 0,
+                left   : 0
+            };
+
+            var self = this;
+
+            $.ajax({
+                type: "POST",
+                data: data,
+                url: "/box",
+                success: function(result) {
+
+                    self.boxes.push({
+                        id: result.id, left  : 0, top   : 0, width : 100, height: 100
+                    });
+
+                }
+            });
+
+        },
 
         updateCoordinates: function(box){
 
@@ -63,13 +90,21 @@ new Vue({
             var height    =  box.helper.height();
 
             var id = id.replace("box_", "");
-            console.log(id);
+
+            var data = {
+                method : 'PUT' , _token: $("meta[name='_token']").attr('content') ,
+                id     : id,
+                width  : width,
+                height : height,
+                top    : position.top,
+                left   : position.left
+            };
+
+            console.log(data);
 
             $.ajax({
                 type: "POST",
-                data: {
-                    method : 'PUT' , _token: $("meta[name='_token']").attr('content') ,id: id, width : width, height : height
-                },
+                data: data,
                 url: "/box/"+id,
                 success: function(result) {
                     console.log(result);
