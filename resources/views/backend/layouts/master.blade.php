@@ -15,6 +15,8 @@
     <link rel='stylesheet' type='text/css' href="//cdn.datatables.net/plug-ins/f2c75b7247b/integration/bootstrap/3/dataTables.bootstrap.css" />
     <link rel="stylesheet" href="<?php echo asset('backend/css/chosen.css');?>">
     <link rel="stylesheet" href="<?php echo asset('backend/css/chosen-bootstrap.css');?>">
+    <link rel="stylesheet" href="<?php echo asset('backend/css/jquery-ui.min.css');?>">
+    <link rel="stylesheet" href="<?php echo asset('backend/css/jquery.contextMenu.css');?>">
     <link rel="stylesheet" href="<?php echo asset('backend/css/admin.css');?>">
     <link rel="stylesheet" type="text/css" href="<?php echo asset('frontend/css/guides.css');?>">
     <link rel="stylesheet" href="<?php echo asset('backend/css/types.css');?>">
@@ -112,6 +114,8 @@
 <script type="text/javascript" src="<?php echo asset('backend/js/vendor/redactor/addmodal.js');?>"></script>
 <script type="text/javascript" src="<?php echo asset('backend/js/vendor/redactor/imagemanager.js');?>"></script>
 <script type="text/javascript" src="<?php echo asset('backend/js/vendor/redactor/filemanager.js');?>"></script>
+<script type="text/javascript" src="<?php echo asset('backend/js/vendor/redactor/fontsize.js');?>"></script>
+<script type="text/javascript" src="<?php echo asset('backend/js/vendor/redactor/fontcolor.js');?>"></script>
 <script type='text/javascript' src="<?php echo asset('backend/plugins/form-multiselect/js/jquery.multi-select.js');?>"></script>
 <script type='text/javascript' src="<?php echo asset('backend/plugins/datatables/jquery.dataTables.min.js');?>"></script>
 <script type='text/javascript' src="<?php echo asset('backend/plugins/datatables/dataTables.bootstrap.js');?>"></script>
@@ -133,13 +137,26 @@
 <script src="<?php echo asset('frontend/js/jquery/jquery.expose.js');?>"></script>
 <script src="<?php echo asset('frontend/js/jquery/jquery.lockfixed.js');?>"></script>
 <script src="<?php echo asset('frontend/js/annotator/annotator.js');?>"></script>
+<script src="<?php echo asset('backend/js/csrf-token.js'); ?>"></script>
+<!-- Backbone -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/json2/20150503/json2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+<script src="<?php echo asset('backend/js/vendor/backbone/backbone-min.js');?>"></script>
 
-<!-- Vue -->
+<script src="<?php echo asset('backend/js/vendor/jquery/jquery.contextMenu.js');?>"></script>
+<script src="<?php echo asset('backend/js/vendor/jquery/jquery.simple-color.js');?>"></script>
+<script type="text/javascript" src="<?php echo asset('backend/js/schemas/models/box.js');?>"></script>
+<script type="text/javascript" src="<?php echo asset('backend/js/schemas/models/boxCollection.js');?>"></script>
+<script type="text/javascript" src="<?php echo asset('backend/js/schemas/models/arrow.js');?>"></script>
+<script type="text/javascript" src="<?php echo asset('backend/js/schemas/models/arrowCollection.js');?>"></script>
+<script type="text/javascript" src="<?php echo asset('backend/js/schemas/views/boxView.js');?>"></script>
+<script type="text/javascript" src="<?php echo asset('backend/js/schemas/views/arrowView.js');?>"></script>
+<script type="text/javascript" src="<?php echo asset('backend/js/schemas/views/buttonView.js');?>"></script>
+<script type="text/javascript" src="<?php echo asset('backend/js/schemas/views/mainArrow.js');?>"></script>
+<script type="text/javascript" src="<?php echo asset('backend/js/schemas/views/main.js');?>"></script>
+<script type="text/javascript" src="<?php echo asset('backend/js/schemas/router.js');?>"></script>
+<script type="text/javascript" src="<?php echo asset('backend/js/schemas/index.js');?>"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/0.12.6/vue.js"></script>
-<script type="text/javascript" src="<?php echo asset('backend/js/schemas/vue-resource.min.js');?>"></script>
-<script type="text/javascript" src="<?php echo asset('backend/js/schemas/compose.js');?>"></script>
-<script type="text/javascript" src="<?php echo asset('backend/js/schemas/task.js');?>"></script>
 
 </body>
 </html>

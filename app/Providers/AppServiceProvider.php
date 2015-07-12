@@ -36,6 +36,7 @@ class AppServiceProvider extends ServiceProvider
         $this->registerProjetService();
 
         $this->registerBoxService();
+        $this->registerArrowService();
 
     }
 
@@ -126,6 +127,17 @@ class AppServiceProvider extends ServiceProvider
         $this->app->singleton('App\Cours\Box\Repo\BoxInterface', function()
         {
             return new \App\Cours\Box\Repo\BoxEloquent(new \App\Cours\Box\Entities\Box);
+        });
+    }
+
+    /**
+     * Arrow
+     */
+    protected function registerArrowService(){
+
+        $this->app->singleton('App\Cours\Arrow\Repo\ArrowInterface', function()
+        {
+            return new \App\Cours\Arrow\Repo\ArrowEloquent(new \App\Cours\Arrow\Entities\Arrow);
         });
     }
 

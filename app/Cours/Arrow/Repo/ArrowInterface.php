@@ -1,6 +1,6 @@
-<?php namespace App\Cours\Box\Repo;
+<?php namespace App\Cours\Arrow\Repo;
 
-interface BoxInterface {
+interface ArrowInterface {
 
     public function getAll();
     public function projet($id);

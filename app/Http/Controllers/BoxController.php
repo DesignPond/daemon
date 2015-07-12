@@ -22,9 +22,11 @@ class BoxController extends Controller
      *
      * @return Response
      */
-    public function index()
+    public function projet($id)
     {
-        return $this->box->getAll();
+        $boxes = $this->box->getAll($id);
+
+        return response()->json(['error' => false, 'items' => $boxes]);
     }
 
     /**
@@ -44,7 +46,11 @@ class BoxController extends Controller
      */
     public function store(Request $request)
     {
-        return $this->box->create($request->all());
+        $box = $request->input('model');
+
+        $new = $this->box->create(json_decode($box,true));
+
+        return response()->json(['error' => false, 'items' => $new]);
     }
 
     /**
@@ -77,8 +83,9 @@ class BoxController extends Controller
      */
     public function update($id,Request $request)
     {
-        //return $this->box->update($request->all());
-        return $request->all();
+        $box = $request->input('model');
+
+        return $this->box->update(json_decode($box,true));
     }
 
     /**
@@ -89,6 +96,8 @@ class BoxController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $this->box->delete($id);
+
+        return response()->json(['error' => false]);
     }
 }

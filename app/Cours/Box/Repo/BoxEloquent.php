@@ -5,66 +5,78 @@ use App\Cours\Box\Entities\Box as M;
 
 class BoxEloquent implements BoxInterface{
 
-    protected $Box;
+    protected $box;
 
-    public function __construct(M $Box)
+    public function __construct(M $box)
     {
-        $this->Box = $Box;
+        $this->box = $box;
     }
 
     public function getAll(){
 
-        return $this->Box->all();
+        return $this->box->all();
+    }
+
+    public function projet($id){
+
+        return $this->box->where('projet_id','=',$id)->get();
     }
 
     public function find($id){
 
-        return $this->Box->findOrFail($id);
+        return $this->box->findOrFail($id);
     }
 
     public function create(array $data){
 
-        $Box = $this->Box->create(array(
-            'top'     => $data['top'],
-            'left'    => $data['left'],
-            'no'      => (isset($data['no']) ? $data['no'] : ''),
-            'width'   => $data['width'],
-            'height'  => $data['height'],
-            'couleur' => (isset($data['couleur']) ? $data['couleur'] : ''),
-            'text'    => (isset($data['text']) ? $data['text'] : ''),
-            'border'  => (isset($data['border']) ? $data['border'] : ''),
-            'zindex'  => (isset($data['zindex']) ? $data['zindex'] : ''),
+        $box = $this->box->create(array(
+            'projet_id' => $data['projet_id'],
+            'top'       => $data['top'],
+            'left'      => $data['left'],
+            'no'        => (isset($data['no']) ? $data['no'] : ''),
+            'width'     => $data['width'],
+            'height'    => $data['height'],
+            'couleur'   => (isset($data['couleur']) ? $data['couleur'] : ''),
+            'text'      => (isset($data['text']) ? $data['text'] : ''),
+            'border'    => (isset($data['border']) ? $data['border'] : ''),
+            'zindex'    => 1,
         ));
 
-        if( ! $Box )
+        if( ! $box )
         {
             return false;
         }
 
-        return $Box;
+        return $box;
 
     }
 
     public function update(array $data){
 
-        $Box = $this->Box->findOrFail($data['id']);
+        $box = $this->box->findOrFail($data['id']);
 
-        if( ! $Box )
+        if( ! $box )
         {
             return false;
         }
 
-        $Box->fill($data);
-        $Box->save();
+        $box->fill($data);
+        $box->save();
 
-        return $Box;
+        return $box;
     }
 
     public function delete($id){
 
-        $Box = $this->Box->find($id);
+        $box = $this->box->find($id);
 
-        return $Box->delete($id);
+        if( ! $box )
+        {
+            return false;
+        }
+
+        return $box->delete($id);
+
     }
 
 }

@@ -3,20 +3,30 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Cours\Arrow\Repo\ArrowInterface;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 class ArrowController extends Controller
 {
+
+    protected $arrow;
+
+    public function __construct(ArrowInterface $arrow)
+    {
+        $this->arrow = $arrow;
+    }
+    
     /**
      * Display a listing of the resource.
      *
      * @return Response
      */
-    public function index()
+    public function projet($id)
     {
-        //
+        $arrows = $this->arrow->getAll($id);
+
+        return response()->json(['error' => false, 'items' => $arrows]);
     }
 
     /**
@@ -34,9 +44,13 @@ class ArrowController extends Controller
      *
      * @return Response
      */
-    public function store()
+    public function store(Request $request)
     {
-        //
+        $arrow = $request->input('model');
+
+        $new = $this->arrow->create(json_decode($arrow,true));
+
+        return response()->json(['error' => false, 'items' => $new]);
     }
 
     /**
@@ -47,7 +61,7 @@ class ArrowController extends Controller
      */
     public function show($id)
     {
-        //
+        return $this->arrow->find($id);
     }
 
     /**
@@ -58,7 +72,7 @@ class ArrowController extends Controller
      */
     public function edit($id)
     {
-        //
+        return $this->arrow->find($id);
     }
 
     /**
@@ -67,9 +81,11 @@ class ArrowController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function update($id)
+    public function update($id,Request $request)
     {
-        //
+        $arrow = $request->input('model');
+
+        return $this->arrow->update(json_decode($arrow,true));
     }
 
     /**
@@ -80,6 +96,8 @@ class ArrowController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $this->arrow->delete($id);
+
+        return response()->json(['error' => false]);
     }
 }

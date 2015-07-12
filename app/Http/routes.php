@@ -40,9 +40,10 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
     Route::resource('schemas', 'SchemaController');
 });
 
-Route::post('box/{id}', ['uses' => 'BoxController@update']);
-
+//Route::post('box/{id}', ['uses' => 'BoxController@update']);
+Route::get('box/projet/{id}', ['uses' => 'BoxController@projet']);
 Route::resource('box', 'BoxController');
+Route::get('arrow/projet/{id}', ['uses' => 'ArrowController@projet']);
 Route::resource('arrow', 'ArrowController');
 
 // Administration routes...

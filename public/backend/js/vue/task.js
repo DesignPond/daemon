@@ -69,3 +69,28 @@ new Vue({
     }
 
 });
+
+
+
+new Vue({
+    el: '#list',
+    data: {
+        listX: ['a', 'b', 'c', 'd'],
+        listY: ['A', 'B', 'C', 'D'],
+    },
+    methods: {
+        sort: function(list, id, tag, data) {
+            var tmp = list[data.index];
+            list.splice(data.index, 1);
+            list.splice(id, 0, tmp);
+        },
+        move: function(from, to, id, tag, data) {
+            var tmp = from[data.index];
+            from.splice(data.index, 1);
+            to.splice(id, 0, tmp);
+        },
+        remove: function(from, tag, data) {
+            from.splice(data.index, 1);
+        }
+    }
+});
