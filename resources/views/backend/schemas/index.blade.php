@@ -11,11 +11,11 @@
                         <p>Couleur</p><input id="colorPicker" class="simple_color" value="#eeeeee"/>
                     </div>
                     <div id="shapes" class="col-md-7">
-                        <button class="btn"  id="add"><span class="car"></span>Ajouter</button>
-                        <button data-position="down"  class="btn arrow"><span class="down"></span>Bas</button>
-                        <button data-position="left"  class="btn arrow"><span class="left"></span>Gauche</button>
-                        <button data-position="right" class="btn arrow"><span class="right"></span>Droite</button>
-                        <button data-position="up"    class="btn arrow"><span class="up"></span>Haut</button>
+                        <button class="btn"  id="add"><i class="fa fa-square"></i> &nbsp;Ajouter</button>
+                        <button data-position="down"  class="btn arrow"><i class="fa fa-long-arrow-down"></i> &nbsp;Bas</button>
+                        <button data-position="left"  class="btn arrow"><i class="fa fa-long-arrow-left"></i> &nbsp;Gauche</button>
+                        <button data-position="right" class="btn arrow"><i class="fa fa-long-arrow-right"></i> &nbsp;Droite</button>
+                        <button data-position="up"    class="btn arrow"><i class="fa fa-long-arrow-up"></i> &nbsp;Haut</button>
                     </div>
                 </div>
 
@@ -23,6 +23,8 @@
                 <p id="empty">Le projet est vide</p>
 
             </div>
+
+            <div class="target">Rotate me!</div>
 
         </div>
     </div>

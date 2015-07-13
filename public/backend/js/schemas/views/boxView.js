@@ -20,16 +20,7 @@ BoxView = Backbone.View.extend({
         // Get text
         var text   = this.model.get('text');
         var bg     = this.model.get('couleur');
-
-        // Change color of text div if bg is white if no color defined in textarea
-        if(bg == '#ffffff')
-        {
-            var inner  = '<div class="inner" style="color:#000000;">';
-        }
-        else
-        {
-            var inner  = '<div class="inner">';
-        }
+        var inner  = '<div class="inner" style="color:#000000;">';
 
         // Adding elements: textarea inner div and button
         var elements  =  inner + text + '</div>';
@@ -44,7 +35,6 @@ BoxView = Backbone.View.extend({
             var border = 'none';
         }
 
-        //this.$el.addClass('box_'+this.model.get('id'));
         // Set the the css infos from model to the div and bind draggable and resizable then append the elements to it.
         this.$el.css({
                     'background-color' : this.model.get('couleur'),

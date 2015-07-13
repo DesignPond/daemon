@@ -50,30 +50,24 @@ MainArrow = Backbone.View.extend({
 
     },
     removeArrow : function(opt){
+        // Keep view reference
+        var self  = this;
+        // Get arrow div refrence, id and model
+        var arrow = opt.$trigger;
+        var id    = arrow.attr("id");
 
-        var answer = confirm("Voulez-vous vraiment effacer?");
+        var model = this.collection.get(id);
 
-        if (answer){
-
-            // Keep view reference
-            var self  = this;
-            // Get arrow div refrence, id and model
-            var arrow = opt.$trigger;
-            var id    = arrow.attr("id");
-
-            var model = this.collection.get(id);
-
-            // Destroy model, delet it from server and remove it from the view
-            model.destroy({
-                success: function(model, response) {
-                    if(response.error === false)
-                    {
-                        self.collection.remove(model);
-                        arrow.remove();
-                    }
+        // Destroy model, delet it from server and remove it from the view
+        model.destroy({
+            success: function(model, response) {
+                if(response.error === false)
+                {
+                    self.collection.remove(model);
+                    arrow.remove();
                 }
-            });
-        }
+            }
+        });
     },
     initMenu:function(){
 
@@ -84,6 +78,7 @@ MainArrow = Backbone.View.extend({
         $.contextMenu({
             // define which elements trigger this menu
             selector: ".arrows",
+            zIndex: 1000,
             // define the elements of the menu
             items: {
                 //editBox     : {name: "Editer le texte ",    icon:'edit' , callback: function(key, opt){ self.showTextarea(key, opt); }},

@@ -42,4 +42,20 @@ $( function() {
     // The url to the application
     var base_url = location.protocol + "//" + location.host+"/";
 
+    var params = {
+        // Callback fired on rotation start.
+        start: function(event, ui) {
+        },
+        // Callback fired during rotation.
+        rotate: function(event, ui) {
+        },
+        // Callback fired on rotation end.
+        stop: function(event, ui) {
+        },
+        // Set the rotation center at (25%, 75%).
+        rotationCenterX: 15.0,
+        rotationCenterY: 85.0
+    };
+    $('.target').rotatable(params);
+
 });

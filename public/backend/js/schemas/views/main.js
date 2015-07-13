@@ -290,6 +290,7 @@ Main = Backbone.View.extend({
         $.contextMenu({
             // define which elements trigger this menu
             selector: '.box',
+            zIndex: 1000,
             // define the elements of the menu
             items: {
                 editBox     : {name: "Editer le texte ",    icon:'edit' , callback: function(key, opt){ self.showTextarea(key, opt); }},

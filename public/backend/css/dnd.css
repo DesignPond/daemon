@@ -44,9 +44,10 @@
     width:120px;
     height:120px;
     position:absolute;
-    -webkit-border-radius: 4px;
-    border-radius: 4px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
     color:#FFF;
+    cursor: pointer;
     z-index:55;
 }
 
@@ -62,7 +63,7 @@ p.icon-large{
     cursor: pointer;
     margin: 0;
     padding: 0;
-    z-index: 1000;
+    z-index: 900;
 }
 
 p.arrows {
@@ -79,59 +80,6 @@ p.arrows {
 
 p.arrow-hover{
     color:#fff;
-}
-
-p.arrow-down {
-    width: 0;
-    height: 0;
-    border-left:15px solid transparent;
-    border-right: 15px solid transparent;
-    border-top: 15px solid #585858;
-    position:absolute;
-    cursor:pointer;
-    z-index:54;
-    margin-top:5px;
-    margin-left:5px;
-}
-
-p.arrow-right {
-    width: 0;
-    height: 0;
-    border-top: 15px solid transparent;
-    border-bottom: 15px solid transparent;
-    border-left: 15px solid #585858;
-    position:absolute;
-    cursor:pointer;
-    z-index:60;
-    margin-top:5px;
-    margin-left:5px;
-}
-
-
-p.arrow-up {
-    width: 0;
-    height: 0;
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
-    border-bottom: 15px solid #585858;
-    position:absolute;
-    cursor:pointer;
-    z-index:60;
-    margin-top:5px;
-    margin-left:5px;
-}
-
-p.arrow-left {
-    width: 0;
-    height: 0;
-    border-top: 15px solid transparent;
-    border-bottom: 15px solid transparent;
-    border-right:15px solid #585858;
-    position:absolute;
-    cursor:pointer;
-    z-index:60;
-    margin-top:5px;
-    margin-left:5px;
 }
 
 
@@ -197,65 +145,4 @@ a.Txt{
 
 .redactor-editor{
     color: #000 !important;
-}
-
-
-/* =============================================================================
-  	 Buttons elements
-   ========================================================================== */
-
-#shapes button
-{
-    position: relative;
-    text-indent: 25px;
-}
-
-#shapes button span{
-    position: absolute;
-    left:15px;
-    top: 5px;
-    width: 0;
-    height: 0;
-}
-
-
-#shapes button span.car{
-    background: none repeat scroll 0 0 #000000;
-    border-radius: 1px 1px 1px 1px;
-    display: block;
-    height: 15px;
-    left: 13px;
-    position: absolute;
-    top: 7px;
-    width: 15px;
-}
-
-#shapes button span.down{
-    border-left:8px solid transparent;
-    border-right: 8px solid transparent;
-    border-top: 8px solid #000;
-    margin-top: 6px;
-}
-
-#shapes button span.left{
-    border-top: 8px solid transparent;
-    border-bottom: 8px solid transparent;
-    border-right:8px solid #000;
-    margin-left: 3px;
-    margin-top: 1px;
-}
-
-#shapes button span.right{
-    border-top: 8px solid transparent;
-    border-bottom: 8px solid transparent;
-    border-left: 8px solid #000;
-    margin-left: 3px;
-    margin-top: 1px;
-}
-
-#shapes button span.up{
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    border-bottom: 8px solid #000;
-    margin-top: 4px;
 }
