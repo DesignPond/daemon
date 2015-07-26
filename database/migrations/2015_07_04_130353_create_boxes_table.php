@@ -14,7 +14,7 @@ class CreateBoxesTable extends Migration {
 	{
 		Schema::create('boxes', function(Blueprint $table) {
 			$table->increments('id');
-            $table->integer('projet_id');
+            $table->integer('schema_id');
 			$table->integer('top');
 			$table->integer('left');
 			$table->integer('no')->nullable();

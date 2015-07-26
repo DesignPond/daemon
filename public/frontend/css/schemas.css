@@ -1,0 +1,8 @@
+#schemas{
+    padding: 10px;
+    width: 100%;
+    display: block;
+    border: 1px solid #ddd;
+    position: relative;
+    height: 100%;
+}

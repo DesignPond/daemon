@@ -24,8 +24,6 @@
 
             </div>
 
-            <div class="target">Rotate me!</div>
-
         </div>
     </div>
 

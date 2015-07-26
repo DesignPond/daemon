@@ -7,15 +7,18 @@ use Mail;
 use App\Http\Requests;
 use App\Http\Requests\SendMessage;
 use App\Cours\Page\Repo\PageInterface;
+use App\Cours\Schema\Repo\SchemaInterface;
 use App\Http\Controllers\Controller;
 
 class HomeController extends Controller
 {
     protected $page;
+    protected $projet;
 
-    public function __construct(PageInterface $page)
+    public function __construct(PageInterface $page,SchemaInterface $schema)
     {
-        $this->page = $page;
+        $this->page   = $page;
+        $this->schema = $schema;
     }
 
     /**
@@ -68,8 +71,9 @@ class HomeController extends Controller
     {
         $page     = $this->page->getBySlug($slug);
         $siblings = $page->getRoot()->getImmediateDescendants();
+        $schema   = $this->schema->find(1);
 
-        return view('frontend.page')->with(['page' => $page, 'siblings' => $siblings]);
+        return view('frontend.page')->with(['page' => $page, 'siblings' => $siblings, 'schema' => $schema]);
     }
 
     /**

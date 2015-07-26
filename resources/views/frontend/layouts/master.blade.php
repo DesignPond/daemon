@@ -19,6 +19,7 @@
     <link rel="stylesheet" type="text/css" href="<?php echo asset('frontend/css/style.css');?>">
     <link rel="stylesheet" type="text/css" href="<?php echo asset('frontend/css/frontend.css');?>">
     <link rel="stylesheet" type="text/css" href="<?php echo asset('frontend/css/guides.css');?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo asset('frontend/css/schemas.css');?>">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 
     <!-- jQuery -->

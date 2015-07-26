@@ -21,6 +21,9 @@
                         </div>
                         <div class="news-body clearfix"><!-- course content -->
                             {!! $page->content !!}
+
+                            @include('frontend.schemas.index', ['schema' => $schema])
+
                         </div><!-- course content end -->
 
                     </div>
