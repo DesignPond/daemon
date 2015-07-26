@@ -320,7 +320,12 @@ Main = Backbone.View.extend({
             focus     : true,
             buttons   : button,
             linkAnchor: true,
-            plugins: ['fontcolor','fontsize','addmodal']
+            fileUpload : 'uploadFileRedactor?_token=' + $('meta[name="_token"]').attr('content'),
+            imageUpload: 'uploadRedactor?_token=' + $('meta[name="_token"]').attr('content'),
+            imageManagerJson: 'imageJson',
+            fileManagerJson: 'fileJson',
+            linkManagerJson: 'linkJson',
+            plugins: ['fontcolor','fontsize','schema']
         });
         // Initalize contxtmenu and wysiwyg editor
 

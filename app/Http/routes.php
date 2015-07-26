@@ -24,6 +24,7 @@ Route::post('sendMessage', ['uses' => 'HomeController@sendMessage']);
 
 Route::get('imageJson/{id?}', ['uses' => 'UploadController@imageJson']);
 Route::get('fileJson/{id?}', ['uses' => 'UploadController@fileJson']);
+Route::get('linkJson/{id?}', ['uses' => 'UploadController@linkJson']);
 
 Route::post('uploadFileRedactor/{id?}', 'UploadController@uploadFileRedactor');
 Route::post('uploadRedactor/{id?}', 'UploadController@uploadRedactor');

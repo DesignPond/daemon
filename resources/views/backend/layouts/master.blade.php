@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="<?php echo asset('backend/css/jquery-ui.min.css');?>">
     <link rel="stylesheet" href="<?php echo asset('backend/css/jquery.contextMenu.css');?>">
     <link rel="stylesheet" href="<?php echo asset('backend/css/jquery.ui.rotatable.css');?>">
+    <link rel="stylesheet" href="<?php echo asset('frontend/css/jquery.fancybox.css');?>">
     <link rel="stylesheet" href="<?php echo asset('backend/css/admin.css');?>">
     <link rel="stylesheet" type="text/css" href="<?php echo asset('frontend/css/guides.css');?>">
     <link rel="stylesheet" href="<?php echo asset('backend/css/types.css');?>">
@@ -113,6 +114,8 @@
 <script type="text/javascript" src="<?php echo asset('backend/js/placeholdr.js');?>"></script>
 <script type="text/javascript" src="<?php echo asset('backend/js/vendor/redactor/fr.js');?>"></script>
 <script type="text/javascript" src="<?php echo asset('backend/js/vendor/redactor/addmodal.js');?>"></script>
+<script type="text/javascript" src="<?php echo asset('backend/js/vendor/redactor/modal.js');?>"></script>
+<script type="text/javascript" src="<?php echo asset('backend/js/vendor/redactor/schema.js');?>"></script>
 <script type="text/javascript" src="<?php echo asset('backend/js/vendor/redactor/imagemanager.js');?>"></script>
 <script type="text/javascript" src="<?php echo asset('backend/js/vendor/redactor/filemanager.js');?>"></script>
 <script type="text/javascript" src="<?php echo asset('backend/js/vendor/redactor/fontsize.js');?>"></script>
@@ -132,6 +135,7 @@
 <script type="text/javascript" src="<?php echo asset('backend/js/vendor/jquery/jquery.contextMenu.js');?>"></script>
 <script type="text/javascript" src="<?php echo asset('backend/js/vendor/jquery/jquery.simple-color.js');?>"></script>
 <script type="text/javascript" src="<?php echo asset('backend/js/vendor/jquery/jquery.ui.rotatable.min.js');?>"></script>
+
 
 <!-- jQuery plugins -->
 <script src="<?php echo asset('frontend/js/jquery/jquery.fancybox.js');?>"></script>

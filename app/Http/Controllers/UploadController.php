@@ -99,4 +99,21 @@ class UploadController extends Controller
 
         return response()->json($data);
     }
+
+    public function linkJson()
+    {
+        $data  = [
+           [
+               'link'  => 2,
+               'title' => 'un titre',
+           ],
+            [
+                'link'  => 3,
+                'title' => 'un autre titre',
+            ]
+        ];
+
+        return response()->json($data);
+    }
+
 }
