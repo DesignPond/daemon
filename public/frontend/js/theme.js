@@ -157,13 +157,9 @@
 		CHEF.initMainMenu(); // init main menu
 		CHEF.mobileNav(); // create mobile nav menu
 		CHEF.listenerMenu(); // toggle mobile nav
-		CHEF.IEpatches(); // set of patches relating to IE
+		//CHEF.IEpatches(); // set of patches relating to IE
 		CHEF.topSearchToggle(); // toggle top-search
 		CHEF.googleMaps(); // Google Maps
-		CHEF.fancyBoxer(); // fancybox
-		CHEF.responsiveVideos(); // fitVids
-		CHEF.responsiveAudios(); // audio player
-		CHEF.pieChartz(); // easy pie charts
 	} );
 	
 	$( window ).resize( function() {

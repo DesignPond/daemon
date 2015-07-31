@@ -21,6 +21,7 @@
     <link rel="stylesheet" type="text/css" href="<?php echo asset('frontend/css/guides.css');?>">
     <link rel="stylesheet" type="text/css" href="<?php echo asset('frontend/css/schemas.css');?>">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo asset('schemas/Treant.css');?>">
 
     <!-- jQuery -->
     <script src="<?php echo asset('frontend/js/jquery/jquery-2.1.1.min.js');?>"></script>
@@ -37,7 +38,10 @@
     <script src="<?php echo asset('frontend/js/jquery/jquery.i18n.min.js');?>"></script>
     <script src="<?php echo asset('frontend/js/jquery/jquery.expose.js');?>"></script>
     <script src="<?php echo asset('frontend/js/jquery/jquery.lockfixed.js');?>"></script>
+    <script src="<?php echo asset('schemas/Treant.js');?>"></script>
+    <script src="<?php echo asset('schemas/vendor/raphael.js');?>"></script>
 
+    <script src="<?php echo asset('frontend/js/main.js');?>"></script>
 </head>
 
 <body class="Site" role="document">
@@ -79,10 +83,7 @@
 
             <div class="row"><!-- row -->
                 <div id="k-top-search" class="col-lg-12 clearfix"><!-- top search -->
-
-                    <!-- Search  -->
-    {{--                @include('frontend.partials.search')--}}
-
+                    <!-- Search  --> {{-- @include('frontend.partials.search')--}}
                 </div><!-- top search end -->
                 <div class="k-breadcrumbs col-lg-12 clearfix"><!-- breadcrumbs -->
 
@@ -95,9 +96,25 @@
                 </div><!-- breadcrumbs end -->
             </div><!-- row end -->
 
-            <!-- Contenu -->
-            @yield('content')
-            <!-- Fin contenu -->
+            <!-- Slide  -->
+            @if(Request::is('/'))
+                @include('frontend.partials.slide')
+            @endif
+
+            <div class="row no-gutter"><!-- row -->
+                <div id="k-sidebar">
+                    <!-- Sidebar  -->
+                    @include('frontend.partials.sidebar')
+                </div><!-- sidebar wrapper end -->
+                <div id="k-main"><!-- doc body wrapper -->
+
+                    <!-- Contenu -->
+                    @yield('content')
+                    <!-- Fin contenu -->
+
+                </div><!-- doc body wrapper end -->
+                <div class="clearfix"></div>
+             </div><!-- row end -->
 
         </div><!-- container end -->
     </div><!-- content wrapper end -->

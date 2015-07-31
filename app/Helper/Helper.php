@@ -58,4 +58,33 @@ class Helper{
 
         return $html;
     }
+
+
+    function renderMenuItem($node)
+    {
+        if( $node->isLeaf() )
+        {
+            return ['text' => ['name' => $node->title]];
+        }
+        else
+        {
+            $html['text']['name'] = $node->title;
+
+            foreach($node->children as $child)
+                $html['children'][] = $this->renderMenuItem($child);
+        }
+
+        return $html;
+    }
+
+
+    public function jsonObj($nodes)
+    {
+
+        $object = $this->renderMenuItem($nodes);
+
+        return json_encode($object);
+
+    }
+
 }
