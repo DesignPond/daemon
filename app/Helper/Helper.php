@@ -35,6 +35,33 @@ class Helper{
         return $html;
     }
 
+    public function renderMenuSimple($node)
+    {
+        if( $node->isLeaf() )
+        {
+            return '<li><a href="'.url('schemas/'.$node->id).'" title="'.$node->title.'">' . $node->title . '</a></li>';
+        }
+        else
+        {
+            $html = '<li><a href="' . url('schemas/' . $node->id) . '" title="'.$node->title.'">' . $node->title . '</a>';
+
+            $html .= '<ul class="sub-menu">';
+
+            if(!$node->children->isEmpty())
+            {
+                foreach ($node->children as $child)
+                {
+                    $html .= $this->renderMenuSimple($child);
+                }
+            }
+
+            $html .= '</ul>';
+            $html .= '</li>';
+        }
+
+        return $html;
+    }
+
     public function renderSidebar($node, $page)
     {
         if( $node->isLeaf() )
@@ -65,13 +92,16 @@ class Helper{
         {
             return [
                 'text'      => ['name' => $node->title],
-                'innerHTML' => '<div class="nodeWrapper"><p>'.$node->title.'</p><a href="#" data-node="'.$node->id.'" class="addBtnNode">+</a></div>'
+                'innerHTML' => '<p><a href="'.url('schemas/'.$node->id).'" data-node="'.$node->id.'">'.$node->title.'</a></p>'
+                //'innerHTML' => '<div class="nodeWrapper"><p>'.$node->title.'</p><a href="#" data-node="'.$node->id.'" class="addBtnNode">+</a></div>'
             ];
         }
         else
         {
             $html['text']['name'] = $node->title;
-            $html['innerHTML']    = '<div class="nodeWrapper"><p>'.$node->title.'</p><a href="#" data-node="'.$node->id.'" class="addBtnNode">+</a></div>';
+            $html['innerHTML']    = '<p><a href="'.url('schemas/'.$node->id).'" data-node="'.$node->id.'">'.$node->title.'</a></p>';
+
+            //$html['innerHTML']    = '<div class="nodeWrapper"><p>'.$node->title.'</p><a href="#" data-node="'.$node->id.'" class="addBtnNode">+</a></div>';
 
             foreach($node->children as $child)
             {

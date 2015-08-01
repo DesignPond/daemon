@@ -14,12 +14,14 @@ class SchemaController extends Controller
     protected $schema;
     protected $page;
     protected $worker;
+    protected $helper;
 
     public function __construct(SchemaInterface $schema, PageWorker $worker, PageInterface $page)
     {
         $this->schema = $schema;
         $this->page   = $page;
         $this->worker = $worker;
+        $this->helper = new \App\Helper\Helper();
     }
 
     /**
@@ -47,9 +49,9 @@ class SchemaController extends Controller
      *
      * @return Response
      */
-    public function store()
+    public function store(Request $request)
     {
-        //
+        return $this->page->create($request->all());
     }
 
     /**
@@ -60,10 +62,26 @@ class SchemaController extends Controller
      */
     public function show($id)
     {
-        $schema  = $this->schema->find($id);
-        $root    = $this->page->find($id);
+       // $schema  = $this->schema->find($id);
+        $page   = $this->page->find($id);
+        $parent = $page->getAncestorsAndSelf()->toHierarchy();
 
-        return view('frontend.schema')->with([ 'schema' => $schema, 'root' => $root ]);
+        return view('frontend.schema')->with([ 'page' => $page, 'id' => $id, 'parent' => $parent ]);
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function schemas($id)
+    {
+        $schema = $this->page->find($id);
+        $level  = $schema->getLevel();
+        $level  = ($level > 0 ? $level + 1 : 0);
+
+        return $this->helper->jsonObj($schema,$level);
     }
 
     /**
@@ -74,7 +92,7 @@ class SchemaController extends Controller
      */
     public function edit($id)
     {
-        //
+
     }
 
     /**

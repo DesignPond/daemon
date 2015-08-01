@@ -29,6 +29,9 @@ Route::get('linkJson/{id?}', ['uses' => 'UploadController@linkJson']);
 Route::post('uploadFileRedactor/{id?}', 'UploadController@uploadFileRedactor');
 Route::post('uploadRedactor/{id?}', 'UploadController@uploadRedactor');
 
+Route::post('schemas/projet/{id?}', ['uses' => 'SchemaController@schemas']);
+Route::resource('schemas', 'SchemaController');
+
 //Route::get('contact', ['uses' => 'PageController@index']);
 // Admin routes
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
@@ -38,7 +41,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
     Route::get('build', ['uses' => 'PageController@build']);
 
     Route::resource('projet', 'ProjetController');
-    Route::resource('schemas', 'SchemaController');
+
 });
 
 //Route::post('box/{id}', ['uses' => 'BoxController@update']);

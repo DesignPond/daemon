@@ -7,6 +7,7 @@
     <meta name="author" content="@Designpond | Cindy Leschaud">
     <meta name="description" content="Cours de méthodologie juridique | Faculté de droit, Universite de Neuchâtel">
     <title>Méthodologie juridique</title>
+    <meta name="_token" content="<?php echo csrf_token(); ?>">
 
     <!-- Styles -->
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,700,800" rel="stylesheet" type="text/css"><!-- Google web fonts -->
@@ -19,9 +20,9 @@
     <link rel="stylesheet" type="text/css" href="<?php echo asset('frontend/css/style.css');?>">
     <link rel="stylesheet" type="text/css" href="<?php echo asset('frontend/css/frontend.css');?>">
     <link rel="stylesheet" type="text/css" href="<?php echo asset('frontend/css/guides.css');?>">
-    <link rel="stylesheet" type="text/css" href="<?php echo asset('frontend/css/schemas.css');?>">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="<?php echo asset('schemas/Treant.css');?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo asset('frontend/css/schemas.css');?>">
 
     <!-- jQuery -->
     <script src="<?php echo asset('frontend/js/jquery/jquery-2.1.1.min.js');?>"></script>
