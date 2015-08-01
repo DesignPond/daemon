@@ -1,6 +1,8 @@
 @extends('frontend.layouts.master')
 @section('content')
 
+<div id="k-main-full"><!-- doc body wrapper -->
+
     <div class="col-padded"><!-- inner custom column -->
         <div class="row gutter"><!-- row -->
             <div class="col-lg-12 col-md-12">
@@ -18,12 +20,14 @@
 
                     <?php
 
-                        $helper = new App\Helper\Helper();
-                        $obj    = $helper->jsonObj($root);
-
+                        /*
                         echo '<pre>';
-                        print_r($obj);
+                        print_r($root);
                         echo '</pre>';
+                         */
+
+                        $helper = new App\Helper\Helper();
+                        $obj    = $helper->jsonObj($root,1);
 
                     ?>
 
@@ -34,10 +38,11 @@
                         simple_chart_config = {
                             chart: {
                                 container: "#tree-simple",
-                                siblingSeparation: 40,
+                                siblingSeparation: 15,
+                                levelSeparation : 60,
                                 nodeAlign: "BOTTOM",
                                 connectors: {
-                                    type: 'step'
+                                    type: 'bCurve'
                                 },
 
                                 node: {
@@ -55,5 +60,7 @@
             </div>
         </div><!-- row end -->
     </div><!-- inner custom column end -->
+
+</div><!-- doc body wrapper end -->
 
 @stop

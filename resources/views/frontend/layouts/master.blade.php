@@ -102,17 +102,13 @@
             @endif
 
             <div class="row no-gutter"><!-- row -->
-                <div id="k-sidebar">
-                    <!-- Sidebar  -->
-                    @include('frontend.partials.sidebar')
-                </div><!-- sidebar wrapper end -->
-                <div id="k-main"><!-- doc body wrapper -->
 
                     <!-- Contenu -->
                     @yield('content')
                     <!-- Fin contenu -->
 
                 </div><!-- doc body wrapper end -->
+
                 <div class="clearfix"></div>
              </div><!-- row end -->
 

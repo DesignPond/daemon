@@ -59,29 +59,44 @@ class Helper{
         return $html;
     }
 
-
-    function renderMenuItem($node)
+    function renderMenuItem($node,$level)
     {
         if( $node->isLeaf() )
         {
-            return ['text' => ['name' => $node->title]];
+            return [
+                'text'      => ['name' => $node->title],
+                'innerHTML' => '<div class="nodeWrapper"><p>'.$node->title.'</p><a href="#" data-node="'.$node->id.'" class="addBtnNode">+</a></div>'
+            ];
         }
         else
         {
             $html['text']['name'] = $node->title;
+            $html['innerHTML']    = '<div class="nodeWrapper"><p>'.$node->title.'</p><a href="#" data-node="'.$node->id.'" class="addBtnNode">+</a></div>';
 
             foreach($node->children as $child)
-                $html['children'][] = $this->renderMenuItem($child);
+            {
+                if($level > 0)
+                {
+                    if($level >= $child->getLevel())
+                    {
+                        $html['children'][] = $this->renderMenuItem($child,$level);
+                    }
+                }
+                else
+                {
+                    $html['children'][] = $this->renderMenuItem($child, $level);
+                }
+            }
         }
 
         return $html;
     }
 
 
-    public function jsonObj($nodes)
+    public function jsonObj($nodes,$level)
     {
 
-        $object = $this->renderMenuItem($nodes);
+        $object = $this->renderMenuItem($nodes,$level);
 
         return json_encode($object);
 

@@ -4,6 +4,11 @@
     float: left;
 }
 
+#k-main-full{
+    width: 100%;
+    display: block;
+}
+
 #k-sidebar{
     width: 22%;
     display: block;

@@ -1,6 +1,13 @@
 @extends('frontend.layouts.master')
 @section('content')
 
+<div id="k-sidebar">
+    <!-- Sidebar  -->
+    @include('frontend.partials.sidebar')
+</div><!-- sidebar wrapper end -->
+
+<div id="k-main"><!-- doc body wrapper -->
+
     <div class="col-padded"><!-- inner custom column -->
         <div class="row gutter"><!-- row -->
             <div class="col-lg-12 col-md-12">
@@ -51,5 +58,7 @@
             </div>
         </div><!-- row end -->
     </div><!-- inner custom column end -->
+
+</div><!-- doc body wrapper end -->
 
 @stop
