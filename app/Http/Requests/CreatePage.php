@@ -34,7 +34,7 @@ class CreatePage extends Request
            // 'page'       => 'required',
            // 'paragraphe' => 'required',
             'title'      => 'required',
-            'content'    => 'required'
+           // 'content'    => 'required'
         ];
     }
 }

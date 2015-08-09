@@ -30,19 +30,13 @@
 
                             <select class="form-control" name="parent_id">
                                 <option {{ $page->parent_id == 0 ? 'checked' : '' }} value="0">Base</option>
-                                @if(!empty($parents))
-                                    @foreach($parents as $parent)
-                                        <option {{ $page->isDescendantOf($parent) ? 'selected' : '' }} value="{{ $parent->id }}">
-                                            {{ $parent->title }}
-                                        </option>
+                                @if(!empty($pages))
+                                    @foreach($pages as $parent_id => $title)
+                                        <option {{ $page->parent_id  == $parent_id ? 'selected' : '' }}  value="{{ $parent_id }}">{{ $title }}</option>
                                     @endforeach
                                 @endif
                             </select>
-                            <?php
-                      //     echo '<pre>';
-                           // print_r($parents);
-                            //echo '</pre>';
-                            ?>
+
                         </div>
                     </div>
 
@@ -52,34 +46,6 @@
                             {!! Form::text('title', $page->title , array('class' => 'form-control') ) !!}
                         </div>
                     </div>
-
-                    <div class="form-group">
-                        <label for="message" class="col-sm-3 control-label">Auteur</label>
-                        <div class="col-sm-4">
-                            {!! Form::text('auteur', $page->auteur , array('class' => 'form-control') ) !!}
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message" class="col-sm-3 control-label">Ouvrage</label>
-                        <div class="col-sm-2">
-                            {!! Form::text('ouvrage', $page->ouvrage , array('class' => 'form-control') ) !!}
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message" class="col-sm-3 control-label">Page</label>
-                        <div class="col-sm-2">
-                            {!! Form::text('page', $page->page , array('class' => 'form-control') ) !!}
-                        </div>
-                    </div>
-
-{{--                    <div class="form-group">
-                        <label for="paragraphe" class="col-sm-3 control-label">Paragraphe</label>
-                        <div class="col-sm-7">
-                            {!! Form::textarea('paragraphe', $page->paragraphe , array('class' => 'form-control  redactor', 'cols' => '50' , 'rows' => '4' )) !!}
-                        </div>
-                    </div>--}}
 
                     <div class="form-group">
                         <label for="content" class="col-sm-3 control-label">Contenu</label>

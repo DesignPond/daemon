@@ -40,7 +40,7 @@ class PageController extends Controller
      */
     public function create()
     {
-        $pages = $this->page->getAll();
+        $pages = $this->page->getTree('id', '&nbsp;');
         
         return view('backend.pages.create')->with(['pages' => $pages]);
     }
@@ -65,10 +65,10 @@ class PageController extends Controller
      */
     public function show($id)
     {
-        $page    = $this->page->find($id);
-        $parents = $this->page->getAll();
+        $page  = $this->page->find($id);
+        $pages = $this->page->getTree('id', '&nbsp;');
 
-        return view('backend.pages.show')->with(array( 'page' => $page ,'parents' => $parents));
+        return view('backend.pages.show')->with(array( 'page' => $page ,'pages' => $pages));
     }
 
     /**

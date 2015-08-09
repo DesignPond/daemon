@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Cours\Schema\Repo\SchemaInterface;
 use App\Cours\Page\Worker\PageWorker;
 use App\Cours\Page\Repo\PageInterface;
+use App\Cours\Groupe\Repo\GroupeInterface;
 
 class SchemaController extends Controller
 {
@@ -16,11 +17,12 @@ class SchemaController extends Controller
     protected $worker;
     protected $helper;
 
-    public function __construct(SchemaInterface $schema, PageWorker $worker, PageInterface $page)
+    public function __construct(SchemaInterface $schema, PageWorker $worker, PageInterface $page, GroupeInterface $groupe)
     {
         $this->schema = $schema;
         $this->page   = $page;
         $this->worker = $worker;
+        $this->groupe = $groupe;
         $this->helper = new \App\Helper\Helper();
     }
 
@@ -63,10 +65,11 @@ class SchemaController extends Controller
     public function show($id)
     {
        // $schema  = $this->schema->find($id);
-        $page   = $this->page->find($id);
-        $parent = $page->getAncestorsAndSelf()->toHierarchy();
+        $page    = $this->page->find($id);
+        $parent  = $page->getAncestorsAndSelf()->toHierarchy();
+        $groupes = $this->groupe->getAll();
 
-        return view('frontend.schema')->with([ 'page' => $page, 'id' => $id, 'parent' => $parent ]);
+        return view('frontend.schema')->with([ 'page' => $page, 'id' => $id, 'parent' => $parent , 'groupes' => $groupes]);
     }
 
     /**

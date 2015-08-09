@@ -14,16 +14,11 @@
                 </h1>
                 <div class="news-title-meta">
                     <h1 class="page-title">{{ $page->title }}</h1>
-         {{--           <div class="news-meta">
-                        <span class="news-meta-date">TERCIER / ROTEN</span>
-                        <span class="news-meta-category">RRJ</span>
-                        <span class="news-meta-comments">n. 14-112</span>
-                    </div>--}}
                 </div>
                 <div class="news-body clearfix"><!-- course content -->
 
                     @if(!$parent->isEmpty())
-                        <ul>
+                        <ul class="hierachy">
                             <?php echo $helper->renderMenuSimple($parent->first()); ?>
                         </ul>
                     @endif
@@ -32,6 +27,12 @@
 
                     {!! $page->content !!}
 
+                    @if(isset($page->projet))
+                        <?php $projet = $page->projet; ?>
+                        <?php $projet->load('structures'); ?>
+
+                        @include('frontend.partials.projet', ['projet' => $projet])
+                    @endif
                 </div><!-- course content end -->
 
             </div>

@@ -31,6 +31,7 @@ class CreatePagesTable extends Migration {
             $table->string('paragraphe');
             $table->string('title');
             $table->string('slug');
+            $table->integer('projet_id')->nullable();
             $table->longText('content');
             $table->softDeletes();
             $table->timestamps();

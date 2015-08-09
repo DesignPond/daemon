@@ -19,7 +19,7 @@ class Page extends Node {
     */
     protected $table = 'pages';
     protected $dates = ['deleted_at'];
-    protected $fillable = ['auteur','ouvrage','page','paragraphe','title','content','parent_id','lft','rgt','depth'];
+    protected $fillable = ['auteur','ouvrage','page','paragraphe','title','content','parent_id','projet_id','lft','rgt','depth'];
 
     //////////////////////////////////////////////////////////////////////////////
 
@@ -106,5 +106,15 @@ class Page extends Node {
     // Please refer the Laravel documentation for further instructions on how
     // to hook your own callbacks/observers into this events:
     // http://laravel.com/docs/5.0/eloquent#model-events
+
+    /**
+     * Group belongs to user
+     *
+     * @var query
+     */
+    public function projet(){
+
+        return $this->belongsTo('App\Cours\Projet\Entities\Projet', 'projet_id');
+    }
 
 }

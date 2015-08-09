@@ -26,8 +26,8 @@
                             <select class="form-control" name="parent_id">
                                 <option value="0">Base</option>
                                 @if(!empty($pages))
-                                    @foreach($pages as $page)
-                                        <option value="{{ $page->parent_id }}">{{ $page->title }}</option>
+                                    @foreach($pages as $parent_id => $page)
+                                        <option value="{{ $parent_id }}">{{ $page }}</option>
                                     @endforeach
                                 @endif
                             </select>
@@ -41,34 +41,6 @@
                             {!! Form::text('title', null , array('class' => 'form-control') ) !!}
                         </div>
                     </div>
-
-                    <div class="form-group">
-                        <label for="message" class="col-sm-3 control-label">Auteur</label>
-                        <div class="col-sm-4">
-                            {!! Form::text('auteur', null , array('class' => 'form-control') ) !!}
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message" class="col-sm-3 control-label">Ouvrage</label>
-                        <div class="col-sm-2">
-                            {!! Form::text('ouvrage', null , array('class' => 'form-control') ) !!}
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message" class="col-sm-3 control-label">Page</label>
-                        <div class="col-sm-2">
-                            {!! Form::text('page', null , array('class' => 'form-control') ) !!}
-                        </div>
-                    </div>
-
-{{--                    <div class="form-group">
-                        <label for="contenu" class="col-sm-3 control-label">Paragraphe</label>
-                        <div class="col-sm-7">
-                            {!! Form::textarea('paragraphe', null, array('class' => 'form-control  redactor', 'cols' => '50' , 'rows' => '4' )) !!}
-                        </div>
-                    </div>--}}
 
                     <div class="form-group">
                         <label for="contenu" class="col-sm-3 control-label">Contenu</label>

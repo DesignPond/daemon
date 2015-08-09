@@ -39,11 +39,11 @@ class Helper{
     {
         if( $node->isLeaf() )
         {
-            return '<li><a href="'.url('schemas/'.$node->id).'" title="'.$node->title.'">' . $node->title . '</a></li>';
+            return '<li><a href="'.url('schemas/'.$node->id).'" title="'.$node->title.'"><i class="fa fa-long-arrow-right"></i> &nbsp;' . $node->title . '</a></li>';
         }
         else
         {
-            $html = '<li><a href="' . url('schemas/' . $node->id) . '" title="'.$node->title.'">' . $node->title . '</a>';
+            $html = '<li><a href="' . url('schemas/' . $node->id) . '" title="'.$node->title.'"><i class="fa fa-long-arrow-right"></i> &nbsp;' . $node->title . '</a>';
 
             $html .= '<ul class="sub-menu">';
 

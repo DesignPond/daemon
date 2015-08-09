@@ -189,3 +189,30 @@ right connector from last child*/
 .tree li a:hover+ul ul::before{
     border-color:  #94a0b4;
 }
+
+.hierachy{
+    margin-bottom: 0;
+}
+
+.hierachy li{
+    display: block;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.hierachy li > ul{
+    margin-bottom: 0;
+}
+
+.hierachy li > ul:nth-child(even){
+}
+
+.hierachy li > ul li{
+    display: block;
+    border: none;
+    margin-bottom: 0;
+}
+
+.hierachy li a{
+    display: block;
+}

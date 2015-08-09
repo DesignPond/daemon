@@ -17,9 +17,9 @@ class PageEloquent implements PageInterface{
         return $this->page->all();
     }
 
-    public function getTree(){
+    public function getTree($key = null, $seperator = ' '){
 
-        return $this->page->getNestedList('title');
+        return $this->page->getNestedList('title', $key, $seperator);
     }
 
     public function getRoot(){
@@ -29,7 +29,7 @@ class PageEloquent implements PageInterface{
 
     public function find($id){
 
-        return $this->page->findOrFail($id);
+        return $this->page->with(['projet'])->findOrFail($id);
     }
 
     public function getBySlug($slug)
@@ -45,10 +45,11 @@ class PageEloquent implements PageInterface{
     public function create(array $data){
 
         $page = $this->page->create(array(
-            'auteur'     => $data['auteur'],
-            'ouvrage'    => $data['ouvrage'],
-            'page'       => $data['page'],
-            'paragraphe' => $data['paragraphe'],
+            'auteur'     => (isset($data['auteur']) ? $data['auteur'] : ''),
+            'ouvrage'    => (isset($data['ouvrage']) ? $data['ouvrage'] : ''),
+            'page'       => (isset($data['page']) ? $data['page'] : ''),
+            'paragraphe' => (isset($data['paragraphe']) ? $data['paragraphe'] : ''),
+            'projet_id'  => (isset($data['projet_id']) ? $data['projet_id'] : ''),
             'title'      => $data['title'],
             'content'    => $data['content'],
             'created_at' => date('Y-m-d G:i:s'),
