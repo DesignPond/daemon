@@ -11,10 +11,10 @@
 .nodeBloc{
     border: 1px solid #444;
     background: #f5f5f5;
-    padding:8px 4px;
-    font-size: 10px;
+    padding:8px;
+    font-size: 12px;
     color: #000;
-    max-width:95px;
+    max-width:150px;
     text-align: center;
 }
 

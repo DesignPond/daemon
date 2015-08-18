@@ -41,7 +41,7 @@
     text-transform: none;
 }
 
-.form-horizontal .control-label {
+.auth-form .form-horizontal .control-label {
     text-align: right;
     padding: 10px 5px 5px;
 }
@@ -192,16 +192,18 @@ right connector from last child*/
 
 .hierachy{
     margin-bottom: 0;
+    padding-left: 0;
 }
 
 .hierachy li{
-    display: block;
+    display: inline-block;
     padding: 0;
     margin-bottom: 0;
 }
 
 .hierachy li > ul{
     margin-bottom: 0;
+    padding-left:10px;
 }
 
 .hierachy li > ul:nth-child(even){
@@ -215,4 +217,22 @@ right connector from last child*/
 
 .hierachy li a{
     display: block;
+    margin-bottom: 1px;
+    padding:0 5px;
+    background: #ea5644;
+    font-size: 13px;
+    color: #fff;
+    position: relative;
+}
+
+.hierachy li a:after{
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #ea5644;
+    border-top: 15px solid transparent;
+    content: "fbfdb";
+    height: 0;
+    position: absolute;
+    right: -10px;
+    top: 0;
+    width: 0;
 }

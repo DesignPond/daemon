@@ -5,10 +5,12 @@ class Helper{
 
     public function renderMenu($node)
     {
+
+        $url = 'schemas/';
+
         if( $node->isLeaf() )
         {
-            $url = (!$node->isRoot() ? 'page/' : '');
-            return '<li><a href="'.url($url.$node->slug).'" title="'.$node->title.'">' . $node->title . '</a></li>';
+            return '<li><a href="'.url($url.$node->id).'" title="'.$node->title.'">' . $node->title . '</a></li>';
         }
         else
         {
@@ -16,11 +18,11 @@ class Helper{
             {
                 $pieces    = explode(' ', $node->title);
                 $last_word = array_pop($pieces);
-                $html  = '<li><a href="'.url('page/'.$node->slug).'" title="'.$last_word.'">' . implode(' ',$pieces) .'</a>';
+                $html  = '<li><a href="'.url($url.$node->id).'" title="'.$last_word.'">' . implode(' ',$pieces) .'</a>';
             }
             else
             {
-                $html  = '<li><a href="'.url('page/'.$node->slug).'">' . $node->title .'</a>';
+                $html  = '<li><a href="'.url($url.$node->id).'">' . $node->title .'</a>';
             }
 
             $html .= '<ul class="sub-menu">';
@@ -39,27 +41,28 @@ class Helper{
     {
         if( $node->isLeaf() )
         {
-            return '<li><a href="'.url('schemas/'.$node->id).'" title="'.$node->title.'"><i class="fa fa-long-arrow-right"></i> &nbsp;' . $node->title . '</a></li>';
+            return '<li><a href="'.url('schemas/'.$node->id).'" title="'.$node->title.'">' . $node->title . '</a></li>';
         }
         else
         {
-            $html = '<li><a href="' . url('schemas/' . $node->id) . '" title="'.$node->title.'"><i class="fa fa-long-arrow-right"></i> &nbsp;' . $node->title . '</a>';
-
-            $html .= '<ul class="sub-menu">';
+            $html = '<li><a href="' . url('schemas/' . $node->id) . '" title="'.$node->title.'">' . $node->title . '</a>';
 
             if(!$node->children->isEmpty())
             {
+                $html .= '<ul class="sub-menu">';
+
                 foreach ($node->children as $child)
                 {
                     $html .= $this->renderMenuSimple($child);
                 }
+
+                $html .= '</ul>';
             }
 
-            $html .= '</ul>';
             $html .= '</li>';
         }
 
-        return $html;
+        return (isset($html) ? $html : '');
     }
 
     public function renderSidebar($node, $page)
@@ -122,14 +125,39 @@ class Helper{
         return $html;
     }
 
-
     public function jsonObj($nodes,$level)
     {
-
         $object = $this->renderMenuItem($nodes,$level);
 
         return json_encode($object);
+    }
 
+    public function renderNode($node)
+    {
+        $form = '<form action="'.url('admin/page/'.$node->id).'" method="POST">
+                              <input type="hidden" name="_method" value="DELETE">'.csrf_field().'
+                              <button data-action="page: '.$node->title.'" class="btn btn-danger btn-xs deleteAction">X</button>
+                          </form>';
+
+        if( $node->isLeaf() )
+        {
+            return '<li class="dd-item" data-id="'.$node->id.'"><div class="dd-handle"><a href="admin/page/'.$node->id.'">' . $node->title . '</a>'.$form.'</div></li>';
+        }
+        else
+        {
+            $html  = '<li class="dd-item" data-id="'.$node->id.'"><div class="dd-handle">';
+            $html .= '<a href="admin/page/'.$node->id.'">' . $node->title.'</a>';
+            $html .= $form;
+            $html .= '</div>';
+            $html .= '<ol class="dd-list">';
+
+            foreach($node->children as $child)
+                $html .= $this->renderNode($child);
+
+            $html .= '</ol>';
+            $html .= '</li>';
+        }
+        return $html;
     }
 
 }

@@ -38,8 +38,8 @@ $(function(){
                     simple_chart_config = {
                         chart: {
                             container: "#tree-simple",
-                            siblingSeparation: 5,
-                            levelSeparation : 120,
+                            siblingSeparation: 10,
+                            levelSeparation : 90,
                             nodeAlign: "TOP",
                             connectors: {
                                 type: 'curve'

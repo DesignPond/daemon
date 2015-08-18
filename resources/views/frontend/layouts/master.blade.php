@@ -102,7 +102,7 @@
                 @include('frontend.partials.slide')
             @endif
 
-            <div class="row no-gutter"><!-- row -->
+            <div class="row"><!-- row -->
 
                     <!-- Contenu -->
                     @yield('content')

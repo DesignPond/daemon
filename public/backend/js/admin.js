@@ -4,6 +4,7 @@ $( function() {
         minHeight  : 250,
         maxHeight: 450,
         focus: true,
+        lang: 'fr',
         plugins: ['advanced','imagemanager','filemanager'],
         fileUpload : 'uploadFileRedactor?_token=' + $('meta[name="_token"]').attr('content'),
         imageUpload: 'uploadRedactor?_token=' + $('meta[name="_token"]').attr('content'),

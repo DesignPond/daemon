@@ -23,7 +23,7 @@
                         </ul>
                     @endif
 
-                    <div id="tree-simple" data-projet="{{ $id }}" style="width:100%; height: 40px"> </div>
+                    <div id="tree-simple" data-projet="{{ $id }}" style="width:100%; height: 40px"></div>
 
                     {!! $page->content !!}
 
@@ -33,6 +33,7 @@
 
                         @include('frontend.partials.projet', ['projet' => $projet])
                     @endif
+
                 </div><!-- course content end -->
 
             </div>

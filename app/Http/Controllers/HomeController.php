@@ -69,11 +69,9 @@ class HomeController extends Controller
      */
     public function page($slug)
     {
-        $page     = $this->page->getBySlug($slug);
-        $siblings = $page->getRoot()->getImmediateDescendants();
-        $schema   = $this->schema->find(1);
+        $page = $this->page->getBySlug($slug);
 
-        return view('frontend.page')->with(['page' => $page, 'siblings' => $siblings, 'schema' => $schema]);
+        return view('frontend.page')->with(['page' => $page]);
     }
 
     /**

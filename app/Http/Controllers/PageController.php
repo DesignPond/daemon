@@ -40,7 +40,7 @@ class PageController extends Controller
      */
     public function create()
     {
-        $pages = $this->page->getTree('id', '&nbsp;');
+        $pages = $this->page->getTree('id', '&nbsp;&nbsp;&nbsp;');
         
         return view('backend.pages.create')->with(['pages' => $pages]);
     }
@@ -66,7 +66,7 @@ class PageController extends Controller
     public function show($id)
     {
         $page  = $this->page->find($id);
-        $pages = $this->page->getTree('id', '&nbsp;');
+        $pages = $this->page->getTree('id', '&nbsp;&nbsp;&nbsp;');
 
         return view('backend.pages.show')->with(array( 'page' => $page ,'pages' => $pages));
     }
@@ -107,7 +107,9 @@ class PageController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $this->page->delete($id);
+
+        return redirect('admin/page');
     }
 
     public function hierarchy(Request $request)

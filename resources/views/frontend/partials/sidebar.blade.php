@@ -1,7 +1,7 @@
 <!-- sidebar wrapper -->
 <div class="col-padded col-shaded"><!-- inner custom column -->
     <ul class="list-unstyled clear-margins"><!-- widgets -->
-        @if (Request::is('/'))
+        @if (Request::is('/') || Request::is('contact'))
             <li class="widget-container widget_nav_menu"><!-- widget -->
                 <h1 class="title-widget">Informations</h1>
                 <ul>
@@ -45,11 +45,14 @@
         @elseif(Request::is('page/*'))
 
             <?php
-                $helper = new \App\Helper\Helper();
-                foreach($siblings as $node){
-                    echo $helper->renderSidebar($node, $page);
+                if(isset($siblings)){
+                    $helper = new \App\Helper\Helper();
+                    foreach($siblings as $node){
+                        echo $helper->renderSidebar($node, $page);
+                    }
                 }
             ?>
+
             <li class="widget-container widget_text"><!-- widget -->
                 <a href="#" class="custom-button cb-yellow" title="Un problème?">
                     <i class="custom-button-icon fa fa-question-circle"></i>

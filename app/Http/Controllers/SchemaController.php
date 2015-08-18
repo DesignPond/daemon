@@ -82,7 +82,7 @@ class SchemaController extends Controller
     {
         $schema = $this->page->find($id);
         $level  = $schema->getLevel();
-        $level  = ($level > 0 ? $level + 1 : 0);
+        $level  = ($level > 0 ? $level + 1 : 1);
 
         return $this->helper->jsonObj($schema,$level);
     }

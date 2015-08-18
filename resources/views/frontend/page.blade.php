@@ -12,8 +12,8 @@
         <div class="row gutter"><!-- row -->
             <div class="col-lg-12 col-md-12">
                 <?php
-                $ancestor = $page->getAncestors();
-                $parent = $ancestor->last();
+                    $ancestor = $page->getAncestors();
+                    $parent = $ancestor->last();
                 ?>
                 <h1 class="title-widget remove-margin-bottom">{{ $parent->title }}</h1>
                 <div class="news-title-meta">

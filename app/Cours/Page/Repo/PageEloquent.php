@@ -17,7 +17,7 @@ class PageEloquent implements PageInterface{
         return $this->page->all();
     }
 
-    public function getTree($key = null, $seperator = ' '){
+    public function getTree($key = null, $seperator = '  '){
 
         return $this->page->getNestedList('title', $key, $seperator);
     }

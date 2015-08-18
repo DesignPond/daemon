@@ -27,3 +27,18 @@ table.dataTable thead .sorting::after{
 select.form-control + .chosen-container .chosen-results li, select.form-control + .chosen-container .chosen-results li.active-result {
     white-space: pre-wrap;
 }
+
+#nestable .dd-handle {
+    position: relative;
+    height: 40px;
+    line-height: 35px;
+    margin: 5px 0;
+    padding: 0 10px;
+}
+
+#nestable .dd-handle form{
+    position: absolute;
+    right: 5px;
+    top: 0;
+    z-index: 20;
+ }
