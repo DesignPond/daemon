@@ -69,3 +69,15 @@ Route::post('password/email', 'Auth\PasswordController@postEmail');
 // Password reset routes...
 Route::get('password/reset/{token}', 'Auth\PasswordController@getReset');
 Route::post('password/reset', 'Auth\PasswordController@postReset');
+
+// Test routes for development
+Route::get('testing', function()
+{
+
+/*    \App\Cours\User\Entities\User::create(array(
+        'name'     => 'Célia Huart',
+        'email'    => 'celia.huart@unine.ch',
+        'password' => Hash::make('methode2015')
+    ));*/
+
+});

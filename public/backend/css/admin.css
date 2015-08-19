@@ -34,6 +34,7 @@ select.form-control + .chosen-container .chosen-results li, select.form-control 
     line-height: 35px;
     margin: 5px 0;
     padding: 0 10px;
+    cursor: default;
 }
 
 #nestable .dd-handle form{

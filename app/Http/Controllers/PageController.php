@@ -54,7 +54,7 @@ class PageController extends Controller
     {
         $page = $this->page->create($request->all());
 
-        return redirect('admin/page/'.$page->id);
+        return redirect('admin/page/'.$page->id)->with(array('status' => 'success' , 'message' => 'La page a été crée' ));
     }
 
     /**
@@ -90,13 +90,10 @@ class PageController extends Controller
      */
     public function update($id, Request $request)
     {
-/*        echo '<pre>';
-        print_r($request->all());
-        echo '</pre>';exit;*/
 
         $page = $this->page->update($request->all());
 
-        return redirect('admin/page/'.$page->id);
+        return redirect('admin/page/'.$page->id)->with( array('status' => 'success' , 'message' => 'La page a été mise à jour' ));
     }
 
     /**
@@ -109,7 +106,7 @@ class PageController extends Controller
     {
         $this->page->delete($id);
 
-        return redirect('admin/page');
+        return redirect('admin/page')->with(array('status' => 'success' , 'message' => 'La page a été supprimé' ));
     }
 
     public function hierarchy(Request $request)
