@@ -36,7 +36,7 @@ class UploadController extends Controller
 
     public function uploadRedactor(Request $request)
     {
-        $files = $this->upload->upload( $request->file('file') , 'uploads', 'thumbs' );
+        $files = $this->upload->upload( $request->file('file') , 'uploads');
 
         if($files)
         {
@@ -78,7 +78,7 @@ class UploadController extends Controller
         {
             foreach($files as $file)
             {
-                $data[] = ['image' => url('/').'/uploads/'.$file, 'thumb' => url('/').'/uploads/thumbs/'.$file, 'title' => $file];
+                $data[] = ['image' => url('/').'/uploads/'.$file, 'thumb' => url('/').'/uploads/'.$file, 'title' => $file];
             }
         }
 

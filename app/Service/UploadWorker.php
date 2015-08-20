@@ -8,30 +8,32 @@ class UploadWorker implements UploadInterface {
 	 * upload selected file 
 	 * @return array
 	*/	
-	public function upload( $file , $destination , $type = null ){
+	public function upload( $file , $destination){
 
         try
         {
             $name = $file->getClientOriginalName();
             $ext  = $file->getClientOriginalExtension();
+
+            $image_name =  basename($name,'.'.$ext);
+
+            $string  = str_random(40);
+            $newname = $string.'.'.$ext;
+
             // Get the name first because after moving, the file doesn't exist anymore
-            $new  = $file->move($destination,$name);
+            $new  = $file->move($destination,$newname);
+
             $size = $new->getSize();
             $mime = $new->getMimeType();
             $path = $new->getRealPath();
 
-            $image_name = basename($name,'.'.$ext);
-
             //resize
-            if($type)
-            {
-                $sizes = \Config::get('size.'.$type);
-                $this->resize( $path.'/thumbs', $image_name, $sizes['width'], $sizes['height']);
-            }
+            //$this->resize( $destination.'/thumb/'.$newname, $path , 200, null , true );
 
-            $newfile = array( 'name' => $name ,'ext' => $ext ,'size' => $size ,'mime' => $mime ,'path' => $path  );
+            $newfile = array( 'name' => $newname ,'ext' => $ext ,'size' => $size ,'mime' => $mime ,'path' => $path );
 
             return $newfile;
+
         }
         catch(Exception $e)
         {
