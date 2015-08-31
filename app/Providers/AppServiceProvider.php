@@ -34,6 +34,7 @@ class AppServiceProvider extends ServiceProvider
         $this->registerTypeService();
         $this->registerGroupeService();
         $this->registerProjetService();
+        $this->registerLinkService();
 
         $this->registerSchemaService();
         $this->registerBoxService();
@@ -61,6 +62,18 @@ class AppServiceProvider extends ServiceProvider
         $this->app->singleton('App\Cours\Page\Repo\PageInterface', function()
         {
             return new \App\Cours\Page\Repo\PageEloquent(new \App\Cours\Page\Entities\Page);
+        });
+
+    }
+
+    /**
+     * Link
+     */
+    protected function registerLinkService(){
+
+        $this->app->singleton('App\Cours\Link\Repo\LinkInterface', function()
+        {
+            return new \App\Cours\Link\Repo\LinkEloquent(new \App\Cours\Link\Entities\Link);
         });
 
     }

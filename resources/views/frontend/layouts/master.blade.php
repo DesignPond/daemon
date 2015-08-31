@@ -119,43 +119,23 @@
 <div id="k-footer"><!-- footer -->
     <div class="container"><!-- container -->
         <div class="row no-gutter"><!-- row -->
-            <div class="col-lg-4 col-md-4"><!-- widgets column left -->
+            <div class="col-lg-8 col-md-8"><!-- widgets column left -->
                 <div class="col-padded col-naked">
+                    @if(!$links->isEmpty())
                     <ul class="list-unstyled clear-margins"><!-- widgets -->
                         <li class="widget-container widget_nav_menu"><!-- widgets list -->
                             <h1 class="title-widget">Liens utiles</h1>
                             <ul>
-                                <li><a target="_blank" href="http://www.bger.ch/fr/jurisdiction-recht" title="menu item">Tribunal fédéral</a></li>
-                                <li><a target="_blank" href="http://www.bvger.ch/recht/00551/index.html?lang=fr" title="menu item">Tribunal administratif</a></li>
-                                <li><a target="_blank" href="http://www.bstger.ch/fr/giurisprudenza/index.html" title="menu item">Tribunal pénal</a></li>
-                                <li><a target="_blank" href="www.lexfind.ch" title="menu item">www.lexfind.ch</a></li>
+                                @foreach($links as $link)
+                                    <li><a target="_blank" href="{{ $link->url }}" title="menu item">{{ $link->titre }}</a></li>
+                                @endforeach
                             </ul>
                         </li>
                     </ul>
+                    @endif
                 </div>
 
             </div><!-- widgets column left end -->
-
-            <div class="col-lg-4 col-md-4"><!-- widgets column center -->
-                <div class="col-padded col-naked">
-                    <ul class="list-unstyled clear-margins"><!-- widgets -->
-                        <li class="widget-container widget_recent_news"><!-- widgets list -->
-                            {{--<h1 class="title-widget">Université de Neuchâtel</h1>
-                            <div itemscope itemtype="http://data-vocabulary.org/Organization">
-                                <h2 class="title-median m-contact-subject" itemprop="name">Faculté de droit</h2>
-                                <div class="m-contact-address" itemprop="address" itemscope itemtype="http://data-vocabulary.org/Address">
-                                    <span class="m-contact-street" itemprop="street-address">Avenue du 1er-Mars 26</span>
-                                    <span class="m-contact-city-region"><span class="m-contact-city" itemprop="locality">2000</span>, <span class="m-contact-region" itemprop="region">Neuchâtel</span></span>
-                                </div>
-                                <div class="m-contact-tel-fax">
-                                    <span class="m-contact-tel">Tel: <span itemprop="tel">+41 32 718 12 00</span></span>
-                                    <span class="m-contact-fax">Fax: <span itemprop="fax">+41 32 718 12 01</span></span>
-                                </div>
-                            </div>--}}
-                        </li>
-                    </ul>
-                </div>
-            </div><!-- widgets column center end -->
 
             <div class="col-lg-4 col-md-4"><!-- widgets column right -->
                 <div class="col-padded col-naked">

@@ -1,14 +1,37 @@
 <?php namespace App\Cours\Page\Worker;
 
 use App\Cours\Page\Repo\PageInterface;
+use App\Cours\Link\Repo\LinkInterface;
 
 class PageWorker{
 
     protected $page;
+    protected $link;
 
-    public function __construct(PageInterface $page)
+    public function __construct(PageInterface $page,LinkInterface $link)
     {
         $this->page = $page;
+        $this->link = $link;
+    }
+
+    public function getLinks($page){
+
+        $ancestors = $page->getAncestorsAndSelf()->reverse()->lists('id');
+
+        if(!$ancestors->isEmpty())
+        {
+            foreach($ancestors as $ancestor)
+            {
+                $links = $this->link->byParent($ancestor);
+
+                if(!$links->isEmpty())
+                {
+                    return $links;
+                }
+            }
+        }
+
+        return $this->link->byParent(0);
     }
 
     public function prepareTree($nodes){

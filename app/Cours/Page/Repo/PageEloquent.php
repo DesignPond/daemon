@@ -17,6 +17,11 @@ class PageEloquent implements PageInterface{
         return $this->page->all();
     }
 
+    public function getCategories(){
+
+        return $this->page->where('parent_categorie','=',1)->get();
+    }
+
     public function getTree($key = null, $seperator = '  '){
 
         return $this->page->getNestedList('title', $key, $seperator);
@@ -45,15 +50,16 @@ class PageEloquent implements PageInterface{
     public function create(array $data){
 
         $page = $this->page->create(array(
-            'auteur'     => (isset($data['auteur']) ? $data['auteur'] : ''),
-            'ouvrage'    => (isset($data['ouvrage']) ? $data['ouvrage'] : ''),
-            'page'       => (isset($data['page']) ? $data['page'] : ''),
-            'paragraphe' => (isset($data['paragraphe']) ? $data['paragraphe'] : ''),
-            'projet_id'  => (isset($data['projet_id']) ? $data['projet_id'] : ''),
-            'title'      => $data['title'],
-            'content'    => $data['content'],
-            'created_at' => date('Y-m-d G:i:s'),
-            'updated_at' => date('Y-m-d G:i:s')
+            'auteur'           => (isset($data['auteur']) ? $data['auteur'] : ''),
+            'ouvrage'          => (isset($data['ouvrage']) ? $data['ouvrage'] : ''),
+            'page'             => (isset($data['page']) ? $data['page'] : ''),
+            'paragraphe'       => (isset($data['paragraphe']) ? $data['paragraphe'] : ''),
+            'projet_id'        => (isset($data['projet_id']) ? $data['projet_id'] : ''),
+            'parent_categorie' => (isset($data['parent_categorie']) && !empty($data['parent_categorie']) ? $data['parent_categorie'] : null),
+            'title'            => $data['title'],
+            'content'          => $data['content'],
+            'created_at'       => date('Y-m-d G:i:s'),
+            'updated_at'       => date('Y-m-d G:i:s')
         ));
 
         if( ! $page )
@@ -82,7 +88,8 @@ class PageEloquent implements PageInterface{
 
         $page->fill($data);
 
-        $page->updated_at = date('Y-m-d G:i:s');
+        $page->parent_categorie = (isset($data['parent_categorie']) && !empty($data['parent_categorie']) ? $data['parent_categorie'] : null);
+        $page->updated_at       = date('Y-m-d G:i:s');
         $page->save();
 
         if($data['parent_id'] > 0)

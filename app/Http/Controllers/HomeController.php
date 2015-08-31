@@ -8,17 +8,23 @@ use App\Http\Requests;
 use App\Http\Requests\SendMessage;
 use App\Cours\Page\Repo\PageInterface;
 use App\Cours\Schema\Repo\SchemaInterface;
+use App\Cours\Link\Repo\LinkInterface;
 use App\Http\Controllers\Controller;
 
 class HomeController extends Controller
 {
     protected $page;
     protected $projet;
+    protected $link;
+    protected $alllinks;
 
-    public function __construct(PageInterface $page,SchemaInterface $schema)
+    public function __construct(PageInterface $page,SchemaInterface $schema, LinkInterface $link)
     {
         $this->page   = $page;
         $this->schema = $schema;
+        $this->link   = $link;
+
+        $this->alllinks = $this->link->getAll();
     }
 
     /**
@@ -28,7 +34,9 @@ class HomeController extends Controller
      */
     public function accueil()
     {
-        return view('frontend.index');
+        $links = $this->alllinks->where('parent_id', 0);
+
+        return view('frontend.index')->with(['links' => $links]);
     }
 
     /**
@@ -38,7 +46,22 @@ class HomeController extends Controller
      */
     public function contact()
     {
-        return view('frontend.contact');
+        $links = $this->alllinks->where('parent_id', 0);
+
+        return view('frontend.contact')->with(['links' => $links]);
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $slug
+     * @return Response
+     */
+    public function page($slug)
+    {
+        $page  = $this->page->getBySlug($slug);
+
+        return view('frontend.page')->with(['page' => $page]);
     }
 
     /**
@@ -59,19 +82,6 @@ class HomeController extends Controller
 
         return redirect('/')->with(array('status' => 'success', 'message' => '<strong>Merci pour votre message</strong><br/>Nous vous contacterons dès que possible.'));
 
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $slug
-     * @return Response
-     */
-    public function page($slug)
-    {
-        $page = $this->page->getBySlug($slug);
-
-        return view('frontend.page')->with(['page' => $page]);
     }
 
     /**

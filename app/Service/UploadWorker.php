@@ -28,7 +28,7 @@ class UploadWorker implements UploadInterface {
             $path = $new->getRealPath();
 
             //resize
-            //$this->resize( $destination.'/thumb/'.$newname, $path , 200, null , true );
+            $this->resize( $destination.'/'.$newname, $path , 1100, null , true );
 
             $newfile = array( 'name' => $newname ,'ext' => $ext ,'size' => $size ,'mime' => $mime ,'path' => $path );
 
@@ -68,7 +68,7 @@ class UploadWorker implements UploadInterface {
             $constraint->upsize();
         });
 
-        $img->save($path);
+        $img->save($path, 75);
 	}
 
     /*

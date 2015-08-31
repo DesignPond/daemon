@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Cours\Schema\Repo\SchemaInterface;
+use App\Cours\Link\Repo\LinkInterface;
 use App\Cours\Page\Worker\PageWorker;
 use App\Cours\Page\Repo\PageInterface;
 use App\Cours\Groupe\Repo\GroupeInterface;
@@ -17,9 +18,10 @@ class SchemaController extends Controller
     protected $worker;
     protected $helper;
 
-    public function __construct(SchemaInterface $schema, PageWorker $worker, PageInterface $page, GroupeInterface $groupe)
+    public function __construct(SchemaInterface $schema, PageWorker $worker, PageInterface $page, GroupeInterface $groupe,LinkInterface $link)
     {
         $this->schema = $schema;
+        $this->link   = $link;
         $this->page   = $page;
         $this->worker = $worker;
         $this->groupe = $groupe;
@@ -69,7 +71,9 @@ class SchemaController extends Controller
         $parent  = $page->getAncestorsAndSelf()->toHierarchy();
         $groupes = $this->groupe->getAll();
 
-        return view('frontend.schema')->with([ 'page' => $page, 'id' => $id, 'parent' => $parent , 'groupes' => $groupes]);
+        $links   = $this->worker->getLinks($page);
+
+        return view('frontend.schema')->with([ 'page' => $page, 'id' => $id, 'parent' => $parent , 'groupes' => $groupes, 'links' => $links]);
     }
 
     /**

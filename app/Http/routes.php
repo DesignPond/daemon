@@ -39,7 +39,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
     Route::resource('page', 'PageController');
     Route::post('hierarchy', ['uses' => 'PageController@hierarchy']);
     Route::get('build', ['uses' => 'PageController@build']);
-
+    Route::resource('link', 'LinkController');
     Route::resource('projet', 'ProjetController');
 
 });
