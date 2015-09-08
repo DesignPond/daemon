@@ -121,7 +121,7 @@
         <div class="row no-gutter"><!-- row -->
             <div class="col-lg-8 col-md-8"><!-- widgets column left -->
                 <div class="col-padded col-naked">
-                    @if(!$links->isEmpty())
+                    @if(isset($links) && !$links->isEmpty())
                     <ul class="list-unstyled clear-margins"><!-- widgets -->
                         <li class="widget-container widget_nav_menu"><!-- widgets list -->
                             <h1 class="title-widget">Liens utiles</h1>

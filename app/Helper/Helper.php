@@ -160,4 +160,25 @@ class Helper{
         return $html;
     }
 
+
+    /**
+     * Hightlight terms
+     */
+    function highight($text,$keywords)
+    {
+        // $text:     the text from which you want to highlight and return...
+        // $keywords: either string or array or words that should be highlighted in the text.
+        $popover = 'tabindex="0" class="highlight" data-trigger="focus" data-toggle="popover" data-placement="top"';
+        // Find matches
+        for ($x = 0; $x < count($keywords); $x++)
+        {
+            if (strlen($keywords[$x]['keyword']) > 1)
+            {
+                $text = str_replace(' '.$keywords[$x]['keyword'].' ','<span '.$popover.' title="'.$keywords[$x]['keyword'].'" data-content="'.$keywords[$x]['description'].'">'.$keywords[$x]['keyword'].'</span>',$text);
+            }
+        }
+
+        return $text;
+    }
+
 }

@@ -11,7 +11,8 @@
         "intervention/image": "~2.1",
         "laravelcollective/html": "~5.0",
         "guzzlehttp/guzzle": "~5.3|~6.0",
-        "baum/baum": "~1.1"
+        "baum/baum": "~1.1",
+        "yangqi/htmldom": "dev-master"
     },
     "require-dev": {
         "laracasts/generators": "~1.1",

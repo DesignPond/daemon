@@ -1,7 +1,7 @@
 @extends('frontend.layouts.master')
 @section('content')
 
-<?php  $helper = new \App\Helper\Helper(); ?>
+<?php $helper = new \App\Helper\Helper(); ?>
 
 <div id="k-main-full"><!-- doc body wrapper -->
 
@@ -25,7 +25,9 @@
 
                     <div id="tree-simple" data-projet="{{ $id }}" style="width:100%; height: 40px"></div>
 
-                    {!! $page->content !!}
+                    <?php $content = $helper->highight($page->content,$glossaires->toArray()); ?>
+
+                    {!! $content!!}
 
                     @if(isset($page->projet))
                         <?php $projet = $page->projet; ?>

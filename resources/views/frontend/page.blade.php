@@ -13,7 +13,7 @@
             <div class="col-lg-12 col-md-12">
                 <?php
                     $ancestor = $page->getAncestors();
-                    $parent = $ancestor->last();
+                    $parent   = $ancestor->last();
                 ?>
                 <h1 class="title-widget remove-margin-bottom">{{ $parent->title }}</h1>
                 <div class="news-title-meta">
@@ -25,6 +25,7 @@
                     </div>
                 </div>
                 <div class="news-body clearfix"><!-- course content -->
+
                     {!! $page->content !!}
 
                     @include('frontend.schemas.index', ['schema' => $schema])

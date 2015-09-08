@@ -177,6 +177,7 @@ return [
         'File'      => Illuminate\Support\Facades\File::class,
         'Form'      => 'Collective\Html\FormFacade',
         'Html'      => 'Collective\Html\HtmlFacade',
+        'Htmldom'   => 'Yangqi\Htmldom\Htmldom',
         'Hash'      => Illuminate\Support\Facades\Hash::class,
         'Input'     => Illuminate\Support\Facades\Input::class,
         'Inspiring' => Illuminate\Foundation\Inspiring::class,

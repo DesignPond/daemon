@@ -62,11 +62,11 @@ a.addBtn:hover{
     line-height: 15px;
 }
 
-#tree-simple{
-
-}
-
 .leafNode{
     width: 100%;
     text-align: left;
+}
+
+span.highlight{
+    background: #fff5f5;
 }

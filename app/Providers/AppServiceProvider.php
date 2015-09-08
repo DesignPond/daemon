@@ -35,6 +35,7 @@ class AppServiceProvider extends ServiceProvider
         $this->registerGroupeService();
         $this->registerProjetService();
         $this->registerLinkService();
+        $this->registerGlossaireService();
 
         $this->registerSchemaService();
         $this->registerBoxService();
@@ -120,6 +121,17 @@ class AppServiceProvider extends ServiceProvider
         $this->app->singleton('App\Cours\Type\Repo\TypeInterface', function()
         {
             return new \App\Cours\Type\Repo\TypeEloquent(new \App\Cours\Type\Entities\Type);
+        });
+    }
+
+    /**
+     * Glossaire
+     */
+    protected function registerGlossaireService(){
+
+        $this->app->singleton('App\Cours\Glossaire\Repo\GlossaireInterface', function()
+        {
+            return new \App\Cours\Glossaire\Repo\GlossaireEloquent(new \App\Cours\Glossaire\Entities\Glossaire);
         });
     }
 

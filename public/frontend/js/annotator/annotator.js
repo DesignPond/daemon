@@ -6,6 +6,10 @@ $(function(){
         autoSize:false
     });
 
+    $('[data-toggle="popover"]').popover({
+        trigger : 'hover'
+    });
+
     $('[data-toggle="popover"]').hover(function(){
         $(this).toggleClass('expose_hover_div');
     });

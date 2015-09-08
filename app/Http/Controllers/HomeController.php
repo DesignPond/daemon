@@ -9,6 +9,7 @@ use App\Http\Requests\SendMessage;
 use App\Cours\Page\Repo\PageInterface;
 use App\Cours\Schema\Repo\SchemaInterface;
 use App\Cours\Link\Repo\LinkInterface;
+use App\Cours\Glossaire\Repo\GlossaireInterface;
 use App\Http\Controllers\Controller;
 
 class HomeController extends Controller
@@ -17,14 +18,18 @@ class HomeController extends Controller
     protected $projet;
     protected $link;
     protected $alllinks;
+    protected $helper;
+    protected $glossaire;
 
-    public function __construct(PageInterface $page,SchemaInterface $schema, LinkInterface $link)
+    public function __construct(PageInterface $page,SchemaInterface $schema, LinkInterface $link, GlossaireInterface $glossaire)
     {
-        $this->page   = $page;
-        $this->schema = $schema;
-        $this->link   = $link;
+        $this->page      = $page;
+        $this->schema    = $schema;
+        $this->link      = $link;
+        $this->glossaire = $glossaire;
 
         $this->alllinks = $this->link->getAll();
+        $this->helper = new \App\Helper\Helper;
     }
 
     /**
@@ -59,7 +64,7 @@ class HomeController extends Controller
      */
     public function page($slug)
     {
-        $page  = $this->page->getBySlug($slug);
+        $page = $this->page->getBySlug($slug);
 
         return view('frontend.page')->with(['page' => $page]);
     }

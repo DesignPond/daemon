@@ -10,6 +10,7 @@ use App\Cours\Link\Repo\LinkInterface;
 use App\Cours\Page\Worker\PageWorker;
 use App\Cours\Page\Repo\PageInterface;
 use App\Cours\Groupe\Repo\GroupeInterface;
+use App\Cours\Glossaire\Repo\GlossaireInterface;
 
 class SchemaController extends Controller
 {
@@ -17,15 +18,18 @@ class SchemaController extends Controller
     protected $page;
     protected $worker;
     protected $helper;
+    protected $glossaire;
 
-    public function __construct(SchemaInterface $schema, PageWorker $worker, PageInterface $page, GroupeInterface $groupe,LinkInterface $link)
+    public function __construct(SchemaInterface $schema, PageWorker $worker, PageInterface $page, GroupeInterface $groupe,LinkInterface $link, GlossaireInterface $glossaire)
     {
-        $this->schema = $schema;
-        $this->link   = $link;
-        $this->page   = $page;
-        $this->worker = $worker;
-        $this->groupe = $groupe;
-        $this->helper = new \App\Helper\Helper();
+        $this->schema    = $schema;
+        $this->link      = $link;
+        $this->page      = $page;
+        $this->worker    = $worker;
+        $this->groupe    = $groupe;
+        $this->glossaire = $glossaire;
+
+        $this->helper    = new \App\Helper\Helper();
     }
 
     /**
@@ -71,9 +75,10 @@ class SchemaController extends Controller
         $parent  = $page->getAncestorsAndSelf()->toHierarchy();
         $groupes = $this->groupe->getAll();
 
-        $links   = $this->worker->getLinks($page);
+        $links     = $this->worker->getLinks($page);
+        $glossaires = $this->glossaire->getAll();
 
-        return view('frontend.schema')->with([ 'page' => $page, 'id' => $id, 'parent' => $parent , 'groupes' => $groupes, 'links' => $links]);
+        return view('frontend.schema')->with([ 'page' => $page, 'id' => $id, 'parent' => $parent , 'groupes' => $groupes, 'links' => $links, 'glossaires' => $glossaires]);
     }
 
     /**
