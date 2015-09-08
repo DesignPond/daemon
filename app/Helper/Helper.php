@@ -174,7 +174,9 @@ class Helper{
         {
             if (strlen($keywords[$x]['keyword']) > 1)
             {
-                $text = str_replace(' '.$keywords[$x]['keyword'].' ','<span '.$popover.' title="'.$keywords[$x]['keyword'].'" data-content="'.$keywords[$x]['description'].'">'.$keywords[$x]['keyword'].'</span>',$text);
+                $key     = $keywords[$x]['keyword'];
+                $contenu = $keywords[$x]['keyword'];
+                $text    = preg_replace("/\b($key)\b/i", '<span '.$popover.' title="'.$key.'" data-content="'.$contenu.'">'.$key.'</span>', $text);
             }
         }
 
