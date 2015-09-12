@@ -14,7 +14,7 @@
     padding:8px;
     font-size: 12px;
     color: #000;
-    max-width:150px;
+    max-width:170px;
     text-align: center;
 }
 
@@ -24,9 +24,10 @@
 }
 
 .nodeBloc p , .nodeBloc p a{
-    font-size: 11px;
     color: #000;
+    font-size: 14px;
     font-weight: normal;
+    line-height: 20px;
 }
 
 .nodeBloc p a:hover{

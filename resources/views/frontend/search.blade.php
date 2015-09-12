@@ -25,8 +25,11 @@
                             </div>
                             <div class="news-body">
                                 <p>
-                                    <?php $value = str_limit($result->content, 350); ?>
-                                    {!! strip_tags($value) !!}
+                                    <?php
+                                        $value = strip_tags($result->content);
+                                        $value = str_limit($value, 350);
+                                    ?>
+                                    {!! $value !!}
                                     <p><a href="{{ url('schemas/'.$result->id) }}" class="moretag">Voir plus</a></p>
                                 </p>
                             </div>
