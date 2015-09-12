@@ -67,7 +67,7 @@ class Page extends Node {
     //  *
     //  * @var string
     //  */
-    // protected $orderColumn = null;
+    protected $orderColumn = 'rang';
 
     // /**
     // * With Baum, all NestedSet-related fields are guarded from mass-assignment
