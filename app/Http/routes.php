@@ -37,6 +37,7 @@ Route::resource('schemas', 'SchemaController');
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
 {
     Route::resource('page', 'PageController');
+    Route::resource('glossaire', 'GlossaireController');
     Route::post('hierarchy', ['uses' => 'PageController@hierarchy']);
     Route::get('build', ['uses' => 'PageController@build']);
     Route::resource('link', 'LinkController');

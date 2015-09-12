@@ -25,7 +25,6 @@
 	
 	/* ---------- handle navigation for smaller devices */
 	CHEF.mobileMenuClone = '';
-
 	if( $( 'nav#k-menu' ).length ) CHEF.mobileMenuClone = $( 'nav#k-menu' ).clone().attr( 'id', 'navigation-mobile' );
 	CHEF.mobileNav = function() {
 		CHEF.mobileMenuClone.insertAfter( 'nav#k-menu' );
@@ -59,97 +58,40 @@
 		}
 	}
 	/* ---------- end handle top-search toggle ---------- */
-	
-	/* ---------- Google Maps ---------- */
-	CHEF.googleMaps = function(){
-		if( $( '.map' ).length ) {
-	
-			$( '.map' ).each( function( i, e ) {
-	
-				var $gmap = $( e );
-				var $gmap_title = $gmap.attr( 'data-gmaptitle' );
-				var $gmap_id = $gmap.attr( 'id' );
-				var $gmap_lat = $gmap.attr( 'data-gmaplat' );
-				var $gmap_lng = $gmap.attr( 'data-gmaplon' );
-				var $gmap_zoom = parseInt( $gmap.attr( 'data-gmapzoom' ) );
-				var $gmap_icon = $gmap.attr( 'data-gmapmarker' );
-				
-				var $c_name = $gmap.attr( 'data-cname' );
-				var $c_address = $gmap.attr( 'data-caddress' );
-				var $c_city = $gmap.attr( 'data-ccity' );
-				var $c_state = ( $gmap.attr( 'data-cstate' ) != '' ) ? ', ' + $gmap.attr( 'data-cstate' ) + ' ' : '';
-				var $c_zip = $gmap.attr( 'data-czip' );
-				var $c_country = $gmap.attr( 'data-ccountry' );
-				
-				var contentString;
-				if( $c_name == '' && $c_address == '' && $c_city == '' && $c_state == '' && $c_zip == '' && $c_country == '' ) contentString = '';
-				else contentString = '<div class="map-info-win"><strong>' + $c_name + '</strong><br />' + $c_address + '<br />' + $c_city + $c_state + $c_zip + '<br />' + $c_country + '</div>';
-				
-				var latlng = new google.maps.LatLng( $gmap_lat, $gmap_lng );			
-				var options = { 
-					scrollwheel: false,
-					draggable: true, 
-					zoomControl: true,
-					disableDoubleClickZoom: true,
-					disableDefaultUI: true,
-					zoom: $gmap_zoom,
-					center: latlng,
-					mapTypeId: google.maps.MapTypeId.ROADMAP
-				};
-				
-				var styles = [ 
-							  {
-								featureType: "all",
-								stylers: [
-								  { saturation: -80 }
-								]
-							  },{
-								featureType: "road.arterial",
-								elementType: "geometry",
-								stylers: [
-								  { hue: "#82a536" },
-								  { saturation: 40 }
-								]
-							  },{
-								featureType: "poi.business",
-								elementType: "labels",
-								stylers: [
-								  { visibility: "off" }
-								]
-							  }
-							];
-				
-				var styledMap = new google.maps.StyledMapType( styles,{ name: "BPS Theme Map" } );
-				var map = new google.maps.Map( document.getElementById( $gmap_id ), options );
-				var m_icon = ( $gmap_icon != '' ) ? $gmap_icon : '';
+
+	/* ---------- Fancybox ---------- */
+	CHEF.fancyBoxer = function() {
+		if( $( '.fancybox' ).length || $( '.fancybox-media' ).length ) {
 			
-				var marker = new google.maps.Marker( {
-					position: latlng,
-					map: map,
-					icon: m_icon,
-					title: $gmap_title
-				} );
-				
-				map.mapTypes.set( 'map_style', styledMap );
-				map.setMapTypeId( 'map_style' );
-				
-				if( contentString != '' ) {
-					var infowindow = new google.maps.InfoWindow( {
-						content: contentString
-					} );
-					
-					infowindow.open( map, marker ); // show info by default
-					
-					google.maps.event.addListener( marker, 'click', function() {
-						infowindow.open( map, marker );
-					} );
+			$( '.fancybox' ).fancybox( {				
+				padding : 0,
+				helpers : {
+					title : { type: 'inside' }
 				}
-	
 			} );
-		}	
+				
+			$( '.fancybox-media' ).fancybox( {
+				padding : 0,
+				openEffect  : 'none',
+				closeEffect : 'none',
+				helpers : {
+					media : {}
+				}
+			} );
+
+		}
 	}
-	/* ---------- end Google Maps ---------- */
-	
+	/* ---------- end Fancybox ---------- */
+
+	/* ---------- IE patches ---------- */
+	CHEF.IEpatches = function() {
+		if( navigator.userAgent.match( /IEMobile\/10\.0/ ) ) {
+			var msViewportStyle = document.createElement( 'style' );
+			msViewportStyle.appendChild( document.createTextNode( '@-ms-viewport{ width: auto!important; }' ) );
+			document.querySelector( 'head' ).appendChild( msViewportStyle );
+		}
+	}
+	/* ---------- end IE patches ---------- */
 
 	
 	// events
@@ -157,9 +99,9 @@
 		CHEF.initMainMenu(); // init main menu
 		CHEF.mobileNav(); // create mobile nav menu
 		CHEF.listenerMenu(); // toggle mobile nav
-		//CHEF.IEpatches(); // set of patches relating to IE
+		CHEF.IEpatches(); // set of patches relating to IE
 		CHEF.topSearchToggle(); // toggle top-search
-		CHEF.googleMaps(); // Google Maps
+		CHEF.fancyBoxer(); // fancybox
 	} );
 	
 	$( window ).resize( function() {

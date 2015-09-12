@@ -12,11 +12,11 @@
     <!-- Styles -->
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,700,800" rel="stylesheet" type="text/css"><!-- Google web fonts -->
     <link rel="stylesheet" type="text/css" href="<?php echo asset('frontend/font-awesome/css/font-awesome.min.css');?>">
-
     <link rel="stylesheet" type="text/css" href="<?php echo asset('frontend/css/dropdown-menu.css');?>">
     <link rel="stylesheet" type="text/css" href="<?php echo asset('frontend/bootstrap/css/bootstrap.min.css');?>">
     <link rel="stylesheet" type="text/css" href="<?php echo asset('frontend/css/jquery.fancybox.css');?>">
     <link rel="stylesheet" type="text/css" href="<?php echo asset('frontend/css/annotator.min.css'); ?>">
+
     <link rel="stylesheet" type="text/css" href="<?php echo asset('frontend/css/style.css');?>">
     <link rel="stylesheet" type="text/css" href="<?php echo asset('frontend/css/frontend.css');?>">
     <link rel="stylesheet" type="text/css" href="<?php echo asset('frontend/css/guides.css');?>">
@@ -24,25 +24,6 @@
     <link rel="stylesheet" type="text/css" href="<?php echo asset('schemas/Treant.css');?>">
     <link rel="stylesheet" type="text/css" href="<?php echo asset('frontend/css/schemas.css');?>">
 
-    <!-- jQuery -->
-    <script src="<?php echo asset('frontend/js/jquery/jquery-2.1.1.min.js');?>"></script>
-    <script src="<?php echo asset('frontend/js/jquery/jquery-migrate-1.2.1.min.js');?>"></script>
-    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-
-    <!-- Annotator -->
-    <script src="<?php echo asset('frontend/js/annotator/annotator-full.min.js');?>"></script>
-    <script src="<?php echo asset('frontend/js/annotator/view_annotator.js');?>"></script>
-    <script src="<?php echo asset('frontend/js/annotator/annotator.js');?>"></script>
-
-    <!-- jQuery plugins -->
-    <script src="<?php echo asset('frontend/js/jquery/jquery.fancybox.js');?>"></script>
-    <script src="<?php echo asset('frontend/js/jquery/jquery.i18n.min.js');?>"></script>
-    <script src="<?php echo asset('frontend/js/jquery/jquery.expose.js');?>"></script>
-    <script src="<?php echo asset('frontend/js/jquery/jquery.lockfixed.js');?>"></script>
-    <script src="<?php echo asset('schemas/Treant.js');?>"></script>
-    <script src="<?php echo asset('schemas/vendor/raphael.js');?>"></script>
-
-    <script src="<?php echo asset('frontend/js/main.js');?>"></script>
 </head>
 
 <body class="Site" role="document">
@@ -50,72 +31,62 @@
 <!-- device test, don't remove. javascript needed! -->
 <span class="visible-xs"></span><span class="visible-sm"></span><span class="visible-md"></span><span class="visible-lg"></span>
 <!-- device test end -->
-<div class="Site-content">
-    <div id="k-head" class="container"><!-- container + head wrapper -->
+
+<div id="k-head" class="container"><!-- container + head wrapper -->
+    <div class="row"><!-- row -->
+        <div class="col-lg-12">
+            <div id="k-site-logo" class="pull-left"><!-- site logo -->
+                <h1 class="k-logo">
+                    <a href="{{ url('/') }}" title="Home Page">
+                        <img src="{{ asset('frontend/images/logo.png') }}" alt="Site Logo" class="img-responsive" />
+                    </a>
+                </h1>
+                <a id="mobile-nav-switch" href="#drop-down-left"><span class="alter-menu-icon"></span></a><!-- alternative menu button -->
+            </div><!-- site logo end -->
+
+            <!-- Navigation  -->
+            @include('frontend.partials.navigation')
+
+        </div>
+    </div><!-- row end -->
+</div><!-- container + head wrapper end -->
+
+<div id="k-body"><!-- content wrapper -->
+    <div class="container"><!-- container -->
+
         <div class="row"><!-- row -->
-            <nav class="k-functional-navig"><!-- functional navig -->
-            <!--
-                <ul class="list-inline pull-right">
-                    <li><a target="_blank" href="http://www2.unine.ch">Unine</a></li>
-                    <li><a target="_blank" href="https://claroline.unine.ch/">Claroline</a></li>
-                    <li><a target="_blank" href="http://www.unine.ch/pidho">Horaires des cours</a></li>
-                </ul>
-            -->
-            </nav><!-- functional navig end -->
-            <div class="col-lg-12">
-                <div id="k-site-logo" class="pull-left"><!-- site logo -->
-                    <h1 class="k-logo">
-                        <a href="{{ url('/') }}" title="Home Page">
-                            <img src="{{ asset('frontend/images/logo.png') }}" alt="Site Logo" class="img-responsive" />
-                        </a>
-                    </h1>
-                    <a id="mobile-nav-switch" href="#drop-down-left"><span class="alter-menu-icon"></span></a><!-- alternative menu button -->
-                </div><!-- site logo end -->
+            <div id="k-top-search" class="col-lg-12 clearfix"><!-- top search -->
 
-                <!-- Navigation  -->
-                @include('frontend.partials.navigation')
+            </div><!-- top search end -->
+            <div class="k-breadcrumbs col-lg-12 clearfix"><!-- breadcrumbs -->
 
-            </div>
+                <!-- breadcrumbs  -->
+                @include('frontend.partials.breadcrumbs')
+
+                <!-- message error  -->
+                @include('frontend.partials.message')
+
+            </div><!-- breadcrumbs end -->
         </div><!-- row end -->
-    </div><!-- container + head wrapper end -->
 
-    <div id="k-body"><!-- content wrapper -->
-        <div class="container"><!-- container -->
+        <!-- Slide  -->
+        @if(Request::is('/'))
+            @include('frontend.partials.slide')
+        @endif
 
-            <div class="row"><!-- row -->
-                <div id="k-top-search" class="col-lg-12 clearfix"><!-- top search -->
-                    <!-- Search  --> {{-- @include('frontend.partials.search')--}}
-                </div><!-- top search end -->
-                <div class="k-breadcrumbs col-lg-12 clearfix"><!-- breadcrumbs -->
+        <div class="row"><!-- row -->
 
-                    <!-- breadcrumbs  -->
-                    @include('frontend.partials.breadcrumbs')
+            <!-- Contenu -->
+            @yield('content')
+            <!-- Fin contenu -->
 
-                    <!-- message error  -->
-                    @include('frontend.partials.message')
+            <div class="clearfix"></div>
+         </div><!-- row end -->
 
-                </div><!-- breadcrumbs end -->
-            </div><!-- row end -->
+    </div><!-- container end -->
+</div><!-- content wrapper end -->
 
-            <!-- Slide  -->
-            @if(Request::is('/'))
-                @include('frontend.partials.slide')
-            @endif
 
-            <div class="row"><!-- row -->
-
-                    <!-- Contenu -->
-                    @yield('content')
-                    <!-- Fin contenu -->
-
-                </div><!-- doc body wrapper end -->
-
-                <div class="clearfix"></div>
-             </div><!-- row end -->
-
-        </div><!-- container end -->
-    </div><!-- content wrapper end -->
-</div>
 <div id="k-footer"><!-- footer -->
     <div class="container"><!-- container -->
         <div class="row no-gutter"><!-- row -->
@@ -167,12 +138,25 @@
     </div><!-- container end -->
 </div><!-- subfooter end -->
 
+<!-- jQuery -->
+<script src="<?php echo asset('frontend/js/jquery/jquery-2.1.1.min.js');?>"></script>
+<script src="<?php echo asset('frontend/js/jquery/jquery-migrate-1.2.1.min.js');?>"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script src="<?php echo asset('frontend/js/annotator/annotator.js');?>"></script>
+
+<!-- jQuery plugins -->
+<script src="<?php echo asset('frontend/js/jquery/jquery.fancybox.js');?>"></script>
+<script src="<?php echo asset('frontend/js/jquery/jquery.i18n.min.js');?>"></script>
+<script src="<?php echo asset('frontend/js/jquery/jquery.expose.js');?>"></script>
+<script src="<?php echo asset('frontend/js/jquery/jquery.lockfixed.js');?>"></script>
+<script src="<?php echo asset('schemas/Treant.js');?>"></script>
+<script src="<?php echo asset('schemas/vendor/raphael.js');?>"></script>
+
+<script src="<?php echo asset('frontend/js/main.js');?>"></script>
 <!-- Bootstrap -->
 <script src="<?php echo asset('frontend/bootstrap/js/bootstrap.min.js');?>"></script>
-
 <!-- Drop-down -->
 <script src="<?php echo asset('frontend/js/jquery/dropdown-menu.min.js');?>"></script>
-
 <!-- Theme -->
 <script src="<?php echo asset('frontend/js/theme.js');?>"></script>
 
