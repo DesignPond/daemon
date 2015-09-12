@@ -113,9 +113,10 @@
                     <ul class="list-unstyled clear-margins"><!-- widgets -->
                         <li class="widget-container widget_course_search"><!-- widgets list -->
                             <h1 class="title-widget">Recherche sur le site</h1>
-                            <form role="search" method="get" id="course-finder" action="#">
+                            <form role="search" method="post" id="course-finder" action="{{ url('search') }}">
+                                {!! csrf_field() !!}
                                 <div class="input-group">
-                                    <input type="text" placeholder="Recherche..." autocomplete="off" class="form-control" id="find-course" name="find-course" />
+                                    <input type="text" placeholder="Recherche..." autocomplete="off" class="form-control" id="find-course" name="term" />
                                     <span class="input-group-btn"><button type="submit" class="btn btn-default">GO!</button></span>
                                 </div>
                             </form>

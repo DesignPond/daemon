@@ -17,7 +17,9 @@ Route::group(['middleware' => 'auth'], function()
     Route::get('accueil', ['uses' => 'HomeController@accueil']);
     Route::get('page/{slug}', ['uses' => 'HomeController@page']);
     Route::get('contact', ['uses' => 'HomeController@contact']);
+
     Route::post('sendMessage', ['uses' => 'HomeController@sendMessage']);
+    Route::post('search', ['uses' => 'SearchController@search']);
 
     Route::get('imageJson/{id?}', ['uses' => 'UploadController@imageJson']);
     Route::get('fileJson/{id?}', ['uses' => 'UploadController@fileJson']);

@@ -1,7 +1,7 @@
 <!-- sidebar wrapper -->
 <div class="col-padded col-shaded"><!-- inner custom column -->
     <ul class="list-unstyled clear-margins"><!-- widgets -->
-        @if (Request::is('/') || Request::is('contact'))
+        @if (Request::is('/') || Request::is('contact') || Request::is('search'))
             <li class="widget-container widget_nav_menu"><!-- widget -->
                 <h1 class="title-widget">Informations</h1>
                 <ul>
@@ -12,12 +12,14 @@
                 </ul>
             </li>
             <li class="widget-container widget_recent_news"><!-- widgets list -->
+                <br/>
                 <ul class="list-unstyled clear-margins"><!-- widgets -->
                     <li class="widget-container widget_course_search"><!-- widget -->
                         <h1 class="title-titan">Recherche</h1>
-                        <form role="search" method="get" id="course-finder" action="#">
+                        <form role="search" method="post" id="course-finder" action="{{ url('search') }}">
+                            {!! csrf_field() !!}
                             <div class="input-group">
-                                <input type="text" placeholder="" autocomplete="off" class="form-control" id="find-course" name="find-course" />
+                                <input type="text" placeholder="Recherche..." autocomplete="off" class="form-control" id="find-course" name="term" />
                                 <span class="input-group-btn"><button type="submit" class="btn btn-default">GO!</button></span>
                             </div>
                         </form>

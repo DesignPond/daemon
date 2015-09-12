@@ -27,6 +27,11 @@ class PageEloquent implements PageInterface{
         return $this->page->getNestedList('title', $key, $seperator);
     }
 
+    public function search($term)
+    {
+        return $this->page->where('content','LIKE', '%'.$term.'%')->get();
+    }
+
     public function getRoot(){
 
         return $this->page->whereNull('parent_id')->get();
