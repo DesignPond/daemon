@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="row fullwidth auth-form"><!-- row -->
+    <div class="row fullwidth auth-form auth-form_height"><!-- row -->
         <div class="col-lg-12 clearfix">
 
             <div class="row">
