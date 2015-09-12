@@ -10,27 +10,25 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+Route::group(['middleware' => 'auth'], function()
+{
+    // Site routes...
+    Route::get('/', ['uses' => 'HomeController@accueil']);
+    Route::get('accueil', ['uses' => 'HomeController@accueil']);
+    Route::get('page/{slug}', ['uses' => 'HomeController@page']);
+    Route::get('contact', ['uses' => 'HomeController@contact']);
+    Route::post('sendMessage', ['uses' => 'HomeController@sendMessage']);
 
-Route::get('home', function () {
-    return view('welcome');
+    Route::get('imageJson/{id?}', ['uses' => 'UploadController@imageJson']);
+    Route::get('fileJson/{id?}', ['uses' => 'UploadController@fileJson']);
+    Route::get('linkJson/{id?}', ['uses' => 'UploadController@linkJson']);
+
+    Route::post('uploadFileRedactor/{id?}', 'UploadController@uploadFileRedactor');
+    Route::post('uploadRedactor/{id?}', 'UploadController@uploadRedactor');
+
+    Route::post('schemas/projet/{id?}', ['uses' => 'SchemaController@schemas']);
+    Route::resource('schemas', 'SchemaController');
 });
-
-// Site routes...
-Route::get('/', ['uses' => 'HomeController@accueil']);
-Route::get('accueil', ['uses' => 'HomeController@accueil']);
-Route::get('page/{slug}', ['uses' => 'HomeController@page']);
-Route::get('contact', ['uses' => 'HomeController@contact']);
-Route::post('sendMessage', ['uses' => 'HomeController@sendMessage']);
-
-Route::get('imageJson/{id?}', ['uses' => 'UploadController@imageJson']);
-Route::get('fileJson/{id?}', ['uses' => 'UploadController@fileJson']);
-Route::get('linkJson/{id?}', ['uses' => 'UploadController@linkJson']);
-
-Route::post('uploadFileRedactor/{id?}', 'UploadController@uploadFileRedactor');
-Route::post('uploadRedactor/{id?}', 'UploadController@uploadRedactor');
-
-Route::post('schemas/projet/{id?}', ['uses' => 'SchemaController@schemas']);
-Route::resource('schemas', 'SchemaController');
 
 //Route::get('contact', ['uses' => 'PageController@index']);
 // Admin routes
