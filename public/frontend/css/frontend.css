@@ -45,9 +45,10 @@
     min-height:345px;
 }
 
+#formLogin .control-label,
 .auth-form .form-horizontal .control-label {
     text-align: right;
-    padding: 10px 5px 5px;
+    padding: 10px 15px;
 }
 
 .form-horizontal .radio, .form-horizontal .checkbox {
@@ -81,8 +82,8 @@
 
 .news-body ul{
     margin-bottom: 25px;
+    width: 95%;
 }
-
 
 /*
 * Tree
@@ -196,7 +197,12 @@ right connector from last child*/
 
 .hierachy{
     margin-bottom: 0;
-    padding-left: 0;
+    width: 97%;
+    padding-left: 15px;
+}
+
+.hierachy li > ul{
+    width: 100%;
 }
 
 .hierachy li{
@@ -239,4 +245,13 @@ right connector from last child*/
     right: -10px;
     top: 0;
     width: 0;
+}
+
+#tree-simple{
+    margin-left: 10px;
+    min-height: 200px;
+}
+
+#tree-simple h3{
+    margin-top: 0;
 }

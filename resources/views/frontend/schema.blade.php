@@ -6,7 +6,7 @@
 <div id="k-main-full"><!-- doc body wrapper -->
 
     <div class="col-padded"><!-- inner custom column -->
-        <div class="row gutter"><!-- row -->
+        <div class="row"><!-- row -->
             <div class="col-lg-12 col-md-12">
 
                 <h1 class="title-widget remove-margin-bottom">
@@ -17,13 +17,19 @@
                 </div>
                 <div class="news-body clearfix"><!-- course content -->
 
-                    @if(!$parent->isEmpty())
-                        <ul class="hierachy">
-                            <?php echo $helper->renderMenuSimple($parent->first()); ?>
-                        </ul>
-                    @endif
 
-                    <div id="tree-simple" data-projet="{{ $id }}" style="width:100%; height: 40px"></div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            @if(!$parent->isEmpty())
+                                <ul class="hierachy">
+                                    <?php echo $helper->renderMenuSimple($parent->first()); ?>
+                                </ul>
+                            @endif
+                        </div>
+                        <div class="col-md-9">
+                            <div id="tree-simple" data-projet="{{ $id }}" style="width:100%; height: 40px"></div>
+                        </div>
+                    </div>
 
                     <?php $content = $helper->highight($page->content,$glossaires->toArray()); ?>
 

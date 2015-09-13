@@ -54,7 +54,7 @@ return [
     |
     */
 
-    'from' => ['address' => 'cindy.leschaud@gmail.com', 'name' => 'Cindy Leschaud'],
+    'from' => ['address' => 'info@methodolog​ie.ch', 'name' => 'Méthodologie juridique UniNE'],
 
     /*
     |--------------------------------------------------------------------------

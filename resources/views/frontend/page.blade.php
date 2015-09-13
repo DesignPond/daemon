@@ -9,7 +9,7 @@
 <div id="k-main"><!-- doc body wrapper -->
 
     <div class="col-padded"><!-- inner custom column -->
-        <div class="row gutter"><!-- row -->
+        <div class="row"><!-- row -->
             <div class="col-lg-12 col-md-12">
                 <?php
                     $ancestor = $page->getAncestors();

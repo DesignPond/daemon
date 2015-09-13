@@ -54,7 +54,7 @@
 <div id="k-body"><!-- content wrapper -->
     <div class="container"><!-- container -->
 
-        <div class="row"><!-- row -->
+        <div class="row no-gutter"><!-- row -->
             <div id="k-top-search" class="col-lg-12 clearfix"><!-- top search -->
 
             </div><!-- top search end -->
@@ -74,7 +74,7 @@
             @include('frontend.partials.slide')
         @endif
 
-        <div class="row"><!-- row -->
+        <div class="row no-gutter"><!-- row -->
 
             <!-- Contenu -->
             @yield('content')
