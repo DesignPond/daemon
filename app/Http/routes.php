@@ -75,10 +75,12 @@ Route::post('password/reset', 'Auth\PasswordController@postReset');
 Route::get('testing', function()
 {
 
-/*    \App\Cours\User\Entities\User::create(array(
-        'name'     => 'Célia Huart',
-        'email'    => 'celia.huart@unine.ch',
-        'password' => Hash::make('methode2015')
-    ));*/
+/*
+    \App\Cours\User\Entities\User::create(array(
+        'name'     => 'Etudiant',
+        'email'    => 'info@methodologie.ch',
+        'password' => Hash::make('mj2015')
+    ));
+ */
 
 });

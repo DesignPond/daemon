@@ -50,6 +50,13 @@
                     </div>
 
                     <div class="form-group">
+                        <label for="message" class="col-sm-3 control-label">Ordre</label>
+                        <div class="col-sm-1">
+                            {!! Form::text('rang', $page->rang , array('class' => 'form-control') ) !!}
+                        </div>
+                    </div>
+
+                    <div class="form-group">
                         <label for="message" class="col-sm-3 control-label">Cette page est utilisé comme catégorie de liens</label>
                         <div class="col-sm-4">
                             {!! Form::checkbox('parent_categorie', 1, $page->parent_categorie ? true : false) !!}

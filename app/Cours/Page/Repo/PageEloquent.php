@@ -58,6 +58,7 @@ class PageEloquent implements PageInterface{
             'auteur'           => (isset($data['auteur']) ? $data['auteur'] : ''),
             'ouvrage'          => (isset($data['ouvrage']) ? $data['ouvrage'] : ''),
             'page'             => (isset($data['page']) ? $data['page'] : ''),
+            'rang'             => (isset($data['rang']) ? $data['rang'] : ''),
             'paragraphe'       => (isset($data['paragraphe']) ? $data['paragraphe'] : ''),
             'projet_id'        => (isset($data['projet_id']) ? $data['projet_id'] : ''),
             'parent_categorie' => (isset($data['parent_categorie']) && !empty($data['parent_categorie']) ? $data['parent_categorie'] : null),
