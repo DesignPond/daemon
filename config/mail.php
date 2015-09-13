@@ -54,7 +54,7 @@ return [
     |
     */
 
-    'from' => ['address' => 'info@methodolog​ie.ch', 'name' => 'Méthodologie juridique UniNE'],
+    'from' => ['address' => 'info@methodologie.ch', 'name' => 'Méthodologie juridique UniNE'],
 
     /*
     |--------------------------------------------------------------------------
