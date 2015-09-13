@@ -21,6 +21,7 @@
                                     <label class="col-md-4 control-label">Code d'accès</label>
                                     <div class="col-md-6">
                                         <input type="text" class="form-control" name="password">
+                                        <p class="help-block">Même que sur Claroline</p>
                                     </div>
                                 </div>
 
