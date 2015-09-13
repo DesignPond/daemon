@@ -82,7 +82,7 @@ class HomeController extends Controller
 
             $message->from($data['email'], $data['name']);
 
-            $message->to('cindy.leschaud@gmail.com')->subject('Message depuis le site www.methodologie.ch');
+            $message->to('info@methodologie.ch')->subject('Message depuis le site www.methodologie.ch');
         });
 
         return redirect('/')->with(array('status' => 'success', 'message' => '<strong>Merci pour votre message</strong><br/>Nous vous contacterons dès que possible.'));
