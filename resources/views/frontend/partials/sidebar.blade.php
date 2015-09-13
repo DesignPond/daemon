@@ -2,15 +2,12 @@
 <div class="col-padded col-shaded"><!-- inner custom column -->
     <ul class="list-unstyled clear-margins"><!-- widgets -->
         @if (Request::is('/') || Request::is('contact') || Request::is('search'))
-            <li class="widget-container widget_nav_menu"><!-- widget -->
+           <!-- <li class="widget-container widget_nav_menu">
                 <h1 class="title-widget">Informations</h1>
                 <ul>
-                    <li><a href="#" title="menu item">Annonces</a></li>
-                    <li><a href="#" title="menu item">Plan du cours</a></li>
-                    <li><a href="#" title="menu item">Directives</a></li>
-                    <li><a href="#" title="menu item">Calendrier du cours</a></li>
+                    <li><a href="#" title="menu item">Administration</a></li>
                 </ul>
-            </li>
+            </li> -->
             <li class="widget-container widget_recent_news"><!-- widgets list -->
                 <br/>
                 <ul class="list-unstyled clear-margins"><!-- widgets -->
@@ -28,12 +25,11 @@
                         <a href="{{ url('auth/login') }}" class="custom-button cb-green" title="S'identifier">
                             <i class="custom-button-icon fa fa-check-square-o"></i>
                                 <span class="custom-button-wrap">
-                                    <span class="custom-button-title">Login</span>
-                                    <span class="custom-button-tagline">Avec votre email UniNE</span>
+                                    <span class="custom-button-title">Administration</span>
                                 </span>
                             <em></em>
                         </a>
-                        <a href="#" class="custom-button cb-gray" title="Consulter les cours">
+                        <a href="mailto:info@methodologie.ch" class="custom-button cb-gray" title="Consulter les cours">
                             <i class="custom-button-icon fa  fa-play-circle-o"></i>
                                 <span class="custom-button-wrap">
                                     <span class="custom-button-title">Demander un accès</span>
