@@ -72,7 +72,7 @@ sup{
 .list-guide li{
     font-size: 13px;
     font-weight: 700;
-    line-height: 20px;
+    line-height: 17px;
     padding-left: 5px;
     margin-left: 5px;
     position: relative;
@@ -92,7 +92,7 @@ sup{
 
 .list-guide li ul{
     padding-left: 0;
-    margin: 10px 0 10px 0;
+    margin: 5px 0 8px 0;
 }
 
 .list-guide li ul li ul{

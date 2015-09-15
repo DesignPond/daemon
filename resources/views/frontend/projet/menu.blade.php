@@ -42,6 +42,6 @@
         <ul>
         </ul>
     </li>
-    <li><a class="expose" data-anchor="signatures" href="#">Signatures</a></li>
-    <li><a class="expose" data-anchor="formule-de-promulgation" href="#">Formule de promulgation</a></li>
+    <li><a target="_blank" href="http://www.admin.ch/ch/f/as/2004/1385.pdf">Signatures</a></li>
+    <li><a target="_blank" href="http://www.admin.ch/ch/f/as/2004/1385.pdf">Formule de promulgation</a></li>
 </ol>

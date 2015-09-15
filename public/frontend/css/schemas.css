@@ -77,10 +77,16 @@ span.highlight{
 */
 
 .sidebarStatic {
-    position: relative;
+    position: static;
 }
 
 .sidebarFixed {
     position: fixed;
     top: 20px;
+}
+
+.sidebarBottom {
+    position: absolute;
+    bottom: 20px;
+    z-index: 1000;
 }

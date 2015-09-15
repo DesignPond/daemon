@@ -38,7 +38,7 @@
                     @if(isset($page->projet))
 
                         <div class="row">
-                            <div class="col-md-3">
+                            <div class="col-md-3" style="position: relative;">
                                 @include('frontend.projet.menu')
                             </div>
                             <div class="col-md-9">

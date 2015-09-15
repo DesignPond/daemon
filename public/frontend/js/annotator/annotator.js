@@ -48,17 +48,37 @@ $(function(){
     $.lockfixed("#structures",{offset: {top: 10}});
 
     var changePoint = $('#content').offset().top;
+    var changePoint2 = $('#dispositions-finales').offset().top;
+    var final        = $('#final').offset().top - 450;
+    var distance     = (changePoint2 - $(window).scrollTop());
 
-    console.log(changePoint);
+    console.log($(window).scrollTop());
+    console.log(changePoint2);
+
+    $('#guides').parent().css({
+        'height' : final
+    });
 
     $(window).scroll(function () {
-        if ($(window).scrollTop() >= changePoint) {
+
+        if ($(window).scrollTop() >= changePoint && $(window).scrollTop() < changePoint2)
+        {
             $('#guides').removeClass('sidebarStatic');
+            $('#guides').removeClass('sidebarBottom');
             $('#guides').addClass('sidebarFixed');
         }
-        else {
+        else if($(window).scrollTop() >= changePoint2)
+        {
             $('#guides').addClass('sidebarStatic');
+            $('#guides').addClass('sidebarBottom');
             $('#guides').removeClass('sidebarFixed');
         }
+        else
+        {
+            $('#guides').removeClass('sidebarFixed');
+            $('#guides').removeClass('sidebarBottom');
+            $('#guides').addClass('sidebarStatic');
+        }
+
     });
 });
