@@ -36,10 +36,16 @@
                     {!! $content!!}
 
                     @if(isset($page->projet))
-                        <?php $projet = $page->projet; ?>
-                        <?php $projet->load('structures'); ?>
 
-                        @include('frontend.partials.projet', ['projet' => $projet])
+                        <div class="row">
+                            <div class="col-md-3">
+                                @include('frontend.projet.menu')
+                            </div>
+                            <div class="col-md-9">
+                                @include('frontend.projet.content')
+                            </div>
+                        </div>
+
                     @endif
 
                 </div><!-- course content end -->

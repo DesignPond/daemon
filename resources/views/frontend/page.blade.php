@@ -15,7 +15,7 @@
                     $ancestor = $page->getAncestors();
                     $parent   = $ancestor->last();
                 ?>
-                <h1 class="title-widget remove-margin-bottom">{{ $parent->title }}</h1>
+                <h1 id="changPoint" class="title-widget remove-margin-bottom">{{ $parent->title }}</h1>
                 <div class="news-title-meta">
                     <h1 class="page-title">{{ $page->title }}</h1>
                     <div class="news-meta">
@@ -26,34 +26,15 @@
                 </div>
                 <div class="news-body clearfix"><!-- course content -->
 
-                    {!! $page->content !!}
-
-                    @include('frontend.schemas.index', ['schema' => $schema])
-
-
-                       <div id="chartOrg"></div>
-                       <ul id="org" style="display:none">
-                           <li>Food
-                               <ul>
-                                   <li>Beer</li>
-                                   <li>Vegetables
-                                       <ul>
-                                           <li>Pumpkin</li>
-                                           <li><a href="http://tquila.com" target="_blank">Aubergine</a></li>
-                                       </ul>
-                                   </li>
-                                   <li>Bread</li>
-                                   <li>Chocolate
-                                       <ul>
-                                           <li>Topdeck</li>
-                                           <li>Reese's Cups</li>
-                                       </ul>
-                                   </li>
-                               </ul>
-                           </li>
-                       </ul>
-                   </div>
-
+                    <div class="row">
+                        <div class="col-md-2">
+                            @include('frontend.projet.menu')
+                        </div>
+                        <div class="col-md-10">
+                            @include('frontend.projet.content')
+                        </div>
+                    </div>
+                    
                 </div><!-- course content end -->
 
             </div>

@@ -7,7 +7,7 @@ $(function(){
     });
 
     $('[data-toggle="popover"]').popover({
-        trigger : 'hover'
+        trigger : 'click'
     });
 
     $('[data-toggle="popover"]').hover(function(){
@@ -47,4 +47,18 @@ $(function(){
 
     $.lockfixed("#structures",{offset: {top: 10}});
 
+    var changePoint = $('#content').offset().top;
+
+    console.log(changePoint);
+
+    $(window).scroll(function () {
+        if ($(window).scrollTop() >= changePoint) {
+            $('#guides').removeClass('sidebarStatic');
+            $('#guides').addClass('sidebarFixed');
+        }
+        else {
+            $('#guides').addClass('sidebarStatic');
+            $('#guides').removeClass('sidebarFixed');
+        }
+    });
 });

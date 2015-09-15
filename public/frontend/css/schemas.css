@@ -71,3 +71,16 @@ a.addBtn:hover{
 span.highlight{
     background: #fff5f5;
 }
+
+/*
+    Fixed sidebar
+*/
+
+.sidebarStatic {
+    position: relative;
+}
+
+.sidebarFixed {
+    position: fixed;
+    top: 20px;
+}

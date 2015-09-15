@@ -165,7 +165,7 @@ class PageController extends Controller
             ['id' => 30, 'slug' => str_slug('Contact'), 'title' => 'Contact','rang' => 4],
         ];
 
-        $all_pages  = \App\Cours\Page\Entities\Page::buildTree($pages); // => true
+        //$all_pages  = \App\Cours\Page\Entities\Page::buildTree($pages); // => true
     }
     
 }

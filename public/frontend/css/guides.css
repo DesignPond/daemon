@@ -95,6 +95,14 @@ sup{
     margin: 10px 0 10px 0;
 }
 
+.list-guide li ul li ul{
+    padding-left: 13px;
+}
+
+.list-guide li ul li ul li{
+    list-style: circle;
+}
+
 .list-guide li ul li{
     list-style: none;
     margin-left: 0;
