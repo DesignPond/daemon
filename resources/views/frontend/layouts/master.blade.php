@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="<?php echo asset('schemas/Treant.css');?>">
     <link rel="stylesheet" type="text/css" href="<?php echo asset('frontend/css/schemas.css');?>?<?php echo rand(1234,120000); ?>">
-
+    <link rel="stylesheet" type="text/css" href="<?php echo asset('backend/css/types.css');?>?<?php echo rand(1234,120000); ?>">
 </head>
 
 <body class="Site" role="document">

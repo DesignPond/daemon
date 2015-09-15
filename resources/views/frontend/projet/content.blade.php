@@ -1,6 +1,7 @@
 <div id="content">
 
-    <div tabindex="0" data-trigger="focus" data-toggle="popover" data-placement="top"  id="intitule" title="Intitulé" data-content="Intitulé">
+    <div tabindex="0" data-trigger="focus" data-toggle="popover" data-placement="top"  id="intitule" title="Intitulé"
+         data-content="Formule qui permet d'identifer l'acte">
         <span  tabindex="0" data-trigger="focus" data-toggle="popover" data-placement="top" title="Numéro" data-content="Chaque acte inclut dans le recueil dispose d'un numéro RS correspondant à sa position dans le classement thématique"  class='class_type class_type_1' id='numero'>251</span>
         <span  tabindex="0" data-trigger="focus" data-toggle="popover" data-placement="top" title="Forme de l'acte" data-content="L'intitulé indique le type d'acte normatif dont il s'agit selon la classification propre à l'ordre constitutionnel de l'État (p.ex. une loi, un arrêté, une ordonnance, un décret, un règlement, une convention, un protocole)"  class='class_type class_type_2' id='forme-de-lacte'>
             Loi fédérale</span> <span  tabindex="0" data-trigger="focus" data-toggle="popover" data-placement="top" title="Objet" data-content="Détermination de l'objet"  class='class_type class_type_3' id='objet'>sur les cartels et autres restrictions à la concurrence</span> <br/>
@@ -17,10 +18,10 @@
     </div>
 
     <!-- Corps du texte -->
-    <div tabindex="0" data-trigger="focus" data-toggle="popover" data-placement="top"  id="corps-texte" title="Corps du texte" data-content="">
+    <div tabindex="0" data-trigger="focus" data-toggle="popover" data-placement="top"  id="corps-texte" title="Le corps du texte" data-content="Le corps du texte comprend souvent les règles de droit proprement dites.">
 
         <!-- Règles générales -->
-        <div tabindex="0" data-trigger="focus" data-toggle="popover" data-placement="top"  id="regle-générales" title="Règles générales" data-content="">
+        <div tabindex="0" data-trigger="focus" data-toggle="popover" data-placement="top"  id="regle-générales" title="Règles générales" data-content="Dans le actes législatifs les plus récents, les premières dispositions sont destinées à en définir le cadre">
 
             <h1>Chapitre 1 Dispositions générales</h1>
             <!-- But -->
@@ -31,7 +32,7 @@
             <!-- end but -->
 
             <!-- Champ d'application -->
-            <div tabindex="0" data-trigger="focus" data-toggle="popover" data-placement="top" id="champs-application" title="Champ d'application" data-content="">
+            <div tabindex="0" data-trigger="focus" data-toggle="popover" data-placement="top" id="champs-application" title="Champ d'application" data-content="Le texte précise en quelques formules générales les champs d'application matériel et personnel de l'acte.">
 
                 <div id="a2" class="a2 subpage">
                     <div class="articleTitle">
@@ -113,7 +114,8 @@
             </div>
             <!-- End Champ d'application -->
             <!-- regle-definitoire -->
-            <div tabindex="0" data-trigger="focus" data-toggle="popover" data-placement="top" id="regle-definitoire" title="Règles définitioires" data-content="">
+            <div tabindex="0" data-trigger="focus" data-toggle="popover" data-placement="top" id="regle-definitoire" title="Règles définitioires"
+                 data-content="Afin de préciser le champ d'application de l'acte et de simplifier son application ultérieure, le législateur propose de plus en plus la définition des principales notions utilisées.">
 
                 <div id="a4" class="a4 subpage">
                     <div class="articleTitle">
@@ -158,7 +160,7 @@
         <!-- end regles générales -->
 
         <!-- regle-materielles -->
-        <div tabindex="0" data-trigger="focus" data-toggle="popover" data-placement="top"  id="regle-materielles" title="Règles matérielles" data-content="">
+        <div tabindex="0" data-trigger="focus" data-toggle="popover" data-placement="top"  id="regle-materielles" title="Règles matérielles" data-content="L'essentiel du texte contient les règles de droit matériel qui régissent l'objet traité.">
 
             <h1 class="title clickable">Chapitre 2 Dispositions de droit matériel</h1>
             <h2 class="title clickable">Section 1 Restrictions illicites à la concurrence</h2>
@@ -451,7 +453,8 @@
         <!-- END regles materielles -->
 
         <!-- regle-formelles -->
-        <div tabindex="0" data-trigger="focus" data-toggle="popover" data-placement="top"  id="regle-formelles" title="Règles formelles" data-content="">
+        <div tabindex="0" data-trigger="focus" data-toggle="popover" data-placement="top"  id="regle-formelles" title="Règles formelles"
+             data-content="Sans qu'il soit toujours nécessaire ni possible de le faire, l'acte complète les règles de fond par des règles de forme, qui précisent notamment quelles sont les autorités compétentes pour appliquer la loi et la procédure à suivre devant elles.">
 
             <h1 class="title clickable">Chapitre 3 Dispositions de procédure civile</h1>
             <div id="a12" class="a12 subpage">
@@ -523,7 +526,7 @@
             </div>
 
             <h1 class="title clickable">Chapitre 4 Dispositions de procédure administrative</h1>
-            <h2 class="title clickable"><span class="expanderComparator"></span>Section 1 Autorités en matière de concurrence</h2>
+            <h2 class="title clickable">Section 1 Autorités en matière de concurrence</h2>
 
             <div id="a18" class="a18 subpage">
                 <div class="articleTitle">
@@ -748,7 +751,7 @@
                 </div>
             </div>
 
-            <h2 class="title clickable"><span class="expanderComparator"></span>Section 5 Autres tâches et compétences des autorités en matière de concurrence</h2>
+            <h2 class="title clickable">Section 5 Autres tâches et compétences des autorités en matière de concurrence</h2>
 
             <div id="a45" class="a45 subpage">
                 <div class="articleTitle">
@@ -798,7 +801,8 @@
         <!-- END regles formelles -->
 
         <!-- sanctions -->
-        <div tabindex="0" data-trigger="focus" data-toggle="popover" data-placement="top"  id="sactions" title="Sanctions" data-content="">
+        <div tabindex="0" data-trigger="focus" data-toggle="popover" data-placement="top"  id="sactions" title="Sanctions"
+             data-content="Le plus souvent la loi prescrit des sanctions afin de garantir l'éxécution des normes de comportement.">
 
             <h2 class="title clickable">Section 6 Sanctions administratives<sup><a href="#fn6">6</a></sup></h2>
             <div id="a49a" class="a49a subpage">
@@ -955,18 +959,18 @@
         <div tabindex="0" data-trigger="focus" data-toggle="popover" data-placement="top" id="dispositions-finales" title="Dispositions finales" data-content="Les dispositions finales (« die Schlussbestimmungen» ; « le disposizioni finali ») précisent les conditions d'exécution de l'acte. Elles comprennent en principe les parties suivantes : 503 P Les clauses d'exécution. La mise en oeuvre du régime instauré par la loi peut appeler des règles complémentaires, dites d'exécution. L'acte désigne les organes compétents pour les adopter et précise souvent les modalités de l'intervention. ">
 
             <h1 class="title clickable">Chapitre 7 Dispositions finales</h1>
-            <div tabindex="0" data-trigger="focus" data-toggle="popover" data-placement="top" title="Clause d'exécution" data-content="Clause d'exécution"  class='class_type class_type_12' id='clause-dexecution'>
+            <div tabindex="0" data-trigger="focus" data-toggle="popover" data-placement="top" title="Clause d'exécution" data-content="La mise en oeuvre du régime instauré par la loi peut appeler des règles complémentaires, dites d'exécution."  class='class_type class_type_12' id='clause-dexecution'>
                 <h5><a href="#"><strong>Art. 60</strong>  Exécution</a></h5>
                 <p>Le Conseil fédéral édicte les dispositions d'exécution.</p>
             </div>
 
-            <div tabindex="0" data-trigger="focus" data-toggle="popover" data-placement="top" title="Clause abrogatoire" data-content="Clause abrogatoire"  class='class_type class_type_13' id='clause-abrogatoire'>
+            <div tabindex="0" data-trigger="focus" data-toggle="popover" data-placement="top" title="Clause abrogatoire" data-content="L'entrée en vigeur de la nouvelle loi peut entraîner la modification des textes antérieurs."  class='class_type class_type_13' id='clause-abrogatoire'>
                 <h5><a href="#"><strong>Art.  61</strong> Abrogation du droit en vigueur</a></h5>
                 <p>La loi du 20 décembre 1985<sup><a href="#fn-#a61-1">1</a></sup> sur les cartels et organisations analogues est abrogée.</p>
                 <p><small><a name="fn-#a61-1"><sup>1</sup></a> [RO <strong>1986</strong> 874, <strong>1992</strong> 288 annexe ch. 12]</small></p>
             </div>
 
-            <div tabindex="0" data-trigger="focus" data-toggle="popover" data-placement="top" title="Règles de droit intemporel" data-content="Règles de droit intemporel"  class='class_type class_type_14' id='regles-de-droit-intemporel'>
+            <div tabindex="0" data-trigger="focus" data-toggle="popover" data-placement="top" title="Règles de droit intertemporel" data-content="Le passage de la loi ancienne à la loi nouvelle peut soulever des conflits que le législateur doit règler par quelques principes de droit intertemporel. "  class='class_type class_type_14' id='regles-de-droit-intemporel'>
                 <div class="articleTitle">
                     <h5><a href="#"><strong>Art.  62</strong> Dispositions transitoires</a></h5>
                 </div>
@@ -992,7 +996,9 @@
             </div>
         </div>
 
-        <div tabindex="0" data-trigger="focus" data-toggle="popover" data-placement="top"  id="entree-en-vigueur" title="Entrée en vigueur" data-content="Entrée en vigueur"><p>Date de l'entrée en vigueur: 1<sup>er</sup> juillet 1996<sup><a href="#fn9">9</a></sup></p>
+        <div tabindex="0" data-trigger="focus" data-toggle="popover" data-placement="top"  id="entree-en-vigueur" title="Entrée en vigueur"
+             data-content="La dernière disposition précise à quel date le texte entre en vigueur.">
+            <p>Date de l'entrée en vigueur: 1<sup>er</sup> juillet 1996<sup><a href="#fn9">9</a></sup></p>
             <div class="articleTitle">
                 <h5><a href="#"><strong>Art. 63</strong> Référendum et entrée en vigueur</a></h5>
             </div>

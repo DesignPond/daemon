@@ -35,7 +35,7 @@
         <ul>
             <li><a class="expose" data-anchor="clause-dexecution" href="#">Clause d&#039;ex&eacute;cution</a></li>
             <li><a class="expose" data-anchor="clause-abrogatoire" href="#">Clause abrogatoire</a></li>
-            <li><a class="expose" data-anchor="regles-de-droit-intemporel" href="#">R&egrave;gles de droit intemporel</a></li>
+            <li><a class="expose" data-anchor="regles-de-droit-intemporel" href="#">R&egrave;gles de droit intertemporel</a></li>
         </ul>
     </li>
     <li><a class="expose" data-anchor="entree-en-vigueur" href="#">Entr&eacute;e en vigueur</a>
