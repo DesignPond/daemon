@@ -19,14 +19,14 @@
 
 
                     <div class="row">
-                        <div class="col-md-3">
+                        <div class="col-md-3 col-xs-12">
                             @if(!$parent->isEmpty())
                                 <ul class="hierachy">
                                     <?php echo $helper->renderMenuSimple($parent->first()); ?>
                                 </ul>
                             @endif
                         </div>
-                        <div class="col-md-9">
+                        <div class="col-md-9 col-xs-12">
                             <div id="tree-simple" data-projet="{{ $id }}" style="width:100%; height: 40px"></div>
                         </div>
                     </div>
