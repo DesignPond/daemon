@@ -47,38 +47,42 @@ $(function(){
 
     $.lockfixed("#structures",{offset: {top: 10}});
 
-    var changePoint = $('#content').offset().top;
-    var changePoint2 = $('#dispositions-finales').offset().top;
-    var final        = $('#final').offset().top - 450;
-    var distance     = (changePoint2 - $(window).scrollTop());
+    if($('#content').length){
 
-    console.log($(window).scrollTop());
-    console.log(changePoint2);
+        var changePoint = $('#content').offset().top;
+        var changePoint2 = $('#dispositions-finales').offset().top;
+        var final        = $('#final').offset().top - 450;
+        var distance     = (changePoint2 - $(window).scrollTop());
 
-    $('#guides').parent().css({
-        'height' : final
-    });
+        console.log($(window).scrollTop());
+        console.log(changePoint2);
 
-    $(window).scroll(function () {
+        $('#guides').parent().css({
+            'height' : final
+        });
 
-        if ($(window).scrollTop() >= changePoint && $(window).scrollTop() < changePoint2)
-        {
-            $('#guides').removeClass('sidebarStatic');
-            $('#guides').removeClass('sidebarBottom');
-            $('#guides').addClass('sidebarFixed');
-        }
-        else if($(window).scrollTop() >= changePoint2)
-        {
-            $('#guides').addClass('sidebarStatic');
-            $('#guides').addClass('sidebarBottom');
-            $('#guides').removeClass('sidebarFixed');
-        }
-        else
-        {
-            $('#guides').removeClass('sidebarFixed');
-            $('#guides').removeClass('sidebarBottom');
-            $('#guides').addClass('sidebarStatic');
-        }
+        $(window).scroll(function () {
 
-    });
+            if ($(window).scrollTop() >= changePoint && $(window).scrollTop() < changePoint2)
+            {
+                $('#guides').removeClass('sidebarStatic');
+                $('#guides').removeClass('sidebarBottom');
+                $('#guides').addClass('sidebarFixed');
+            }
+            else if($(window).scrollTop() >= changePoint2)
+            {
+                $('#guides').addClass('sidebarStatic');
+                $('#guides').addClass('sidebarBottom');
+                $('#guides').removeClass('sidebarFixed');
+            }
+            else
+            {
+                $('#guides').removeClass('sidebarFixed');
+                $('#guides').removeClass('sidebarBottom');
+                $('#guides').addClass('sidebarStatic');
+            }
+
+        });
+    }
+
 });

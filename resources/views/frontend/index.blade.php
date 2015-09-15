@@ -22,7 +22,7 @@
                     <p>
                         Il s’agit dans une première partie d’acquérir des notions indispensables à la recherche juridique, en connaissant d’une part les modes de
                         publication de la législation, de la jurisprudence et de la doctrine et en effectuant d’autre part des recherches dans ces trois domaines. La
-                        deuxième partie aborde la rédaction juridique en présentant les usages communément reconnus pour des travaux scientifiques et pratiques.
+                        seconde partie aborde la rédaction juridique en présentant les usages communément reconnus pour des travaux scientifiques et pratiques.
                         L’accent est mis aussi bien sur la technique de citation que sur la structure des documents. Par ailleurs, le cours est complété par une
                         présentation de la bibliothèque universitaire et la découverte d’une institution fondamentale du système juridique helvétique (p.ex. Parlement
                         fédéral, Tribunal fédéral).
@@ -39,10 +39,11 @@
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12">
                 <h6>Documentation</h6>
-                <p>L’ouvrage de référence est le suivant : P. Tercier/Ch. Roten, La recherche et la rédaction juridiques, 6e éd., Genève / Zurich / Bâle 2011. Les
+                <p>L’ouvrage de référence est le suivant : <span style="font-variant: small-caps;">P. Tercier/Ch. Roteny</span>, La recherche et la rédaction juridiques, 6e éd., Genève 2011.<br/> Les
                     lectures préparatoires supplémentaires ainsi que les présentations Power Point seront disponibles sur Claroline, selon les indications données
                     en début de cours.
                 </p>
+                <p>Le site web methodologie.ch illustre le contenu de l'ouvrage de base (sans le remplacer) en offrant une présentation complémentaire de la matière enseignée.</p>
             </div>
         </div><!-- row end -->
     </div><!-- inner custom column end -->

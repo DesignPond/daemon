@@ -35,6 +35,7 @@
 <div id="k-head" class="container"><!-- container + head wrapper -->
     <div class="row"><!-- row -->
         <div class="col-lg-12">
+
             <div id="k-site-logo" class="pull-left"><!-- site logo -->
                 <h1 class="k-logo">
                     <a href="{{ url('/') }}" title="Home Page">

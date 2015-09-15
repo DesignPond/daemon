@@ -1,5 +1,5 @@
 <!-- main navig -->
-<nav id="k-menu" class="k-main-navig">
+<nav id="k-menu" class="k-main-navig"><!-- main navig -->
     <ul id="drop-down-left" class="k-dropdown-menu">
         <li><a href="{{ url('/') }}" title="News">Accueil</a></li>
         <?php
