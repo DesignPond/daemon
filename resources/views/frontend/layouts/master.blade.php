@@ -144,7 +144,7 @@
 <script src="<?php echo asset('frontend/js/jquery/jquery-2.1.1.min.js');?>"></script>
 <script src="<?php echo asset('frontend/js/jquery/jquery-migrate-1.2.1.min.js');?>"></script>
 <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-<script src="<?php echo asset('frontend/js/annotator/annotator.js');?>"></script>
+<script src="<?php echo asset('frontend/js/annotator/annotator.js');?>?<?php echo rand(1234,120000); ?>"></script>
 
 <!-- jQuery plugins -->
 <script src="<?php echo asset('frontend/js/jquery/jquery.fancybox.js');?>"></script>
@@ -154,7 +154,7 @@
 <script src="<?php echo asset('schemas/Treant.js');?>"></script>
 <script src="<?php echo asset('schemas/vendor/raphael.js');?>"></script>
 
-<script src="<?php echo asset('frontend/js/main.js');?>"></script>
+<script src="<?php echo asset('frontend/js/main.js');?>?<?php echo rand(1234,120000); ?>"></script>
 <!-- Bootstrap -->
 <script src="<?php echo asset('frontend/bootstrap/js/bootstrap.min.js');?>"></script>
 <!-- Drop-down -->
