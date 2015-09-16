@@ -39,7 +39,7 @@
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12">
                 <h6>Documentation</h6>
-                <p>L’ouvrage de référence est le suivant : <span style="font-variant: small-caps;">P. Tercier/Ch. Roteny</span>, La recherche et la rédaction juridiques, 6e éd., Genève 2011.<br/> Les
+                <p>L’ouvrage de référence est le suivant : <span style="font-variant: small-caps;">P. Tercier/Ch. Roten</span>, La recherche et la rédaction juridiques, 6e éd., Genève 2011.<br/> Les
                     lectures préparatoires supplémentaires ainsi que les présentations Power Point seront disponibles sur Claroline, selon les indications données
                     en début de cours.
                 </p>
