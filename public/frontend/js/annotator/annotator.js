@@ -16,6 +16,7 @@ $(function(){
 
     $(".expose").click(function(e) {
         e.preventDefault();
+        $('.nextpartcontent').removeClass('warning');
         var anchor = $(this).data('anchor');
 
         var $test = $('#' +anchor), o = $test.offset().top - 300;
@@ -23,6 +24,12 @@ $(function(){
             $test.popover('show');
             $test.addClass("warning");
         });
+
+        if($(this).hasClass('nextpart')){
+            console.log('next!');
+            var next = $(this).data('next');
+            $('#' +next).addClass("warning");
+        }
     });
 
     $(".text_content").click(function(e) {

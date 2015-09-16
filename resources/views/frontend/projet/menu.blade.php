@@ -27,7 +27,7 @@
                 </ul>
             </li>
             <li><a class="expose" data-anchor="regle-materielles" href="#">Règles matérielles</a></li>
-            <li><a class="expose" data-anchor="regle-formelles" href="#">Règles formelles</a></li>
+            <li><a class="expose nextpart" data-next="regle-next" data-anchor="regle-formelles" href="#">Règles formelles</a></li>
             <li><a class="expose" data-anchor="sactions" href="#">Sactions</a></li>
         </ul>
     </li>

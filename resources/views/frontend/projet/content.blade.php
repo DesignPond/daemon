@@ -682,45 +682,127 @@
             <div id="a34" class="a34 subpage">
                 <div class="articleTitle"><h5><a href="#"><strong>Art. 34</strong> Effets juridiques</a></h5></div>  <p>Les effets de droit civil d'une concentration soumise à l'obligation de notifier sont suspendus, sous réserve de l'écoulement du délai selon l'art. 32, al. 1, et de l'autorisation de réalisation provisoire. Faute de décision de la commission dans le délai imparti à l'art. 33, al. 3, la concentration est réputée autorisée, à moins que la commission constate dans une décision qu'elle a été empêchée de conduire l'examen pour des causes imputables aux entreprises participantes.</p></div>
             <div id="a35" class="a35 subpage"><div class="articleTitle"><h5><a href="#"><strong>Art. 35</strong> Violation de l'obligation de notifier</a></h5></div>  <p>Lorsqu'une concentration d'entreprises a été réalisée sans la notification dont elle aurait dû faire l'objet, la procédure selon les art. 32 à 38 sera engagée d'office. Le délai selon l'art. 32, al. 1, commence dans ce cas à courir lorsque l'autorité de concurrence est en possession des informations que doit contenir une notification.</p></div>
-            <div id="a36" class="a36 subpage"><div class="articleTitle"><h5><a href="#"><strong>Art. 36</strong> Procédure d'autorisation exceptionnelle</a></h5></div>  <p><sup><a name="1">1</a></sup>Si la commission a interdit la concentration, les entreprises participantes peuvent présenter dans les 30 jours au DEFR une demande d'autorisation exceptionnelle du Conseil fédéral fondée sur des intérêts publics prépondérants. Si une telle demande est présentée, le délai pour former un recours devant le Tribunal administratif fédéral ne commence à courir qu'après la notification de la décision du Conseil fédéral.<sup><a href="#fn-#a36-1">1</a></sup></p><p><sup><a name="2">2</a></sup>La demande d'autorisation exceptionnelle du Conseil fédéral peut également être présentée dans les 30 jours à compter de l'entrée en force d'une décision du Tribunal administratif fédéral ou du Tribunal fédéral.<sup><a href="#fn-#a36-2">2</a></sup></p><p><sup><a name="3">3</a></sup>Le Conseil fédéral prend sa décision si possible dans les quatre mois suivant la réception de la demande.</p><hr><div class="fns"><p><small><a name="fn-#a36-1"><sup>1</sup></a> Nouvelle teneur de la phrase selon le ch. 27 de l'annexe à la LF du 17 juin 2005 sur le TAF, en vigueur depuis le 1<sup>er</sup> janv. 2007
-                            (
-                            <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/recueil-officiel.html">RO</a>
-                            <a target="_blank" href="https://www.admin.ch/opc/fr/official-compilation/2006/index.html"><strong>2006</strong></a>
-                            <a target="_blank" href="http://www.admin.ch/ch/f/as/2006/2197.pdf">2197</a>
-                            <a target="_blank" href="http://www.admin.ch/ch/f/as/2006/1069.pdf">1069</a>;
-                            <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/feuille-federale.html">FF</a>
-                            <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2001/index.html"><strong>2001</strong></a>
-                            <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2001/4000.pdf">4000</a>
-                            ).<a name="fn-#a36-2"><sup>2</sup></a> Nouvelle teneur selon le ch. 27 de l'annexe à la LF du 17 juin 2005 sur le TAF, en vigueur depuis le 1<sup>er</sup> janv. 2007
-                            (
-                            <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/recueil-officiel.html">RO</a>
-                            <a target="_blank" href="https://www.admin.ch/opc/fr/official-compilation/2006/index.html"><strong>2006</strong></a>
-                            <a target="_blank" href="http://www.admin.ch/ch/f/as/2006/2197.pdf">2197</a>
-                            <a target="_blank" href="http://www.admin.ch/ch/f/as/2006/1069.pdf">1069</a>;
-                            <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/feuille-federale.html">FF</a>
-                            <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2001/index.html"><strong>2001</strong></a>
-                            <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2001/4000.pdf">4000</a>
-                            ).</small></p></div></div><div id="a37" class="a37 subpage"><div class="articleTitle"><h5><a href="#"><strong>Art. 37</strong> Rétablissement d'une concurrence efficace</a></h5></div>  <p><sup><a name="1">1</a></sup>Lorsqu'une concentration interdite est réalisée ou qu'une concentration est interdite après sa réalisation et qu'une autorisation exceptionnelle n'a pas été demandée ni octroyée pour la concentration, les entreprises participantes sont tenues de prendre les mesures rendues nécessaires par le rétablissement d'une concurrence efficace.</p><p><sup><a name="2">2</a></sup>La commission peut exiger des entreprises participantes qu'elles fassent des propositions qui les lient en vue du rétablissement d'une concurrence efficace. Elle leur impartit un délai à cette fin.</p><p><sup><a name="3">3</a></sup>Si la commission accepte les mesures proposées, elle peut décider comment et dans quel délai les entreprises participantes devront les mettre en oeuvre.</p><p><sup><a name="4">4</a></sup>Si la commission ne reçoit pas les propositions demandées ou qu'elle les rejette, elle peut décider:</p><dl compact="compact"><dt>a.</dt><dd>la séparation des entreprises ou des actifs regroupés;</dd><dt>b.</dt><dd>la cessation des effets du contrôle;</dd><dt>c.</dt><dd>d'autres mesures à même de rétablir une concurrence efficace.</dd></dl></div>
-            <div id="a38" class="a38 subpage"><div class="articleTitle"><h5><a href="#"><strong>Art. 38</strong> Révocation et révision</a></h5></div>  <p><sup><a name="1">1</a></sup>La commission peut rapporter une autorisation ou décider l'examen d'une concentration malgré l'écoulement du délai de l'art. 32, al. 1, lorsque:</p><dl compact="compact"><dt>a.</dt><dd>les entreprises participantes ont fourni des indications inexactes;</dd><dt>b.</dt><dd>l'autorisation a été obtenue frauduleusement;</dd><dt>c.</dt><dd>les entreprises participantes contreviennent gravement à une charge dont a été assortie l'autorisation.</dd></dl><p><sup><a name="2">2</a></sup>Le Conseil fédéral peut rapporter une autorisation exceptionnelle pour les mêmes motifs.</p></div></div><a name="id-4-4"></a><h2 class="title clickable"><span class="expanderComparator"></span>Section 4 Procédure et voies de droit</h2><div class="collapseable">
-            <div id="a39" class="a39 subpage"><div class="articleTitle"><h5><a href="#"><strong>Art. 39</strong> Principe</a></h5></div>  <p>La loi fédérale du 20 décembre 1968 sur la procédure administrative<sup><a href="#fn-#a39-1">1</a></sup> est applicable aux procédures, dans la mesure où il n'y est pas dérogé dans les dispositions qui suivent.</p><hr><div class="fns"><p><small><a name="fn-#a39-1"><sup>1</sup></a> RS <strong><a href="http://www.admin.ch/ch/f/rs/c172_021.html">172.021</a></strong></small></p></div>
+            <div id="a36" class="a36 subpage">
+                <div class="articleTitle">
+                    <h5><a href="#"><strong>Art. 36</strong> Procédure d'autorisation exceptionnelle</a></h5>
+                </div>
+                <p><sup><a name="1">1</a></sup>Si la commission a interdit la concentration, les entreprises participantes peuvent présenter
+                    dans les 30 jours au DEFR une demande d'autorisation exceptionnelle du Conseil fédéral fondée sur des intérêts publics
+                    prépondérants. Si une telle demande est présentée, le délai pour former un recours devant le Tribunal administratif fédéral
+                    ne commence à courir qu'après la notification de la décision du Conseil fédéral.<sup><a href="#fn-#a36-1">1</a></sup></p>
+                <p><sup><a name="2">2</a></sup>La demande d'autorisation exceptionnelle du Conseil fédéral peut également être présentée dans
+                    les 30 jours à compter de l'entrée en force d'une décision du Tribunal administratif fédéral ou du Tribunal fédéral.<sup>
+                        <a href="#fn-#a36-2">2</a></sup></p><p><sup><a name="3">3</a></sup>Le Conseil fédéral prend sa décision si possible dans
+                    les quatre mois suivant la réception de la demande.</p><hr><div class="fns"><p><small><a name="fn-#a36-1"><sup>1</sup></a>
+                            Nouvelle teneur de la phrase selon le ch. 27 de l'annexe à la LF du 17 juin 2005 sur le TAF, en vigueur depuis le 1<sup>er</sup> janv. 2007
+                        (
+                        <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/recueil-officiel.html">RO</a>
+                        <a target="_blank" href="https://www.admin.ch/opc/fr/official-compilation/2006/index.html"><strong>2006</strong></a>
+                        <a target="_blank" href="http://www.admin.ch/ch/f/as/2006/2197.pdf">2197</a>
+                        <a target="_blank" href="http://www.admin.ch/ch/f/as/2006/1069.pdf">1069</a>;
+                        <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/feuille-federale.html">FF</a>
+                        <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2001/index.html"><strong>2001</strong></a>
+                        <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2001/4000.pdf">4000</a>
+                        ).<a name="fn-#a36-2"><sup>2</sup></a> Nouvelle teneur selon le ch. 27 de l'annexe à la LF du 17 juin 2005 sur le TAF, en vigueur depuis le 1<sup>er</sup> janv. 2007
+                        (
+                        <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/recueil-officiel.html">RO</a>
+                        <a target="_blank" href="https://www.admin.ch/opc/fr/official-compilation/2006/index.html"><strong>2006</strong></a>
+                        <a target="_blank" href="http://www.admin.ch/ch/f/as/2006/2197.pdf">2197</a>
+                        <a target="_blank" href="http://www.admin.ch/ch/f/as/2006/1069.pdf">1069</a>;
+                        <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/feuille-federale.html">FF</a>
+                        <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2001/index.html"><strong>2001</strong></a>
+                        <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2001/4000.pdf">4000</a>
+                        ).</small></p>
             </div>
-            <div id="a40" class="a40 subpage"><div class="articleTitle"><h5><a href="#"><strong>Art. 40</strong> Obligation de renseigner</a></h5></div>  <p>Les parties à des ententes, les entreprises puissantes sur le marché, celles qui participent à des concentrations d'entreprises ainsi que les tiers concernés sont tenus de fournir aux autorités en matière de concurrence tous les renseignements utiles et de produire toutes les pièces nécessaires. Le droit de refuser de fournir des renseignements est régi par les art.16 et 17 de la loi fédérale du 20décembre 1968 sur la procédure administrative<sup><a href="#fn-#a40-1">1</a></sup>.<sup><a href="#fn-#a40-2">2</a></sup></p><hr><div class="fns"><p><small><a name="fn-#a40-1"><sup>1</sup></a> RS <strong><a href="http://www.admin.ch/ch/f/rs/c172_021.html">172.021</a></strong><a name="fn-#a40-2"><sup>2</sup></a> Nouvelle teneur de la phrase selon le ch. I 3 de la LF du 28 sept. 2012 sur l'adaptation de disp. de procédure relatives au secret professionnel des avocats, en vigueur depuis le 1<sup>er</sup> mai 2013 (<a href="http://www.admin.ch/ch/f/as/2013/847.pdf">RO <strong>2013</strong> 847</a>; <a href="http://www.admin.ch/ch/f/ff/2011/7509.pdf">FF <strong>2011</strong> 7509</a>).</small></p></div></div><div id="a41" class="a41 subpage">
-                <div class="articleTitle"><h5><a href="#"><strong>Art. 41</strong> Entraide administrative</a></h5></div>  <p>Les services de la Confédération et des cantons sont tenus de coopérer aux recherches des autorités en matière de concurrence et de mettre à leur disposition les pièces nécessaires.</p></div>
-            <div id="a42" class="a42 subpage"><div class="articleTitle"><h5><a href="#"><strong>Art. 42</strong></a><sup><a href="#fn-#a42-1">1</a></sup><a href="#">Mesures d'enquête</a></h5></div>  <p><sup><a name="1">1</a></sup>Les autorités en matière de concurrence peuvent entendre des tiers comme témoins et contraindre les parties à l'enquête à faire des dépositions. L'art. 64 de la loi fédérale de procédure civile fédérale du 4 décembre 1947<sup><a href="#fn-#a42-2">2</a></sup> est applicable par analogie.</p><p><sup><a name="2">2</a></sup>Les autorités en matière de concurrence peuvent ordonner des perquisitions et saisir des pièces à conviction. Les art. 45 à 50 de la loi fédérale du 22 mars 1974 sur le droit pénal administratif<sup><a href="#fn-#a42-3">3</a></sup> sont applicables par analogie à ces mesures de contrainte. Les perquisitions et saisies sont ordonnées, sur demande du secrétariat, par un membre de la présidence.</p><hr><div class="fns"><p><small><a name="fn-#a42-1"><sup>1</sup></a> Nouvelle teneur selon le ch. I de la LF du 20 juin 2003, en vigueur depuis le 1<sup>er</sup> avr. 2004 (<a href="http://www.admin.ch/ch/f/as/2004/1385.pdf">RO <strong>2004</strong> 1385</a>; <a href="http://www.admin.ch/ch/f/ff/2002/1911.pdf">FF <strong>2002</strong> 1911</a> 5128).<a name="fn-#a42-2"><sup>2</sup></a> RS <strong><a href="http://www.admin.ch/ch/f/rs/c273.html">273</a></strong><a name="fn-#a42-3"><sup>3</sup></a> RS <strong><a href="http://www.admin.ch/ch/f/rs/c313_0.html">313.0</a></strong></small></p></div></div>
-            <div id="a42a" class="a42a subpage"><div class="articleTitle"><h5><a href="#"><strong>Art. 42</strong><em>a</em></a><sup><a href="#fn-#a42a-1">1</a></sup><a href="#">Enquêtes lors de procédures engagées au titre de l'accord sur le transport aérien entre la Suisse et la CE</a></h5></div>  <p><sup><a name="1">1</a></sup>La commission est l'autorité suisse qui collabore avec les institutions de la Communauté européenne selon l'art. 11 de l'accord du 21 juin 1999 entre la Confédération suisse et la Communauté européenne sur le transport aérien<sup><a href="#fn-#a42a-2">2</a></sup>.</p><p><sup><a name="2">2</a></sup>Si, lors d'une procédure engagée selon l'art. 11 de cet accord, une entreprise s'oppose à la vérification, des mesures d'enquête au sens de l'art. 42 peuvent être engagées à la demande de la Commission de la Communauté européenne; l'art. 44 est applicable.</p><hr><div class="fns"><p><small><a name="fn-#a42a-1"><sup>1</sup></a> Introduit par le ch. I de la LF du 20 juin 2003, en vigueur depuis le 1<sup>er</sup> avr. 2004 (<a href="http://www.admin.ch/ch/f/as/2004/1385.pdf">RO <strong>2004</strong> 1385</a>; <a href="http://www.admin.ch/ch/f/ff/2002/1911.pdf">FF <strong>2002</strong> 1911</a> 5128).<a name="fn-#a42a-2"><sup>2</sup></a> RS <strong><a href="http://www.admin.ch/ch/f/rs/c0_748_127_192_68.html">0.748.127.192.68</a></strong></small></p></div></div><div id="a42b" class="a42b subpage">
-                <div class="articleTitle"><h5><a href="#"><strong>Art.42</strong><em>b</em></a><sup><a href="#fn-#a42b-1">1</a></sup><a href="#">Communication de données à une autorité étrangère en matière de concurrence</a></h5></div>  <p><sup><a name="1">1</a></sup>La communication de données à une autorité étrangère en matière de concurrence n'est autorisée que si elle se fonde sur une loi ou sur un accord international, ou avec le consentement des entreprises concernées.</p><p><sup><a name="2">2</a></sup>En l'absence du consentement des entreprises concernées, les autorités en matière de concurrence peuvent communiquer à une autorité étrangère en matière de concurrence des données confidentielles, notamment des secrets d'affaires, sur la base d'un accord international et uniquement lorsque:</p><dl compact="compact"><dt>a.</dt><dd>les pratiques faisant l'objet d'une enquête dans l'Etat destinataire sont également illicites selon le droit suisse;</dd><dt>b.</dt><dd>les deux autorités en matière de concurrence enquêtent sur des pratiques ou actes juridiques identiques ou connexes;</dd><dt>c.</dt><dd>les données sont utilisées par l'autorité étrangère uniquement en vue de l'application des dispositions du droit des cartels et à titre de moyens de preuve en ce qui concerne l'objet de l'enquête auquel se rapporte sa requête;</dd><dt>d.</dt><dd>les données ne sont pas utilisées dans le cadre d'une procédure pénale ou civile;</dd><dt>e.</dt><dd>les droits des parties et le secret de fonction sont garantis dans le droit de procédure étranger; et</dd><dt>f.</dt><dd>les données confidentielles ne sont pas communiquées à l'autorité étrangère dans le cadre d'un accord amiable (art. 29) ou de la coopération à la mise au jour et à la suppression d'une restriction à la concurrence (art. 49<em>a</em>, al. 2).</dd></dl><p><sup><a name="3">3</a></sup>Avant de transmettre les données à l'autorité étrangère, les autorités en matière de concurrence informent les entreprises concernées et les invitent à prendre position.</p>
+            <div id="a37" class="a37 subpage">
+                <div class="articleTitle">
+                    <h5><a href="#"><strong>Art. 37</strong> Rétablissement d'une concurrence efficace</a></h5>
+                </div>
+                <p><sup><a name="1">1</a></sup>Lorsqu'une concentration interdite est réalisée ou qu'une concentration est
+                    interdite après sa réalisation et qu'une autorisation exceptionnelle n'a pas été demandée ni octroyée
+                    pour la concentration, les entreprises participantes sont tenues de prendre les mesures rendues nécessaires
+                    par le rétablissement d'une concurrence efficace.</p>
+                <p><sup><a name="2">2</a></sup>La commission peut exiger des entreprises participantes qu'elles fassent des propositions
+                    qui les lient en vue du rétablissement d'une concurrence efficace. Elle leur impartit un délai à cette fin.</p>
+                <p><sup><a name="3">3</a></sup>Si la commission accepte les mesures proposées, elle peut décider comment et dans
+                    quel délai les entreprises participantes devront les mettre en oeuvre.</p><p><sup>
+                        <a name="4">4</a></sup>Si la commission ne reçoit pas les propositions demandées ou qu'elle les rejette, elle peut décider:</p>
+                <dl compact="compact"><dt>a.</dt><dd>la séparation des entreprises ou des actifs regroupés;</dd>
+                    <dt>b.</dt><dd>la cessation des effets du contrôle;</dd><dt>c.</dt><dd>d'autres mesures à même de rétablir une concurrence efficace.</dd></dl>
+            </div>
+
+            <div id="a38" class="a38 subpage">
+                <div class="articleTitle">
+                    <h5><a href="#"><strong>Art. 38</strong> Révocation et révision</a></h5>
+                </div>
+                <p><sup><a name="1">1</a></sup>La commission peut rapporter une autorisation ou décider l'examen d'une concentration malgré l'écoulement du délai de l'art. 32, al. 1, lorsque:</p>
+                <dl compact="compact"><dt>a.</dt><dd>les entreprises participantes ont fourni des indications inexactes;</dd><dt>b.</dt><dd>l'autorisation a été obtenue frauduleusement;</dd><dt>c.</dt><dd>les entreprises participantes contreviennent gravement à une charge dont a été assortie l'autorisation.</dd></dl>
+                <p><sup><a name="2">2</a></sup>Le Conseil fédéral peut rapporter une autorisation exceptionnelle pour les mêmes motifs.</p></div>
+            </div>
+
+            <h2 class="title clickable">Section 4 Procédure et voies de droit</h2>
+            <div id="a39" class="a39 subpage">
+                <div class="articleTitle">
+                    <h5><a href="#"><strong>Art. 39</strong> Principe</a></h5>
+                </div>
+                <p>La loi fédérale du 20 décembre 1968 sur la procédure administrative<sup><a href="#fn-#a39-1">1</a></sup> est applicable aux procédures, dans la mesure où il n'y est pas dérogé dans les dispositions qui suivent.</p>
+                <hr>
+                <p><small><a name="fn-#a39-1"><sup>1</sup></a> RS <strong><a href="http://www.admin.ch/ch/f/rs/c172_021.html">172.021</a></strong></small></p>
+            </div>
+            <div id="a40" class="a40 subpage">
+                <div class="articleTitle">
+                    <h5><a href="#"><strong>Art. 40</strong> Obligation de renseigner</a></h5>
+                </div>
+                <p>Les parties à des ententes, les entreprises puissantes sur le marché, celles qui participent à des concentrations d'entreprises ainsi que les tiers concernés sont tenus de fournir aux autorités en matière de concurrence tous les renseignements utiles et de produire toutes les pièces nécessaires. Le droit de refuser de fournir des renseignements est régi par les art.16 et 17 de la loi fédérale du 20décembre 1968 sur la procédure administrative<sup><a href="#fn-#a40-1">1</a></sup>.<sup><a href="#fn-#a40-2">2</a></sup></p>
                 <hr>
                 <div class="fns">
-                    <p><small><a name="fn-#a42b-1"><sup>1</sup></a> Introduit par l'annexe à l'AF du 20 juin 2014 portant approbation et mise en oeuvre de l'Ac. entre la Suisse et l'UE concernant la coopération en matière d'application de leurs droits de la concurrence, en vigueur depuis le 1<sup>er</sup> déc. 2014
-                            (
-                            <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/recueil-officiel.html">RO</a>
-                            <a target="_blank" href="https://www.admin.ch/opc/fr/official-compilation/2014/index.html"><strong>2014</strong></a>
-                            <a target="_blank" href="http://www.admin.ch/ch/f/as/2014/3711.pdf">3711</a>;
-                            <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/feuille-federale.html">FF</a>
-                            <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2013/index.html"><strong>2013</strong></a>
-                            <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2013/3477.pdf">3477</a>
-                            ).</small></p>
+                    <p><small><a name="fn-#a40-1"><sup>1</sup></a> RS <strong><a href="http://www.admin.ch/ch/f/rs/c172_021.html">172.021</a></strong><a name="fn-#a40-2"><sup>2</sup></a> Nouvelle teneur de la phrase selon le ch. I 3 de la LF du 28 sept. 2012 sur l'adaptation de disp. de procédure relatives au secret professionnel des avocats, en vigueur depuis le 1<sup>er</sup> mai 2013 (<a href="http://www.admin.ch/ch/f/as/2013/847.pdf">RO <strong>2013</strong> 847</a>; <a href="http://www.admin.ch/ch/f/ff/2011/7509.pdf">FF <strong>2011</strong> 7509</a>).</small></p>
                 </div>
+            </div>
+            <div id="a41" class="a41 subpage">
+                <div class="articleTitle">
+                    <h5><a href="#"><strong>Art. 41</strong> Entraide administrative</a></h5>
+                </div>
+                <p>Les services de la Confédération et des cantons sont tenus de coopérer aux recherches des autorités en matière de concurrence et de mettre à leur disposition les pièces nécessaires.</p></div>
+            <div id="a42" class="a42 subpage">
+                <div class="articleTitle">
+                    <h5><a href="#"><strong>Art. 42</strong></a><sup><a href="#fn-#a42-1">1</a></sup><a href="#">Mesures d'enquête</a></h5>
+                </div>
+                <p><sup><a name="1">1</a></sup>Les autorités en matière de concurrence peuvent entendre des tiers comme témoins et contraindre les parties à l'enquête à faire des dépositions. L'art. 64 de la loi fédérale de procédure civile fédérale du 4 décembre 1947<sup><a href="#fn-#a42-2">2</a></sup> est applicable par analogie.</p><p><sup><a name="2">2</a></sup>Les autorités en matière de concurrence peuvent ordonner des perquisitions et saisir des pièces à conviction. Les art. 45 à 50 de la loi fédérale du 22 mars 1974 sur le droit pénal administratif<sup><a href="#fn-#a42-3">3</a></sup> sont applicables par analogie à ces mesures de contrainte. Les perquisitions et saisies sont ordonnées, sur demande du secrétariat, par un membre de la présidence.</p>
+                <hr>
+                <div class="fns"><p><small><a name="fn-#a42-1"><sup>1</sup></a> Nouvelle teneur selon le ch. I de la LF du 20 juin 2003, en vigueur depuis le 1<sup>er</sup> avr. 2004 (<a href="http://www.admin.ch/ch/f/as/2004/1385.pdf">RO <strong>2004</strong> 1385</a>; <a href="http://www.admin.ch/ch/f/ff/2002/1911.pdf">FF <strong>2002</strong> 1911</a> 5128).<a name="fn-#a42-2"><sup>2</sup></a> RS <strong><a href="http://www.admin.ch/ch/f/rs/c273.html">273</a></strong><a name="fn-#a42-3"><sup>3</sup></a> RS <strong><a href="http://www.admin.ch/ch/f/rs/c313_0.html">313.0</a></strong></small></p>
+                </div>
+            </div>
+            <div id="a42a" class="a42a subpage">
+                <div class="articleTitle">
+                    <h5><a href="#"><strong>Art. 42</strong><em>a</em></a><sup><a href="#fn-#a42a-1">1</a></sup><a href="#">Enquêtes lors de procédures engagées au titre de l'accord sur le transport aérien entre la Suisse et la CE</a></h5>
+                </div>
+                <p><sup><a name="1">1</a></sup>La commission est l'autorité suisse qui collabore avec les institutions de la Communauté européenne selon l'art. 11 de l'accord du 21 juin 1999 entre la Confédération suisse et la Communauté européenne sur le transport aérien<sup><a href="#fn-#a42a-2">2</a></sup>.</p><p><sup><a name="2">2</a></sup>
+                    Si, lors d'une procédure engagée selon l'art. 11 de cet accord, une entreprise s'oppose à la vérification, des mesures d'enquête au sens
+                    de l'art. 42 peuvent être engagées à la demande de la Commission de la Communauté européenne; l'art. 44 est applicable.</p><hr>
+                <div class="fns">
+                    <p><small><a name="fn-#a42a-1"><sup>1</sup></a> Introduit par le ch. I de la LF du 20 juin 2003, en vigueur depuis le 1<sup>er</sup> avr. 2004 (<a href="http://www.admin.ch/ch/f/as/2004/1385.pdf">RO <strong>2004</strong> 1385</a>;
+                    <a href="http://www.admin.ch/ch/f/ff/2002/1911.pdf">FF <strong>2002</strong> 1911</a> 5128).<a name="fn-#a42a-2"><sup>2</sup></a> RS <strong><a href="http://www.admin.ch/ch/f/rs/c0_748_127_192_68.html">0.748.127.192.68</a></strong></small></p>
+                </div>
+            </div>
+            <div id="a42b" class="a42b subpage">
+                <div class="articleTitle">
+                    <h5><a href="#"><strong>Art.42</strong><em>b</em></a><sup><a href="#fn-#a42b-1">1</a></sup><a href="#">Communication de données à une autorité étrangère en matière de concurrence</a></h5>
+                </div>  <p><sup><a name="1">1</a></sup>La communication de données à une autorité étrangère en matière de concurrence n'est autorisée que si elle se fonde sur une loi ou sur un accord international, ou avec le consentement des entreprises concernées.</p><p><sup><a name="2">2</a></sup>En l'absence du consentement des entreprises concernées, les autorités en matière de concurrence
+                peuvent communiquer à une autorité étrangère en matière de concurrence des données confidentielles, notamment des secrets d'affaires, sur la base d'un accord international et uniquement lorsque:</p><dl compact="compact"><dt>a.</dt><dd>les pratiques faisant l'objet d'une enquête dans l'Etat destinataire sont également illicites selon le droit suisse;</dd><dt>b.</dt><dd>les deux autorités en
+                    matière de concurrence enquêtent sur des pratiques ou actes juridiques identiques ou connexes;</dd><dt>c.</dt><dd>les données sont utilisées par l'autorité étrangère uniquement en vue de l'application des dispositions du droit des cartels et à titre de moyens de preuve en ce qui concerne l'objet de l'enquête auquel se rapporte sa requête;</dd><dt>d.</dt><dd>les données ne sont pas utilisées dans le cadre d'une procédure pénale ou civile;</dd><dt>e.</dt>
+                <dd>les droits des parties et le secret de fonction sont garantis dans le droit de procédure étranger; et</dd><dt>f.</dt><dd>les données confidentielles ne sont pas communiquées à l'autorité étrangère dans le cadre
+                    d'un accord amiable (art. 29) ou de la coopération à la mise au jour et à la suppression d'une restriction à la concurrence (art. 49<em>a</em>, al. 2).</dd></dl><p><sup><a name="3">3</a></sup>Avant de transmettre les données à l'autorité étrangère, les autorités en matière de concurrence informent les entreprises concernées et les invitent à prendre position.</p>
+                <hr>
+                <p><small><a name="fn-#a42b-1"><sup>1</sup></a> Introduit par l'annexe à l'AF du 20 juin 2014 portant approbation et mise en oeuvre de l'Ac. entre la Suisse et l'UE concernant la coopération en matière d'application de leurs droits de la concurrence, en vigueur depuis le 1<sup>er</sup> déc. 2014
+                        (
+                        <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/recueil-officiel.html">RO</a>
+                        <a target="_blank" href="https://www.admin.ch/opc/fr/official-compilation/2014/index.html"><strong>2014</strong></a>
+                        <a target="_blank" href="http://www.admin.ch/ch/f/as/2014/3711.pdf">3711</a>;
+                        <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/feuille-federale.html">FF</a>
+                        <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2013/index.html"><strong>2013</strong></a>
+                        <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2013/3477.pdf">3477</a>
+                        ).</small></p>
             </div>
             <div id="a43" class="a43 subpage">
                 <div class="articleTitle">
@@ -729,26 +811,24 @@
                 <p><sup><a name="1">1</a></sup>Peuvent s'annoncer afin de participer à l'enquête concernant une restriction à la concurrence:</p><dl compact="compact"><dt>a.</dt><dd>les personnes qui ne peuvent accéder à la concurrence ou l'exercer du fait de la restriction à la concurrence;</dd><dt>b.</dt><dd>les associations professionnelles ou économiques que leurs statuts autorisent à défendre les intérêts économiques de leurs membres, pour autant que des membres de l'association ou de l'une de ses sections puissent participer à l'enquête;</dd><dt>c.</dt><dd>les organisations d'importance nationale ou régionale qui se consacrent statutairement à la protection des consommateurs.</dd></dl>
                 <p><sup><a name="2">2</a></sup>Le secrétariat peut exiger que les groupes de plus de cinq participants à l'enquête, ayant des intérêts identiques, désignent un représentant commun lorsque, à défaut, l'enquête s'en trouverait compliquée à l'excès. Il peut si nécessaire limiter la participation à une audition; les droits des parties découlant de la loi fédérale du 20 décembre 1968 sur la procédure administrative<sup><a href="#fn-#a43-1">1</a></sup> sont réservés.</p><p><sup><a name="3">3</a></sup>Les al. 1 et 2 sont applicables par analogie à la procédure d'octroi par le Conseil fédéral de l'autorisation exceptionnelle d'une restriction illicite à la concurrence (art.8).</p><p><sup><a name="4">4</a></sup>Dans la procédure d'examen des concentrations d'entreprises, seules les entreprises participantes ont qualité de parties.</p>
                 <hr>
-                <div class="fns"><p><small><a name="fn-#a43-1"><sup>1</sup></a> RS <strong><a href="http://www.admin.ch/ch/f/rs/c172_021.html">172.021</a></strong></small></p>
-                </div>
+                <p><small><a name="fn-#a43-1"><sup>1</sup></a> RS <strong><a href="http://www.admin.ch/ch/f/rs/c172_021.html">172.021</a></strong></small></p>
             </div>
+
             <div id="a44" class="a44 subpage">
                 <div class="articleTitle">
                     <h5><a href="#"><strong>Art. 44</strong></a><sup><a href="#fn-#a44-1">1</a></sup><a href="#"></a></h5>
                 </div>
                 <hr>
-                <div class="fns">
                     <p><small><a name="fn-#a44-1"><sup>1</sup></a> Abrogé par le ch. 27 de l'annexe à la LF du 17 juin 2005 sur le TAF, avec effet au 1<sup>er</sup> janv. 2007
-                            (
-                            <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/recueil-officiel.html">RO</a>
-                            <a target="_blank" href="https://www.admin.ch/opc/fr/official-compilation/2006/index.html"><strong>2006</strong></a>
-                            <a target="_blank" href="http://www.admin.ch/ch/f/as/2006/2197.pdf">2197</a>
-                            <a target="_blank" href="http://www.admin.ch/ch/f/as/2006/1069.pdf">1069</a>;
-                            <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/feuille-federale.html">FF</a>
-                            <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2001/index.html"><strong>2001</strong></a>
-                            <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2001/4000.pdf">4000</a>
-                            ).</small></p>
-                </div>
+                    (
+                    <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/recueil-officiel.html">RO</a>
+                    <a target="_blank" href="https://www.admin.ch/opc/fr/official-compilation/2006/index.html"><strong>2006</strong></a>
+                    <a target="_blank" href="http://www.admin.ch/ch/f/as/2006/2197.pdf">2197</a>
+                    <a target="_blank" href="http://www.admin.ch/ch/f/as/2006/1069.pdf">1069</a>;
+                    <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/feuille-federale.html">FF</a>
+                    <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2001/index.html"><strong>2001</strong></a>
+                    <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2001/4000.pdf">4000</a>
+                    ).</small></p>
             </div>
 
             <h2 class="title clickable">Section 5 Autres tâches et compétences des autorités en matière de concurrence</h2>
@@ -924,8 +1004,8 @@
 
         </div>
         <!-- END sanctions -->
-
-
+        <!-- start next -->
+        <div id="regle-next" class="nextpartcontent">
             <h1 class="title clickable">Chapitre 6 Exécution d'accords internationaux</h1>
             <div class="collapseable">
                 <div id="a58" class="a58 subpage">
@@ -951,6 +1031,8 @@
                     <p><sup><a name="1">1</a></sup>Le Conseil fédéral veille à ce que l'exécution de la présente loi et l'efficacité des mesures prises fassent l'objet d'une évaluation.</p><p><sup><a name="2">2</a></sup>Le Conseil fédéral présente un rapport au Parlement lorsque l'évaluation est terminée, mais au plus tard cinq ans après l'entrée en vigueur de la présente disposition, et lui soumet des propositions quant à la suite à donner à l'évaluation.</p>
                 </div>
             </div>
+        </div>
+        <!-- END next -->
 
         </div>
         <!-- END corps text -->
