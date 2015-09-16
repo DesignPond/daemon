@@ -43,7 +43,6 @@
 
 /*** ESSENTIAL STYLES ***/
 .k-dropdown-menu {
-    white-space: nowrap;
     display: inline-block;
     /* IE7 inline-block fix */
     *display: inline;
@@ -79,6 +78,7 @@
 .k-dropdown-menu ul li {
     position: relative;
     display: block;
+    width: 130px;
 }
 
 /* Optional submenu arrows */
