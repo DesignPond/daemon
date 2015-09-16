@@ -1,5 +1,4 @@
 <div id="content">
-
     <div tabindex="0" data-trigger="focus" data-toggle="popover" data-placement="top"  id="intitule" title="Intitulé"
          data-content="Formule qui permet d'identifer l'acte">
         <span  tabindex="0" data-trigger="focus" data-toggle="popover" data-placement="top" title="Numéro" data-content="Chaque acte inclut dans le recueil dispose d'un numéro RS correspondant à sa position dans le classement thématique"  class='class_type class_type_1' id='numero'>251</span>

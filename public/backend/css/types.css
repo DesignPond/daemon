@@ -93,3 +93,9 @@
     Sorting classes
 */
 
+.anchor-loi{
+    position: fixed;
+    bottom: 20px;
+    margin-left: -25px;
+    display: none;
+}

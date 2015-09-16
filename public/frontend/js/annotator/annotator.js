@@ -54,6 +54,8 @@ $(function(){
 
     $.lockfixed("#structures",{offset: {top: 10}});
 
+    var width = $(window).width();
+
     if($('#content').length){
 
         var changePoint = $('#content').offset().top;
@@ -64,32 +66,39 @@ $(function(){
         console.log($(window).scrollTop());
         console.log(changePoint2);
 
-        $('#guides').parent().css({
-            'height' : final
-        });
+        if(width < 991) {
+            $('.anchor-loi').show();
+        }
 
-        $(window).scroll(function () {
+        if(width > 991)
+        {
 
-            if ($(window).scrollTop() >= changePoint && $(window).scrollTop() < changePoint2)
-            {
-                $('#guides').removeClass('sidebarStatic');
-                $('#guides').removeClass('sidebarBottom');
-                $('#guides').addClass('sidebarFixed');
-            }
-            else if($(window).scrollTop() >= changePoint2)
-            {
-                $('#guides').addClass('sidebarStatic');
-                $('#guides').addClass('sidebarBottom');
-                $('#guides').removeClass('sidebarFixed');
-            }
-            else
-            {
-                $('#guides').removeClass('sidebarFixed');
-                $('#guides').removeClass('sidebarBottom');
-                $('#guides').addClass('sidebarStatic');
-            }
+            $('#guides').parent().css({
+                'height' : final
+            });
 
-        });
+            $(window).scroll(function () {
+                if ($(window).scrollTop() >= changePoint && $(window).scrollTop() < changePoint2)
+                {
+                    $('#guides').removeClass('sidebarStatic');
+                    $('#guides').removeClass('sidebarBottom');
+                    $('#guides').addClass('sidebarFixed');
+                }
+                else if($(window).scrollTop() >= changePoint2)
+                {
+                    $('#guides').addClass('sidebarStatic');
+                    $('#guides').addClass('sidebarBottom');
+                    $('#guides').removeClass('sidebarFixed');
+                }
+                else
+                {
+                    $('#guides').removeClass('sidebarFixed');
+                    $('#guides').removeClass('sidebarBottom');
+                    $('#guides').addClass('sidebarStatic');
+                }
+            });
+
+        }
     }
 
 });

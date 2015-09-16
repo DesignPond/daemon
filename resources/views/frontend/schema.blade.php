@@ -41,7 +41,8 @@
                             <div class="col-md-3" style="position: relative;">
                                 @include('frontend.projet.menu')
                             </div>
-                            <div class="col-md-9">
+                            <div class="col-md-9" style="position: relative;">
+                                <a href="#" class="anchor-loi"><i class="fa fa-2x fa-arrow-circle-o-up"></i></a>
                                 @include('frontend.projet.content')
                             </div>
                         </div>
