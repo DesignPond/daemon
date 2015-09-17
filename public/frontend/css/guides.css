@@ -57,7 +57,8 @@ sup{
 }
 
 .warning{
-    background:#ffe0dc;
+    background:#f5d8bb;
+    color: #000 !important;
 }
 
 .popover{
