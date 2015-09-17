@@ -710,7 +710,7 @@ a.list-group-item.active > .badge, .nav-pills > .active > a > .badge { backgroun
 /* SM */
 @media (min-width: 768px) and (max-width: 991px) {
 	/*[class*='col-']:not(:last-child) { margin-bottom: 10px; }*/
-	#k-head {}
+	#k-head { width: 90%; margin: 0 auto;}
 	#k-site-logo { display: block;  }
 	.k-main-navig { margin-top: 30px;float: right;width: 70%; }
 	#drop-down-left a { border-top: none; padding-top: 0 !important; }
@@ -718,6 +718,14 @@ a.list-group-item.active > .badge, .nav-pills > .active > a > .badge { backgroun
 	#drop-down-left > li:first-child { margin-left: 0; }
 	.k-logo img { height: 91px; }
 	.k-carousel-caption { display: none; }
+    #drop-down-left > li {
+        margin-left: 15px;
+    }
+    .k-main-navig {
+        float: right;
+        margin-top: 30px;
+        width: 60%;
+    }
 }
 /* XS */
 @media (max-width: 767px) {
