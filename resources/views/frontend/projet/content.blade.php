@@ -11,8 +11,13 @@
     <div tabindex="0" data-trigger="focus" data-toggle="popover" data-placement="top"  id="preambule" title="Préambule" data-content="Préambule">
         <span  tabindex="0" data-trigger="focus" data-toggle="popover" data-placement="top" title="Organe" data-content="Organe qui a adopté le texte législatif"  class='class_type class_type_7' id='organe'>L'Assemblée fédérale de la Confédération suisse,</span>
         <span  tabindex="0" data-trigger="focus" data-toggle="popover" data-placement="top" title="Visa, Base cst." data-content="Les «visas ». On appelle ainsi toutes les références aux documents sur lesquels se fonde l'acte, références introduites par la préposition invariable « vu » (issu du participe passé du verbe « voir» ; «gestützt auf»; « visto »)."  class='class_type class_type_8' id='visa-base-cst'>
-            vu les art. 27, al. 1, 961, 97, al. 2, et 1222 de la Constitution 3, 4 en application des dispositions du droit de la concurrence des accords internationaux,</span>
-        <span  tabindex="0" data-trigger="focus" data-toggle="popover" data-placement="top" title="Réf. au Message du CF" data-content="Réf. au Message du CF"  class='class_type class_type_9' id='ref-au-message-du-cf'>vu le message du Conseil fédéral du 23 novembre 1994</span>
+
+            vu les art. 27, al. 1, 96<sup><a href="#fn1">1</a></sup>, 97, al. 2, et 122
+                <sup><a href="#fn2">2</a></sup> de la Constitution
+                <sup><a href="#fn3">3</a></sup>,
+                <sup><a href="#fn4">4</a></sup> en application des dispositions du droit de la concurrence des accords internationaux,
+        </span>
+        <span  tabindex="0" data-trigger="focus" data-toggle="popover" data-placement="top" title="Réf. au Message du CF" data-content="Réf. au Message du CF"  class='class_type class_type_9' id='ref-au-message-du-cf'>vu le message du Conseil fédéral du 23 novembre 1994<sup><a href="#fn5">5</a></sup></span>
         <span  tabindex="0" data-trigger="focus" data-toggle="popover" data-placement="top" title="Verbe" data-content="verbe marquant la décision de l'organe qui l'édicte. Ainsi l'Assemblée fédérale ou le Conseil fédéral «arrête ». Dans la terminologie propre au droit, le verbe « arrêter » (« beschliessen » ; « decretare ») désigne l'acte par lequel une autorité législative ou judiciaire prend une décision. C'est de là que viennent d'ailleurs les termes « arrêté » désignant un type d'acte législatif et « arrêt » désignant un type de décision judiciaire."  class='class_type class_type_10' id='verbe'>arrête:</span>
     </div>
 
@@ -24,7 +29,11 @@
 
             <h1>Chapitre 1 Dispositions générales</h1>
             <!-- But -->
-            <div tabindex="0" data-trigger="focus" data-toggle="popover" data-placement="top"  id="but" title="But de l'acte" data-content="Le but de l'acte (l'article-programme « der Zweckartikel » l'articolo sullo scopo»). 11 indique en une formule générale l'objet et souvent le (ou les) objectif(s) de l'acte. Cette indication peut servir d'indice pour l'interprétation (téléologique; cf. nt' 1651) d'une des dispositions qui suivent.">
+            <div tabindex="0" data-trigger="focus" data-toggle="popover" data-placement="top"  id="but" title="But de l'acte"
+                 data-content="Le but de l'acte (l'article-programme « der Zweckartikel » l'articolo sullo scopo»). 11 indique en une formule générale l'objet et souvent le (ou les) objectif(s) de
+                 l'acte. Cette indication peut servir d'indice pour l'interprétation (téléologique) d'une des dispositions qui suivent.">
+
+
                 <h5><a href="#"><strong>Art. 1</strong> But</a></h5>
                 <p>La présente loi a pour but d'empêcher les conséquences nuisibles d'ordre économique ou social imputables aux cartels et aux autres restrictions à la concurrence et de promouvoir ainsi la concurrence dans l'intérêt d'une économie de marché fondée sur un régime libéral.</p>
             </div>
@@ -52,12 +61,12 @@
                     <p><small><a name="fn-#a2-1"><sup>1</sup></a> Introduit par le ch. I de la LF du 20 juin 2003, en vigueur depuis le 1<sup>er</sup> avr. 2004
                             (
                             <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/recueil-officiel.html">RO</a>
-                             <a target="_blank" href="https://www.admin.ch/opc/fr/official-compilation/2004/index.html"><strong>2004</strong></a>
-                             <a target="_blank" href="http://www.admin.ch/ch/f/as/2004/1385.pdf">1385</a>;
-                             <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/feuille-federale.html">FF</a>
-                             <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2002/index.html"><strong>2002</strong></a>
-                             <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2002/1911.pdf">1911</a>
-                             <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2002/5128.pdf">5128)</a>
+                            <a target="_blank" href="https://www.admin.ch/opc/fr/official-compilation/2004/index.html"><strong>2004</strong></a>
+                            <a target="_blank" href="http://www.admin.ch/ch/f/as/2004/1385.pdf">1385</a>;
+                            <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/feuille-federale.html">FF</a>
+                            <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2002/index.html"><strong>2002</strong></a>
+                            <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2002/1911.pdf">1911</a>
+                            <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2002/5128.pdf">5128)</a>
                             .
                         </small></p>
                 </div>
@@ -96,13 +105,13 @@
                             ch. I de la LF du 20 juin 2003, en vigueur depuis le
                             1<sup>er</sup> avr. 2004
                             (
-                                <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/recueil-officiel.html">RO</a>
-                                <a target="_blank" href="https://www.admin.ch/opc/fr/official-compilation/2004/index.html"><strong>2004</strong></a>
-                                <a target="_blank" href="http://www.admin.ch/ch/f/as/2004/1385.pdf">1385</a>;
-                                <a href="http://www.admin.ch/ch/f/ff/2002/1911.pdf">FF</a>;
-                                <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2002/index.html"><strong>2002</strong></a>
-                                <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2002/1911.pdf">1911</a>
-                                <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2002/5128.pdf">5128)</a>
+                            <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/recueil-officiel.html">RO</a>
+                            <a target="_blank" href="https://www.admin.ch/opc/fr/official-compilation/2004/index.html"><strong>2004</strong></a>
+                            <a target="_blank" href="http://www.admin.ch/ch/f/as/2004/1385.pdf">1385</a>;
+                            <a href="http://www.admin.ch/ch/f/ff/2002/1911.pdf">FF</a>;
+                            <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2002/index.html"><strong>2002</strong></a>
+                            <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2002/1911.pdf">1911</a>
+                            <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2002/5128.pdf">5128)</a>
                             )
                             .<a name="fn-#a3-2"><sup>2</sup></a>
                             RS <strong><a href="http://www.admin.ch/ch/f/rs/c942_20.html">942.20</a></strong>
@@ -492,12 +501,12 @@
                 <hr>
                 <p><small><a name="fn-#a14-1"><sup>1</sup></a> Abrogé par le ch. II 16 de l'annexe 1 au CPC du 19 déc. 2008, avec effet au 1<sup>er</sup> janv. 2011
                         (
-                            <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/recueil-officiel.html">RO</a>
-                            <a target="_blank" href="https://www.admin.ch/opc/fr/official-compilation/2010/index.html"><strong>2010</strong></a>
-                            <a target="_blank" href="http://www.admin.ch/ch/f/as/2010/1739.pdf">1739</a>;
-                            <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/feuille-federale.html">FF</a>
-                            <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2006/index.html"><strong>2006</strong></a>
-                            <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2006/6841.pdf">6841</a>
+                        <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/recueil-officiel.html">RO</a>
+                        <a target="_blank" href="https://www.admin.ch/opc/fr/official-compilation/2010/index.html"><strong>2010</strong></a>
+                        <a target="_blank" href="http://www.admin.ch/ch/f/as/2010/1739.pdf">1739</a>;
+                        <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/feuille-federale.html">FF</a>
+                        <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2006/index.html"><strong>2006</strong></a>
+                        <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2006/6841.pdf">6841</a>
                         )
                         .</small></p>
             </div>
@@ -535,25 +544,25 @@
                 <p><sup><a name="2">2</a></sup>La commission comprend entre onze et quinze membres. Ceux-ci sont en majorité des experts indépendants.</p><p><sup><a name="2bis">2bis</a></sup>Les membres de la commission signalent leurs intérêts dans un registre des intérêts.<sup><a href="#fn-#a18-2">2</a></sup></p>
                 <p><sup><a name="3">3</a></sup>Elle prend toutes les décisions qui ne sont pas expressément réservées à une autre autorité. Elle adresse des recommandations (art. 45, al. 2) et des préavis (art. 46, al.2) aux autorités politiques, et élabore des avis (art. 47, al. 1).</p>
                 <hr>
-                    <p><small><a name="fn-#a18-1"><sup>1</sup></a> Nouvelle teneur selon le ch. I de la LF du 20 juin 2003, en vigueur depuis le 1<sup>er</sup> avr. 2004
-                            (
-                            <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/recueil-officiel.html">RO</a>
-                            <a target="_blank" href="https://www.admin.ch/opc/fr/official-compilation/2004/index.html"><strong>2004</strong></a>
-                            <a target="_blank" href="http://www.admin.ch/ch/f/as/2004/1385.pdf">1385</a>;
-                            <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/feuille-federale.html">FF</a>
-                            <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2002/index.html"><strong>2002</strong></a>
-                            <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2002/1911.pdf">1911</a>
-                            <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2002/5128.pdf">5128)</a>
-                            ).<a name="fn-#a18-2"><sup>2</sup></a> Introduit par le ch. I de la LF du 20 juin 2003, en vigueur depuis le 1<sup>er</sup> avr. 2004
-                            (
-                            <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/recueil-officiel.html">RO</a>
-                            <a target="_blank" href="https://www.admin.ch/opc/fr/official-compilation/2004/index.html"><strong>2004</strong></a>
-                            <a target="_blank" href="http://www.admin.ch/ch/f/as/2004/1385.pdf">1385</a>;
-                            <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/feuille-federale.html">FF</a>
-                            <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2002/index.html"><strong>2002</strong></a>
-                            <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2002/1911.pdf">1911</a>
-                            <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2002/5128.pdf">5128)</a>
-                            ).</small></p>
+                <p><small><a name="fn-#a18-1"><sup>1</sup></a> Nouvelle teneur selon le ch. I de la LF du 20 juin 2003, en vigueur depuis le 1<sup>er</sup> avr. 2004
+                        (
+                        <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/recueil-officiel.html">RO</a>
+                        <a target="_blank" href="https://www.admin.ch/opc/fr/official-compilation/2004/index.html"><strong>2004</strong></a>
+                        <a target="_blank" href="http://www.admin.ch/ch/f/as/2004/1385.pdf">1385</a>;
+                        <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/feuille-federale.html">FF</a>
+                        <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2002/index.html"><strong>2002</strong></a>
+                        <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2002/1911.pdf">1911</a>
+                        <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2002/5128.pdf">5128)</a>
+                        ).<a name="fn-#a18-2"><sup>2</sup></a> Introduit par le ch. I de la LF du 20 juin 2003, en vigueur depuis le 1<sup>er</sup> avr. 2004
+                        (
+                        <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/recueil-officiel.html">RO</a>
+                        <a target="_blank" href="https://www.admin.ch/opc/fr/official-compilation/2004/index.html"><strong>2004</strong></a>
+                        <a target="_blank" href="http://www.admin.ch/ch/f/as/2004/1385.pdf">1385</a>;
+                        <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/feuille-federale.html">FF</a>
+                        <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2002/index.html"><strong>2002</strong></a>
+                        <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2002/1911.pdf">1911</a>
+                        <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2002/5128.pdf">5128)</a>
+                        ).</small></p>
             </div>
             <div id="a19" class="a19 subpage">
                 <div class="articleTitle">
@@ -651,22 +660,22 @@
                 <hr>
                 <p><small><a name="fn-#a31-1"><sup>1</sup></a> Nouvelle teneur de la phrase selon le ch. 27 de l'annexe à la LF du 17 juin 2005 sur le TAF, en vigueur depuis le 1<sup>er</sup> janv. 2007
                         (
-                            <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/recueil-officiel.html">RO</a>
-                            <a target="_blank" href="https://www.admin.ch/opc/fr/official-compilation/2006/index.html"><strong>2006</strong></a>
-                            <a target="_blank" href="http://www.admin.ch/ch/f/as/2006/2197.pdf">2197</a>
-                            <a target="_blank" href="http://www.admin.ch/ch/f/as/2006/1069.pdf">1069</a>;
-                            <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/feuille-federale.html">FF</a>
-                            <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2001/index.html"><strong>2001</strong></a>
-                            <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2001/4000.pdf">4000</a>
+                        <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/recueil-officiel.html">RO</a>
+                        <a target="_blank" href="https://www.admin.ch/opc/fr/official-compilation/2006/index.html"><strong>2006</strong></a>
+                        <a target="_blank" href="http://www.admin.ch/ch/f/as/2006/2197.pdf">2197</a>
+                        <a target="_blank" href="http://www.admin.ch/ch/f/as/2006/1069.pdf">1069</a>;
+                        <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/feuille-federale.html">FF</a>
+                        <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2001/index.html"><strong>2001</strong></a>
+                        <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2001/4000.pdf">4000</a>
                         ).<a name="fn-#a31-2"><sup>2</sup></a> Nouvelle teneur selon le ch. 27 de l'annexe à la LF du 17 juin 2005 sur le TAF, en vigueur depuis le 1<sup>er</sup> janv. 2007
                         (
-                            <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/recueil-officiel.html">RO</a>
-                            <a target="_blank" href="https://www.admin.ch/opc/fr/official-compilation/2006/index.html"><strong>2006</strong></a>
-                            <a target="_blank" href="http://www.admin.ch/ch/f/as/2006/2197.pdf">2197</a>
-                            <a target="_blank" href="http://www.admin.ch/ch/f/as/2006/1069.pdf">1069</a>;
-                            <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/feuille-federale.html">FF</a>
-                            <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2001/index.html"><strong>2001</strong></a>
-                            <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2001/4000.pdf">4000</a>
+                        <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/recueil-officiel.html">RO</a>
+                        <a target="_blank" href="https://www.admin.ch/opc/fr/official-compilation/2006/index.html"><strong>2006</strong></a>
+                        <a target="_blank" href="http://www.admin.ch/ch/f/as/2006/2197.pdf">2197</a>
+                        <a target="_blank" href="http://www.admin.ch/ch/f/as/2006/1069.pdf">1069</a>;
+                        <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/feuille-federale.html">FF</a>
+                        <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2001/index.html"><strong>2001</strong></a>
+                        <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2001/4000.pdf">4000</a>
                         ).</small></p>
             </div>
 
@@ -694,49 +703,49 @@
                         <a href="#fn-#a36-2">2</a></sup></p><p><sup><a name="3">3</a></sup>Le Conseil fédéral prend sa décision si possible dans
                     les quatre mois suivant la réception de la demande.</p><hr><div class="fns"><p><small><a name="fn-#a36-1"><sup>1</sup></a>
                             Nouvelle teneur de la phrase selon le ch. 27 de l'annexe à la LF du 17 juin 2005 sur le TAF, en vigueur depuis le 1<sup>er</sup> janv. 2007
-                        (
-                        <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/recueil-officiel.html">RO</a>
-                        <a target="_blank" href="https://www.admin.ch/opc/fr/official-compilation/2006/index.html"><strong>2006</strong></a>
-                        <a target="_blank" href="http://www.admin.ch/ch/f/as/2006/2197.pdf">2197</a>
-                        <a target="_blank" href="http://www.admin.ch/ch/f/as/2006/1069.pdf">1069</a>;
-                        <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/feuille-federale.html">FF</a>
-                        <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2001/index.html"><strong>2001</strong></a>
-                        <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2001/4000.pdf">4000</a>
-                        ).<a name="fn-#a36-2"><sup>2</sup></a> Nouvelle teneur selon le ch. 27 de l'annexe à la LF du 17 juin 2005 sur le TAF, en vigueur depuis le 1<sup>er</sup> janv. 2007
-                        (
-                        <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/recueil-officiel.html">RO</a>
-                        <a target="_blank" href="https://www.admin.ch/opc/fr/official-compilation/2006/index.html"><strong>2006</strong></a>
-                        <a target="_blank" href="http://www.admin.ch/ch/f/as/2006/2197.pdf">2197</a>
-                        <a target="_blank" href="http://www.admin.ch/ch/f/as/2006/1069.pdf">1069</a>;
-                        <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/feuille-federale.html">FF</a>
-                        <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2001/index.html"><strong>2001</strong></a>
-                        <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2001/4000.pdf">4000</a>
-                        ).</small></p>
-            </div>
-            <div id="a37" class="a37 subpage">
-                <div class="articleTitle">
-                    <h5><a href="#"><strong>Art. 37</strong> Rétablissement d'une concurrence efficace</a></h5>
+                            (
+                            <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/recueil-officiel.html">RO</a>
+                            <a target="_blank" href="https://www.admin.ch/opc/fr/official-compilation/2006/index.html"><strong>2006</strong></a>
+                            <a target="_blank" href="http://www.admin.ch/ch/f/as/2006/2197.pdf">2197</a>
+                            <a target="_blank" href="http://www.admin.ch/ch/f/as/2006/1069.pdf">1069</a>;
+                            <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/feuille-federale.html">FF</a>
+                            <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2001/index.html"><strong>2001</strong></a>
+                            <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2001/4000.pdf">4000</a>
+                            ).<a name="fn-#a36-2"><sup>2</sup></a> Nouvelle teneur selon le ch. 27 de l'annexe à la LF du 17 juin 2005 sur le TAF, en vigueur depuis le 1<sup>er</sup> janv. 2007
+                            (
+                            <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/recueil-officiel.html">RO</a>
+                            <a target="_blank" href="https://www.admin.ch/opc/fr/official-compilation/2006/index.html"><strong>2006</strong></a>
+                            <a target="_blank" href="http://www.admin.ch/ch/f/as/2006/2197.pdf">2197</a>
+                            <a target="_blank" href="http://www.admin.ch/ch/f/as/2006/1069.pdf">1069</a>;
+                            <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/feuille-federale.html">FF</a>
+                            <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2001/index.html"><strong>2001</strong></a>
+                            <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2001/4000.pdf">4000</a>
+                            ).</small></p>
                 </div>
-                <p><sup><a name="1">1</a></sup>Lorsqu'une concentration interdite est réalisée ou qu'une concentration est
-                    interdite après sa réalisation et qu'une autorisation exceptionnelle n'a pas été demandée ni octroyée
-                    pour la concentration, les entreprises participantes sont tenues de prendre les mesures rendues nécessaires
-                    par le rétablissement d'une concurrence efficace.</p>
-                <p><sup><a name="2">2</a></sup>La commission peut exiger des entreprises participantes qu'elles fassent des propositions
-                    qui les lient en vue du rétablissement d'une concurrence efficace. Elle leur impartit un délai à cette fin.</p>
-                <p><sup><a name="3">3</a></sup>Si la commission accepte les mesures proposées, elle peut décider comment et dans
-                    quel délai les entreprises participantes devront les mettre en oeuvre.</p><p><sup>
-                        <a name="4">4</a></sup>Si la commission ne reçoit pas les propositions demandées ou qu'elle les rejette, elle peut décider:</p>
-                <dl compact="compact"><dt>a.</dt><dd>la séparation des entreprises ou des actifs regroupés;</dd>
-                    <dt>b.</dt><dd>la cessation des effets du contrôle;</dd><dt>c.</dt><dd>d'autres mesures à même de rétablir une concurrence efficace.</dd></dl>
-            </div>
+                <div id="a37" class="a37 subpage">
+                    <div class="articleTitle">
+                        <h5><a href="#"><strong>Art. 37</strong> Rétablissement d'une concurrence efficace</a></h5>
+                    </div>
+                    <p><sup><a name="1">1</a></sup>Lorsqu'une concentration interdite est réalisée ou qu'une concentration est
+                        interdite après sa réalisation et qu'une autorisation exceptionnelle n'a pas été demandée ni octroyée
+                        pour la concentration, les entreprises participantes sont tenues de prendre les mesures rendues nécessaires
+                        par le rétablissement d'une concurrence efficace.</p>
+                    <p><sup><a name="2">2</a></sup>La commission peut exiger des entreprises participantes qu'elles fassent des propositions
+                        qui les lient en vue du rétablissement d'une concurrence efficace. Elle leur impartit un délai à cette fin.</p>
+                    <p><sup><a name="3">3</a></sup>Si la commission accepte les mesures proposées, elle peut décider comment et dans
+                        quel délai les entreprises participantes devront les mettre en oeuvre.</p><p><sup>
+                            <a name="4">4</a></sup>Si la commission ne reçoit pas les propositions demandées ou qu'elle les rejette, elle peut décider:</p>
+                    <dl compact="compact"><dt>a.</dt><dd>la séparation des entreprises ou des actifs regroupés;</dd>
+                        <dt>b.</dt><dd>la cessation des effets du contrôle;</dd><dt>c.</dt><dd>d'autres mesures à même de rétablir une concurrence efficace.</dd></dl>
+                </div>
 
-            <div id="a38" class="a38 subpage">
-                <div class="articleTitle">
-                    <h5><a href="#"><strong>Art. 38</strong> Révocation et révision</a></h5>
-                </div>
-                <p><sup><a name="1">1</a></sup>La commission peut rapporter une autorisation ou décider l'examen d'une concentration malgré l'écoulement du délai de l'art. 32, al. 1, lorsque:</p>
-                <dl compact="compact"><dt>a.</dt><dd>les entreprises participantes ont fourni des indications inexactes;</dd><dt>b.</dt><dd>l'autorisation a été obtenue frauduleusement;</dd><dt>c.</dt><dd>les entreprises participantes contreviennent gravement à une charge dont a été assortie l'autorisation.</dd></dl>
-                <p><sup><a name="2">2</a></sup>Le Conseil fédéral peut rapporter une autorisation exceptionnelle pour les mêmes motifs.</p></div>
+                <div id="a38" class="a38 subpage">
+                    <div class="articleTitle">
+                        <h5><a href="#"><strong>Art. 38</strong> Révocation et révision</a></h5>
+                    </div>
+                    <p><sup><a name="1">1</a></sup>La commission peut rapporter une autorisation ou décider l'examen d'une concentration malgré l'écoulement du délai de l'art. 32, al. 1, lorsque:</p>
+                    <dl compact="compact"><dt>a.</dt><dd>les entreprises participantes ont fourni des indications inexactes;</dd><dt>b.</dt><dd>l'autorisation a été obtenue frauduleusement;</dd><dt>c.</dt><dd>les entreprises participantes contreviennent gravement à une charge dont a été assortie l'autorisation.</dd></dl>
+                    <p><sup><a name="2">2</a></sup>Le Conseil fédéral peut rapporter une autorisation exceptionnelle pour les mêmes motifs.</p></div>
             </div>
 
             <h2 class="title clickable">Section 4 Procédure et voies de droit</h2>
@@ -781,17 +790,17 @@
                     de l'art. 42 peuvent être engagées à la demande de la Commission de la Communauté européenne; l'art. 44 est applicable.</p><hr>
                 <div class="fns">
                     <p><small><a name="fn-#a42a-1"><sup>1</sup></a> Introduit par le ch. I de la LF du 20 juin 2003, en vigueur depuis le 1<sup>er</sup> avr. 2004 (<a href="http://www.admin.ch/ch/f/as/2004/1385.pdf">RO <strong>2004</strong> 1385</a>;
-                    <a href="http://www.admin.ch/ch/f/ff/2002/1911.pdf">FF <strong>2002</strong> 1911</a> 5128).<a name="fn-#a42a-2"><sup>2</sup></a> RS <strong><a href="http://www.admin.ch/ch/f/rs/c0_748_127_192_68.html">0.748.127.192.68</a></strong></small></p>
+                            <a href="http://www.admin.ch/ch/f/ff/2002/1911.pdf">FF <strong>2002</strong> 1911</a> 5128).<a name="fn-#a42a-2"><sup>2</sup></a> RS <strong><a href="http://www.admin.ch/ch/f/rs/c0_748_127_192_68.html">0.748.127.192.68</a></strong></small></p>
                 </div>
             </div>
             <div id="a42b" class="a42b subpage">
                 <div class="articleTitle">
                     <h5><a href="#"><strong>Art.42</strong><em>b</em></a><sup><a href="#fn-#a42b-1">1</a></sup><a href="#">Communication de données à une autorité étrangère en matière de concurrence</a></h5>
                 </div>  <p><sup><a name="1">1</a></sup>La communication de données à une autorité étrangère en matière de concurrence n'est autorisée que si elle se fonde sur une loi ou sur un accord international, ou avec le consentement des entreprises concernées.</p><p><sup><a name="2">2</a></sup>En l'absence du consentement des entreprises concernées, les autorités en matière de concurrence
-                peuvent communiquer à une autorité étrangère en matière de concurrence des données confidentielles, notamment des secrets d'affaires, sur la base d'un accord international et uniquement lorsque:</p><dl compact="compact"><dt>a.</dt><dd>les pratiques faisant l'objet d'une enquête dans l'Etat destinataire sont également illicites selon le droit suisse;</dd><dt>b.</dt><dd>les deux autorités en
-                    matière de concurrence enquêtent sur des pratiques ou actes juridiques identiques ou connexes;</dd><dt>c.</dt><dd>les données sont utilisées par l'autorité étrangère uniquement en vue de l'application des dispositions du droit des cartels et à titre de moyens de preuve en ce qui concerne l'objet de l'enquête auquel se rapporte sa requête;</dd><dt>d.</dt><dd>les données ne sont pas utilisées dans le cadre d'une procédure pénale ou civile;</dd><dt>e.</dt>
-                <dd>les droits des parties et le secret de fonction sont garantis dans le droit de procédure étranger; et</dd><dt>f.</dt><dd>les données confidentielles ne sont pas communiquées à l'autorité étrangère dans le cadre
-                    d'un accord amiable (art. 29) ou de la coopération à la mise au jour et à la suppression d'une restriction à la concurrence (art. 49<em>a</em>, al. 2).</dd></dl><p><sup><a name="3">3</a></sup>Avant de transmettre les données à l'autorité étrangère, les autorités en matière de concurrence informent les entreprises concernées et les invitent à prendre position.</p>
+                    peuvent communiquer à une autorité étrangère en matière de concurrence des données confidentielles, notamment des secrets d'affaires, sur la base d'un accord international et uniquement lorsque:</p><dl compact="compact"><dt>a.</dt><dd>les pratiques faisant l'objet d'une enquête dans l'Etat destinataire sont également illicites selon le droit suisse;</dd><dt>b.</dt><dd>les deux autorités en
+                        matière de concurrence enquêtent sur des pratiques ou actes juridiques identiques ou connexes;</dd><dt>c.</dt><dd>les données sont utilisées par l'autorité étrangère uniquement en vue de l'application des dispositions du droit des cartels et à titre de moyens de preuve en ce qui concerne l'objet de l'enquête auquel se rapporte sa requête;</dd><dt>d.</dt><dd>les données ne sont pas utilisées dans le cadre d'une procédure pénale ou civile;</dd><dt>e.</dt>
+                    <dd>les droits des parties et le secret de fonction sont garantis dans le droit de procédure étranger; et</dd><dt>f.</dt><dd>les données confidentielles ne sont pas communiquées à l'autorité étrangère dans le cadre
+                        d'un accord amiable (art. 29) ou de la coopération à la mise au jour et à la suppression d'une restriction à la concurrence (art. 49<em>a</em>, al. 2).</dd></dl><p><sup><a name="3">3</a></sup>Avant de transmettre les données à l'autorité étrangère, les autorités en matière de concurrence informent les entreprises concernées et les invitent à prendre position.</p>
                 <hr>
                 <p><small><a name="fn-#a42b-1"><sup>1</sup></a> Introduit par l'annexe à l'AF du 20 juin 2014 portant approbation et mise en oeuvre de l'Ac. entre la Suisse et l'UE concernant la coopération en matière d'application de leurs droits de la concurrence, en vigueur depuis le 1<sup>er</sup> déc. 2014
                         (
@@ -818,16 +827,16 @@
                     <h5><a href="#"><strong>Art. 44</strong></a><sup><a href="#fn-#a44-1">1</a></sup><a href="#"></a></h5>
                 </div>
                 <hr>
-                    <p><small><a name="fn-#a44-1"><sup>1</sup></a> Abrogé par le ch. 27 de l'annexe à la LF du 17 juin 2005 sur le TAF, avec effet au 1<sup>er</sup> janv. 2007
-                    (
-                    <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/recueil-officiel.html">RO</a>
-                    <a target="_blank" href="https://www.admin.ch/opc/fr/official-compilation/2006/index.html"><strong>2006</strong></a>
-                    <a target="_blank" href="http://www.admin.ch/ch/f/as/2006/2197.pdf">2197</a>
-                    <a target="_blank" href="http://www.admin.ch/ch/f/as/2006/1069.pdf">1069</a>;
-                    <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/feuille-federale.html">FF</a>
-                    <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2001/index.html"><strong>2001</strong></a>
-                    <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2001/4000.pdf">4000</a>
-                    ).</small></p>
+                <p><small><a name="fn-#a44-1"><sup>1</sup></a> Abrogé par le ch. 27 de l'annexe à la LF du 17 juin 2005 sur le TAF, avec effet au 1<sup>er</sup> janv. 2007
+                        (
+                        <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/recueil-officiel.html">RO</a>
+                        <a target="_blank" href="https://www.admin.ch/opc/fr/official-compilation/2006/index.html"><strong>2006</strong></a>
+                        <a target="_blank" href="http://www.admin.ch/ch/f/as/2006/2197.pdf">2197</a>
+                        <a target="_blank" href="http://www.admin.ch/ch/f/as/2006/1069.pdf">1069</a>;
+                        <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/feuille-federale.html">FF</a>
+                        <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2001/index.html"><strong>2001</strong></a>
+                        <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2001/4000.pdf">4000</a>
+                        ).</small></p>
             </div>
 
             <h2 class="title clickable">Section 5 Autres tâches et compétences des autorités en matière de concurrence</h2>
@@ -1033,133 +1042,185 @@
         </div>
         <!-- END next -->
 
-        </div>
-        <!-- END corps text -->
+    </div>
+    <!-- END corps text -->
 
-        <!-- dispositions-finales -->
-        <div tabindex="0" data-trigger="focus" data-toggle="popover" data-placement="top" id="dispositions-finales" title="Dispositions finales" data-content="Les dispositions finales (« die Schlussbestimmungen» ; « le disposizioni finali ») précisent les conditions d'exécution de l'acte. Elles comprennent en principe les parties suivantes : 503 P Les clauses d'exécution. La mise en oeuvre du régime instauré par la loi peut appeler des règles complémentaires, dites d'exécution. L'acte désigne les organes compétents pour les adopter et précise souvent les modalités de l'intervention. ">
+    <!-- dispositions-finales -->
+    <div tabindex="0" data-trigger="focus" data-toggle="popover" data-placement="top" id="dispositions-finales" title="Dispositions finales" data-content="Les dispositions finales (« die Schlussbestimmungen» ; « le disposizioni finali ») précisent les conditions d'exécution de l'acte. Elles comprennent en principe les parties suivantes : 503 P Les clauses d'exécution. La mise en oeuvre du régime instauré par la loi peut appeler des règles complémentaires, dites d'exécution. L'acte désigne les organes compétents pour les adopter et précise souvent les modalités de l'intervention. ">
 
-            <h1 class="title clickable">Chapitre 7 Dispositions finales</h1>
-            <div tabindex="0" data-trigger="focus" data-toggle="popover" data-placement="top" title="Clause d'exécution" data-content="La mise en oeuvre du régime instauré par la loi peut appeler des règles complémentaires, dites d'exécution."  class='class_type class_type_12' id='clause-dexecution'>
-                <h5><a href="#"><strong>Art. 60</strong>  Exécution</a></h5>
-                <p>Le Conseil fédéral édicte les dispositions d'exécution.</p>
-            </div>
-
-            <div tabindex="0" data-trigger="focus" data-toggle="popover" data-placement="top" title="Clause abrogatoire" data-content="L'entrée en vigeur de la nouvelle loi peut entraîner la modification des textes antérieurs."  class='class_type class_type_13' id='clause-abrogatoire'>
-                <h5><a href="#"><strong>Art.  61</strong> Abrogation du droit en vigueur</a></h5>
-                <p>La loi du 20 décembre 1985<sup><a href="#fn-#a61-1">1</a></sup> sur les cartels et organisations analogues est abrogée.</p>
-                <p><small><a name="fn-#a61-1"><sup>1</sup></a> [RO <strong>1986</strong> 874, <strong>1992</strong> 288 annexe ch. 12]</small></p>
-            </div>
-
-            <div tabindex="0" data-trigger="focus" data-toggle="popover" data-placement="top" title="Règles de droit intertemporel" data-content="Le passage de la loi ancienne à la loi nouvelle peut soulever des conflits que le législateur doit règler par quelques principes de droit intertemporel. "  class='class_type class_type_14' id='regles-de-droit-intemporel'>
-                <div class="articleTitle">
-                    <h5><a href="#"><strong>Art.  62</strong> Dispositions transitoires</a></h5>
-                </div>
-                <p>
-                    <sup><a name="1">1</a></sup>
-                    &nbsp;Les procédures en cours devant la Commission des cartels relatives à des accords en matière deconcurrence sont suspendues
-                    dès l'entrée en vigueur de la présente loi;si nécessaire, elles seront poursuivies selon le nouveau droit àl'expiration d'un délai de six mois.
-                </p>
-                <p>
-                    <sup><a name="2">2</a></sup>&nbsp;Une nouvelle procédure devant la
-                    commission relative à des accords en matière de concurrence ne pourraêtre introduite qu'à l'expiration d'un délai de six mois à
-                    compter del'entrée en vigueur de la loi, à moins que les destinataires potentielsd'une décision n'aient demandé qu'il soit procédé plus tôt à une
-                    enquête. L'enquête préalable peut être menée en tout temps.
-                </p>
-                <p>
-                    <sup><a name="3">3</a></sup>&nbsp;Les décisions en force et les recommandations acceptées en vertu de la loi fédérale du 20 décembre 1985<sup>
-                        <a href="#fn-#a62-1">1</a></sup> sur les cartels et
-                    organisations analogues continuent à être régies par l'ancien droit, y compris en ce qui concerne les sanctions.
-                </p>
-                <div class="fns">
-                    <p><small><a name="fn-#a62-1"><sup>1</sup></a> [RO <strong>1986</strong> 874, <strong>1992</strong> 288 annexe ch. 12]</small></p>
-                </div>
-            </div>
+        <h1 class="title clickable">Chapitre 7 Dispositions finales</h1>
+        <div tabindex="0" data-trigger="focus" data-toggle="popover" data-placement="top" title="Clause d'exécution" data-content="La mise en oeuvre du régime instauré par la loi peut appeler des règles complémentaires, dites d'exécution."  class='class_type class_type_12' id='clause-dexecution'>
+            <h5><a href="#"><strong>Art. 60</strong>  Exécution</a></h5>
+            <p>Le Conseil fédéral édicte les dispositions d'exécution.</p>
         </div>
 
-        <div tabindex="0" data-trigger="focus" data-toggle="popover" data-placement="top"  id="entree-en-vigueur" title="Entrée en vigueur"
-             data-content="La dernière disposition précise à quel date le texte entre en vigueur.">
-            <p>Date de l'entrée en vigueur: 1<sup>er</sup> juillet 1996<sup><a href="#fn9">9</a></sup></p>
+        <div tabindex="0" data-trigger="focus" data-toggle="popover" data-placement="top" title="Clause abrogatoire" data-content="L'entrée en vigeur de la nouvelle loi peut entraîner la modification des textes antérieurs."  class='class_type class_type_13' id='clause-abrogatoire'>
+            <h5><a href="#"><strong>Art.  61</strong> Abrogation du droit en vigueur</a></h5>
+            <p>La loi du 20 décembre 1985<sup><a href="#fn-#a61-1">1</a></sup> sur les cartels et organisations analogues est abrogée.</p>
+            <p><small><a name="fn-#a61-1"><sup>1</sup></a> [RO <strong>1986</strong> 874, <strong>1992</strong> 288 annexe ch. 12]</small></p>
+        </div>
+
+        <div tabindex="0" data-trigger="focus" data-toggle="popover" data-placement="top" title="Règles de droit intertemporel" data-content="Le passage de la loi ancienne à la loi nouvelle peut soulever des conflits que le législateur doit règler par quelques principes de droit intertemporel. "  class='class_type class_type_14' id='regles-de-droit-intemporel'>
             <div class="articleTitle">
-                <h5><a href="#"><strong>Art. 63</strong> Référendum et entrée en vigueur</a></h5>
+                <h5><a href="#"><strong>Art.  62</strong> Dispositions transitoires</a></h5>
             </div>
-            <p><sup><a name="1">1</a></sup>&nbsp;La présente loi est sujette au référendum facultatif.</p>
-            <p><sup><a name="2">2</a></sup>&nbsp;Le Conseil fédéral fixe la date del'entrée en vigueur.</p>
-            <p>Art. 18 à 25: 1<sup>er</sup> février 1996<sup><a href="#fn10">10</a></sup></p><a name="id-final1"></a>
-        </div>
-
-     <!--   <div tabindex="0" data-trigger="focus" data-toggle="popover" data-placement="top"  id="signatures" title="Signatures" data-content="Signatures">
-            <div class="row bloc">
-                <div class="col-md-6">
-                    <p>Conseil national, 6 octobre 1995</p>
-                    <p>Le président: Claude Frey <br>Le secrétaire: Duvillard </p>
-                </div>
-                <div class="col-md-6">
-                    <p>Conseil des Etats, 6 octobre 1995 </p>
-                    <p>Le président: Ktichler <br>Le secrétaire: Lanz </p>
-                </div>
-            </div>
-        </div>
-
-
-            <p><cite>Expiration du délai référendaire et entrée en vigueur </cite></p>
-            <p><sup>1</sup> Le délai référendaire s'appliquant à la présente loi a expiré le 15 janvier 1996 sans avoir été utilisé. <sup>2</sup>) </p>
-            <p><sup>2</sup> Les articles 18 à 25 de la présente loi entrent en vigueur le 1" février 1996. L'entrée en vigueur des autres dispositions sera fixée ultérieurement. </p>
-            <div class="row bloc">
-                <div class="col-md-6">26 janvier 1996</div>
-                <div class="col-md-6">
-                    <p>Au nom du Conseil fédéral suisse: </p>
-                    <p>Le président de la Confédération, Delamuraz <br>Le chancelier de la Confédération, Couchepin </p>
-                </div>
-            </div>
-            <h1 class="title clickable">Dispositions finales de la modification du 20 juin 2003<sup><a href="#fn11">11</a></sup></h1>
-            <div class="collapseable">
-                <p>Aucune sanction prévue à l'art. 49<em>a</em> n'est
-                    prise lorsqu'une restriction à la concurrence est annoncée ou supprimée dans
-                    l'année qui suit l'entrée en vigueur de cette disposition.
-                </p>
-            </div>
-            <div id="app1" class="app1 subpage">
-                <h1 id="ahref0" class="title clickable"><span class="expanderComparator"></span><em>Annexe</em></h1>
-                <div class="collapseable"><h2 id="ahref1">Modification du droit en vigueur</h2>
-                    <p>…<sup><a href="#fn-#app1-1">1</a></sup></p>
-                    <div class="fns">
-                        <p><small><a name="fn-#app1-1"><sup>1</sup></a> Les mod. peuvent être consultées au RO <strong>1996</strong> 546. </small></p>
-                    </div>
-                </div>
-            </div>
-            <div><p>&nbsp;RO <strong>1996</strong> 546</p></div>
+            <p>
+                <sup><a name="1">1</a></sup>
+                &nbsp;Les procédures en cours devant la Commission des cartels relatives à des accords en matière deconcurrence sont suspendues
+                dès l'entrée en vigueur de la présente loi;si nécessaire, elles seront poursuivies selon le nouveau droit àl'expiration d'un délai de six mois.
+            </p>
+            <p>
+                <sup><a name="2">2</a></sup>&nbsp;Une nouvelle procédure devant la
+                commission relative à des accords en matière de concurrence ne pourraêtre introduite qu'à l'expiration d'un délai de six mois à
+                compter del'entrée en vigueur de la loi, à moins que les destinataires potentielsd'une décision n'aient demandé qu'il soit procédé plus tôt à une
+                enquête. L'enquête préalable peut être menée en tout temps.
+            </p>
+            <p>
+                <sup><a name="3">3</a></sup>&nbsp;Les décisions en force et les recommandations acceptées en vertu de la loi fédérale du 20 décembre 1985<sup>
+                    <a href="#fn-#a62-1">1</a></sup> sur les cartels et
+                organisations analogues continuent à être régies par l'ancien droit, y compris en ce qui concerne les sanctions.
+            </p>
             <div class="fns">
-                <p>
-                    <small>
-                        <a name="fn1"><sup>1</sup></a> Cette disp. correspond à l'art.
-                        31<sup>bis</sup> de la cst. du 29 mai 1874 (RS <strong>1</strong>
-                        3).<br><a name="fn2"><sup>2</sup></a> Cette disp. correspond à l'art. 64
-                        de la cst. du 29 mai 1874 (RS <strong>1</strong> 3).<br><a name="fn3"><sup>3</sup></a> RS <strong>101</strong><br>
-                        <a name="fn4"><sup>4</sup></a> Nouvelle teneur selon le ch. I de la
-                        LF du 20 juin 2003, en vigueur depuis le 1<sup>er</sup> avr. 2004 (<a href="http://www.admin.ch/ch/f/as/2004/1385.pdf">RO
-                            <strong>2004</strong> 1385</a>; <a href="http://www.admin.ch/ch/f/ff/2002/1911.pdf">FF
-                            <strong>2002</strong> 1911</a> 5128).<br><a name="fn5"><sup>5</sup></a>
-                        FF <strong>1995</strong> I 472<br><a name="fn6"><sup>6</sup></a>
-                        Anciennement avant art. 50.<br><a name="fn7"><sup>7</sup></a> Introduite
-                        par le ch. I de la LF du 20 juin 2003, en vigueur depuis le
-                        1<sup>er</sup> avr. 2004 (<a href="http://www.admin.ch/ch/f/as/2004/1385.pdf">RO
-                            <strong>2004</strong> 1385</a>; <a href="http://www.admin.ch/ch/f/ff/2002/1911.pdf">FF
-                            <strong>2002</strong> 1911</a> 5128).<br><a name="fn8"><sup>8</sup></a>
-                        Introduit par le ch. I de la LF du 20 juin 2003, en vigueur depuis le
-                        1<sup>er</sup> avr. 2004 (<a href="http://www.admin.ch/ch/f/as/2004/1385.pdf">RO
-                            <strong>2004</strong> 1385</a>; <a href="http://www.admin.ch/ch/f/ff/2002/1911.pdf">FF
-                            <strong>2002</strong> 1911</a> 5128).<br><a name="fn9"><sup>9</sup></a>
-                        O du 17 juin 1996 (RO <strong>1996</strong> 1805)<br><a name="fn10"><sup>10</sup></a> ACF du 26 janv. 1996<br>
-                        <a name="fn11"><sup>11</sup></a>
-                        <a href="http://www.admin.ch/ch/f/as/2004/1385.pdf">RO
-                            <strong>2004</strong> 1385</a>; <a href="http://www.admin.ch/ch/f/ff/2002/1911.pdf">FF
-                            <strong>2002</strong> 1911</a> 5128
-                    </small>
-                </p>
+                <p><small><a name="fn-#a62-1"><sup>1</sup></a> [RO <strong>1986</strong> 874, <strong>1992</strong> 288 annexe ch. 12]</small></p>
             </div>
         </div>
+    </div>
 
-    -->
+    <div tabindex="0" data-trigger="focus" data-toggle="popover" data-placement="top"  id="entree-en-vigueur" title="Entrée en vigueur"
+         data-content="La dernière disposition précise à quel date le texte entre en vigueur.">
+        <p>Date de l'entrée en vigueur: 1<sup>er</sup> juillet 1996<sup><a href="#fn9">9</a></sup></p>
+        <div class="articleTitle">
+            <h5><a href="#"><strong>Art. 63</strong> Référendum et entrée en vigueur</a></h5>
+        </div>
+        <p><sup><a name="1">1</a></sup>&nbsp;La présente loi est sujette au référendum facultatif.</p>
+        <p><sup><a name="2">2</a></sup>&nbsp;Le Conseil fédéral fixe la date del'entrée en vigueur.</p>
+        <p>Art. 18 à 25: 1<sup>er</sup> février 1996<sup><a href="#fn10">10</a></sup></p><a name="id-final1"></a>
+    </div>
+
+    <div class="fns">
+        <p>
+            <small><a name="fn1"><sup>1</sup></a> Cette disp. correspond à l'art. 31<sup>bis</sup> de la cst. du 29 mai 1874 (RS <strong>1</strong> 3).<br>
+                <a name="fn2"><sup>2</sup></a> Cette disp. correspond à l'art. 64 de la cst. du 29 mai 1874 (RS <strong>1</strong> 3).<br>
+                <a name="fn3"><sup>3</sup></a> RS <strong>101</strong><br>
+                <a name="fn4"><sup>4</sup></a> Nouvelle teneur selon le ch. I de la LF du 20 juin 2003, en vigueur depuis le 1<sup>er</sup> avr. 2004
+                (
+                <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/recueil-officiel.html">RO</a>
+                <a target="_blank" href="https://www.admin.ch/opc/fr/official-compilation/2004/index.html"><strong>2004</strong></a>
+                <a target="_blank" href="http://www.admin.ch/ch/f/as/2004/1385.pdf">1385</a>;
+                <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/feuille-federale.html">FF</a>
+                <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2002/index.html"><strong>2002</strong></a>
+                <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2002/1911.pdf">1911</a>
+                <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2002/5128.pdf">5128)</a>
+                ).<br>
+                <a name="fn5"><sup>5</sup></a> FF <strong>1995</strong> I 472<br><a name="fn6"><sup>6</sup></a> Anciennement avant art. 50.<br>
+                <a name="fn7"><sup>7</sup></a> Introduite par le ch. I de la LF du 20 juin 2003, en vigueur depuis le 1<sup>er</sup> avr. 2004
+                (
+                <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/recueil-officiel.html">RO</a>
+                <a target="_blank" href="https://www.admin.ch/opc/fr/official-compilation/2004/index.html"><strong>2004</strong></a>
+                <a target="_blank" href="http://www.admin.ch/ch/f/as/2004/1385.pdf">1385</a>;
+                <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/feuille-federale.html">FF</a>
+                <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2002/index.html"><strong>2002</strong></a>
+                <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2002/1911.pdf">1911</a>
+                <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2002/5128.pdf">5128)</a>
+                ).
+                <br>
+                <a name="fn8"><sup>8</sup></a> Introduit par le ch. I de la LF du 20 juin 2003, en vigueur depuis le 1<sup>er</sup> avr. 2004
+                (
+                <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/recueil-officiel.html">RO</a>
+                <a target="_blank" href="https://www.admin.ch/opc/fr/official-compilation/2004/index.html"><strong>2004</strong></a>
+                <a target="_blank" href="http://www.admin.ch/ch/f/as/2004/1385.pdf">1385</a>;
+                <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/feuille-federale.html">FF</a>
+                <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2002/index.html"><strong>2002</strong></a>
+                <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2002/1911.pdf">1911</a>
+                <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2002/5128.pdf">5128)</a>
+                ).<br>
+                <a name="fn9"><sup>9</sup></a> O du 17 juin 1996 (RO <strong>1996</strong> 1805)<br><a name="fn10"><sup>10</sup></a> ACF du 26 janv. 1996<br>
+                <a name="fn11"><sup>11</sup></a>
+
+                <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/recueil-officiel.html">RO</a>
+                <a target="_blank" href="https://www.admin.ch/opc/fr/official-compilation/2004/index.html"><strong>2004</strong></a>
+                <a target="_blank" href="http://www.admin.ch/ch/f/as/2004/1385.pdf">1385</a>;
+                <a target="_blank" href="https://www.admin.ch/gov/fr/accueil/droit-federal/feuille-federale.html">FF</a>
+                <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2002/index.html"><strong>2002</strong></a>
+                <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2002/1911.pdf">1911</a>
+                <a target="_blank" href="https://www.admin.ch/opc/fr/federal-gazette/2002/5128.pdf">5128)</a>
+
+            </small>
+        </p>
+    </div>
+
+    <!--   <div tabindex="0" data-trigger="focus" data-toggle="popover" data-placement="top"  id="signatures" title="Signatures" data-content="Signatures">
+           <div class="row bloc">
+               <div class="col-md-6">
+                   <p>Conseil national, 6 octobre 1995</p>
+                   <p>Le président: Claude Frey <br>Le secrétaire: Duvillard </p>
+               </div>
+               <div class="col-md-6">
+                   <p>Conseil des Etats, 6 octobre 1995 </p>
+                   <p>Le président: Ktichler <br>Le secrétaire: Lanz </p>
+               </div>
+           </div>
+       </div>
+
+
+           <p><cite>Expiration du délai référendaire et entrée en vigueur </cite></p>
+           <p><sup>1</sup> Le délai référendaire s'appliquant à la présente loi a expiré le 15 janvier 1996 sans avoir été utilisé. <sup>2</sup>) </p>
+           <p><sup>2</sup> Les articles 18 à 25 de la présente loi entrent en vigueur le 1" février 1996. L'entrée en vigueur des autres dispositions sera fixée ultérieurement. </p>
+           <div class="row bloc">
+               <div class="col-md-6">26 janvier 1996</div>
+               <div class="col-md-6">
+                   <p>Au nom du Conseil fédéral suisse: </p>
+                   <p>Le président de la Confédération, Delamuraz <br>Le chancelier de la Confédération, Couchepin </p>
+               </div>
+           </div>
+           <h1 class="title clickable">Dispositions finales de la modification du 20 juin 2003<sup><a href="#fn11">11</a></sup></h1>
+           <div class="collapseable">
+               <p>Aucune sanction prévue à l'art. 49<em>a</em> n'est
+                   prise lorsqu'une restriction à la concurrence est annoncée ou supprimée dans
+                   l'année qui suit l'entrée en vigueur de cette disposition.
+               </p>
+           </div>
+           <div id="app1" class="app1 subpage">
+               <h1 id="ahref0" class="title clickable"><span class="expanderComparator"></span><em>Annexe</em></h1>
+               <div class="collapseable"><h2 id="ahref1">Modification du droit en vigueur</h2>
+                   <p>…<sup><a href="#fn-#app1-1">1</a></sup></p>
+                   <div class="fns">
+                       <p><small><a name="fn-#app1-1"><sup>1</sup></a> Les mod. peuvent être consultées au RO <strong>1996</strong> 546. </small></p>
+                   </div>
+               </div>
+           </div>
+           <div><p>&nbsp;RO <strong>1996</strong> 546</p></div>
+           <div class="fns">
+               <p>
+                   <small>
+                       <a name="fn1"><sup>1</sup></a> Cette disp. correspond à l'art.
+                       31<sup>bis</sup> de la cst. du 29 mai 1874 (RS <strong>1</strong>
+                       3).<br><a name="fn2"><sup>2</sup></a> Cette disp. correspond à l'art. 64
+                       de la cst. du 29 mai 1874 (RS <strong>1</strong> 3).<br><a name="fn3"><sup>3</sup></a> RS <strong>101</strong><br>
+                       <a name="fn4"><sup>4</sup></a> Nouvelle teneur selon le ch. I de la
+                       LF du 20 juin 2003, en vigueur depuis le 1<sup>er</sup> avr. 2004 (<a href="http://www.admin.ch/ch/f/as/2004/1385.pdf">RO
+                           <strong>2004</strong> 1385</a>; <a href="http://www.admin.ch/ch/f/ff/2002/1911.pdf">FF
+                           <strong>2002</strong> 1911</a> 5128).<br><a name="fn5"><sup>5</sup></a>
+                       FF <strong>1995</strong> I 472<br><a name="fn6"><sup>6</sup></a>
+                       Anciennement avant art. 50.<br><a name="fn7"><sup>7</sup></a> Introduite
+                       par le ch. I de la LF du 20 juin 2003, en vigueur depuis le
+                       1<sup>er</sup> avr. 2004 (<a href="http://www.admin.ch/ch/f/as/2004/1385.pdf">RO
+                           <strong>2004</strong> 1385</a>; <a href="http://www.admin.ch/ch/f/ff/2002/1911.pdf">FF
+                           <strong>2002</strong> 1911</a> 5128).<br><a name="fn8"><sup>8</sup></a>
+                       Introduit par le ch. I de la LF du 20 juin 2003, en vigueur depuis le
+                       1<sup>er</sup> avr. 2004 (<a href="http://www.admin.ch/ch/f/as/2004/1385.pdf">RO
+                           <strong>2004</strong> 1385</a>; <a href="http://www.admin.ch/ch/f/ff/2002/1911.pdf">FF
+                           <strong>2002</strong> 1911</a> 5128).<br><a name="fn9"><sup>9</sup></a>
+                       O du 17 juin 1996 (RO <strong>1996</strong> 1805)<br><a name="fn10"><sup>10</sup></a> ACF du 26 janv. 1996<br>
+                       <a name="fn11"><sup>11</sup></a>
+                       <a href="http://www.admin.ch/ch/f/as/2004/1385.pdf">RO
+                           <strong>2004</strong> 1385</a>; <a href="http://www.admin.ch/ch/f/ff/2002/1911.pdf">FF
+                           <strong>2002</strong> 1911</a> 5128
+                   </small>
+               </p>
+           </div>
+       </div>
+
+   -->
     <div id="final"></div>
 </div>
