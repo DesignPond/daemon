@@ -30,9 +30,8 @@
             <h1>Chapitre 1 Dispositions générales</h1>
             <!-- But -->
             <div tabindex="0" data-trigger="focus" data-toggle="popover" data-placement="top"  id="but" title="But de l'acte"
-                 data-content="Le but de l'acte (l'article-programme « der Zweckartikel » l'articolo sullo scopo»). 11 indique en une formule générale l'objet et souvent le (ou les) objectif(s) de
+                 data-content="Le but de l'acte (l'article-programme) indique en une formule générale l'objet et souvent le (ou les) objectif(s) de
                  l'acte. Cette indication peut servir d'indice pour l'interprétation (téléologique) d'une des dispositions qui suivent.">
-
 
                 <h5><a href="#"><strong>Art. 1</strong> But</a></h5>
                 <p>La présente loi a pour but d'empêcher les conséquences nuisibles d'ordre économique ou social imputables aux cartels et aux autres restrictions à la concurrence et de promouvoir ainsi la concurrence dans l'intérêt d'une économie de marché fondée sur un régime libéral.</p>
