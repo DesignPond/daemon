@@ -1,6 +1,9 @@
-<form action="#" id="top-searchform" method="get" role="search">
-    <div class="input-group">
-        <input type="text" name="s" id="sitesearch" class="form-control" autocomplete="off" placeholder="Tapez votre recherche puis pressez entrée sur votre clavier" />
-    </div>
-</form>
-<div id="bt-toggle-search" class="search-icon text-center"><i class="s-open fa fa-search"></i><i class="s-close fa fa-times"></i></div><!-- toggle search button -->
+<!-- Search -->
+<div class="search">
+    <form method="POST" action="{{ url('search') }}">
+        {!! csrf_field() !!}
+        <input type="text" class="search-input form-control" placeholder="search">
+        <i class="fa fa-search search-icon"></i>
+    </form>
+</div>
+<!-- End of Search -->

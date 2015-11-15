@@ -1,38 +1,21 @@
 @extends('frontend.layouts.master')
-
 @section('content')
 
-<div class="row fullwidth auth-form"><!-- row -->
-    <div class="col-lg-12 clearfix">
-
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3">
-                <div class="panel panel-default">
-                    <div class="panel-heading">Mot de passe perdu</div>
-                    <div class="panel-body">
-
-                        <form class="form-horizontal" role="form" method="POST" action="/password/email">
-                            {!! csrf_field() !!}
-
-                            <div class="form-group">
-                                <label class="col-md-4 control-label">E-Mail</label>
-                                <div class="col-md-6">
-                                    <input type="email" class="form-control" name="email" value="{{ old('email') }}">
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <div class="col-md-6 col-md-offset-4">
-                                    <button type="submit" class="btn btn-primary">Envoyer</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
+    <div class="login-wrapper">
+        <div class="helper center">
+            <!-- Logo Image -->
+            <a href="{{ url('/') }}" class="logo-image animated">
+                <img style="color:#000;" src="{{ asset('frontend/images/logos/logo-small-b.svg') }}" alt="logo">
+            </a>
+            <!-- End of Logo Image -->
         </div>
-
+        <form class="login-form" method="POST" action="/password/email">
+            {!! csrf_field() !!}
+            <div class="login-inputs">
+                <input type="email" class="form-control" name="email" value="{{ old('email') }}">
+            </div>
+            <button type="submit" class="button blue full">Envoyer</button>
+        </form>
     </div>
-</div>
 
 @endsection

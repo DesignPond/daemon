@@ -57,13 +57,6 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="message" class="col-sm-3 control-label">Cette page est utilisé comme catégorie de liens</label>
-                        <div class="col-sm-4">
-                            {!! Form::checkbox('parent_categorie', 1, $page->parent_categorie ? true : false) !!}
-                        </div>
-                    </div>
-
-                    <div class="form-group">
                         <label for="content" class="col-sm-3 control-label">Contenu</label>
                         <div class="col-sm-7">
                             {!! Form::textarea('content', $page->content , array('class' => 'form-control  redactor', 'cols' => '50' , 'rows' => '4' )) !!}

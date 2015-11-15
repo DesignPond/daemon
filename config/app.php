@@ -26,7 +26,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://method.local'),
+    'url' => env('APP_URL', 'http://deamon.local'),
 
     /*
     |--------------------------------------------------------------------------
@@ -146,6 +146,7 @@ return [
         'Collective\Html\HtmlServiceProvider',
         'Intervention\Image\ImageServiceProvider',
         'Baum\Providers\BaumServiceProvider',
+        'Torann\Registry\RegistryServiceProvider',
 
     ],
 
@@ -198,7 +199,7 @@ return [
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
-
+        'Registry' => 'Torann\Registry\Facades\Registry',
     ],
 
 ];

@@ -1,53 +1,40 @@
 @extends('frontend.layouts.master')
 @section('content')
 
-<div id="k-sidebar">
-    <!-- Sidebar  -->
-    @include('frontend.partials.sidebar')
-</div><!-- sidebar wrapper end -->
+    <div class="layout with-right-sidebar js-layout">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="main-content">
 
-<div id="k-main"><!-- doc body wrapper -->
+                    <h2>Résultats</h2>
+                    <hr/>
 
-    <div class="col-padded"><!-- inner custom column -->
-        <div class="row gutter"><!-- row -->
-            <div class="col-lg-12 col-md-12">
+                    <h4>Recherche: {{ $term }}</h4>
 
-                <div class="col-lg-12 col-md-12">
-                    <h1 class="title-widget remove-margin-bottom">Résultats pour <em>{{ $term }}</em></h1>
+                    @if(!$results->isEmpty())
+                        @foreach($results as $result)
+                            <div class="panel panel-small">
+                                <header class="panel-header">{{ $result->title }} </header>
+                                <section class="panel-content">
+                                    <p>{!! $result->limit_text !!}</p>
+                                    <p><a href="{{ url('page/'.$result->slug) }}" class="button small blue">Voir</a></p>
+                                </section>
+                            </div>
+                        @endforeach
+                    @endif
+
                 </div>
-
-                @if($results)
-                    @foreach($results as $result)
-
-                        <div class="k-article-summary col-lg-12 col-md-12">
-                            <div class="news-title-meta">
-                                <h1 class="page-title"><a href="{{ url('schemas/'.$result->id) }}" title="{{ $result->title }}">{{ $result->title }}</a></h1>
-                            </div>
-                            <div class="news-body">
-                                <p>
-                                    <?php
-                                        $value = strip_tags($result->content);
-                                        $value = str_limit($value, 350);
-                                    ?>
-                                    {!! $value !!}
-                                    <p><a href="{{ url('schemas/'.$result->id) }}" class="moretag">Voir plus</a></p>
-                                </p>
-                            </div>
-                        </div>
-
-                    @endforeach
-                @else
-                    <div class="k-article-summary col-lg-12 col-md-12">
-                        <div class="news-body">
-                            <p>Pas de résultats</p>
-                        </div>
-                    </div>
-                @endif
-
             </div>
-        </div><!-- row end -->
-    </div><!-- inner custom column end -->
+            <div class="col-md-3 hidden-sm hidden-xs">
+                <div class="sidebar js-sidebar-fixed">
 
-</div><!-- doc body wrapper end -->
+                    @include('frontend.partials.search')
+
+                    @include('frontend.partials.sidebar')
+
+                </div>
+            </div>
+        </div>
+    </div>
 
 @stop

@@ -39,7 +39,7 @@ class PageEloquent implements PageInterface{
 
     public function find($id){
 
-        return $this->page->with(['projet'])->findOrFail($id);
+        return $this->page->findOrFail($id);
     }
 
     public function getBySlug($slug)
@@ -55,13 +55,8 @@ class PageEloquent implements PageInterface{
     public function create(array $data){
 
         $page = $this->page->create(array(
-            'auteur'           => (isset($data['auteur']) ? $data['auteur'] : ''),
-            'ouvrage'          => (isset($data['ouvrage']) ? $data['ouvrage'] : ''),
-            'page'             => (isset($data['page']) ? $data['page'] : ''),
             'rang'             => (isset($data['rang']) ? $data['rang'] : ''),
-            'paragraphe'       => (isset($data['paragraphe']) ? $data['paragraphe'] : ''),
-            'projet_id'        => (isset($data['projet_id']) ? $data['projet_id'] : ''),
-            'parent_categorie' => (isset($data['parent_categorie']) && !empty($data['parent_categorie']) ? $data['parent_categorie'] : null),
+            'main'             => (isset($data['main']) ? $data['main'] : ''),
             'title'            => $data['title'],
             'content'          => $data['content'],
             'created_at'       => date('Y-m-d G:i:s'),
@@ -94,8 +89,7 @@ class PageEloquent implements PageInterface{
 
         $page->fill($data);
 
-        $page->parent_categorie = (isset($data['parent_categorie']) && !empty($data['parent_categorie']) ? $data['parent_categorie'] : null);
-        $page->updated_at       = date('Y-m-d G:i:s');
+        $page->updated_at = date('Y-m-d G:i:s');
         $page->save();
 
         if($data['parent_id'] > 0)

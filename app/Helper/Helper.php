@@ -5,27 +5,16 @@ class Helper{
 
     public function renderMenu($node)
     {
-
-        $url = 'schemas/';
+        $url = 'page/';
 
         if( $node->isLeaf() )
         {
-            return '<li><a href="'.url($url.$node->id).'" title="'.$node->title.'">' . $node->title . '</a></li>';
+            return '<li><a href="'.url($url.$node->slug).'" title="'.$node->title.'">' . $node->title . '</a></li>';
         }
         else
         {
-            if($node->isRoot())
-            {
-                $pieces    = explode(' ', $node->title);
-                $last_word = array_pop($pieces);
-                $html  = '<li><a href="'.url($url.$node->id).'" title="'.$last_word.'">' . implode(' ',$pieces) .'</a>';
-            }
-            else
-            {
-                $html  = '<li><a href="'.url($url.$node->id).'">' . $node->title .'</a>';
-            }
-
-            $html .= '<ul class="sub-menu">';
+            $html  = '<li><a href="'.url($url.$node->slug).'">' . $node->title .'</a>';
+            $html .= '<ul>';
 
             foreach($node->children as $child)
                 $html .= $this->renderMenu($child);
@@ -181,6 +170,31 @@ class Helper{
         }
 
         return $text;
+    }
+
+    public function ListFolder($path, $directory_class = NULL, $link = FALSE)
+    {
+        //using the opendir function
+        $dir_handle = @opendir($path) or die("Unable to open $path");
+
+        //Leave only the lastest folder name
+        $dirname = end(explode("/", $path));
+
+        while (false !== ($file = readdir($dir_handle)))
+        {
+            if($file!="." && $file!=".." && $file!=".DS_Store")
+            {
+                if (is_dir($path."/".$file))
+                {
+                    //Display a list of sub folders.
+                    ListFolder($path."/".$file , $directory_class);
+                }
+
+            }
+        }
+
+        //closing the directory
+        closedir($dir_handle);
     }
 
 }

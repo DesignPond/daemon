@@ -2,57 +2,43 @@
 
 /*
 |--------------------------------------------------------------------------
-| Application Routes
+| Frontend Routes
 |--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the controller to call when that URI is requested.
-|
 */
-Route::group(['middleware' => 'student'], function()
-{
-    // Site routes...
-    Route::get('/', ['uses' => 'HomeController@accueil']);
-    Route::get('accueil', ['uses' => 'HomeController@accueil']);
-    Route::get('page/{slug}', ['uses' => 'HomeController@page']);
-    Route::get('contact', ['uses' => 'HomeController@contact']);
 
-    Route::post('sendMessage', ['uses' => 'HomeController@sendMessage']);
-    Route::post('search', ['uses' => 'SearchController@search']);
+Route::get('/', ['uses' => 'HomeController@accueil']);
+Route::get('accueil', ['uses' => 'HomeController@accueil']);
+Route::get('page/{slug}', ['uses' => 'HomeController@page']);
+Route::get('contact', ['uses' => 'HomeController@contact']);
 
-    Route::get('imageJson/{id?}', ['uses' => 'UploadController@imageJson']);
-    Route::get('fileJson/{id?}', ['uses' => 'UploadController@fileJson']);
-    Route::get('linkJson/{id?}', ['uses' => 'UploadController@linkJson']);
+Route::post('sendMessage', ['uses' => 'HomeController@sendMessage']);
+Route::post('search', ['uses' => 'SearchController@search']);
 
-    Route::post('uploadFileRedactor/{id?}', 'UploadController@uploadFileRedactor');
-    Route::post('uploadRedactor/{id?}', 'UploadController@uploadRedactor');
+Route::get('imageJson/{id?}', ['uses' => 'Backend\UploadController@imageJson']);
+Route::get('fileJson/{id?}', ['uses' => 'Backend\UploadController@fileJson']);
 
-    Route::post('schemas/projet/{id?}', ['uses' => 'SchemaController@schemas']);
-    Route::resource('schemas', 'SchemaController');
-});
+Route::post('uploadFileRedactor/{id?}', 'Backend\UploadController@uploadFileRedactor');
+Route::post('uploadRedactor/{id?}', 'Backend\UploadController@uploadRedactor');
 
-//Route::get('contact', ['uses' => 'PageController@index']);
-// Admin routes
+Route::resource('page', 'PageController');
+
+/*
+|--------------------------------------------------------------------------
+| Backend Routes
+|--------------------------------------------------------------------------
+*/
+
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
 {
-    Route::resource('page', 'PageController');
-    Route::resource('glossaire', 'GlossaireController');
-    Route::post('hierarchy', ['uses' => 'PageController@hierarchy']);
-    Route::get('build', ['uses' => 'PageController@build']);
-    Route::resource('link', 'LinkController');
-    Route::resource('projet', 'ProjetController');
+    Route::get('/', [ 'middleware' => 'auth', 'uses' => 'Backend\AdminController@index']);
+
+    Route::resource('page', 'Backend\PageController');
+    Route::resource('glossaire', 'Backend\GlossaireController');
+    Route::post('hierarchy', ['uses' => 'Backend\PageController@hierarchy']);
+    Route::get('build', ['uses' => 'Backend\PageController@build']);
+    Route::resource('config', 'Backend\ConfigController');
 
 });
-
-//Route::post('box/{id}', ['uses' => 'BoxController@update']);
-Route::get('box/projet/{id}', ['uses' => 'BoxController@projet']);
-Route::resource('box', 'BoxController');
-Route::get('arrow/projet/{id}', ['uses' => 'ArrowController@projet']);
-Route::resource('arrow', 'ArrowController');
-
-// Administration routes...
-Route::get('admin', [ 'middleware' => 'auth', 'uses' => 'AdminController@index']);
 
 // Authentication routes...
 Route::get('auth/student', 'Auth\AuthController@getStudent');
@@ -83,5 +69,25 @@ Route::get('testing', function()
         'password' => Hash::make('mj2015')
     ));
  */
+
+    $model = new \App\Cours\Page\Entities\Page();
+
+    $pages = [
+
+        ['id' => 1, 'template' => 'accueil', 'slug' => 'accueil',     'title' => 'Accueil',      'content' => '<p>content</p>'],
+        ['id' => 2, 'template' => 'contact', 'slug' => 'contact',     'title' => 'Contact',      'content' => '<p>content</p>'],
+        ['id' => 3, 'template' => 'page', 'slug' => 'colloque',    'title' => 'Colloques',    'content' => '<p>content</p>'],
+        ['id' => 4, 'template' => 'page', 'slug' => 'inscription', 'title' => 'Inscriptions', 'content' => '<p>content</p>'],
+        ['id' => 5, 'template' => 'page', 'slug' => 'user',        'title' => 'Utilisateurs', 'content' => '<p>content</p>',
+            'children' => [
+                    ['id' => 6, 'template' => 'page', 'slug' => 'account', 'title' => 'Comptes'],
+                    ['id' => 7, 'template' => 'page', 'slug' => 'adresse', 'title' => 'Adresses'],
+                    ['id' => 8, 'template' => 'page', 'slug' => 'specialisation', 'title' => 'Spécialisations']
+            ]
+        ],
+        ['id' => 9, 'template' => 'page', 'slug' => 'shop', 'title' => 'Shop', 'content' => '<p>content</p>']
+    ];
+
+    $model->buildTree($pages);
 
 });

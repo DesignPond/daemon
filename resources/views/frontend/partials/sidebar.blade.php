@@ -1,67 +1,15 @@
-<!-- sidebar wrapper -->
-<div class="col-padded col-shaded"><!-- inner custom column -->
-    <ul class="list-unstyled clear-margins"><!-- widgets -->
-        @if (Request::is('/') || Request::is('contact') || Request::is('search'))
-           <!-- <li class="widget-container widget_nav_menu">
-                <h1 class="title-widget">Informations</h1>
-                <ul>
-                    <li><a href="#" title="menu item">Administration</a></li>
-                </ul>
-            </li> -->
-            <li class="widget-container widget_recent_news"><!-- widgets list -->
-                <br/>
-                <ul class="list-unstyled clear-margins"><!-- widgets -->
-                    <li class="widget-container widget_course_search"><!-- widget -->
-                        <h1 class="title-titan">Recherche</h1>
-                        <form role="search" method="post" id="course-finder" action="{{ url('search') }}">
-                            {!! csrf_field() !!}
-                            <div class="input-group">
-                                <input type="text" placeholder="Recherche..." autocomplete="off" class="form-control" id="find-course" name="term" />
-                                <span class="input-group-btn"><button type="submit" class="btn btn-default">GO!</button></span>
-                            </div>
-                        </form>
-                    </li><!-- widget end -->
-                    <li class="widget-container widget_text"><!-- widget -->
-                        <a href="{{ url('auth/login') }}" class="custom-button cb-green" title="S'identifier">
-                            <i class="custom-button-icon fa fa-check-square-o"></i>
-                                <span class="custom-button-wrap">
-                                    <span class="custom-button-title">Administration</span>
-                                </span>
-                            <em></em>
-                        </a>
-                        <a href="mailto:info@methodologie.ch" class="custom-button cb-gray" title="Consulter les cours">
-                            <i class="custom-button-icon fa  fa-play-circle-o"></i>
-                                <span class="custom-button-wrap">
-                                    <span class="custom-button-title">Demander un accès</span>
-                                    <span class="custom-button-tagline">Vous devez être inscrit au cours de méthodologie juridique</span>
-                                </span>
-                            <em></em>
-                        </a>
-                    </li><!-- widget end -->
-                </ul><!-- widgets end -->
-            </li><!-- widgets list end -->
-        @elseif(Request::is('page/*'))
-
-            <?php
-                if(isset($siblings)){
-                    $helper = new \App\Helper\Helper();
-                    foreach($siblings as $node){
-                        echo $helper->renderSidebar($node, $page);
-                    }
-                }
-            ?>
-
-            <li class="widget-container widget_text"><!-- widget -->
-                <a href="#" class="custom-button cb-yellow" title="Un problème?">
-                    <i class="custom-button-icon fa fa-question-circle"></i>
-                <span class="custom-button-wrap">
-                    <span class="custom-button-title">Un problème?</span>
-                    <span class="custom-button-tagline">Contacter un assistant</span>
-                </span>
-                    <em></em>
-                </a>
-            </li><!-- widget end -->
-        @endif
-    </ul><!-- widgets end -->
-</div><!-- inner custom column end -->
-
+<!-- Vertical Menu -->
+<nav class="menu-vertical-wrapper">
+    <ul class="menu-vertical  js-menu-vertical" data-prepend-to=".js-layout" data-select="Menu">
+        <?php
+        if(isset($hierarchy))
+        {
+            $helper = new \App\Helper\Helper();
+            foreach($hierarchy as $page)
+            {
+                echo $helper->renderMenu($page);
+            }
+        }
+        ?>
+    </ul>
+</nav>

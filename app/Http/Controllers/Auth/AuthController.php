@@ -6,7 +6,6 @@ use App\Cours\User\Entities\User;
 use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
-use App\Cours\Link\Repo\LinkInterface;
 
 class AuthController extends Controller
 {
@@ -30,14 +29,9 @@ class AuthController extends Controller
      *
      * @return void
      */
-    public function __construct(LinkInterface $link)
+    public function __construct()
     {
         $this->middleware('guest', ['except' => 'getLogout']);
-        $this->link = $link;
-        $alllinks   = $this->link->getAll();
-        $links      = $alllinks->where('parent_id', 0);
-
-        \View::share('links', $links);
     }
 
     /**

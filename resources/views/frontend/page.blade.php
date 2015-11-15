@@ -1,46 +1,46 @@
 @extends('frontend.layouts.master')
 @section('content')
 
-<div id="k-sidebar">
-    <!-- Sidebar  -->
-    @include('frontend.partials.sidebar')
-</div><!-- sidebar wrapper end -->
+    <div class="layout with-right-sidebar js-layout">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="main-content">
 
-<div id="k-main"><!-- doc body wrapper -->
+                    <h2>{{ $page->title }}</h2>
 
-    <div class="col-padded"><!-- inner custom column -->
-        <div class="row"><!-- row -->
-            <div class="col-lg-12 col-md-12">
-                <?php
-                    $ancestor = $page->getAncestors();
-                    $parent   = $ancestor->last();
-                ?>
-                <h1 id="changPoint" class="title-widget remove-margin-bottom">{{ $parent->title }}</h1>
-                <div class="news-title-meta">
-                    <h1 class="page-title">{{ $page->title }}</h1>
-                    <div class="news-meta">
-                        <span class="news-meta-date">TERCIER / ROTEN</span>
-                        <span class="news-meta-category">RRJ</span>
-                        <span class="news-meta-comments"> n. 14-112</span>
+                    <div>
+                        {!! $page->content !!}
                     </div>
+
+                    <!-- Article Navigation -->
+                    <div class="article-navigation">
+                        <a href="" class="article-navigation-prev">Older Post</a>
+                        <a href="" class="article-navigation-next">Newer Post</a>
+                    </div>
+                    <!-- End of Article Navigation -->
+
+                    <!-- Article Widget Related Article -->
+                    <div class="article-widget">
+                        <h3 class="article-widget-title"> Related tutorials </h3>
+                        <ul class="article-related-articles">
+                            <li><a href="#">Perspiciatis illo facere alias laboriosam totam repellendus quisquam, maiores tenetur aut.</a></li>
+                            <li><a href="#">Temporibus quisquam, aliquam id totam voluptas eaque inventore ut facilis minus.</a></li>
+                        </ul>
+                    </div>
+                    <!-- End of Article Widget Related Article -->
+
                 </div>
-                <div class="news-body clearfix"><!-- course content -->
-
-                    <div class="row">
-                        <div class="col-md-2">
-                            @include('frontend.projet.menu')
-                        </div>
-                        <div class="col-md-10">
-                            @include('frontend.projet.content')
-                        </div>
-                    </div>
-                    
-                </div><!-- course content end -->
-
             </div>
-        </div><!-- row end -->
-    </div><!-- inner custom column end -->
+            <div class="col-md-3 hidden-sm hidden-xs">
+                <div class="sidebar js-sidebar-fixed">
 
-</div><!-- doc body wrapper end -->
+                    @include('frontend.partials.search')
+
+                    @include('frontend.partials.sidebar')
+
+                </div>
+            </div>
+        </div>
+    </div>
 
 @stop

@@ -19,103 +19,37 @@ class Page extends Node {
     */
     protected $table = 'pages';
 
-    protected $dates = ['deleted_at'];
-    protected $fillable = ['auteur','ouvrage','page','paragraphe','title','content','parent_id','projet_id','lft','rgt','depth','parent_categorie'];
+    protected $dates    = ['deleted_at'];
+    protected $fillable = ['title','content','slug','parent_id','lft','rgt','depth'];
 
-    //////////////////////////////////////////////////////////////////////////////
-
-    //
-    // Below come the default values for Baum's own Nested Set implementation
-    // column names.
-    //
-    // You may uncomment and modify the following fields at your own will, provided
-    // they match *exactly* those provided in the migration.
-    //
-    // If you don't plan on modifying any of these you can safely remove them.
-    //
-
-    // /**
-    //  * Column name which stores reference to parent's node.
-    //  *
-    //  * @var string
-    //  */
-    // protected $parentColumn = 'parent_id';
-
-    // /**
-    //  * Column name for the left index.
-    //  *
-    //  * @var string
-    //  */
-    // protected $leftColumn = 'lft';
-
-    // /**
-    //  * Column name for the right index.
-    //  *
-    //  * @var string
-    //  */
-    // protected $rightColumn = 'rgt';
-
-    // /**
-    //  * Column name for the depth field.
-    //  *
-    //  * @var string
-    //  */
-    // protected $depthColumn = 'depth';
-
-    // /**
-    //  * Column to perform the default sorting
-    //  *
-    //  * @var string
-    //  */
     protected $orderColumn = 'rang';
 
-    // /**
-    // * With Baum, all NestedSet-related fields are guarded from mass-assignment
-    // * by default.
-    // *
-    // * @var array
-    // */
-    // protected $guarded = array('id', 'parent_id', 'lft', 'rgt', 'depth');
-
-    //
-    // This is to support "scoping" which may allow to have multiple nested
-    // set trees in the same database table.
-    //
-    // You should provide here the column names which should restrict Nested
-    // Set queries. f.ex: company_id, etc.
-    //
-
-    // /**
-    //  * Columns which restrict what we consider our Nested Set list
-    //  *
-    //  * @var array
-    //  */
-    // protected $scoped = array();
-
-    //////////////////////////////////////////////////////////////////////////////
-
-    //
-    // Baum makes available two model events to application developers:
-    //
-    // 1. `moving`: fired *before* the a node movement operation is performed.
-    //
-    // 2. `moved`: fired *after* a node movement operation has been performed.
-    //
-    // In the same way as Eloquent's model events, returning false from the
-    // `moving` event handler will halt the operation.
-    //
-    // Please refer the Laravel documentation for further instructions on how
-    // to hook your own callbacks/observers into this events:
-    // http://laravel.com/docs/5.0/eloquent#model-events
-
-    /**
-     * Group belongs to user
-     *
-     * @var query
-     */
-    public function projet(){
-
-        return $this->belongsTo('App\Cours\Projet\Entities\Projet', 'projet_id');
+    public function getLimitTextAttribute()
+    {
+        return $this->truncate($this->content,350);
     }
 
+    public function truncate($s, $l, $e = '...', $isHTML = false){
+
+        $i    = 0;
+        $tags = [];
+
+        if($isHTML)
+        {
+            preg_match_all('/<[^>]+>([^<]*)/', $s, $m, PREG_OFFSET_CAPTURE | PREG_SET_ORDER);
+            foreach($m as $o)
+            {
+                if($o[0][1] - $i >= $l)
+                    break;
+                $t = substr(strtok($o[0][0], " \t\n\r\0\x0B>"), 1);
+                if($t[0] != '/')
+                    $tags[] = $t;
+                elseif(end($tags) == substr($t, 1))
+                    array_pop($tags);
+                $i += $o[1][1] - $o[0][1];
+            }
+        }
+
+        return substr($s, 0, $l = min(strlen($s),  $l + $i)) . (count($tags = array_reverse($tags)) ? '' : '') . (strlen($s) > $l ? $e : '');
+    }
 }

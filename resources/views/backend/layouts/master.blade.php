@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Administration | Methodologie</title>
+    <title>Administration</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Methodologie | administration">
@@ -43,7 +43,7 @@
 <header class="navbar navbar-inverse navbar-fixed-top" role="banner">
 
     <a id="leftmenu-trigger" class="tooltips" data-toggle="tooltip" data-placement="right" title="Toggle Sidebar"></a>
-    <div class="navbar-header pull-left"><a class="navbar-brand" href="{{ url('/')  }}">Methodologie</a></div>
+    <div class="navbar-header pull-left"><a class="navbar-brand" href="{{ url('/')  }}">Documentation</a></div>
 
     <ul class="nav navbar-nav pull-right toolbar">
         <li class="dropdown">
@@ -72,7 +72,7 @@
     <div id="page-content">
         <div id='wrap'>
 
-            <div id="page-heading"><h2>{{ $pageTitle or 'Methodologie' }} <small>Administration</small></h2></div>
+            <div id="page-heading"><h2>Administration</h2></div>
 
             <div class="container">
 
@@ -90,7 +90,7 @@
     <footer role="contentinfo">
         <div class="clearfix">
             <ul class="list-unstyled list-inline pull-left">
-                <li>Methodologie &copy; <?php echo date('Y'); ?></li>
+                <li>Documentation &copy; <?php echo date('Y'); ?></li>
             </ul>
             <button class="pull-right btn btn-inverse-alt btn-xs hidden-print" id="back-to-top"><i class="fa fa-arrow-up"></i></button>
         </div>
