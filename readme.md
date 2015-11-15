@@ -1,4 +1,4 @@
-## Site de methodologie juridique
+## Site de documentation
 
 Auteur: @designpond 2015
 
