@@ -12,23 +12,6 @@
                         {!! $page->content !!}
                     </div>
 
-                    <!-- Article Navigation -->
-                    <div class="article-navigation">
-                        <a href="" class="article-navigation-prev">Older Post</a>
-                        <a href="" class="article-navigation-next">Newer Post</a>
-                    </div>
-                    <!-- End of Article Navigation -->
-
-                    <!-- Article Widget Related Article -->
-                    <div class="article-widget">
-                        <h3 class="article-widget-title"> Related tutorials </h3>
-                        <ul class="article-related-articles">
-                            <li><a href="#">Perspiciatis illo facere alias laboriosam totam repellendus quisquam, maiores tenetur aut.</a></li>
-                            <li><a href="#">Temporibus quisquam, aliquam id totam voluptas eaque inventore ut facilis minus.</a></li>
-                        </ul>
-                    </div>
-                    <!-- End of Article Widget Related Article -->
-
                 </div>
             </div>
             <div class="col-md-3 hidden-sm hidden-xs">

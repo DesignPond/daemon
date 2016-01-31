@@ -32,7 +32,7 @@ class PageController extends Controller
      */
     public function index()
     {
-        return view('backend.schemas.index');
+        return view('frontend.index');
     }
 
     /**

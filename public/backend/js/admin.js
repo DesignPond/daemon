@@ -5,12 +5,12 @@ $( function() {
         maxHeight: 450,
         focus: true,
         lang: 'fr',
-        plugins: ['advanced','imagemanager','filemanager'],
+        plugins: ['advanced','imagemanager','filemanager','fontcolor'],
         fileUpload : 'uploadFileRedactor?_token=' + $('meta[name="_token"]').attr('content'),
         imageUpload: 'uploadRedactor?_token=' + $('meta[name="_token"]').attr('content'),
         imageManagerJson: 'imageJson',
         fileManagerJson: 'fileJson',
-        buttons    : ['html','|','formatting','bold','italic','|','unorderedlist','orderedlist','outdent','indent','|','image','file','link','alignment']
+        buttons    : ['html','|','formatting','bold','italic','pre','|','unorderedlist','orderedlist','outdent','indent','|','image','file','link','alignment']
     });
 
     $.fn.datepicker.dates['fr'] = {
