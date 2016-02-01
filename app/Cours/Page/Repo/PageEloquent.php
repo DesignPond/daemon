@@ -55,7 +55,7 @@ class PageEloquent implements PageInterface{
     public function create(array $data){
 
         $page = $this->page->create(array(
-            'rang'       => (isset($data['rang']) ? $data['rang'] : ''),
+            'rang'        => (isset($data['rang']) ? $data['rang'] : 0),
             'main'        => (isset($data['main']) ? $data['main'] : ''),
             'title'       => $data['title'],
             'content'     => $data['content'],

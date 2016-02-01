@@ -20,7 +20,7 @@ class Page extends Node {
     protected $table = 'pages';
 
     protected $dates    = ['deleted_at'];
-    protected $fillable = ['title','content','slug','parent_id','lft','rgt','depth'];
+    protected $fillable = ['title','content','slug','parent_id','lft','rgt','depth','rang'];
 
     protected $orderColumn = 'rang';
 
