@@ -9039,6 +9039,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   padding: 0;
   list-style-type: none;
   line-height: 40px;
+  display: block;
 }
 .menu-vertical ul li.selected > a {
   color: #44bb55;
