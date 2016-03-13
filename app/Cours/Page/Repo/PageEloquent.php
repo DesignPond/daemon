@@ -34,7 +34,7 @@ class PageEloquent implements PageInterface{
 
     public function getRoot(){
 
-        return $this->page->whereNull('parent_id')->get();
+        return $this->page->where('parent_id','=',0)->get();
     }
 
     public function find($id){

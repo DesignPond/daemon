@@ -14,7 +14,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         $page =  new \App\Cours\Page\Entities\Page();
-        $root  = $page->whereNull('parent_id')->where('main', null)->orderBy('rang','asc')->get();
+        $root  = $page->where('parent_id','=',0)->where('main', null)->orderBy('rang','asc')->get();
 
         view()->share('hierarchy', $root);
     }
