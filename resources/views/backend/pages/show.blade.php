@@ -43,6 +43,14 @@
                     </div>
 
                     <div class="form-group">
+                        <label class="col-sm-3 control-label">Comme site</label>
+                        <div class="col-sm-5">
+                            <label class="radio-inline"><input type="radio" value="0" {{ !$page->site ? 'checked' : '' }} name="hidden"> Oui</label>
+                            <label class="radio-inline"><input type="radio" value="1" {{ $page->site ? 'checked' : '' }} name="hidden"> Non</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
                         <label for="message" class="col-sm-3 control-label">Titre</label>
                         <div class="col-sm-4">
                             {!! Form::text('title', $page->title , array('class' => 'form-control') ) !!}

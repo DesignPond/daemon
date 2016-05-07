@@ -12,8 +12,8 @@
         <li class="<?php echo (Request::is('page') || Request::is('page/*') ? 'active' : '' ); ?>"><a href="{{ url('admin/page') }}">
                 <i class="fa fa-file"></i> <span>Pages</span></a>
         </li>
-        <li class="<?php echo (Request::is('glossaire') || Request::is('glossaire/*') ? 'active' : '' ); ?>"><a href="{{ url('admin/glossaire') }}">
-                <i class="fa fa-book"></i> <span>Glossaire</span></a>
+        <li class="<?php echo (Request::is('site') || Request::is('site/*') ? 'active' : '' ); ?>"><a href="{{ url('admin/site') }}">
+                <i class="fa fa-book"></i> <span>Sites</span></a>
         </li>
         <li class="<?php echo (Request::is('admin/config') ? 'active' : ''); ?>">
             <a href="{{ url('admin/config') }}"><i class="fa fa-cog"></i><span>Configurations</span></a>

@@ -9,6 +9,7 @@
 Route::get('/', ['uses' => 'HomeController@accueil']);
 Route::get('accueil', ['uses' => 'HomeController@accueil']);
 Route::get('page/{slug}', ['uses' => 'HomeController@page']);
+Route::get('subpage', ['uses' => 'HomeController@subpage']);
 Route::get('contact', ['uses' => 'HomeController@contact']);
 
 Route::post('sendMessage', ['uses' => 'HomeController@sendMessage']);
@@ -37,6 +38,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
     Route::post('hierarchy', ['uses' => 'Backend\PageController@hierarchy']);
     Route::get('build', ['uses' => 'Backend\PageController@build']);
     Route::resource('config', 'Backend\ConfigController');
+    Route::resource('site', 'Backend\SiteController');
 
 });
 

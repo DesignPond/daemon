@@ -1,4 +1,4 @@
-<div class="container">
+{{--<div class="container">
     <div class="row">
         <div class="col-md-5 col-sm-6 col-xs-6">
             <!-- Logo Image -->
@@ -22,10 +22,16 @@
             <!-- Menu -->
             <nav class="right helper">
                 <ul class="menu sf-menu js-menu menu-light">
-                    <li><a href="{{ url('/') }}" title="News">HOME</a></li>
+                    <li><a href="{{ url('/') }}" title="accueil">ACCUEIL</a></li>
                 </ul>
             </nav>
             <!-- End of Menu -->
         </div>
     </div>
-</div>
+</div>--}}
+<nav class="right helper">
+    <ul class="menu sf-menu js-menu">
+        <li><a href="{{ url('/') }}" title="accueil">Accueil</a></li>
+        <li><a href="contacts.html">Contacts</a></li>
+    </ul>
+</nav>

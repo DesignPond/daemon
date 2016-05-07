@@ -16,17 +16,15 @@
 </head>
 <body>
 
-<div class="page">
+<div class="page js-page login-page">
     <div class="login">
         <div class="login-content">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-
                         <!-- Contenu -->
                         @yield('content')
                         <!-- Fin contenu -->
-
                     </div>
                 </div>
             </div>

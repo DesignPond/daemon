@@ -19,59 +19,68 @@
     <link rel="stylesheet" type="text/css" href="<?php echo asset('schemas/Treant.css');?>">
 
 </head>
-
 <body>
 
-<div class="page">
-    <div class="header header-over">
-        @include('frontend.partials.navigation')
-    </div>
-
-    @include('frontend.partials.slide')
-
-    <div id="content">
-        <div class="container">
-
-            <!-- messages and errors -->
-            @include('backend.partials.message')
-
-            <!-- Contenu -->
-            @yield('content')
-            <!-- Fin contenu -->
-
-        </div>
-    </div>
-    <!-- Footer -->
-    <footer class="footer">
+<div class="page js-page">
+    <!-- Header -->
+    <div class="header header-over large">
         <div class="container">
             <div class="row">
-                <div class="col-md-5 col-sm-5 col-xs-12">
-                    <div class="footer-logo-wrapper">
-                        <!-- Logo Image -->
-                        <a href="{{ url('/') }}" class="logo-image "><img src="{{ asset('frontend/images/logos/logo-small.svg') }}" alt="logo"></a>
-                        <!-- End of Logo Image -->
-                    </div>
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <!-- Logo Image -->
+                    <a href="{{ url('/') }}" class="logo-image"><img src="{{ asset('frontend/images/logo.svg') }}" alt="logo"></a>
+                    <!-- End of Logo Image -->
                 </div>
-                <div class="col-md-7 col-sm-7 col-xs-12">
-                    <div class="footer-wrapper">
-                        <!-- Scroll top -->
-                        <span class="scroll-top js-scroll-top">
-                            <i class="fa fa-angle-up"></i>
-                        </span>
-                        <!-- End of Scroll top -->
-                        <!-- Footer Menu -->
-                        <ul class="footer-menu helper right">
-                            <li><a href="mailto:info@designpond.ch"> info@designpond.ch </a></li>
-                        </ul>
-                        <!-- End of Footer Menu -->
-                        <!-- Copyright -->
-                        <p class="copyright helper right">
-                            <a href="http://designpond.ch">DesignPond</a>, all rights reserved. {{ date('Y') }} &copy; </p>
-                        <!-- End of Copyright -->
+                <div class="col-md-9 col-sm-6 col-xs-6">
+                    <!-- Menu -->
+                    @include('frontend.partials.navigation')
+                    <!-- End of Menu -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of Header -->
+
+    @include('frontend.partials.slide')
+    <!-- messages and errors -->
+    @include('backend.partials.message')
+
+    <!-- Contenu -->
+    @yield('content')
+    <!-- Fin contenu -->
+
+    <!-- Footer -->
+    <footer class="js-footer-is-fixed">
+        <!-- Footer Default -->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-3 col-xs-12">
+                        <div class="footer-logo-wrapper">
+                            <!-- Logo Image -->
+                            <a href="{{ url('/') }}" class="logo-image "><img src="{{ asset('frontend/images/logos/logo-small.svg') }}" alt="logo"></a>
+                            <!-- End of Logo Image -->
+                        </div>
+                    </div>
+                    <div class="col-md-9 col-sm-9 col-xs-12">
+                        <div class="footer-wrapper">
+                            <!-- Scroll top -->
+                            <span class="scroll-top js-scroll-top"><i class="fa fa-angle-up"></i></span>
+                            <!-- End of Scroll top -->
+                            <!-- Footer Menu -->
+                            <ul class="footer-menu helper right">
+                                <li><a href="mailto:info@designpond.ch"> info@designpond.ch </a></li>
+                            </ul>
+                            <!-- End of Footer Menu -->
+                            <!-- Copyright -->
+                            <p class="copyright helper right"><a href="http://designpond.ch">DesignPond</a>, all rights reserved. {{ date('Y') }} &copy; </p>
+                            <!-- End of Copyright -->
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- End of Footer Default -->
     </footer>
     <!-- End of Footer -->
 </div>

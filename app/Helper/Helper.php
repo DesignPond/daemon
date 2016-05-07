@@ -3,6 +3,35 @@ namespace App\Helper;
 
 class Helper{
 
+    public function renderSubMenu($node)
+    {
+        // <li class="is-active">
+        //<a href="#content" class=""><span class="one-page-nav-icon"><i class="fa fa-thumbs-o-up"></i></span>Main features</a>
+
+        $url = 'page/';
+
+        if( $node->isLeaf() )
+        {
+            return '<li class="'.(\Request::is($url.$node->slug) ? 'is-active' : '').'">
+                <a href="'.url($url.$node->slug).'" title="'.$node->title.'"><span class="one-page-nav-icon"><i class="fa fa-angle-right "></i></span>' . $node->title . '</a>
+                </li>';
+        }
+        else
+        {
+            $html  = '<li class="'.(\Request::is($url.$node->slug) ? 'is-active' : '').'">
+                <a href="'.url($url.$node->slug).'"><span class="one-page-nav-icon"><i class="fa fa-cube"></i></span>' . $node->title .'</a>';
+            $html .= '<ul>';
+
+            foreach($node->children as $child)
+                $html .= $this->renderSubMenu($child);
+
+            $html .= '</ul>';
+            $html .= '</li>';
+        }
+
+        return $html;
+    }
+    
     public function renderMenu($node)
     {
         $url = 'page/';

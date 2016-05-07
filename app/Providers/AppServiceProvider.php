@@ -32,6 +32,31 @@ class AppServiceProvider extends ServiceProvider
         $this->registerCategorieService();
         $this->registerGlossaireService();
 
+        $this->registerUploadService();
+        $this->registerSiteService();
+
+    }
+
+    /**
+     * Site
+     */
+    protected function registerSiteService(){
+
+        $this->app->singleton('App\Cours\Site\Repo\SiteInterface', function()
+        {
+            return new \App\Cours\Site\Repo\SiteEloquent(new \App\Cours\Site\Entities\Site);
+        });
+    }
+
+    /*
+    * Upload
+    */
+    protected function registerUploadService(){
+
+        $this->app->bind('App\Cours\Service\UploadInterface', function()
+        {
+            return new \App\Cours\Service\UploadWorker();
+        });
     }
 
     /**

@@ -26,7 +26,7 @@ section,
 summary {
   display: block;
 }
-audio,
+audio,.one-page-nav li
 canvas,
 progress,
 video {
@@ -2768,6 +2768,7 @@ button.close {
   top: auto;
   left: auto;
 }
+
 @media (min-width: 768px) {
   .nav-tabs.nav-justified > li {
     display: table-cell;

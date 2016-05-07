@@ -60,6 +60,17 @@ class HomeController extends Controller
     }
 
     /**
+     * Display the specified resource.
+     *
+     * @param  int  $slug
+     * @return Response
+     */
+    public function subpage()
+    {
+        return view('frontend.subpage');
+    }
+
+    /**
      * Send contact message
      *
      * @return Response
