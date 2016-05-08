@@ -32,9 +32,14 @@ class PageEloquent implements PageInterface{
         return $this->page->where('content','LIKE', '%'.$term.'%')->get();
     }
 
-    public function getRoot(){
-
+    public function getRoot()
+    {
         return $this->page->where('parent_id','=',0)->get();
+    }
+
+    public function getSiteRoot($site_id)
+    {
+        return $this->page->where('parent_id','=',0)->where('site_id','=',$site_id)->get();
     }
 
     public function find($id){
@@ -56,7 +61,7 @@ class PageEloquent implements PageInterface{
 
         $page = $this->page->create(array(
             'rang'        => (isset($data['rang']) ? $data['rang'] : 0),
-            'site'        => (isset($data['site']) ? $data['site'] : 0),
+            'site_id'     => (isset($data['site']) ? $data['site'] : null),
             'main'        => (isset($data['main']) ? $data['main'] : ''),
             'title'       => $data['title'],
             'content'     => $data['content'],

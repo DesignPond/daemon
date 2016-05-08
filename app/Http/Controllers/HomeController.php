@@ -7,20 +7,20 @@ use Mail;
 use App\Http\Requests;
 use App\Http\Requests\SendMessage;
 use App\Cours\Page\Repo\PageInterface;
-use App\Cours\Glossaire\Repo\GlossaireInterface;
+use App\Cours\Site\Repo\SiteInterface;
 use App\Http\Controllers\Controller;
 
 class HomeController extends Controller
 {
     protected $page;
     protected $helper;
-    protected $glossaire;
+    protected $site;
 
-    public function __construct(PageInterface $page, GlossaireInterface $glossaire)
+    public function __construct(PageInterface $page, SiteInterface $site)
     {
-        $this->page      = $page;
-        $this->glossaire = $glossaire;
-        $this->helper    = new \App\Helper\Helper;
+        $this->page   = $page;
+        $this->site   = $site;
+        $this->helper = new \App\Helper\Helper;
     }
 
     /**
@@ -54,9 +54,11 @@ class HomeController extends Controller
      */
     public function page($slug)
     {
-        $page = $this->page->getBySlug($slug);
+        $page  = $this->page->getBySlug($slug);
+        $pages = $this->page->getSiteRoot($page->site_id);
+        $site  = $this->site->find($page->site_id);
 
-        return view('frontend.page')->with(['page' => $page]);
+        return view('frontend.page')->with(['page' => $page, 'pages' => $pages,'site' => $site]);
     }
 
     /**
@@ -65,9 +67,11 @@ class HomeController extends Controller
      * @param  int  $slug
      * @return Response
      */
-    public function subpage()
+    public function site($id)
     {
-        return view('frontend.subpage');
+        $site = $this->page->getSiteRoot($id);
+
+        return view('frontend.site')->with(['site' => $site]);
     }
 
     /**

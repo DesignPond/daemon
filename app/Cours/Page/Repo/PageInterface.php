@@ -6,6 +6,8 @@ interface PageInterface {
     public function getCategories();
     public function find($id);
     public function search($term);
+    public function getSiteRoot($site_id);
+    public function getRoot();
     public function buildTree($data);
     public function getBySlug($slug);
     public function create(array $data);

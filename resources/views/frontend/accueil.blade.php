@@ -7,23 +7,27 @@
 
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
-                <h2>HOME</h2>
+                <h2>ACCUEIL</h2>
                 <hr/>
 
-                <h4>Documentation du site internet <strong>{!! Registry::get('nom', 'DesignPond') !!}</strong></h4>
+                <h4>Documentations des sites de <strong>{!! Registry::get('nom', 'DesignPond') !!}</strong></h4>
                 <div>{!! $page->content !!}</div>
 
-                <div class="panel">
-                    <header class="panel-header"> Administration Droit Formation </header>
-                    <section class="panel-content">
-                        <p class="helper mb30">Ce site décrit les divers fonctionnalités de l'administration ainsi que les divers pages des sites.</p>
-                        <div class="helper center">
-                            <div class="button-list">
-                                <a class="button green" href="{{ url('page') }}">Voir</a>
-                            </div>
+                @if(!$sites->isEmpty())
+                    @foreach($sites as $site)
+                        <div class="panel">
+                            <header class="panel-header"> {{ $site->nom  }} </header>
+                            <section class="panel-content">
+                                <p class="helper mb30">{!! $site->description !!}</p>
+                                <div class="helper center">
+                                    <div class="button-list">
+                                        <a class="button green" href="{{ url('page/'.$site->root->slug) }}">Voir</a>
+                                    </div>
+                                </div>
+                            </section>
                         </div>
-                    </section>
-                </div>
+                    @endforeach
+                @endif
 
             </div>
         </div>

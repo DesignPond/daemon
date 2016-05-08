@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use Illuminate\Http\Request;
 use App\Cours\Page\Worker\PageWorker;
 use App\Cours\Page\Repo\PageInterface;
+use App\Cours\Site\Repo\SiteInterface;
 use App\Http\Requests\CreatePage;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -12,11 +13,13 @@ use App\Http\Controllers\Controller;
 class PageController extends Controller
 {
     protected $page;
+    protected $site;
     protected $worker;
 
-    public function __construct(PageInterface $page, PageWorker $worker)
+    public function __construct(PageInterface $page, SiteInterface $site, PageWorker $worker)
     {
         $this->page   = $page;
+        $this->site   = $site;
         $this->worker = $worker;
     }
 
@@ -41,8 +44,9 @@ class PageController extends Controller
     public function create()
     {
         $pages = $this->page->getTree('id', '&nbsp;&nbsp;&nbsp;');
+        $sites = $this->site->getAll();
         
-        return view('backend.pages.create')->with(['pages' => $pages]);
+        return view('backend.pages.create')->with(['pages' => $pages, 'sites' => $sites]);
     }
 
     /**
@@ -67,8 +71,9 @@ class PageController extends Controller
     {
         $page  = $this->page->find($id);
         $pages = $this->page->getTree('id', '&nbsp;&nbsp;&nbsp;');
+        $sites = $this->site->getAll();
 
-        return view('backend.pages.show')->with(array( 'page' => $page ,'pages' => $pages));
+        return view('backend.pages.show')->with(array( 'page' => $page ,'pages' => $pages, 'sites' => $sites));
     }
 
     /**

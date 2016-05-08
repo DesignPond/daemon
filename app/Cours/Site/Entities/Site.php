@@ -11,39 +11,13 @@ class Site extends Model{
     protected $table    = 'sites';
     protected $fillable = ['nom','url','logo','slug','description'];
 
-    public function newsletter()
-    {
-        return $this->hasMany('App\Droit\Newsletter\Entities\Newsletter');
-    }
-
-    public function menus()
-    {
-        return $this->hasMany('App\Droit\Menu\Entities\Menu');
-    }
-
     public function pages()
     {
-        return $this->hasMany('App\Droit\Page\Entities\Page');
+        return $this->hasMany('App\Cours\Page\Entities\Page');
     }
 
-    public function arrets()
+    public function root()
     {
-        return $this->hasMany('App\Droit\Arret\Entities\Arret');
+        return $this->hasOne('App\Cours\Page\Entities\Page')->where('parent_id','=',0);
     }
-
-    public function analyses()
-    {
-        return $this->hasMany('App\Droit\Analyse\Entities\Analyse');
-    }
-
-    public function categories()
-    {
-        return $this->hasMany('App\Droit\Categorie\Entities\Categorie');
-    }
-
-    public function questions()
-    {
-        return $this->hasMany('App\Droit\Faq\Entities\Faq_question');
-    }
-
 }

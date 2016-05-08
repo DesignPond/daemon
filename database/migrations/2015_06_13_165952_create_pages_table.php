@@ -24,7 +24,7 @@ class CreatePagesTable extends Migration {
             $table->integer('depth')->nullable();
 
             // Add needed columns here (f.ex: name, slug, path, etc.)
-            $table->tinyInteger('site')->nullable();
+            $table->integer('site_id')->nullable();
             $table->integer('rang')->nullable();
             $table->integer('main')->nullable();
             $table->string('title');

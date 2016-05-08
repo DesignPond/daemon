@@ -9,7 +9,7 @@
 Route::get('/', ['uses' => 'HomeController@accueil']);
 Route::get('accueil', ['uses' => 'HomeController@accueil']);
 Route::get('page/{slug}', ['uses' => 'HomeController@page']);
-Route::get('subpage', ['uses' => 'HomeController@subpage']);
+Route::get('site/{id}', ['uses' => 'HomeController@site']);
 Route::get('contact', ['uses' => 'HomeController@contact']);
 
 Route::post('sendMessage', ['uses' => 'HomeController@sendMessage']);

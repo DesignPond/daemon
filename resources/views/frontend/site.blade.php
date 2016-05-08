@@ -4,8 +4,6 @@
 <div class="row">
     <div class="col-md-12">
 
-
-
         <!-- Category Info -->
         <div class="category-info " id="browser-support">
             <h3 class="category-title"> Browser support

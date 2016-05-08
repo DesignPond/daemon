@@ -36,9 +36,8 @@
             <!-- One Page Meta -->
             <div class="one-page-meta">
                 <ul class="one-page-meta-list">
-                    <li><a href="#"><i class="one-page-meta-list-icon fa fa-link"></i>Website</a></li>
-                    <li><a href="#"><i class="one-page-meta-list-icon fa fa-github-alt"></i>GitHub</a></li>
-                    <li><a href="#"><i class="one-page-meta-list-icon fa fa-question"></i>Support</a></li>
+                    <li><a href="http://www.hubwebdroit.ch" target="_blank" rel="noopener noreferrer"><i class="one-page-meta-list-icon fa fa-link"></i>Website</a></li>
+                    <li><a href="mailto:cindy.leschaud@gmail.com" target="_blank" rel="noopener noreferrer"><i class="one-page-meta-list-icon fa fa-question"></i>Support</a></li>
                 </ul>
             </div>
             <!-- End of One Page Meta -->
@@ -71,7 +70,7 @@
                         </div>
                     </div>
                     <div class="col-md-10 col-sm-6 col-xs-7">
-                        <h2 class="pull-left">Administration</h2>
+                        <h2 class="pull-left">{{ $site->nom }}</h2>
                         <!-- Menu -->
                         @include('frontend.partials.navigation')
                         <!-- End of Menu -->

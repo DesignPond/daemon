@@ -32,6 +32,6 @@
 <nav class="right helper">
     <ul class="menu sf-menu js-menu">
         <li><a href="{{ url('/') }}" title="accueil">Accueil</a></li>
-        <li><a href="contacts.html">Contacts</a></li>
+        <li><a href="mailto:cindy.leschaud@gmail.com">Support</a></li>
     </ul>
 </nav>

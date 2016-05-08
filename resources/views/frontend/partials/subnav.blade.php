@@ -1,9 +1,9 @@
 <ul class="one-page-nav">
     <?php
-        if(isset($hierarchy))
+        if(!$pages->isEmpty())
         {
             $helper = new \App\Helper\Helper();
-            foreach($hierarchy as $page)
+            foreach($pages as $page)
             {
                 echo $helper->renderSubMenu($page);
             }

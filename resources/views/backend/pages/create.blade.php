@@ -36,10 +36,16 @@
                     </div>
 
                     <div class="form-group">
-                        <label class="col-sm-3 control-label">Comme site</label>
+                        <label class="col-sm-3 control-label">Appartient au site</label>
                         <div class="col-sm-5">
-                            <label class="radio-inline"><input type="radio" value="0" name="site"> Oui</label>
-                            <label class="radio-inline"><input type="radio" value="1" name="site" checked> Non</label>
+                            <select class="form-control" name="site_id">
+                                <option value="">Choix</option>
+                                @if(!$sites->isEmpty())
+                                    @foreach($sites as $site)
+                                        <option value="{{ $site->id }}">{{ $site->nom }}</option>
+                                    @endforeach
+                                @endif
+                            </select>
                         </div>
                     </div>
 
