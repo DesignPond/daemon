@@ -22,6 +22,7 @@ Route::post('uploadFileRedactor/{id?}', 'Backend\UploadController@uploadFileReda
 Route::post('uploadRedactor/{id?}', 'Backend\UploadController@uploadRedactor');
 
 Route::resource('page', 'PageController');
+Route::resource('ticket', 'Helpdesk\Frontend\HelpdeskController');
 
 /*
 |--------------------------------------------------------------------------

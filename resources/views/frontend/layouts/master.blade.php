@@ -10,18 +10,19 @@
     <meta name="_token" content="<?php echo csrf_token(); ?>">
 
     <!-- Styles -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo asset('frontend/css/dropdown-menu.css');?>">
     <link rel="stylesheet" type="text/css" href="<?php echo asset('frontend/css/jquery.fancybox.css');?>">
     <link rel="stylesheet" type="text/css" href="<?php echo asset('frontend/css/style.css'); ?>">
     <link rel="stylesheet" type="text/css" href="<?php echo asset('frontend/css/frontend.css');?>?<?php echo rand(1234,120000); ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo asset('frontend/css/helpdesk.css');?>?<?php echo rand(1234,120000); ?>">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-    <link rel="stylesheet" type="text/css" href="<?php echo asset('schemas/Treant.css');?>">
 
 </head>
 <body>
 
-<div class="page js-page">
+<div class="page js-page page-frontend">
     <!-- Header -->
     <div class="header header-over large">
         <div class="container">
@@ -45,9 +46,20 @@
     <!-- messages and errors -->
     @include('backend.partials.message')
 
-    <!-- Contenu -->
-    @yield('content')
-    <!-- Fin contenu -->
+    <!-- End of Header Back -->
+    <div class="panels" id="content">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <!-- Contenu -->
+                    @yield('content')
+                    <!-- Fin contenu -->
+                </div>
+            </div>
+
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="js-footer-is-fixed">
@@ -82,6 +94,7 @@
         </div>
         <!-- End of Footer Default -->
     </footer>
+    @yield('footer')
     <!-- End of Footer -->
 </div>
 

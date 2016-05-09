@@ -101,6 +101,7 @@ html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  font-size:12px;
 }
 body {
   margin: 0;
@@ -1507,14 +1508,15 @@ th {
   padding-right: 60px;
 }
 html,
-body {
+body.page-frontend {
   height: 100%;
   margin: 0 !important;
+    background: #f6f7f8;
 }
 body {
-  font-size: 1em;
+  font-size: 1.2em;
   line-height: 100%;
-  font-family: 'Roboto', sans-serif;
+  font-family: sans-serif;
   color: #333333;
 }
 #content {
@@ -10338,7 +10340,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .panel {
   background-color: white;
-  padding: 50px;
+  padding: 35px;
   box-shadow: 0 0 6px rgba(153, 153, 153, 0.29);
   margin-bottom: 50px;
 }
@@ -10357,6 +10359,11 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   line-height: 1.4;
   font-weight: 300;
   margin-bottom: 30px;
+}
+.panel-heading h2{
+    margin-bottom:0px;
+    line-height: 35px;
+    font-size: 18px;
 }
 .category-info {
   padding: 60px 0 20px 0;
