@@ -37,7 +37,7 @@ class TicketEloquent implements TicketInterface
             'status_id'    => $data['status_id'],
             'priority_id'  => $data['priority_id'],
             'category_id'  => $data['category_id'],
-            'completed_at' => isset($data['completed_at']) ? $data['completed_at'] : ''
+            'completed_at' => isset($data['completed_at']) && !empty($data['completed_at']) ? $data['completed_at'] : null
         ));
 
         if( ! $ticket )

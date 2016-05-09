@@ -39,4 +39,19 @@ class Helpdesk implements HelpdeskInterface
     {
         return $this->ticket->find($id);
     }
+
+    public function getCategory()
+    {
+        return $this->category->getAll();
+    }
+
+    public function getPriority()
+    {
+        return $this->priority->getAll();
+    }
+
+    public function getStatus()
+    {
+        return $this->status->getAll();
+    }
 }

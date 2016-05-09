@@ -22,6 +22,15 @@ Route::post('uploadFileRedactor/{id?}', 'Backend\UploadController@uploadFileReda
 Route::post('uploadRedactor/{id?}', 'Backend\UploadController@uploadRedactor');
 
 Route::resource('page', 'PageController');
+
+// Tickets upload
+Route::get('frontendUploadJson/{id?}',['uses' => 'Helpdesk\Frontend\UploadController@uploadJson']);
+Route::get('frontendFileJson/{id?}',  ['uses' => 'Helpdesk\Frontend\UploadController@fileJson']);
+
+Route::post('uploadImage', 'Helpdesk\Frontend\UploadController@uploadImage');
+Route::post('uploadFile', 'Helpdesk\Frontend\UploadController@uploadFile');
+
+Route::get('ticket/complete', ['uses' => 'Helpdesk\Frontend\HelpdeskController@complete']);
 Route::resource('ticket', 'Helpdesk\Frontend\HelpdeskController');
 
 /*

@@ -48,9 +48,14 @@ return [
             'root'   => public_path('files'),
         ],
 
-        'upload' => [
+        'ticketsfiles' => [
             'driver' => 'local',
-            'root'   => public_path('uploads'),
+            'root'   => public_path('tickets/files'),
+        ],
+
+        'ticketsupload' => [
+            'driver' => 'local',
+            'root'   => public_path('tickets/uploads'),
         ],
 
         'ftp' => [

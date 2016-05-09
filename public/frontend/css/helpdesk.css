@@ -30,12 +30,12 @@ ul.nav{
     display: inline-block;
     margin-right: 10px;
     vertical-align: top;
-}
-
-.label-item a{
+    border: 1px solid #cbd3dd;
     background-color: white;
     border-radius: 0 5px 0 0;
-    border: 1px solid #cbd3dd;
-    display: block;
     padding: 0 5px;
+}
+
+.label-item span {
+    margin-left: 3px;
 }

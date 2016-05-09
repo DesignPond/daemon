@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo asset('frontend/css/dropdown-menu.css');?>">
     <link rel="stylesheet" type="text/css" href="<?php echo asset('frontend/css/jquery.fancybox.css');?>">
+    <link rel="stylesheet" href="<?php echo asset('backend/js/vendor/redactor/redactor.css'); ?>">
     <link rel="stylesheet" type="text/css" href="<?php echo asset('frontend/css/style.css'); ?>">
     <link rel="stylesheet" type="text/css" href="<?php echo asset('frontend/css/frontend.css');?>?<?php echo rand(1234,120000); ?>">
     <link rel="stylesheet" type="text/css" href="<?php echo asset('frontend/css/helpdesk.css');?>?<?php echo rand(1234,120000); ?>">
@@ -94,26 +95,25 @@
         </div>
         <!-- End of Footer Default -->
     </footer>
-    @yield('footer')
-    <!-- End of Footer -->
 </div>
 
 <!-- jQuery -->
-<script src="<?php echo asset('frontend/js/jquery/jquery-2.1.1.min.js');?>"></script>
-<script src="<?php echo asset('frontend/js/jquery/jquery-migrate-1.2.1.min.js');?>"></script>
-<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.0.0.js"></script>
+<script src="https://code.jquery.com/ui/1.11.3/jquery-ui.min.js"></script>
 
 <!-- Bootstrap -->
 <script src="<?php echo asset('frontend/bootstrap/js/bootstrap.min.js');?>"></script>
-<!-- Drop-down -->
-<script src="<?php echo asset('frontend/js/jquery/dropdown-menu.min.js');?>"></script>
 
-<!-- jQuery plugins -->
-<script src="<?php echo asset('schemas/Treant.js');?>"></script>
-<script src="<?php echo asset('schemas/vendor/raphael.js');?>"></script>
+<script type="text/javascript" src="<?php echo asset('backend/js/vendor/redactor/redactor.js');?>"></script>
+<script type="text/javascript" src="<?php echo asset('backend/js/vendor/redactor/fr.js');?>"></script>
+<script type="text/javascript" src="<?php echo asset('backend/js/vendor/redactor/imagemanager.js');?>"></script>
+<script type="text/javascript" src="<?php echo asset('backend/js/vendor/redactor/filemanager.js');?>"></script>
+<script type="text/javascript" src="<?php echo asset('backend/js/vendor/redactor/fontsize.js');?>"></script>
+<script type="text/javascript" src="<?php echo asset('backend/js/vendor/redactor/fontcolor.js');?>"></script>
 
-<script src="<?php echo asset('frontend/js/all.js');?>"></script>
-<script src="<?php echo asset('frontend/js/custom.js');?>"></script>
+
+<script src="<?php echo asset('frontend/js/frontend.js');?>"></script>
 
 </body>
 </html>
