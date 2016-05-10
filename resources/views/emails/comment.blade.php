@@ -12,7 +12,7 @@ setlocale(LC_ALL, 'fr_FR.UTF-8');
 <head>
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Commentaire | Documentation DesignPond</title>
+    <title>Commentaire | Documentation UniNE</title>
 </head>
 <body bgcolor="#f6f6f6" style="{{ $fontreset }} -webkit-font-smoothing: antialiased; height: 100%; -webkit-text-size-adjust: none; width: 100% !important; {{ $marginreset }}">
 
