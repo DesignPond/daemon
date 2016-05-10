@@ -11,7 +11,7 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="<?php echo asset('frontend/css/style.css'); ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo asset('frontend/css/style.min.css'); ?>">
 
 </head>
 <body>
@@ -33,7 +33,6 @@
 </div>
 
 <script src="<?php echo asset('frontend/js/all.js');?>"></script>
-<script src="<?php echo asset('frontend/js/custom.js');?>"></script>
 
 </body>
 </html>

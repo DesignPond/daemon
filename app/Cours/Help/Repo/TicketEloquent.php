@@ -25,7 +25,7 @@ class TicketEloquent implements TicketInterface
 
     public function find($id){
 
-        return $this->ticket->findOrFail($id);
+        return $this->ticket->with(['comments'])->findOrFail($id);
     }
 
     public function create(array $data){

@@ -2,7 +2,7 @@
 @section('content')
 
     <p><a href="{{ url('ticket') }}" class="btn btn-sm btn-default"><i class="fa fa-arrow-circle-left"></i> &nbsp;Retour</a></p>
-    <h2>Archives</h2><hr/>
+    <h2>Archives</h2>
 
     <div class="panel">
         <a href="{{ url('ticket') }}" class="btn btn-sm btn-default">En cours <span class="badge">{{ $tickets->count() }}</span></a>

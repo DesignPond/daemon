@@ -9,7 +9,7 @@ class Comment extends Model
 
     protected $table = 'helpdesk_comments';
 
-    protected $fillable = ['content', 'html', 'ticket_id'];
+    protected $fillable = ['name', 'content', 'html', 'ticket_id', 'user_id'];
 
     /**
      * Get related ticket.

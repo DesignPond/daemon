@@ -32,6 +32,7 @@ Route::post('uploadFile', 'Helpdesk\Frontend\UploadController@uploadFile');
 
 Route::get('ticket/complete', ['uses' => 'Helpdesk\Frontend\HelpdeskController@complete']);
 Route::resource('ticket', 'Helpdesk\Frontend\HelpdeskController');
+Route::resource('comment', 'Helpdesk\Frontend\CommentController');
 
 /*
 |--------------------------------------------------------------------------
@@ -49,6 +50,13 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
     Route::get('build', ['uses' => 'Backend\PageController@build']);
     Route::resource('config', 'Backend\ConfigController');
     Route::resource('site', 'Backend\SiteController');
+
+    // Helpdesk
+    Route::resource('ticket', 'Helpdesk\Backend\TicketController');
+    Route::resource('priority', 'Helpdesk\Backend\PriorityController');
+    Route::resource('status', 'Helpdesk\Backend\StatusController');
+    Route::resource('comment', 'Helpdesk\Backend\CommentController');
+    Route::resource('categorie', 'Helpdesk\Backend\CategoryController');
 
 });
 
@@ -73,33 +81,23 @@ Route::post('password/reset', 'Auth\PasswordController@postReset');
 // Test routes for development
 Route::get('testing', function()
 {
+    $tickets = \App::make('App\Cours\Help\Repo\TicketInterface');
 
-/*
-    \App\Cours\User\Entities\User::create(array(
-        'name'     => 'Etudiant',
-        'email'    => 'info@methodologie.ch',
-        'password' => Hash::make('mj2015')
-    ));
- */
+    $ticket = $tickets->find(1);
 
-    $model = new \App\Cours\Page\Entities\Page();
+/*    echo '<pre>';
+    print_r($ticket);
+    echo '</pre>';*/
 
-    $pages = [
+    return View::make('emails.ticket', ['ticket' => $ticket]);
 
-        ['id' => 1, 'template' => 'accueil', 'slug' => 'accueil',     'title' => 'Accueil',      'content' => '<p>content</p>'],
-        ['id' => 2, 'template' => 'contact', 'slug' => 'contact',     'title' => 'Contact',      'content' => '<p>content</p>'],
-        ['id' => 3, 'template' => 'page', 'slug' => 'colloque',    'title' => 'Colloques',    'content' => '<p>content</p>'],
-        ['id' => 4, 'template' => 'page', 'slug' => 'inscription', 'title' => 'Inscriptions', 'content' => '<p>content</p>'],
-        ['id' => 5, 'template' => 'page', 'slug' => 'user',        'title' => 'Utilisateurs', 'content' => '<p>content</p>',
-            'children' => [
-                    ['id' => 6, 'template' => 'page', 'slug' => 'account', 'title' => 'Comptes'],
-                    ['id' => 7, 'template' => 'page', 'slug' => 'adresse', 'title' => 'Adresses'],
-                    ['id' => 8, 'template' => 'page', 'slug' => 'specialisation', 'title' => 'Spécialisations']
-            ]
-        ],
-        ['id' => 9, 'template' => 'page', 'slug' => 'shop', 'title' => 'Shop', 'content' => '<p>content</p>']
-    ];
+    /*
+        \App\Cours\User\Entities\User::create(array(
+            'name'     => 'Etudiant',
+            'email'    => 'info@methodologie.ch',
+            'password' => Hash::make('mj2015')
+        ));
+     */
 
-    $model->buildTree($pages);
 
 });

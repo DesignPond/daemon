@@ -4,9 +4,8 @@ $( function() {
     var base_url = location.protocol + "//" + location.host+"/";
 
     $('.redactorFrontend').redactor({
-        minHeight  : 250,
-        maxHeight: 450,
-        focus: true,
+        minHeight  : 220,
+        maxHeight: 300,
         lang: 'fr',
         plugins : ['advanced','imagemanager','filemanager','fontcolor'],
         fileUpload       : base_url + 'uploadFile?_token=' + $('meta[name="_token"]').attr('content'),

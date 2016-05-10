@@ -18,6 +18,10 @@ class HelpdeskController extends Controller
     {
         $this->helpdesk = $helpdesk;
         $this->ticket   = $ticket;
+        
+        \Carbon\Carbon::setLocale('fr');
+        setlocale(LC_ALL, 'fr_FR.UTF-8');
+
     }
     
     /**
@@ -69,6 +73,13 @@ class HelpdeskController extends Controller
     public function store(Request $request)
     {
         $ticket = $this->ticket->create($request->all());
+        
+        // Send email to webmaster
+
+        Mail::send('emails.ticket', ['ticket' => $ticket], function ($m) use ($ticket) {
+            $m->from('doc.hubwebdroit.ch', 'DesignPond | Documentation');
+            $m->to('cindy.leschaud@gmail.com', 'DesignPond')->subject('Un nouveau ticket a été posté');
+        });
 
         return redirect('ticket')->with(['status' => 'success' , 'message' => 'Le ticket a été ouvert']);
     }
@@ -84,17 +95,6 @@ class HelpdeskController extends Controller
         $ticket = $this->helpdesk->find($id);
 
         return view('frontend.tickets.show')->with(['ticket' => $ticket]);
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
     }
 
     /**

@@ -6,82 +6,94 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Cours\Help\Repo\TicketInterface;
+use App\Cours\Help\Worker\HelpdeskInterface;
 
 class TicketController extends Controller
 {
+    protected $ticket;
+    protected $helpdesk;
+
+    public function __construct(HelpdeskInterface $helpdesk, TicketInterface  $ticket)
+    {
+        $this->ticket   = $ticket;
+        $this->helpdesk = $helpdesk;
+
+        setlocale(LC_ALL, 'fr_FR.UTF-8');
+    }
+
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function index()
     {
-        //
+        $tickets  = $this->ticket->getAll();
+
+        return view('backend.helpdesk.tickets.index')->with(['tickets' => $tickets]);
     }
 
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function create()
     {
-        //
+        $categories = $this->helpdesk->getCategory();
+        $priorities = $this->helpdesk->getPriority();
+        $statuses   = $this->helpdesk->getStatus();
+
+        return view('backend.helpdesk.tickets.create')->with(['categories' => $categories, 'priorities' => $priorities, 'statuses' => $statuses]);
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Show the form for creating a new resource.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function store(Request $request)
     {
-        //
+        $ticket = $this->ticket->create($request->all());
+
+        return redirect('admin/ticket/'.$ticket->id)->with(['status' => 'success' , 'message' => 'Le ticket a été créé']);
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function show($id)
     {
-        //
-    }
+        $ticket     = $this->ticket->find($id);
+        $categories = $this->helpdesk->getCategory();
+        $priorities = $this->helpdesk->getPriority();
+        $statuses   = $this->helpdesk->getStatus();
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
+        return view('backend.helpdesk.tickets.show')->with(['ticket' => $ticket, 'categories' => $categories, 'priorities' => $priorities, 'statuses' => $statuses]);
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
-    public function update(Request $request, $id)
+    public function update($id, Request $request)
     {
-        //
+        $ticket = $this->ticket->update($request->all());
+
+        return redirect('admin/ticket/'.$ticket->id)->with(['status' => 'success' , 'message' => 'Le ticket a été mise à jour']);
     }
 
     /**
      * Remove the specified resource from storage.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function destroy($id)
     {
-        //
+        $this->comment->delete($id);
+
+        return redirect('admin/ticket')->with(array('status' => 'success' , 'message' => 'Le ticket a été supprimé' ));
     }
 }

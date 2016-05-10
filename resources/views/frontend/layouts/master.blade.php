@@ -44,8 +44,6 @@
     <!-- End of Header -->
 
     @include('frontend.partials.slide')
-    <!-- messages and errors -->
-    @include('backend.partials.message')
 
     <!-- End of Header Back -->
     <div class="panels" id="content">
@@ -53,9 +51,14 @@
 
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
+
+                    <!-- messages and errors -->
+                    @include('backend.partials.message')
+
                     <!-- Contenu -->
                     @yield('content')
                     <!-- Fin contenu -->
+
                 </div>
             </div>
 
@@ -111,7 +114,6 @@
 <script type="text/javascript" src="<?php echo asset('backend/js/vendor/redactor/filemanager.js');?>"></script>
 <script type="text/javascript" src="<?php echo asset('backend/js/vendor/redactor/fontsize.js');?>"></script>
 <script type="text/javascript" src="<?php echo asset('backend/js/vendor/redactor/fontcolor.js');?>"></script>
-
 
 <script src="<?php echo asset('frontend/js/frontend.js');?>"></script>
 

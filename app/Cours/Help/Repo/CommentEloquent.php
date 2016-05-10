@@ -18,6 +18,11 @@ class CommentEloquent implements CommentInterface
         return $this->comment->all();
     }
 
+    public function getPaginate(){
+
+        return $this->comment->paginate(15);
+    }
+
     public function find($id){
 
         return $this->comment->findOrFail($id);
@@ -25,11 +30,13 @@ class CommentEloquent implements CommentInterface
 
     public function create(array $data){
 
-        $comment = $this->comment->create(array(
+        $comment = $this->comment->create([
+            'name'      => isset($data['name']) ? $data['name'] : null,
             'content'   => $data['content'],
-            'html'      => isset($data['html']) ? $data['html'] : '',
-            'ticket_id' => $data['ticket_id']
-        ));
+            'html'      => isset($data['html']) ? $data['html'] : null,
+            'ticket_id' => $data['ticket_id'],
+            'user_id'   => isset($data['user_id']) ? $data['user_id'] : null,
+        ]);
 
         if( ! $comment )
         {

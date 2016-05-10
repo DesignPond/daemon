@@ -19,6 +19,10 @@ ul.nav{
     color: #a36c00;
 }
 
+.panel-header {
+    text-align: left;
+}
+
 .label-list{
     font-size: 0.75em;
     list-style-type: none;
@@ -28,14 +32,30 @@ ul.nav{
 
 .label-item {
     display: inline-block;
-    margin-right: 10px;
     vertical-align: top;
+}
+
+.label-item-border{
+    padding: 0 5px;
     border: 1px solid #cbd3dd;
     background-color: white;
     border-radius: 0 5px 0 0;
-    padding: 0 5px;
+    margin-right: 10px;
+}
+
+.label-item-date{
+    font-size: 14px;
 }
 
 .label-item span {
     margin-left: 3px;
+}
+
+select option{
+    display: block;
+    height: 20px;
+    line-height: 20px;
+    margin: 0;
+    padding: 5px 3px 3px;
+    vertical-align: middle;
 }

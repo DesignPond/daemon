@@ -6,82 +6,82 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Cours\Help\Repo\CategoryInterface;
 
 class CategoryController extends Controller
 {
+    protected $category;
+
+    public function __construct(CategoryInterface  $category)
+    {
+        $this->category = $category;
+    }
+
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function index()
     {
-        //
+        $categories = $this->category->getAll();
+
+        return view('backend.helpdesk.categories.index')->with(['categories' => $categories]);
     }
 
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function create()
     {
-        //
+        return view('backend.helpdesk.categories.create');
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Show the form for creating a new resource.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function store(Request $request)
     {
-        //
+        $category = $this->category->create($request->all());
+
+        return redirect('admin/categorie/'.$category->id)->with(['status' => 'success' , 'message' => 'La catégorie a été créé']);
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function show($id)
     {
-        //
-    }
+        $categorie = $this->category->find($id);
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
+        return view('backend.helpdesk.categories.show')->with(['categorie' => $categorie]);
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
-    public function update(Request $request, $id)
+    public function update($id, Request $request)
     {
-        //
+        $category = $this->category->update($request->all());
+
+        return redirect('admin/categorie/'.$category->id)->with(['status' => 'success' , 'message' => 'La catégorie a été mis à jour']);
     }
 
     /**
      * Remove the specified resource from storage.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function destroy($id)
     {
-        //
+        $this->category->delete($id);
+
+        return redirect('admin/categorie')->with(array('status' => 'success' , 'message' => 'La catégorie a été supprimée' ));
     }
 }

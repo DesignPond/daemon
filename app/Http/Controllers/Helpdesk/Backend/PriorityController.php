@@ -6,82 +6,82 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Cours\Help\Repo\PriorityInterface;
 
 class PriorityController extends Controller
 {
+    protected $priority;
+
+    public function __construct(PriorityInterface  $priority)
+    {
+        $this->priority = $priority;
+    }
+
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function index()
     {
-        //
+        $priorities  = $this->priority->getAll();
+
+        return view('backend.helpdesk.priorities.index')->with(['priorities' => $priorities]);
     }
 
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function create()
     {
-        //
+        return view('backend.helpdesk.priorities.create');
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Show the form for creating a new resource.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function store(Request $request)
     {
-        //
+        $priority = $this->priority->create($request->all());
+
+        return redirect('admin/priority/'.$priority->id)->with(['status' => 'success' , 'message' => 'La priorité a été créé']);
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function show($id)
     {
-        //
-    }
+        $priority  = $this->priority->find($id);
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
+        return view('backend.helpdesk.priorities.show')->with(['priority' => $priority]);
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
-    public function update(Request $request, $id)
+    public function update($id, Request $request)
     {
-        //
+        $priority = $this->priority->update($request->all());
+
+        return redirect('admin/priority/'.$priority->id)->with(['status' => 'success' , 'message' => 'La priorité a été mise à jour']);
     }
 
     /**
      * Remove the specified resource from storage.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function destroy($id)
     {
-        //
+        $this->priority->delete($id);
+
+        return redirect('admin/priority')->with(array('status' => 'success' , 'message' => 'La priorité a été supprimée' ));
     }
 }

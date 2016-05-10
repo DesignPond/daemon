@@ -1,7 +1,7 @@
 @extends('frontend.layouts.master')
 @section('content')
 
-    <h2>Envoyer un ticket au support</h2><hr/>
+    <h2>Envoyer un ticket au support</h2>
 
     <div class="panel">
         <a href="{{ url('ticket') }}" class="btn btn-sm btn-primary">En cours <span class="badge">{{ $tickets->count() }}</span></a>
