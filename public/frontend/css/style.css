@@ -1852,7 +1852,7 @@ span.color.grey {
 ul {
   margin: 0;
   padding: 0;
-  list-style: disc;
+  list-style: inside none disc;
   margin: 0 0 1em 1.2em;
   line-height: 1.8;
 }
