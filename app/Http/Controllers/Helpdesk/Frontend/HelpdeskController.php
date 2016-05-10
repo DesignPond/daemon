@@ -76,7 +76,7 @@ class HelpdeskController extends Controller
         
         // Send email to webmaster
         \Mail::send('emails.ticket', ['ticket' => $ticket], function ($m) use ($ticket) {
-            $m->from('doc@hubwebdroit.ch', 'DesignPond | Documentation');
+            $m->from('doc@hubwebdroit.ch', 'Hubwebdroit | Documentation');
             $m->to('cindy.leschaud@gmail.com', 'DesignPond')->subject('Un nouveau ticket a été posté');
         });
 

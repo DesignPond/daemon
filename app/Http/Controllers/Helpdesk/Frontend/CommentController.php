@@ -29,7 +29,7 @@ class CommentController extends Controller
 
         // Send email to webmaster
         \Mail::send('emails.comment', ['comment' => $comment], function ($m) use ($comment) {
-            $m->from('doc@hubwebdroit.ch', 'DesignPond | Documentation');
+            $m->from('doc@hubwebdroit.ch', 'Hubwebdroit | Documentation');
             $m->to('cindy.leschaud@gmail.com', 'DesignPond')->subject('Un nouveau commentaire a été posté');
         });
 
