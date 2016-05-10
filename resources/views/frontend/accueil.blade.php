@@ -3,8 +3,7 @@
 
 <h2>ACCUEIL</h2><hr/>
 
-<h4>Documentations des sites de <strong>{!! Registry::get('nom', 'DesignPond') !!}</strong></h4>
-<div>{!! $page->content !!}</div>
+<h3>Site de documentations des sites de <strong>{!! Registry::get('nom', 'DesignPond') !!}</strong></h3>
 
 @if(!$sites->isEmpty())
     @foreach($sites as $site)

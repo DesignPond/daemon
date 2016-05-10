@@ -28,12 +28,13 @@
     <div class="header header-over large">
         <div class="container">
             <div class="row">
-                <div class="col-md-3 col-sm-6 col-xs-6">
+                <div class="col-md-4 col-sm-6 col-xs-6">
                     <!-- Logo Image -->
                     <a href="{{ url('/') }}" class="logo-image"><img src="{{ asset('frontend/images/logo.svg') }}" alt="logo"></a>
                     <!-- End of Logo Image -->
+                    <h2 class="pull-right">Documentation</h2>
                 </div>
-                <div class="col-md-9 col-sm-6 col-xs-6">
+                <div class="col-md-8 col-sm-6 col-xs-6">
                     <!-- Menu -->
                     @include('frontend.partials.navigation')
                     <!-- End of Menu -->
