@@ -7701,7 +7701,7 @@ Copyright (c) 2015 Daniel Eden
   z-index: 5;
   left: 0;
   border-bottom-color: #eaedf1;
-  background-color: #f6f7f8;
+  background-color: #fff;
 }
 .header-over {
   background: transparent;
@@ -7713,6 +7713,9 @@ Copyright (c) 2015 Daniel Eden
   width: 100%;
   background-color: #fff;
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1) !important;
+}
+.header-fixed h2{
+
 }
 .header-fixed.header-fixed-light {
   background-color: #263952;
@@ -7790,6 +7793,12 @@ Copyright (c) 2015 Daniel Eden
   line-height: 60px;
   color: #fff;
 }
+
+.header.header-fixed h2{
+  color:#2288cc;
+  line-height: 45px;
+}
+
 .header-back-container h1.page-title {
   color: #fff;
   font-size: 3em;
@@ -16584,6 +16593,7 @@ input.changelog-input {
   padding: 0;
   list-style-type: none;
   font-weight: 300;
+  background: #fff;
 }
 .one-page-nav li {
   border-bottom: 1px solid #dae0e7;
@@ -16632,6 +16642,7 @@ input.changelog-input {
   margin: 0 0 0 0px;
   padding: 0;
   list-style-type: none;
+  background: #fff;
 }
 .one-page-nav ul a {
   padding: 5px 15px 5px 30px;
