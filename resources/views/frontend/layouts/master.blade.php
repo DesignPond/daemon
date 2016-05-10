@@ -75,7 +75,7 @@
                     <div class="col-md-3 col-sm-3 col-xs-12">
                         <div class="footer-logo-wrapper">
                             <!-- Logo Image -->
-                            <a href="{{ url('/') }}" class="logo-image "><img src="{{ asset('frontend/images/logos/logo-small.svg') }}" alt="logo"></a>
+                            <a href="{{ url('/') }}" class="logo-image"><img style="height: 50px;" src="{{ asset('frontend/images/logo_dd.svg') }}" alt="logo"></a>
                             <!-- End of Logo Image -->
                         </div>
                     </div>
