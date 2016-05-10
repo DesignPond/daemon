@@ -23,7 +23,7 @@
 
 <div class="panel">
     <header class="panel-header" style="margin-bottom: 0;">
-        Un soucis? Un bug? Besoin d'une nouvelle fontionnalité? <a class="btn btn-warning btn-lg pull-right" href="{{ url('ticket') }}">Créer un ticket</a>
+        Un soucis? Un bug? Besoin d'une nouvelle fonctionnalité? <a class="btn btn-warning btn-lg pull-right" href="{{ url('ticket') }}">Créer un ticket</a>
     </header>
 </div>
 
