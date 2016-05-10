@@ -86,7 +86,7 @@
                             <!-- End of Scroll top -->
                             <!-- Footer Menu -->
                             <ul class="footer-menu helper right">
-                                <li><a href="mailto:info@hubwebdroit.ch"> info@hubwebdroit.ch </a></li>
+                                <li></li>
                             </ul>
                             <!-- End of Footer Menu -->
                             <!-- Copyright -->
