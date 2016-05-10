@@ -27,6 +27,12 @@ class CommentController extends Controller
     {
         $comment = $this->comment->create($request->all());
 
+        // Send email to webmaster
+        \Mail::send('emails.comment', ['comment' => $comment], function ($m) use ($comment) {
+            $m->from('doc@hubwebdroit.ch', 'DesignPond | Documentation');
+            $m->to('cindy.leschaud@gmail.com', 'DesignPond')->subject('Un nouveau commentaire a été posté');
+        });
+
         return redirect()->back()->with(['status' => 'success' , 'message' => 'Le commentaire a été ajouté']);
     }
 

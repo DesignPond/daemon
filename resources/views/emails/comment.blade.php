@@ -12,7 +12,7 @@ setlocale(LC_ALL, 'fr_FR.UTF-8');
 <head>
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Ticket | Documentation DesignPond</title>
+    <title>Commentaire | Documentation DesignPond</title>
 </head>
 <body bgcolor="#f6f6f6" style="{{ $fontreset }} -webkit-font-smoothing: antialiased; height: 100%; -webkit-text-size-adjust: none; width: 100% !important; {{ $marginreset }}">
 
@@ -31,8 +31,8 @@ setlocale(LC_ALL, 'fr_FR.UTF-8');
                         </td>
                         <td style="{{ $fontreset }} {{ $marginreset }}" width="10"></td>
                         <td style="{{ $fontreset }} {{ $marginreset }}" width="50">
-                            <h1 style="{{ $fontreset }} font-size: 24px; line-height: 1.2em; color: #111111; font-weight: 500; margin: 20px 0 10px; padding: 0;">Ouverture d'un ticket</h1>
-                            <small>{{ $ticket->created_at->diffForHumans() }}</small>
+                            <h1 style="{{ $fontreset }} font-size: 24px; line-height: 1.2em; color: #111111; font-weight: 500; margin: 20px 0 10px; padding: 0;">Commentaire</h1>
+                            <small>{{ $comment->created_at->diffForHumans() }}</small>
                         </td>
                     </tr>
                     <tr style="{{ $fontreset }} {{ $marginreset }}">
@@ -41,12 +41,12 @@ setlocale(LC_ALL, 'fr_FR.UTF-8');
                     <tr style="{{ $fontreset }} {{ $marginreset }}">
                         <td colspan="3" style="{{ $fontreset }} {{ $marginreset }}">
                             <div style="{{ $fontreset }} {{ $paraeset }}">
-                                <h3>{{ $ticket->subject }}</h3>
-                                <span style="display:inline-block; padding:2px 7px;font-size:12px; border-radius: 3px; color:#fff; background: {{ $ticket->priority->color }}">{{ $ticket->priority->name }}</span>
-                                <span style="display:inline-block; padding:2px 7px;font-size:12px; border-radius: 3px; color:#fff; background: {{ $ticket->status->color }}">{{ $ticket->status->name }}</span>
-                                <span style="display:inline-block; padding:2px 7px;font-size:12px; border-radius: 3px; color:#fff; background: {{ $ticket->category->color }}">{{ $ticket->category->name }}</span>
-                                {!! $ticket->content !!}
-                                <p><a href="{{ url('admin/ticket/'.$ticket->id) }}">Voir le ticket</a></p>
+                                <h3 style="{{ $fontreset }}">
+                                    <a style="{{ $fontreset }} font-size: 20px; text-decoration: none; line-height: 1em; color: #337ab7; font-weight: 500;padding: 0;" href="{{ url('admin/comment/'.$comment->id) }}">{{ $comment->ticket->subject }}</a>
+                                </h3>
+                                {!! $comment->content !!}
+                                <h4>{{ $comment->name }}</h4>
+                                <p><a href="{{ url('admin/comment/'.$comment->id) }}">Voir le commentaire</a></p>
                             </div>
                         </td>
                     </tr>

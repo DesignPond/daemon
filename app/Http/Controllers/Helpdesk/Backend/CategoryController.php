@@ -46,7 +46,7 @@ class CategoryController extends Controller
     {
         $category = $this->category->create($request->all());
 
-        return redirect('admin/categorie/'.$category->id)->with(['status' => 'success' , 'message' => 'La catégorie a été créé']);
+        return redirect('admin/categorie')->with(['status' => 'success' , 'message' => 'La catégorie a été créé']);
     }
 
     /**
@@ -69,7 +69,7 @@ class CategoryController extends Controller
     {
         $category = $this->category->update($request->all());
 
-        return redirect('admin/categorie/'.$category->id)->with(['status' => 'success' , 'message' => 'La catégorie a été mis à jour']);
+        return redirect('admin/categorie')->with(['status' => 'success' , 'message' => 'La catégorie a été mis à jour']);
     }
 
     /**

@@ -46,7 +46,7 @@ class PriorityController extends Controller
     {
         $priority = $this->priority->create($request->all());
 
-        return redirect('admin/priority/'.$priority->id)->with(['status' => 'success' , 'message' => 'La priorité a été créé']);
+        return redirect('admin/priority')->with(['status' => 'success' , 'message' => 'La priorité a été créé']);
     }
 
     /**
@@ -69,7 +69,7 @@ class PriorityController extends Controller
     {
         $priority = $this->priority->update($request->all());
 
-        return redirect('admin/priority/'.$priority->id)->with(['status' => 'success' , 'message' => 'La priorité a été mise à jour']);
+        return redirect('admin/priority')->with(['status' => 'success' , 'message' => 'La priorité a été mise à jour']);
     }
 
     /**

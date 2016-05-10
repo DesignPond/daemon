@@ -82,14 +82,18 @@ Route::post('password/reset', 'Auth\PasswordController@postReset');
 Route::get('testing', function()
 {
     $tickets = \App::make('App\Cours\Help\Repo\TicketInterface');
-
     $ticket = $tickets->find(1);
+
+    $comments = \App::make('App\Cours\Help\Repo\CommentInterface');
+    $comment  = $comments->find(1);
+
 
 /*    echo '<pre>';
     print_r($ticket);
     echo '</pre>';*/
 
-    return View::make('emails.ticket', ['ticket' => $ticket]);
+    //return View::make('emails.ticket', ['ticket' => $ticket]);
+    return View::make('emails.comment', ['comment' => $comment]);
 
     /*
         \App\Cours\User\Entities\User::create(array(

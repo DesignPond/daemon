@@ -54,7 +54,7 @@ return [
     |
     */
 
-    'from' => ['address' => 'info@methodologie.ch', 'name' => 'Méthodologie juridique UniNE'],
+    'from' => ['address' => 'doc@hubwebdroit.ch', 'name' => 'DesignPond | Documentation'],
 
     /*
     |--------------------------------------------------------------------------
