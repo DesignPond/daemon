@@ -85,9 +85,7 @@
                             <span class="scroll-top js-scroll-top"><i class="fa fa-angle-up"></i></span>
                             <!-- End of Scroll top -->
                             <!-- Footer Menu -->
-                            <ul class="footer-menu helper right">
-                                <li></li>
-                            </ul>
+                            <ul class="footer-menu helper right"><li></li></ul>
                             <!-- End of Footer Menu -->
                             <!-- Copyright -->
                             <p class="copyright helper right"><a href="http://designpond.ch">DesignPond</a>, all rights reserved. {{ date('Y') }} &copy; </p>

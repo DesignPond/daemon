@@ -136,7 +136,8 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-
+        LucaDegasperi\OAuth2Server\Storage\FluentStorageServiceProvider::class,
+        LucaDegasperi\OAuth2Server\OAuth2ServerServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -147,6 +148,7 @@ return [
         Intervention\Image\ImageServiceProvider::class,
         Baum\Providers\BaumServiceProvider::class,
         Torann\Registry\RegistryServiceProvider::class,
+        Laravel\Socialite\SocialiteServiceProvider::class,
     ],
 
     /*
@@ -200,6 +202,8 @@ return [
         'View'      => Illuminate\Support\Facades\View::class,
         'Registry'  => 'Torann\Registry\Facades\Registry',
         'Str'       => Illuminate\Support\Str::class,
+        'Authorizer' => 'LucaDegasperi\OAuth2Server\Facades\Authorizer',
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
     ],
 
 ];

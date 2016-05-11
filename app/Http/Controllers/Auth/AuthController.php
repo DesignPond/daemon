@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Cours\User\Entities\User;
 use Validator;
+use Socialite;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
@@ -43,7 +44,8 @@ class AuthController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name'  => 'required|max:255',
+            'first_name'  => 'required|max:255',
+            'last_name'  => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
             'password' => 'required|confirmed|min:6',
         ]);
@@ -58,7 +60,8 @@ class AuthController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'name'  => $data['name'],
+            'first_name'  => $data['first_name'],
+            'last_name'  => $data['last_name'],
             'email' => $data['email'],
             'role'  => (isset($data['role']) ? $data['role'] : ''),
             'password' => bcrypt($data['password']),
@@ -66,12 +69,34 @@ class AuthController extends Controller
     }
 
     /**
-     * Show the application login form.
+     * Redirect the user to the GitHub authentication page.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
-    public function getStudent()
+    public function redirectToProvider()
     {
-        return view('auth.student');
+        return Socialite::driver('droithub')->redirect();
+    }
+
+    /**
+     * Obtain the user information from GitHub.
+     *
+     * @return Response
+     */
+    public function handleProviderCallback()
+    {
+        $user = Socialite::driver('droithub')->user();
+
+        // storing data to our use table and logging them in
+        $data = [
+            'first_name' => $user->first_name,
+            'last_name'  => $user->last_name,
+            'email'      => $user->email
+        ];
+
+        \Auth::login(User::firstOrCreate($data));
+
+        //after login redirecting to home page
+        return redirect('/');
     }
 }

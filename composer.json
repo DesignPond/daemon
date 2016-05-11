@@ -14,7 +14,10 @@
         "baum/baum": "~1.1",
         "yangqi/htmldom": "dev-master",
         "torann/registry": "0.2.*@dev",
-        "vtalbot/markdown": "2.0"
+        "vtalbot/markdown": "2.0",
+        "laravel/socialite": "^2.0",
+        "league/oauth2-server": "^4.1",
+        "lucadegasperi/oauth2-server-laravel": "^5.1"
     },
     "require-dev": {
         "laracasts/generators": "~1.1",

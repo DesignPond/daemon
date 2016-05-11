@@ -42,4 +42,36 @@ class PageWorker{
 
     }
 
+    /*
+     function menuBuilder($menu_array, $is_sub = false)
+{
+    if(!$is_sub) {
+        $menu = '<ul id="side-menu" class="nav"><li class="top-li"></li>';
+    } else {
+        $menu = '<ul class="nav side-submenu">';
+    }
+
+    $sub = '';
+    foreach ($menu_array as $child) {
+        foreach ($child as $key => $val) {
+            if (is_array($val)) {
+                $sub = menuBuilder($val, true);
+            } else {
+                $sub = null;
+                $$key = $val;
+            }
+        }
+
+        $menu .= "<li>".((trim($child['name'])!=null)?("<a>".$child['name']."</a>"):"")."$sub</li>";
+        unset($url, $display, $sub);
+
+    }
+    return $menu . "</ul>";
+}
+
+$array = json_decode($json, true);
+echo $list =  menuBuilder($array['data']['parentNode']['children']);
+
+      */
+
 }

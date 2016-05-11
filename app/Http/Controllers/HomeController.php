@@ -33,7 +33,7 @@ class HomeController extends Controller
         $page       = $this->page->getBySlug('accueil');
         $parent     = $page->getAncestorsAndSelf()->toHierarchy();
 
-        return view('frontend.accueil')->with([ 'page' => $page, 'parent' => $parent]);
+        return view('frontend.index')->with([ 'page' => $page, 'parent' => $parent]);
     }
 
     /**

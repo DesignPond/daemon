@@ -27,7 +27,8 @@ class UserEloquent implements UserInterface{
     public function create(array $data){
 
         $user = $this->user->create(array(
-            'name'           => $data['name'],
+            'first_name'     => $data['first_name'],
+            'last_name'      => $data['last_name'],
             'email'          => $data['email'],
             'role'           => $data['role'],
             'password'       => bcrypt($data['password']),
