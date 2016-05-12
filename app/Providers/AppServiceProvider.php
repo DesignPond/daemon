@@ -39,6 +39,13 @@ class AppServiceProvider extends ServiceProvider
         $this->registerUploadService();
         $this->registerSiteService();
 
+        // Helpdesk service
+        $this->registerHelpdeskService();
+        $this->registerHelpTicketService();
+        $this->registerHelpCategorieService();
+        $this->registerHelpCommentService();
+        $this->registerHelpPriorityService();
+        $this->registerHelpStatusService();
     }
 
     /**
@@ -109,4 +116,77 @@ class AppServiceProvider extends ServiceProvider
         });
     }
 
+    /**
+     * Help Ticket
+     */
+    protected function registerHelpdeskService(){
+
+        $this->app->singleton('App\Cours\Help\Worker\HelpdeskInterface', function()
+        {
+            return new \App\Cours\Help\Worker\Helpdesk(
+                \App::make('App\Cours\Help\Repo\TicketInterface'),
+                \App::make('App\Cours\Help\Repo\CategoryInterface'),
+                \App::make('App\Cours\Help\Repo\CommentInterface'),
+                \App::make('App\Cours\Help\Repo\PriorityInterface'),
+                \App::make('App\Cours\Help\Repo\StatusInterface')
+            );
+        });
+    }
+    
+    /**
+     * Help Ticket
+     */
+    protected function registerHelpTicketService(){
+
+        $this->app->singleton('App\Cours\Help\Repo\TicketInterface', function()
+        {
+            return new \App\Cours\Help\Repo\TicketEloquent(new \App\Cours\Help\Entities\Ticket);
+        });
+    }
+
+    /**
+     * Help Category
+     */
+    protected function registerHelpCategorieService(){
+
+        $this->app->singleton('App\Cours\Help\Repo\CategoryInterface', function()
+        {
+            return new \App\Cours\Help\Repo\CategoryEloquent(new \App\Cours\Help\Entities\Category);
+        });
+    }
+
+    /**
+     * Help Comment
+     */
+    protected function registerHelpCommentService(){
+
+        $this->app->singleton('App\Cours\Help\Repo\CommentInterface', function()
+        {
+            return new \App\Cours\Help\Repo\CommentEloquent(new \App\Cours\Help\Entities\Comment);
+        });
+    }
+
+    /**
+     * Help Priority
+     */
+    protected function registerHelpPriorityService(){
+
+        $this->app->singleton('App\Cours\Help\Repo\PriorityInterface', function()
+        {
+            return new \App\Cours\Help\Repo\PriorityEloquent(new \App\Cours\Help\Entities\Priority);
+        });
+    }
+
+    /**
+     * Help Status
+     */
+    protected function registerHelpStatusService(){
+
+        $this->app->singleton('App\Cours\Help\Repo\StatusInterface', function()
+        {
+            return new \App\Cours\Help\Repo\StatusEloquent(new \App\Cours\Help\Entities\Status);
+        });
+    }
+
+    
 }

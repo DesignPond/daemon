@@ -1,37 +1,14 @@
-{{--<div class="container">
-    <div class="row">
-        <div class="col-md-5 col-sm-6 col-xs-6">
-            <!-- Logo Image -->
-            <a href="{{ url('/') }}" class="logo-image logo-">
-                <img src="{{ asset('frontend/images/logos/logo-small.svg') }}" alt="logo">
-            </a>
-            <!-- End of Logo Image -->
-            <!-- Languages -->
-            <div class="languages languages-light js-languages">
-                <span class="language-active js-language-active">English
-                    <i class="fa fa-caret-down"></i>
-                </span>
-                <ul class="languages-list js-languages-list">
-                    <li><a href="#">English</a></li>
-                    <li><a href="#">Français</a></li>
-                </ul>
-            </div>
-            <!-- End of Languages -->
-        </div>
-        <div class="col-md-7 col-sm-6 col-xs-6">
-            <!-- Menu -->
-            <nav class="right helper">
-                <ul class="menu sf-menu js-menu menu-light">
-                    <li><a href="{{ url('/') }}" title="accueil">ACCUEIL</a></li>
-                </ul>
-            </nav>
-            <!-- End of Menu -->
-        </div>
-    </div>
-</div>--}}
 <nav class="right helper">
     <ul class="menu sf-menu js-menu">
         <li><a href="{{ url('/') }}" title="accueil">Accueil</a></li>
-        <li><a href="mailto:cindy.leschaud@gmail.com">Support</a></li>
+        <li><a href="{{ url('ticket') }}">Support</a></li>
+        <li>
+            @if (!Auth::check())
+                <a href="{{ url('auth/login')}}" class="btn btn-default btn-sm pull-right">Login</a>
+            @endif
+            @if (Auth::check())
+                    <a href="{{ url('auth/logout')}}" class="btn btn-default btn-sm pull-right">Logout</a>
+            @endif
+        </li>
     </ul>
 </nav>

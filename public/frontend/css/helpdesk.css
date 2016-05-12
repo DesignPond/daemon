@@ -1,0 +1,61 @@
+ul.nav{
+    margin: 0;
+    line-height: 1.2em;
+}
+
+.nav-pills > li > a,
+.nav-pills > li > a:focus,
+.nav-pills > li > a:hover{
+    background: #f5f5f5;
+}
+
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:focus,
+.nav-pills > li.active > a:hover{
+    background: #e69900;
+}
+
+.nav-pills > li.active > a span{
+    color: #a36c00;
+}
+
+.panel-header {
+    text-align: left;
+}
+
+.label-list{
+    font-size: 0.75em;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.label-item {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.label-item-border{
+    padding: 0 5px;
+    border: 1px solid #cbd3dd;
+    background-color: white;
+    border-radius: 0 5px 0 0;
+    margin-right: 10px;
+}
+
+.label-item-date{
+    font-size: 14px;
+}
+
+.label-item span {
+    margin-left: 3px;
+}
+
+select option{
+    display: block;
+    height: 20px;
+    line-height: 20px;
+    margin: 0;
+    padding: 5px 3px 3px;
+    vertical-align: middle;
+}

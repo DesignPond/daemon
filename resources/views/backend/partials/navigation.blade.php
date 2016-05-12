@@ -10,11 +10,30 @@
              <i class="fa fa-home"></i> <span>Accueil</span></a>
         </li>
         <li class="<?php echo (Request::is('page') || Request::is('page/*') ? 'active' : '' ); ?>"><a href="{{ url('admin/page') }}">
-                <i class="fa fa-file"></i> <span>Pages</span></a>
+            <i class="fa fa-file"></i> <span>Pages</span></a>
         </li>
         <li class="<?php echo (Request::is('site') || Request::is('site/*') ? 'active' : '' ); ?>"><a href="{{ url('admin/site') }}">
-                <i class="fa fa-book"></i> <span>Sites</span></a>
+            <i class="fa fa-map-marker"></i> <span>Sites</span></a>
         </li>
+
+        <li class="divider"></li>
+        <li class="<?php echo (Request::is('ticket') || Request::is('ticket/*') ? 'active' : '' ); ?>"><a href="{{ url('admin/ticket') }}">
+            <i class="fa fa-ticket"></i> <span>Tickets</span></a>
+        </li>
+        <li class="<?php echo (Request::is('categorie') || Request::is('categorie/*') ? 'active' : '' ); ?>"><a href="{{ url('admin/categorie') }}">
+            <i class="fa fa-tag"></i> <span>Categories</span></a>
+        </li>
+        <li class="<?php echo (Request::is('comment') || Request::is('comment/*') ? 'active' : '' ); ?>"><a href="{{ url('admin/comment') }}">
+            <i class="fa fa-comment"></i> <span>Commentaires</span></a>
+        </li>
+        <li class="<?php echo (Request::is('priority') || Request::is('priority/*') ? 'active' : '' ); ?>"><a href="{{ url('admin/priority') }}">
+            <i class="fa fa-sort-numeric-desc"></i> <span>Priorités</span></a>
+        </li>
+        <li class="<?php echo (Request::is('status') || Request::is('status/*') ? 'active' : '' ); ?>"><a href="{{ url('admin/status') }}">
+            <i class="fa fa-exclamation-triangle"></i> <span>Statut</span></a>
+        </li>
+
+        <li class="divider"></li>
         <li class="<?php echo (Request::is('admin/config') ? 'active' : ''); ?>">
             <a href="{{ url('admin/config') }}"><i class="fa fa-cog"></i><span>Configurations</span></a>
         </li>

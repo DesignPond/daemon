@@ -136,18 +136,16 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-
         /*
          * Application Service Providers...
          */
         App\Providers\AppServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        'Collective\Html\HtmlServiceProvider',
-        'Intervention\Image\ImageServiceProvider',
-        'Baum\Providers\BaumServiceProvider',
-        'Torann\Registry\RegistryServiceProvider',
-
+        Collective\Html\HtmlServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class,
+        Baum\Providers\BaumServiceProvider::class,
+        Torann\Registry\RegistryServiceProvider::class,
     ],
 
     /*

@@ -35,4 +35,9 @@ return [
         'secret' => '',
     ],
 
+    'droithub' => [
+        'client_id'     => '2',
+        'client_secret' => 'deamon',
+        'redirect'      => 'http://deamon.local/auth/droithub/callback',
+    ]
 ];

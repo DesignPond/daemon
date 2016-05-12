@@ -101,6 +101,7 @@ html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  font-size:12px;
 }
 body {
   margin: 0;
@@ -1507,14 +1508,15 @@ th {
   padding-right: 60px;
 }
 html,
-body {
+body.page-frontend {
   height: 100%;
   margin: 0 !important;
+    background: #f6f7f8;
 }
 body {
-  font-size: 1em;
+  font-size: 1.2em;
   line-height: 100%;
-  font-family: 'Roboto', sans-serif;
+  font-family: sans-serif;
   color: #333333;
 }
 #content {
@@ -1625,6 +1627,7 @@ h2 {
 h3 {
   font-size: 1.5em;
   margin: 0 0 .5em 0;
+  font-weight: normal;
 }
 h4 {
   font-size: 1.17em;
@@ -1642,7 +1645,7 @@ h6 {
    Paragraph
    ========================================================================== */
 p {
-  font-size: 1em;
+  font-size: 1.1em;
   margin: 0 0 1em 0;
   font-weight: 300;
   line-height: 1.8;
@@ -1847,9 +1850,10 @@ span.color.grey {
    Unordered List
    ========================================================================== */
 ul {
+
   margin: 0;
   padding: 0;
-  list-style: disc;
+  list-style: inside none disc;
   margin: 0 0 1em 1.2em;
   line-height: 1.8;
 }
@@ -7583,7 +7587,7 @@ Copyright (c) 2015 Daniel Eden
 .logo-image img {
   display: block;
   max-width: 100%;
-  height: 50px;
+  height: 110px;
   width: auto;
 }
 .footer .logo-image {
@@ -7687,7 +7691,7 @@ Copyright (c) 2015 Daniel Eden
   padding: 10px 0;
 }
 .header.large {
-  padding: 30px 0;
+  padding:25px 0 30px 0;
 }
 .header-one-page {
   border-top: 0;
@@ -7698,7 +7702,7 @@ Copyright (c) 2015 Daniel Eden
   z-index: 5;
   left: 0;
   border-bottom-color: #eaedf1;
-  background-color: #f6f7f8;
+  background-color: #fff;
 }
 .header-over {
   background: transparent;
@@ -7711,6 +7715,9 @@ Copyright (c) 2015 Daniel Eden
   background-color: #fff;
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1) !important;
 }
+.header-fixed h2{
+
+}
 .header-fixed.header-fixed-light {
   background-color: #263952;
 }
@@ -7722,7 +7729,7 @@ Copyright (c) 2015 Daniel Eden
   position: relative;
 }
 .header-back-large {
-  padding: 100px 0 0px 0;
+  padding: 150px 0 0px 0;
 }
 .header-back-small {
   padding: 140px 0 70px 0;
@@ -7784,9 +7791,15 @@ Copyright (c) 2015 Daniel Eden
 }
 .header h2{
   margin-bottom: 0;
-  line-height: 40px;
-  color: #2288cc;
+  line-height: 60px;
+  color: #fff;
 }
+
+.header.header-fixed h2{
+  color:#2288cc;
+  line-height: 45px;
+}
+
 .header-back-container h1.page-title {
   color: #fff;
   font-size: 3em;
@@ -10338,7 +10351,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .panel {
   background-color: white;
-  padding: 50px;
+  padding: 35px;
   box-shadow: 0 0 6px rgba(153, 153, 153, 0.29);
   margin-bottom: 50px;
 }
@@ -10352,11 +10365,16 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   width: 80%;
 }
 .panel-header {
-  font-size: 1.875em;
+  font-size: 1.5em;
   text-align: center;
   line-height: 1.4;
   font-weight: 300;
   margin-bottom: 30px;
+}
+.panel-heading h2{
+    margin-bottom:0px;
+    line-height: 35px;
+    font-size: 18px;
 }
 .category-info {
   padding: 60px 0 20px 0;
@@ -16501,7 +16519,7 @@ input.changelog-input {
   vertical-align: middle;
 }
 .one-page-logo .logo-image img {
-  height: 65px;
+  height: 70px;
 }
 .one-page-meta {
   padding: 15px 0;
@@ -16576,6 +16594,7 @@ input.changelog-input {
   padding: 0;
   list-style-type: none;
   font-weight: 300;
+  background: #fff;
 }
 .one-page-nav li {
   border-bottom: 1px solid #dae0e7;
@@ -16624,6 +16643,7 @@ input.changelog-input {
   margin: 0 0 0 0px;
   padding: 0;
   list-style-type: none;
+  background: #fff;
 }
 .one-page-nav ul a {
   padding: 5px 15px 5px 30px;

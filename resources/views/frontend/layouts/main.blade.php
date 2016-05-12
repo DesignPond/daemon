@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="background: #fff;">
 
 <head>
     <meta charset="utf-8">
@@ -18,7 +18,7 @@
     <script src="js/modernizr.js"></script>
 </head>
 
-<body class="">
+<body>
 
 <!-- End of Preloader -->
 <div class="page js-page ">
