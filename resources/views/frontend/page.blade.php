@@ -6,6 +6,13 @@
         <div class="main-content">
             <h2>{{ $page->title }}</h2>
             <div>{!! $page->content !!}</div>
+
+            <?php
+
+            echo $tree;
+
+            ?>
+
         </div>
     </div>
 </div>

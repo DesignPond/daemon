@@ -3,7 +3,6 @@
     <!-- BEGIN SIDEBAR MENU -->
     <ul class="acc-menu" id="sidebar">
         <!-- Recherche globale -->
-       <!-- @include('backend.partials.search')-->
 
         <li class="divider"></li>
         <li class="<?php echo (Request::is('admin') ? 'active' : '' ); ?>"><a href="{{ url('admin') }}">
@@ -15,7 +14,9 @@
         <li class="<?php echo (Request::is('site') || Request::is('site/*') ? 'active' : '' ); ?>"><a href="{{ url('admin/site') }}">
             <i class="fa fa-map-marker"></i> <span>Sites</span></a>
         </li>
-
+        <li class="<?php echo (Request::is('user') || Request::is('user/*') ? 'active' : '' ); ?>"><a href="{{ url('admin/user') }}">
+                <i class="fa fa-users"></i> <span>Utilisateurs</span></a>
+        </li>
         <li class="divider"></li>
         <li class="<?php echo (Request::is('ticket') || Request::is('ticket/*') ? 'active' : '' ); ?>"><a href="{{ url('admin/ticket') }}">
             <i class="fa fa-ticket"></i> <span>Tickets</span></a>

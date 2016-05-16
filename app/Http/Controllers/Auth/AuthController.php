@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Auth;
 
 use App\Cours\User\Entities\User;
 use Validator;
-use Socialite;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
@@ -66,37 +65,5 @@ class AuthController extends Controller
             'role'  => (isset($data['role']) ? $data['role'] : ''),
             'password' => bcrypt($data['password']),
         ]);
-    }
-
-    /**
-     * Redirect the user to the GitHub authentication page.
-     *
-     * @return Response
-     */
-    public function redirectToProvider()
-    {
-        return Socialite::driver('droithub')->redirect();
-    }
-
-    /**
-     * Obtain the user information from GitHub.
-     *
-     * @return Response
-     */
-    public function handleProviderCallback()
-    {
-        $user = Socialite::driver('droithub')->user();
-
-        // storing data to our use table and logging them in
-        $data = [
-            'first_name' => $user->first_name,
-            'last_name'  => $user->last_name,
-            'email'      => $user->email
-        ];
-
-        \Auth::login(User::firstOrCreate($data));
-
-        //after login redirecting to home page
-        return redirect('/');
     }
 }

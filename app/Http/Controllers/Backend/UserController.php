@@ -1,0 +1,95 @@
+<?php
+
+namespace App\Http\Controllers\Backend;
+
+use Illuminate\Http\Request;
+use App\Http\Requests;
+use App\Http\Controllers\Controller;
+
+use App\Cours\User\Repo\UserInterface;
+use App\Http\Requests\CreateUser;
+use App\Http\Requests\UpdateUser;
+
+class UserController extends Controller {
+
+    protected $user;
+
+    public function __construct(UserInterface $user)
+    {
+        $this->user = $user;
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return Response
+     */
+    public function index()
+    {
+        $users = $this->user->getAll();
+
+        return view('backend.users.index')->with(['users' => $users]);
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return Response
+     */
+    public function create()
+    {
+        return view('backend.users.create');
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @return Response
+     */
+    public function store(CreateUser $request)
+    {
+        $user = $this->user->create($request->all());
+
+        return redirect('admin/user/'.$user->id);
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function show($id, Request $request)
+    {
+        $user = $this->user->find($id);
+
+        return view('backend.users.show')->with(compact('user'));
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function update($id,UpdateUser $request)
+    {
+        $user = $this->user->update($request->all());
+
+        return redirect('admin/user/'.$user->id)->with(array('status' => 'success', 'message' => 'Utilisateur mis à jour' ));
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function destroy($id)
+    {
+        $this->user->delete($id);
+
+        return redirect('admin/user')->with(array('status' => 'success', 'message' => 'Utilisateur supprimé' ));
+    }
+
+}

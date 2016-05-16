@@ -42,36 +42,67 @@ class PageWorker{
 
     }
 
-    /*
-     function menuBuilder($menu_array, $is_sub = false)
-{
-    if(!$is_sub) {
-        $menu = '<ul id="side-menu" class="nav"><li class="top-li"></li>';
-    } else {
-        $menu = '<ul class="nav side-submenu">';
+    public function tree($source_dir, $directory_depth = 0, $hidden = FALSE, $onlydir = TRUE)
+    {
+        if ($fp = @opendir($source_dir))
+        {
+            $filedata	= array();
+            $new_depth	= $directory_depth - 1;
+            $source_dir	= rtrim($source_dir, DIRECTORY_SEPARATOR).DIRECTORY_SEPARATOR;
+
+            while (FALSE !== ($file = readdir($fp)))
+            {
+                // Remove '.', '..', and hidden files [optional]
+                if ( ! trim($file, '.') OR ($hidden == FALSE && $file[0] == '.'))
+                {
+                    continue;
+                }
+
+                if (($directory_depth < 1 OR $new_depth > 0) && @is_dir($source_dir.$file))
+                {
+                    $filedata[$file] = $this->tree($source_dir.$file.DIRECTORY_SEPARATOR, $new_depth, $hidden);
+                }
+                else
+                {
+                    if(!$onlydir)
+                    {
+                        $filedata[] = $file;
+                    }
+                }
+            }
+
+            closedir($fp);
+            return $filedata;
+        }
+
+        return FALSE;
     }
 
-    $sub = '';
-    foreach ($menu_array as $child) {
-        foreach ($child as $key => $val) {
-            if (is_array($val)) {
-                $sub = menuBuilder($val, true);
-            } else {
-                $sub = null;
-                $$key = $val;
+    public function treeDirectories($directories, $path = '', $loop = 0, $colors = [])
+    {
+        $key   = key($directories);
+        $exist = (isset($directories[$key]) && is_array( $directories[$key] ) ? true : false);
+
+        $class = $loop > 0 ? '' : 'file-tree-list js-file-tree treeview' ;
+        $html  = ($exist ? '<ul class="'.$class.'" data-expanded="true">' : '');
+
+        if($exist)
+        {
+            foreach($directories as $name => $subdir)
+            {
+                if(is_array($subdir))
+                {
+                    $html .= '<li style="'.(isset($colors[$name]) ? 'font-weight:500;color:'.$colors[$name] : '').'"><i class="fa fa-folder-o"></i> &nbsp;'.$name.'</span>';
+                    $html .= $this->treeDirectories($subdir, $path.$name.'/', $loop + 1, $colors);
+                    $loop += 1;
+                    $html .= '</li>';
+                }
             }
         }
 
-        $menu .= "<li>".((trim($child['name'])!=null)?("<a>".$child['name']."</a>"):"")."$sub</li>";
-        unset($url, $display, $sub);
+        $html .= ($exist ? '</ul>' : '' );
 
+        return $html;
     }
-    return $menu . "</ul>";
-}
-
-$array = json_decode($json, true);
-echo $list =  menuBuilder($array['data']['parentNode']['children']);
-
-      */
 
 }

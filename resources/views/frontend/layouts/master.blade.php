@@ -11,7 +11,7 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo asset('frontend/css/dropdown-menu.css');?>">
     <link rel="stylesheet" type="text/css" href="<?php echo asset('frontend/css/jquery.fancybox.css');?>">
     <link rel="stylesheet" href="<?php echo asset('backend/js/vendor/redactor/redactor.css'); ?>">
@@ -113,7 +113,7 @@
 <script type="text/javascript" src="<?php echo asset('backend/js/vendor/redactor/filemanager.js');?>"></script>
 <script type="text/javascript" src="<?php echo asset('backend/js/vendor/redactor/fontsize.js');?>"></script>
 <script type="text/javascript" src="<?php echo asset('backend/js/vendor/redactor/fontcolor.js');?>"></script>
-
+<script src="<?php echo asset('frontend/js/jquery.treeView.js');?>"></script>
 <script src="<?php echo asset('frontend/js/frontend.js');?>"></script>
 
 </body>

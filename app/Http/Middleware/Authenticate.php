@@ -35,7 +35,7 @@ class Authenticate
     public function handle($request, Closure $next)
     {
 
-        if($this->auth->guest() || $this->auth->user()->role != 1)
+        if($this->auth->guest())
         {
             if ($request->ajax()) 
             {
@@ -46,7 +46,7 @@ class Authenticate
                 return redirect()->guest('auth/login');
             }
         }
-
+        
         return $next($request);
     }
 }

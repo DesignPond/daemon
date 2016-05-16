@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\Http\Requests\SendMessage;
 use App\Cours\Page\Repo\PageInterface;
 use App\Cours\Site\Repo\SiteInterface;
+use App\Cours\Page\Worker\PageWorker;
 use App\Http\Controllers\Controller;
 
 class HomeController extends Controller
@@ -15,11 +16,13 @@ class HomeController extends Controller
     protected $page;
     protected $helper;
     protected $site;
+    protected $worker;
 
-    public function __construct(PageInterface $page, SiteInterface $site)
+    public function __construct(PageInterface $page, SiteInterface $site, PageWorker $worker)
     {
         $this->page   = $page;
         $this->site   = $site;
+        $this->worker = $worker;
         $this->helper = new \App\Helper\Helper;
     }
 
@@ -58,7 +61,23 @@ class HomeController extends Controller
         $pages = $this->page->getSiteRoot($page->site_id);
         $site  = $this->site->find($page->site_id);
 
-        return view('frontend.page')->with(['page' => $page, 'pages' => $pages,'site' => $site]);
+        $directories = [
+            'app' => [
+                'Console' => [], 'Droit' => [], 'Events' => [], 'Exceptions' => [], 'Http' => [], 'Jobs' => [], 'Listeners' => [], 'Providers' => [], 'Services' => []
+            ] ,'bootstrap' => [] ,'config' => [] ,'database' => [] ,'public' => [
+                'frontend' => [], 'backend' => [], 'files' => [], 'logos' => [], 'newsletter' => [], 'uploads' => []
+            ] ,'resources' => [
+                'lang' => [], 'views' => []
+            ] ,'tests' => [] ,'vendor' => []
+        ];
+
+        $colors = [
+            'Droit' => '#17a037'
+        ];
+
+        $tree = $this->worker->treeDirectories($directories, $path = '', $loop = 0, $colors);
+
+        return view('frontend.page')->with(['page' => $page, 'pages' => $pages,'site' => $site, 'tree' => $tree]);
     }
 
     /**

@@ -46,7 +46,7 @@ Route::resource('comment', 'Helpdesk\Frontend\CommentController');
 |--------------------------------------------------------------------------
 */
 
-Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
+Route::group(['prefix' => 'admin', 'middleware' => ['auth','administration'] ], function()
 {
     Route::get('/', [ 'middleware' => 'auth', 'uses' => 'Backend\AdminController@index']);
 
@@ -56,6 +56,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
     Route::get('build', ['uses' => 'Backend\PageController@build']);
     Route::resource('config', 'Backend\ConfigController');
     Route::resource('site', 'Backend\SiteController');
+    Route::resource('user', 'Backend\UserController');
 
     // Helpdesk
     Route::resource('ticket', 'Helpdesk\Backend\TicketController');
@@ -66,51 +67,6 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
 
 });
 
-
-// oauth routes
-Route::get('oauth/authorize', ['as' => 'oauth.authorize.get','middleware' => ['check-authorization-params', 'auth'], function() {
-    // display a form where the user can authorize the client to access it's data
-    $authParams = Authorizer::getAuthCodeRequestParams();
-    $formParams = array_except($authParams,'client');
-    $formParams['client_id'] = $authParams['client']->getId();
-    return view('oauth.authorization-form', ['params'=>$formParams,'client'=>$authParams['client']]);
-}]);
-
-Route::post('oauth/authorize', ['as' => 'oauth.authorize.post','middleware' => ['check-authorization-params', 'auth'], function() {
-
-    $params = Authorizer::getAuthCodeRequestParams();
-    $params['user_id'] = Auth::user()->id;
-
-    $redirectUri = '';
-
-    // if the user has allowed the client to access its data, redirect back to the client with an auth code
-    if (Input::get('approve') !== null) {
-        $redirectUri = Authorizer::issueAuthCode('user', $params['user_id'], $params);
-    }
-
-    // if the user has denied the client to access its data, redirect back to the client with an error message
-    if (Input::get('deny') !== null) {
-        $redirectUri = Authorizer::authCodeRequestDeniedRedirectUri();
-    }
-
-    return Redirect::to($redirectUri);
-}]);
-
-Route::post('oauth/access_token', function() {
-    return Response::json(Authorizer::issueAccessToken());
-});
-
-Route::get('oauth/user', ['middleware' => 'oauth', function(){
-
-    $user_id = Authorizer::getResourceOwnerId();
-    $user    = \App\Cours\User\Entities\User::find($user_id);
-
-    return Response::json(['first_name' => $user->first_name, 'last_name' => $user->last_name, 'email' => $user->email, 'id' => $user_id]);
-}]);
-
-// Login via shop
-Route::get('auth/droithub', 'Auth\AuthController@redirectToProvider');
-Route::get('auth/droithub/callback', 'Auth\AuthController@handleProviderCallback');
 
 // Authentication routes...
 Route::get('auth/login', 'Auth\AuthController@getLogin');
@@ -133,14 +89,23 @@ Route::post('password/reset', 'Auth\PasswordController@postReset');
 // Test routes for development
 Route::get('testing', function()
 {
+/*
     $tickets = \App::make('App\Cours\Help\Repo\TicketInterface');
     $ticket = $tickets->find(1);
 
     $comments = \App::make('App\Cours\Help\Repo\CommentInterface');
     $comment  = $comments->find(1);
+*/
+
+    $worker = \App::make('App\Cours\Page\Worker\PageWorker');
+    $tree   = $worker->tree('frontend');
+
+    $tree = $worker->treeDirectories($tree);
+
+    echo $tree;
 
     //return View::make('emails.ticket', ['ticket' => $ticket]);
-    return View::make('emails.comment', ['comment' => $comment]);
+
     /*
         \App\Cours\User\Entities\User::create(array(
             'name'     => 'Etudiant',

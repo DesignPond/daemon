@@ -2,6 +2,19 @@
 @section('content')
 
     <div class="login-wrapper">
+
+        @if(isset($errors) && $errors->has())
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="alert alert-danger">
+                        @foreach($errors->all() as $message)
+                            <p style="font-size: 14px;">{{ $message }}</p>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+        @endif
+
         <div class="helper center">
             <a href="{{ url('/') }}" class="logo-image animated">
                 <img style="color:#000;" src="{{ asset('frontend/images/logos/logo-small-b.svg') }}" alt="logo">

@@ -2,8 +2,8 @@
 
 namespace App\Cours\User\Repo;
 
-use App\Droit\User\Repo\UserInterface;
-use App\Droit\User\Entities\User as M;
+use App\Cours\User\Repo\UserInterface;
+use App\Cours\User\Entities\User as M;
 
 class UserEloquent implements UserInterface{
 
