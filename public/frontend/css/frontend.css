@@ -53,3 +53,7 @@ hr{
 .panel.panel-small .panel-header{
     text-align: left;
 }
+
+.file-tree-list li.contains-items{
+    font-weight: 600;
+}

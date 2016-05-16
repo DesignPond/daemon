@@ -143,9 +143,12 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
+        App\Providers\CodeServiceProvider::class,
+        
         Intervention\Image\ImageServiceProvider::class,
         Baum\Providers\BaumServiceProvider::class,
         Torann\Registry\RegistryServiceProvider::class,
+        Pingpong\Shortcode\ShortcodeServiceProvider::class,
     ],
 
     /*
@@ -199,6 +202,7 @@ return [
         'View'      => Illuminate\Support\Facades\View::class,
         'Registry'  => 'Torann\Registry\Facades\Registry',
         'Str'       => Illuminate\Support\Str::class,
+        'Shortcode' => Pingpong\Shortcode\ShortcodeFacade::class,
     ],
 
 ];

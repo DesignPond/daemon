@@ -17,7 +17,8 @@
         "vtalbot/markdown": "2.0",
         "laravel/socialite": "^2.0",
         "league/oauth2-server": "^4.1",
-        "lucadegasperi/oauth2-server-laravel": "^5.1"
+        "lucadegasperi/oauth2-server-laravel": "^5.1",
+        "pingpong/shortcode": "~2.0"
     },
     "require-dev": {
         "laracasts/generators": "~1.1",

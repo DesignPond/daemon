@@ -61,23 +61,7 @@ class HomeController extends Controller
         $pages = $this->page->getSiteRoot($page->site_id);
         $site  = $this->site->find($page->site_id);
 
-        $directories = [
-            'app' => [
-                'Console' => [], 'Droit' => [], 'Events' => [], 'Exceptions' => [], 'Http' => [], 'Jobs' => [], 'Listeners' => [], 'Providers' => [], 'Services' => []
-            ] ,'bootstrap' => [] ,'config' => [] ,'database' => [] ,'public' => [
-                'frontend' => [], 'backend' => [], 'files' => [], 'logos' => [], 'newsletter' => [], 'uploads' => []
-            ] ,'resources' => [
-                'lang' => [], 'views' => []
-            ] ,'tests' => [] ,'vendor' => []
-        ];
-
-        $colors = [
-            'Droit' => '#17a037'
-        ];
-
-        $tree = $this->worker->treeDirectories($directories, $path = '', $loop = 0, $colors);
-
-        return view('frontend.page')->with(['page' => $page, 'pages' => $pages,'site' => $site, 'tree' => $tree]);
+        return view('frontend.page')->with(['page' => $page, 'pages' => $pages,'site' => $site]);
     }
 
     /**

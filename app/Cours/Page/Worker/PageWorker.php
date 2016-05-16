@@ -84,7 +84,7 @@ class PageWorker{
         $exist = (isset($directories[$key]) && is_array( $directories[$key] ) ? true : false);
 
         $class = $loop > 0 ? '' : 'file-tree-list js-file-tree treeview' ;
-        $html  = ($exist ? '<ul class="'.$class.'" data-expanded="true">' : '');
+        $html  = ($exist ? '<ul class="'.$class.'" data-expanded="true" style="width:300px; float:left; margin-rigth:20px;">' : '');
 
         if($exist)
         {
