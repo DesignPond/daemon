@@ -10,14 +10,14 @@
     <meta name="_token" content="<?php echo csrf_token(); ?>">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="<?php echo asset('frontend/css/dropdown-menu.css');?>">
-    <link rel="stylesheet" type="text/css" href="<?php echo asset('frontend/css/jquery.fancybox.css');?>">
-    <link rel="stylesheet" href="<?php echo asset('backend/js/vendor/redactor/redactor.css'); ?>">
-    <link rel="stylesheet" type="text/css" href="<?php echo asset('frontend/css/style.css'); ?>">
-    <link rel="stylesheet" type="text/css" href="<?php echo asset('frontend/css/frontend.css');?>?<?php echo rand(1234,120000); ?>">
-    <link rel="stylesheet" type="text/css" href="<?php echo asset('frontend/css/helpdesk.css');?>?<?php echo rand(1234,120000); ?>">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo secure_asset('frontend/css/dropdown-menu.css');?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo secure_asset('frontend/css/jquery.fancybox.css');?>">
+    <link rel="stylesheet" href="<?php echo secure_asset('backend/js/vendor/redactor/redactor.css'); ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo secure_asset('frontend/css/style.css'); ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo secure_asset('frontend/css/frontend.css');?>?<?php echo rand(1234,120000); ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo secure_asset('frontend/css/helpdesk.css');?>?<?php echo rand(1234,120000); ?>">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 
 </head>
@@ -30,7 +30,7 @@
             <div class="row">
                 <div class="col-md-4 col-sm-6 col-xs-6">
                     <!-- Logo Image -->
-                    <a href="{{ url('/') }}" class="logo-image"><img src="{{ asset('frontend/images/logo.svg') }}" alt="logo"></a>
+                    <a href="{{ url('/') }}" class="logo-image"><img src="{{ secure_asset('frontend/images/logo.svg') }}" alt="logo"></a>
                     <!-- End of Logo Image -->
                     <h2 class="pull-right">Documentation</h2>
                 </div>
@@ -75,7 +75,7 @@
                     <div class="col-md-3 col-sm-3 col-xs-12">
                         <div class="footer-logo-wrapper">
                             <!-- Logo Image -->
-                            <a href="{{ url('/') }}" class="logo-image"><img style="height: 50px;" src="{{ asset('frontend/images/logo_dd.svg') }}" alt="logo"></a>
+                            <a href="{{ url('/') }}" class="logo-image"><img style="height: 50px;" src="{{ secure_asset('frontend/images/logo_dd.svg') }}" alt="logo"></a>
                             <!-- End of Logo Image -->
                         </div>
                     </div>
@@ -105,16 +105,16 @@
 <script src="https://code.jquery.com/ui/1.11.3/jquery-ui.min.js"></script>
 
 <!-- Bootstrap -->
-<script src="<?php echo asset('frontend/bootstrap/js/bootstrap.min.js');?>"></script>
+<script src="<?php echo secure_asset('frontend/bootstrap/js/bootstrap.min.js');?>"></script>
 
-<script type="text/javascript" src="<?php echo asset('backend/js/vendor/redactor/redactor.js');?>"></script>
-<script type="text/javascript" src="<?php echo asset('backend/js/vendor/redactor/fr.js');?>"></script>
-<script type="text/javascript" src="<?php echo asset('backend/js/vendor/redactor/imagemanager.js');?>"></script>
-<script type="text/javascript" src="<?php echo asset('backend/js/vendor/redactor/filemanager.js');?>"></script>
-<script type="text/javascript" src="<?php echo asset('backend/js/vendor/redactor/fontsize.js');?>"></script>
-<script type="text/javascript" src="<?php echo asset('backend/js/vendor/redactor/fontcolor.js');?>"></script>
-<script src="<?php echo asset('frontend/js/jquery.treeView.js');?>"></script>
-<script src="<?php echo asset('frontend/js/frontend.js');?>"></script>
+<script type="text/javascript" src="<?php echo secure_asset('backend/js/vendor/redactor/redactor.js');?>"></script>
+<script type="text/javascript" src="<?php echo secure_asset('backend/js/vendor/redactor/fr.js');?>"></script>
+<script type="text/javascript" src="<?php echo secure_asset('backend/js/vendor/redactor/imagemanager.js');?>"></script>
+<script type="text/javascript" src="<?php echo secure_asset('backend/js/vendor/redactor/filemanager.js');?>"></script>
+<script type="text/javascript" src="<?php echo secure_asset('backend/js/vendor/redactor/fontsize.js');?>"></script>
+<script type="text/javascript" src="<?php echo secure_asset('backend/js/vendor/redactor/fontcolor.js');?>"></script>
+<script src="<?php echo secure_asset('frontend/js/jquery.treeView.js');?>"></script>
+<script src="<?php echo secure_asset('frontend/js/frontend.js');?>"></script>
 
 </body>
 </html>
