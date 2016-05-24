@@ -18,7 +18,8 @@
         "laravel/socialite": "^2.0",
         "league/oauth2-server": "^4.1",
         "lucadegasperi/oauth2-server-laravel": "^5.1",
-        "pingpong/shortcode": "~2.0"
+        "pingpong/shortcode": "~2.0",
+        "shin1x1/laravel-force-https-url-scheme": "^1.1"
     },
     "require-dev": {
         "laracasts/generators": "~1.1",
