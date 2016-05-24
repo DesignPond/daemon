@@ -28,8 +28,9 @@ class TicketController extends Controller
     public function index()
     {
         $tickets  = $this->ticket->getAll();
+        $resolved = $this->ticket->getAll(true);
 
-        return view('backend.helpdesk.tickets.index')->with(['tickets' => $tickets]);
+        return view('backend.helpdesk.tickets.index')->with(['tickets' => $tickets, 'resolved' => $resolved]);
     }
 
     /**

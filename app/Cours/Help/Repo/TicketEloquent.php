@@ -59,8 +59,17 @@ class TicketEloquent implements TicketInterface
         }
 
         $ticket->fill($data);
-        $ticket->completed_at = isset($data['completed_at']) && !empty($data['completed_at']) ? $data['completed_at'] : null;
-        
+
+        if(isset($data['completed_at']) && !empty($data['completed_at'])){
+             $ticket->completed_at = $data['completed_at'];
+             $ticket->status_id    = 2;
+        }
+        else
+        {
+            $ticket->completed_at = null;
+            $ticket->status_id    = 1;
+        }
+
         $ticket->save();
 
         return $ticket;
