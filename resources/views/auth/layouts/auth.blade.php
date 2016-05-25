@@ -14,6 +14,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo asset('frontend/css/style.min.css'); ?>">
 
+    <style type="text/css">
+        .button, a{
+            font-size: 16px;
+        }
+    </style>
 </head>
 <body>
 
