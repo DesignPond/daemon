@@ -29,7 +29,7 @@
             <!-- One Page Logo -->
             <div class="one-page-logo">
                 <!-- Logo Image -->
-                <a href="{{ url('/') }}" class="logo-image"><img height="85px" src="{{ asset('frontend/images/logo_inverse.svg') }}" alt="logo"></a>
+                <a href="{{ url('/') }}" class="logo-image"><img style="max-height: 85px;" src="{{ asset('frontend/images/logo_inverse.svg') }}" alt="logo"></a>
                 <!-- End of Logo Image -->
             </div>
             <!-- End of One Page Logo -->
@@ -43,11 +43,13 @@
             <!-- End of One Page Meta -->
         </div>
         <!-- End of One Page Sidebar Header -->
+
         <!-- One Page Nav -->
         <div class="one-page-nav-wrapper js-custom-scrollbar">
             @include('frontend.partials.subnav')
         </div>
         <!-- End of One Page Nav -->
+
         <!-- One Page Sidebar Footer -->
         <footer class="one-page-sidebar-footer">
             <a href="http://designpond.ch">DesignPond</a>, all rights reserved. {{ date('Y') }} &copy;
@@ -62,14 +64,14 @@
         <header class="header large header-one-page js-header-fixed">
             <div class="container-fluid container-spaced">
                 <div class="row">
-                    <div class="col-md-2 col-sm-6 col-xs-5">
+                    <div class="col-md-2 col-sm-6 col-xs-3">
                         <div class="visible-sm-block visible-xs-block">
                             <!-- Logo Image -->
                             <a href="{{ url('/') }}" class="logo-image logo-animated"><img height="85px" src="{{ asset('frontend/images/logo_inverse.svg') }}" alt="logo"></a>
                             <!-- End of Logo Image -->
                         </div>
                     </div>
-                    <div class="col-md-10 col-sm-6 col-xs-7">
+                    <div class="col-md-10 col-sm-6 col-xs-9">
                         <h2 class="pull-left">{{ $site->nom }}</h2>
                         <!-- Menu -->
                         @include('frontend.partials.navigation')
@@ -85,9 +87,16 @@
                 <!-- messages and errors -->
                 @include('backend.partials.message')
 
-                <!-- Contenu -->
-                @yield('content')
-                <!-- Fin contenu -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="js-prepend-mobile-menu">
+                            <!-- The mobile menu will be prepended here -->
+                        </div>
+                        <!-- Contenu -->
+                        @yield('content')
+                        <!-- Fin contenu -->
+                    </div>
+                </div>
             </div>
         </div>
 

@@ -1,4 +1,4 @@
-<ul class="one-page-nav">
+<ul class="one-page-nav js-one-page-nav js-menu-vertical" data-prepend-to=".js-prepend-mobile-menu">
     <?php
         if(!$pages->isEmpty())
         {
