@@ -12,13 +12,13 @@ class Helper{
 
         if( $node->isLeaf() )
         {
-            return '<li class="'.(\Request::is($url.$node->slug) ? 'is-active' : '').'">
+            return '<li class="'.(\Request::is($url.$node->slug) ? 'is-active selected' : '').'">
                 <a href="'.url($url.$node->slug).'" title="'.$node->title.'"><span class="one-page-nav-icon"><i class="fa fa-angle-right "></i></span>' . $node->title . '</a>
                 </li>';
         }
         else
         {
-            $html  = '<li class="'.(\Request::is($url.$node->slug) ? 'is-active' : '').'">
+            $html  = '<li class="'.(\Request::is($url.$node->slug) ? 'is-active selected' : 'selected').'">
                 <a href="'.url($url.$node->slug).'"><span class="one-page-nav-icon"><i class="fa fa-cube"></i></span>' . $node->title .'</a>';
             $html .= '<ul>';
 
