@@ -20,7 +20,7 @@
                 <img style="color:#000;" src="{{ asset('frontend/images/logos/logo-small-b.svg') }}" alt="logo">
             </a>
         </div>
-        <form class="login-form" method="POST" action="/auth/login">
+        <form class="login-form" method="POST" action="login">
             {!! csrf_field() !!}
             <div class="login-inputs">
                 <input type="text" class="form-control" placeholder="Email" name="email" value="{{ old('email') }}">
