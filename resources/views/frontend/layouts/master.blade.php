@@ -34,7 +34,7 @@
                 </div>
                 <div class="col-md-8 col-sm-6 col-xs-6">
                     <!-- End of Logo Image -->
-                    <h2 class="pull-right">Documentation</h2>
+                    <h2 class="pull-left">Documentation</h2>
                     <!-- Menu -->
                     @include('frontend.partials.navigation')
                     <!-- End of Menu -->
