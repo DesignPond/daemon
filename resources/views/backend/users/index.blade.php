@@ -37,9 +37,10 @@
                                     <span class="label label-{{ $color }}">{{ $user->role == 1 ? 'Administrateur'  : 'Invité' }}</span>
                                 </td>
                                 <td class="text-right">
-                                    {!! Form::open(array('route' => array('admin.user.destroy', $user->id), 'method' => 'delete')) !!}
-                                    <button data-action="{{ $user->name }}" class="btn btn-danger btn-sm deleteAction">Supprimer</button>
-                                    {!! Form::close() !!}
+                                    <form action="{{ url('admin/user/'.$user->id) }}" method="POST" class="form-horizontal">
+                                        <input type="hidden" name="_method" value="DELETE">{!! csrf_field() !!}
+                                        <button data-what="Supprimer" data-action="{{ $user->name }}" class="btn btn-danger btn-sm deleteAction">Supprimer</button>
+                                    </form>
                                 </td>
                             </tr>
                             @endforeach
