@@ -52,4 +52,42 @@ class Page extends Node {
 
         return substr($s, 0, $l = min(strlen($s),  $l + $i)) . (count($tags = array_reverse($tags)) ? '' : '') . (strlen($s) > $l ? $e : '');
     }
+
+    /**
+     * Return an key-value array indicating the node's depth with $seperator
+     *
+     * @return Array
+     */
+    public static function getNestedList($column, $key = null, $seperator = ' ') {
+        $instance = new static;
+
+        $key = $key ?: $instance->getKeyName();
+        $depthColumn = $instance->getDepthColumnName();
+
+        $nodes = $instance->newNestedSetQuery()->get();
+        $keys  = $nodes->pluck($key);
+
+        $values = $nodes->map(function ($node, $key) use ($seperator, $depthColumn, $column) {
+            return str_repeat($seperator, $node->$depthColumn). $node->$column;
+        })->toArray();
+
+        return $keys->combine($values)->toArray();
+    }
+
+    /**
+     * Get a new "scoped" query builder for the Node's model.
+     *
+     * @param  bool  $excludeDeleted
+     * @return \Illuminate\Database\Eloquent\Builder|static
+     */
+    public function newNestedSetQuery($excludeDeleted = true) {
+        $builder = $this->newQuery($excludeDeleted)->orderBy($this->leftColumn);
+
+        if ( $this->isScoped() ) {
+            foreach($this->scoped as $scopeFld)
+                $builder->where($scopeFld, '=', $this->$scopeFld);
+        }
+
+        return $builder;
+    }
 }

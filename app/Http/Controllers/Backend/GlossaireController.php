@@ -48,6 +48,8 @@ class GlossaireController extends Controller
     {
         $glossaire = $this->glossaire->create($request->all());
 
+        alert()->success('Mots mises à jour');
+        
         return redirect('admin/glossaire/'.$glossaire->id)->with(array('status' => 'success' , 'message' => 'Les mots a été ajoutées' ));
     }
 

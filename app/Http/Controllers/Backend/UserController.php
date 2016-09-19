@@ -76,7 +76,9 @@ class UserController extends Controller {
     {
         $user = $this->user->update($request->all());
 
-        return redirect('admin/user/'.$user->id)->with(array('status' => 'success', 'message' => 'Utilisateur mis à jour' ));
+        alert()->success('User mises à jour');
+
+        return redirect('admin/user/'.$user->id);
     }
 
     /**
@@ -89,7 +91,9 @@ class UserController extends Controller {
     {
         $this->user->delete($id);
 
-        return redirect('admin/user')->with(array('status' => 'success', 'message' => 'Utilisateur supprimé' ));
+        alert()->success('User supprimé');
+
+        return redirect('admin/user');
     }
 
 }

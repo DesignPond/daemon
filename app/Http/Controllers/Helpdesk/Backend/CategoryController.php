@@ -46,7 +46,9 @@ class CategoryController extends Controller
     {
         $category = $this->category->create($request->all());
 
-        return redirect('admin/categorie')->with(['status' => 'success' , 'message' => 'La catégorie a été créé']);
+        alert()->success('Catégorie crée');
+
+        return redirect('admin/categorie');
     }
 
     /**
@@ -69,7 +71,9 @@ class CategoryController extends Controller
     {
         $category = $this->category->update($request->all());
 
-        return redirect('admin/categorie')->with(['status' => 'success' , 'message' => 'La catégorie a été mis à jour']);
+        alert()->success('Catégorie mises à jour');
+
+        return redirect('admin/categorie');
     }
 
     /**
@@ -82,6 +86,8 @@ class CategoryController extends Controller
     {
         $this->category->delete($id);
 
-        return redirect('admin/categorie')->with(array('status' => 'success' , 'message' => 'La catégorie a été supprimée' ));
+        alert()->success('carégorie supprimée');
+
+        return redirect('admin/categorie');
     }
 }

@@ -49,7 +49,9 @@ class SiteController extends Controller
     {
         $site = $this->site->create($request->all());
 
-        return redirect('admin/site/'.$site->id)->with(['status' => 'success' , 'message' => 'Le site a été créé']);
+        alert()->success('Site crée');
+
+        return redirect('admin/site/'.$site->id);
     }
 
     /**
@@ -72,6 +74,8 @@ class SiteController extends Controller
     {
         $site = $this->site->update($request->all());
 
-        return redirect('admin/site/'.$site->id)->with(['status' => 'success' , 'message' => 'Le site a été mise à jour']);
+        alert()->success('Site mis à jour');
+
+        return redirect('admin/site/'.$site->id);
     }
 }

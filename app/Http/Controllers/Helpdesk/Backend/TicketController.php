@@ -56,7 +56,9 @@ class TicketController extends Controller
     {
         $ticket = $this->ticket->create($request->all());
 
-        return redirect('admin/ticket/'.$ticket->id)->with(['status' => 'success' , 'message' => 'Le ticket a été créé']);
+        alert()->success('Ajouté');
+
+        return redirect('admin/ticket/'.$ticket->id);
     }
 
     /**
@@ -82,7 +84,9 @@ class TicketController extends Controller
     {
         $ticket = $this->ticket->update($request->all());
 
-        return redirect('admin/ticket/'.$ticket->id)->with(['status' => 'success' , 'message' => 'Le ticket a été mise à jour']);
+        alert()->success('Mise à jour');
+
+        return redirect('admin/ticket/'.$ticket->id);
     }
 
     /**
@@ -95,6 +99,8 @@ class TicketController extends Controller
     {
         $this->comment->delete($id);
 
-        return redirect('admin/ticket')->with(array('status' => 'success' , 'message' => 'Le ticket a été supprimé' ));
+        alert()->success('Supprimé');
+
+        return redirect('admin/ticket');
     }
 }

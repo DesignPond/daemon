@@ -78,6 +78,7 @@
 
                 <!-- messages and errors -->
                 @include('backend.partials.message')
+                @include('alert::alert')
 
                 <!-- Contenu -->
                 @yield('content')

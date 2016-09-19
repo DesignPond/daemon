@@ -93,7 +93,9 @@ class HomeController extends Controller
             $message->to('info@methodologie.ch')->subject('Message depuis le site www.methodologie.ch');
         });
 
-        return redirect('/')->with(array('status' => 'success', 'message' => '<strong>Merci pour votre message</strong><br/>Nous vous contacterons dès que possible.'));
+        alert()->success('<strong>Merci pour votre message</strong><br/>Nous vous contacterons dès que possible.');
+
+        return redirect('/');
 
     }
 }

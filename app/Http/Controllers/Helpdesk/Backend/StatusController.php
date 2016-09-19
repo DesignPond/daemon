@@ -46,7 +46,9 @@ class StatusController extends Controller
     {
         $status = $this->status->create($request->all());
 
-        return redirect('admin/status')->with(['status' => 'success' , 'message' => 'Le statut a été créé']);
+        alert()->success('Ajouté');
+
+        return redirect('admin/status');
     }
 
     /**
@@ -69,7 +71,9 @@ class StatusController extends Controller
     {
         $status = $this->status->update($request->all());
 
-        return redirect('admin/status')->with(['status' => 'success' , 'message' => 'Le statut a été mise à jour']);
+        alert()->success('Mis à jour');
+
+        return redirect('admin/status');
     }
 
     /**
@@ -82,6 +86,8 @@ class StatusController extends Controller
     {
         $this->status->delete($id);
 
-        return redirect('admin/status')->with(array('status' => 'success' , 'message' => 'Le statut a été supprimé' ));
+        alert()->success('Supprimé');
+
+        return redirect('admin/status');
     }
 }

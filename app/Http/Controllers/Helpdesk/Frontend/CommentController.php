@@ -33,29 +33,8 @@ class CommentController extends Controller
             $m->to('cindy.leschaud@gmail.com', 'DesignPond')->subject('Un nouveau commentaire a été posté');
         });
 
+        alert()->success('Le commentaire a été ajouté');
+
         return redirect()->back()->with(['status' => 'success' , 'message' => 'Le commentaire a été ajouté']);
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
     }
 }

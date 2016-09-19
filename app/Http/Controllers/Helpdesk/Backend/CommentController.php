@@ -51,7 +51,9 @@ class CommentController extends Controller
     {
         $comment = $this->comment->create($request->all());
 
-        return redirect('admin/comment/'.$comment->id)->with(['status' => 'success' , 'message' => 'Le comment a été créé']);
+        alert()->success('Commentaire crée');
+
+        return redirect('admin/comment/'.$comment->id);
     }
 
     /**
@@ -75,7 +77,9 @@ class CommentController extends Controller
     {
         $comment = $this->comment->update($request->all());
 
-        return redirect('admin/comment/'.$comment->id)->with(['status' => 'success' , 'message' => 'Le commentaire a été mis à jour']);
+        alert()->success('Commentaire mis à jour');
+
+        return redirect('admin/comment/'.$comment->id);
     }
 
     /**
@@ -88,6 +92,8 @@ class CommentController extends Controller
     {
         $this->comment->delete($id);
 
-        return redirect('admin/comment')->with(array('status' => 'success' , 'message' => 'Le commentaire a été supprimé' ));
+        alert()->success('Commentaire supprimé');
+
+        return redirect('admin/comment');
     }
 }
