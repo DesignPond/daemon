@@ -22,8 +22,12 @@ class Helper{
                 <a href="'.url($url.$node->slug).'"><span class="one-page-nav-icon"><i class="fa fa-cube"></i></span>' . $node->title .'</a>';
             $html .= '<ul>';
 
-            foreach($node->children as $child)
-                $html .= $this->renderSubMenu($child);
+            if(!$node->children->isEmpty())
+            {
+                foreach($node->children as $child){
+                    $html .= $this->renderSubMenu($child);
+                }
+            }
 
             $html .= '</ul>';
             $html .= '</li>';
