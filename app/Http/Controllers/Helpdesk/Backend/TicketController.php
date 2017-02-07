@@ -97,7 +97,7 @@ class TicketController extends Controller
      */
     public function destroy($id)
     {
-        $this->comment->delete($id);
+        $this->ticket->delete($id);
 
         alert()->success('Supprimé');
 
