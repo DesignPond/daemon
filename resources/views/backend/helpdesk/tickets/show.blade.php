@@ -40,6 +40,20 @@
                                 <textarea name="content" required class="form-control redactor">{!! $ticket->content !!}</textarea>
                             </div>
                         </div>
+
+                        @if(!$ticket->comments->isEmpty())
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Commentaires</label>
+                                <div class="col-sm-9">
+                                    <div class="well well-sm">
+                                        @foreach($ticket->comments as $comment)
+                                            {!! $comment->content !!}
+                                        @endforeach
+                                    </div>
+                                </div>
+                            </div>
+                        @endif
+
                         <div class="form-group">
                             <label class="col-sm-3 control-label"></label>
                             <div class="col-sm-4">
