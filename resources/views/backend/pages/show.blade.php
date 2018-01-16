@@ -29,12 +29,12 @@
                     <div class="form-group">
                         <label for="type" class="col-sm-3 control-label">Hiérarchie</label>
                         <div class="col-sm-4">
-
+                            <?php $helper = new \App\Helper\Helper(); ?>
                             <select class="form-control" name="parent_id">
-                                <option {{ $page->parent_id == 0 ? 'checked' : '' }} value="0">Base</option>
-                                @if(!empty($pages))
-                                    @foreach($pages as $parent_id => $title)
-                                        <option {{ $page->parent_id  == $parent_id ? 'selected' : '' }}  value="{{ $parent_id }}">{{ $title }}</option>
+                                <option value="0">Base</option>
+                                @if(!$pages->isEmpty())
+                                    @foreach($pages as $p)
+                                        <?php echo $helper->renderSelect($p, $p->parent_id); ?>
                                     @endforeach
                                 @endif
                             </select>

@@ -10,7 +10,7 @@
         "intervention/image": "~2.1",
         "laravelcollective/html": "5.3",
         "guzzlehttp/guzzle": "~5.3|~6.0",
-        "baum/baum": "~1.1",
+        "baum/baum": "1.1.1",
         "yangqi/htmldom": "dev-master",
         "torann/registry": "0.2.*@dev",
         "vtalbot/markdown": "2.0",

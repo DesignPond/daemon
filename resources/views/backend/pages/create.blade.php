@@ -22,12 +22,13 @@
                     <div class="form-group">
                         <label for="type" class="col-sm-3 control-label">Hiérarchie</label>
                         <div class="col-sm-4">
+                            <?php $helper = new \App\Helper\Helper(); ?>
 
                             <select class="form-control" name="parent_id">
                                 <option value="0">Base</option>
-                                @if(!empty($pages))
-                                    @foreach($pages as $parent_id => $page)
-                                        <option value="{{ $parent_id }}">{{ $page }}</option>
+                                @if(!$pages->isEmpty())
+                                    @foreach($pages as $page)
+                                        <?php echo $helper->renderSelect($page); ?>
                                     @endforeach
                                 @endif
                             </select>

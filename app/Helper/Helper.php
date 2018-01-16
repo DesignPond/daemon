@@ -182,6 +182,24 @@ class Helper{
         return $html;
     }
 
+    public function renderSelect($node,$selected = null)
+    {
+        $nbr    = $node->depth > 0 ? $node->depth * 4 : 0;
+        $active = $selected && ($selected == $node->parent_id) ? 'selected' : '';
+
+        if( $node->isLeaf() ) {
+            return '<option '.$active.' value="'.$node->id.'">'.str_repeat("&nbsp;", $nbr).$node->title.'</option>';
+        }
+        else {
+
+            $html = '<option '.$active.' value="'.$node->id.'">'.str_repeat("&nbsp;", $nbr).$node->title.'</option>';
+
+            foreach($node->children as $child)
+                $html .= $this->renderSelect($child);
+        }
+
+        return $html;
+    }
 
     /**
      * Hightlight terms
