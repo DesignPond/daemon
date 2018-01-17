@@ -71,7 +71,7 @@ class UploadController extends Controller
     public function imageJson()
     {
         $data  = [];
-        $files = Storage::files();
+        $files = \File::files('uploads');
 
         if(!empty($files))
         {
@@ -79,7 +79,7 @@ class UploadController extends Controller
             {
                 if($file != '.DS_Store')
                 {
-                    $data[] = ['image' => secure_asset('uploads/'.$file), 'thumb' => secure_asset('uploads/'.$file), 'title' => $file];
+                    $data[] = ['image' => secure_asset($file), 'thumb' => secure_asset($file), 'title' => $file];
                 }
             }
         }
@@ -89,13 +89,13 @@ class UploadController extends Controller
 
     public function fileJson()
     {
-        $files = Storage::disk('local')->files();
+        $files = \Files::files('files');
         $data  = [];
         if(!empty($files))
         {
             foreach($files as $file)
             {
-                $data[] = ['image' => $file, 'title' => secure_asset('files/'.$file) ];
+                $data[] = ['image' => $file, 'title' => secure_asset($file) ];
             }
         }
 
