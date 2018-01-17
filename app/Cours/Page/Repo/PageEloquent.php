@@ -90,8 +90,7 @@ class PageEloquent implements PageInterface{
 
         $page = $this->page->findOrFail($data['id']);
 
-        if( ! $page )
-        {
+        if( ! $page ) {
             return false;
         }
 
@@ -100,7 +99,7 @@ class PageEloquent implements PageInterface{
         $page->updated_at = date('Y-m-d G:i:s');
         $page->save();
 
-        if($data['parent_id'] > 0)
+        if($data['parent_id'] > 0 && $data['parent_id'] != $page->parent_id)
         {
             $parent = $this->page->findOrFail($data['parent_id']);
             $page->makeChildOf($parent);
