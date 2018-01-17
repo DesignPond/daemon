@@ -34,7 +34,7 @@
                                 <option value="0">Base</option>
                                 @if(!$pages->isEmpty())
                                     @foreach($pages as $p)
-                                        <?php echo $helper->renderSelect($p, $p->parent_id); ?>
+                                        <?php echo $helper->renderSelect($p, $page->parent_id); ?>
                                     @endforeach
                                 @endif
                             </select>

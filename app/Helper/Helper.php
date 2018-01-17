@@ -185,7 +185,7 @@ class Helper{
     public function renderSelect($node,$selected = null)
     {
         $nbr    = $node->depth > 0 ? $node->depth * 4 : 0;
-        $active = $selected && ($selected == $node->parent_id) ? 'selected' : '';
+        $active = $selected && ($selected == $node->id) ? 'selected' : '';
 
         if( $node->isLeaf() ) {
             return '<option '.$active.' value="'.$node->id.'">'.str_repeat("&nbsp;", $nbr).$node->title.'</option>';
@@ -195,7 +195,7 @@ class Helper{
             $html = '<option '.$active.' value="'.$node->id.'">'.str_repeat("&nbsp;", $nbr).$node->title.'</option>';
 
             foreach($node->children as $child)
-                $html .= $this->renderSelect($child);
+                $html .= $this->renderSelect($child,$selected);
         }
 
         return $html;
