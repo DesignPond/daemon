@@ -55,7 +55,7 @@
 
                     <!-- messages and errors -->
                     @include('backend.partials.message')
-                    @include('alert::alert')
+                    @include('alert::bootstrap')
 
                     <!-- Contenu -->
                     @yield('content')

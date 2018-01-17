@@ -78,7 +78,7 @@
 
                 <!-- messages and errors -->
                 @include('backend.partials.message')
-                @include('alert::alert')
+                @include('alert::bootstrap')
 
                 <!-- Contenu -->
                 @yield('content')
@@ -113,14 +113,15 @@
 <script type="text/javascript" src="<?php echo secure_asset('backend/js/jquery.nicescroll.min.js');?>"></script>
 <script type="text/javascript" src="<?php echo secure_asset('backend/plugins/form-toggle/toggle.min.js');?>"></script>
 <script type="text/javascript" src="<?php echo secure_asset('backend/js/placeholdr.js');?>"></script>
-<script type="text/javascript" src="<?php echo secure_asset('backend/js/vendor/redactor/fr.js');?>"></script>
-<script type="text/javascript" src="<?php echo secure_asset('backend/js/vendor/redactor/addmodal.js');?>"></script>
-<script type="text/javascript" src="<?php echo secure_asset('backend/js/vendor/redactor/modal.js');?>"></script>
-<script type="text/javascript" src="<?php echo secure_asset('backend/js/vendor/redactor/schema.js');?>"></script>
-<script type="text/javascript" src="<?php echo secure_asset('backend/js/vendor/redactor/imagemanager.js');?>"></script>
-<script type="text/javascript" src="<?php echo secure_asset('backend/js/vendor/redactor/filemanager.js');?>"></script>
-<script type="text/javascript" src="<?php echo secure_asset('backend/js/vendor/redactor/fontsize.js');?>"></script>
-<script type="text/javascript" src="<?php echo secure_asset('backend/js/vendor/redactor/fontcolor.js');?>"></script>
+
+<script type="text/javascript" src="{{ secure_asset('backend/js/vendor/redactor/config.js') }}"></script>
+<script type="text/javascript" src="{{ secure_asset('backend/js/vendor/redactor/redactor.js') }}"></script>
+<script type="text/javascript" src="{{ secure_asset('backend/js/vendor/redactor/fr.js') }}"></script>
+<script type="text/javascript" src="{{ secure_asset('backend/js/vendor/redactor/fontcolor.js') }}"></script>
+<script type="text/javascript" src="{{ secure_asset('backend/js/vendor/redactor/fontfamily.js') }}"></script>
+<script type="text/javascript" src="{{ secure_asset('backend/js/vendor/redactor/imagemanager.js') }}"></script>
+<script type="text/javascript" src="{{ secure_asset('backend/js/vendor/redactor/filemanager.js') }}"></script>
+
 <script type='text/javascript' src="<?php echo secure_asset('backend/js/jqColorPicker.min.js');?>"></script>
 <script type='text/javascript' src="<?php echo secure_asset('backend/plugins/form-multiselect/js/jquery.multi-select.js');?>"></script>
 <script type='text/javascript' src="<?php echo secure_asset('backend/plugins/datatables/jquery.dataTables.min.js');?>"></script>

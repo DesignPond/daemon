@@ -159,7 +159,7 @@ return [
         Collective\Html\HtmlServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
         Baum\Providers\BaumServiceProvider::class,
-        Torann\Registry\RegistryServiceProvider::class,
+        DesignPond\Registry\RegistryServiceProvider::class,
         Pingpong\Shortcode\ShortcodeServiceProvider::class,
         Vinkla\Alert\AlertServiceProvider::class,
     ],
@@ -213,7 +213,7 @@ return [
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
-        'Registry'  => 'Torann\Registry\Facades\Registry',
+        'Registry'   => DesignPond\Registry\Facades\Registry::class,
         'Str'       => Illuminate\Support\Str::class,
         'Shortcode' => Pingpong\Shortcode\ShortcodeFacade::class,
         'Alert'      => Vinkla\Alert\Facades\Alert::class

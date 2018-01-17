@@ -143,7 +143,7 @@
 		imageEditable: true,
 		imageLink: true,
 		imagePosition: true,
-		imageFloatMargin: '10px',
+		imageFloatMargin: '20px',
 		imageResizable: true,
 
 		imageUpload: null,

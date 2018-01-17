@@ -1,5 +1,6 @@
 $( function() {
 
+/*
     $('.redactor').redactor({
         minHeight  : 250,
         maxHeight: 450,
@@ -22,6 +23,7 @@ $( function() {
         today: "Aujourd'hui",
         clear: "Clear"
     };
+*/
 
     $('.datePicker').datepicker({
         format: 'yyyy-mm-dd',

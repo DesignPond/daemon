@@ -79,7 +79,7 @@ class UploadController extends Controller
             {
                 if($file != '.DS_Store')
                 {
-                    $data[] = ['image' => url('/').'/uploads/'.$file, 'thumb' => url('/').'/uploads/'.$file, 'title' => $file];
+                    $data[] = ['image' => secure_asset('uploads/'.$file), 'thumb' => secure_asset('uploads/'.$file), 'title' => $file];
                 }
             }
         }
@@ -95,7 +95,7 @@ class UploadController extends Controller
         {
             foreach($files as $file)
             {
-                $data[] = ['name' => $file, 'link' => url('/').'/files/'.$file, 'title' => $file];
+                $data[] = ['image' => $file, 'title' => secure_asset('files/'.$file) ];
             }
         }
 
