@@ -2,7 +2,7 @@ $( function() {
 
     $('.redactor').redactor({
         minHeight  : 250,
-        maxHeight: 450,
+        maxHeight: 650,
         removeEmpty : [ 'strong' , 'em' , 'span' , 'p' ],
         lang: 'fr',
         plugins: ['imagemanager','filemanager','fontsize','fontcolor'],
