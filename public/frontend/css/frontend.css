@@ -58,6 +58,6 @@ hr{
     font-weight: 600;
 }
 
-.redactor-styles .clear-fix {
+.redactor-styles .clearfix {
     clear: both;
 }
