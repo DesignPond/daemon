@@ -3,16 +3,21 @@ $( function() {
     $('.redactor').redactor({
         minHeight  : 250,
         maxHeight: 650,
-        removeEmpty : [ 'strong' , 'em' , 'span' , 'p' ],
+        focus: true,
+        formattingTags: ['p', 'h1','h2', 'h3','h4','h5','blockquote','cite'],
         lang: 'fr',
-        plugins: ['imagemanager','filemanager','fontsize','fontcolor'],
-        fileUpload : 'uploadFileRedactor?_token=' + $('meta[name="_token"]').attr('content'),
+        plugins: ['imagemanager','filemanager','source','iconic','alignment','fontsize','fontcolor'],
+        fileUpload : 'uploadRedactor?_token=' + $('meta[name="_token"]').attr('content'),
         imageUpload: 'uploadRedactor?_token=' + $('meta[name="_token"]').attr('content'),
         imageManagerJson: 'imageJson?_token=' + $('meta[name="_token"]').attr('content'),
         fileManagerJson: 'fileJson?_token=' + $('meta[name="_token"]').attr('content'),
-        imageResizable: true,
-        imagePosition: true,
-        buttons    : ['html','formatting','bold','italic','|','unorderedlist','orderedlist', '|','image','file','link','alignment']
+        buttons    : ['source','format','bold','italic','|','lists','|','image','file','link','alignment'],
+        formattingAdd: {
+            "red-p-add": {
+                title: 'Red Block Add',
+                args: ['p', 'class', 'red-styled']
+            },
+        }
     });
 
     $('.redactorSimple').redactor({
@@ -27,5 +32,6 @@ $( function() {
         plugins: ['iconic'],
         buttons  : ['html','formatting','bold','italic','link','image','file','|','unorderedlist','orderedlist']
     });
+
 
 });

@@ -119,6 +119,8 @@
 <script type="text/javascript" src="{{ secure_asset('backend/js/vendor/redactor/fr.js') }}"></script>
 <script type="text/javascript" src="{{ secure_asset('backend/js/vendor/redactor/fontcolor.js') }}"></script>
 <script type="text/javascript" src="{{ secure_asset('backend/js/vendor/redactor/fontfamily.js') }}"></script>
+<script type="text/javascript" src="{{ secure_asset('backend/js/vendor/redactor/source.js') }}"></script>
+<script type="text/javascript" src="{{ secure_asset('backend/js/vendor/redactor/alignment.js') }}"></script>
 <script type="text/javascript" src="{{ secure_asset('backend/js/vendor/redactor/imagemanager.js') }}"></script>
 <script type="text/javascript" src="{{ secure_asset('backend/js/vendor/redactor/filemanager.js') }}"></script>
 
