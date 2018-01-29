@@ -14,8 +14,8 @@ $( function() {
         buttons    : ['source','format','bold','italic','|','lists','|','image','file','link','alignment'],
         formattingAdd: {
             "red-p-add": {
-                title: 'Red Block Add',
-                args: ['p', 'class', 'red-styled']
+                title: 'Clear',
+                args: ['p', 'class', 'clearfix']
             },
         }
     });
