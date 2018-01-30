@@ -2,7 +2,7 @@ $( function() {
 
     $('.redactor').redactor({
         minHeight  : 250,
-        maxHeight: 650,
+        maxHeight: 590,
         focus: true,
         formattingTags: ['p', 'h1','h2', 'h3','h4','h5','blockquote','cite'],
         lang: 'fr',
