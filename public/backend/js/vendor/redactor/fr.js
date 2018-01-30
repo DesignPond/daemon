@@ -2,7 +2,6 @@
 {
 	$.Redactor.opts.langs['fr'] = {
     "format": "Format",
-    "align": "Aligner",
     "image": "Image",
     "file": "Fichier",
     "link": "Lien",
@@ -48,9 +47,11 @@
     "caption": "Caption",
     "bulletslist": "Bullets",
     "numberslist": "Numbers",
-    "align-left":"Aligner à gauche",
-    "align-center":"Aligner au centre",
-    "align-right":"Aligner à droite"
-    };
+    "image-position": "Position",
+    "none": "None",
+    "left": "Left",
+    "right": "Right",
+    "center": "Center"
+};
 
 })(jQuery);
