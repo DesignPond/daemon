@@ -61,3 +61,7 @@ hr{
 .clearfix {
     clear: both;
 }
+
+figure {
+    margin: 20px 10px;
+}
