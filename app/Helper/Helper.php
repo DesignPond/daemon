@@ -10,8 +10,7 @@ class Helper{
 
         $url = 'page/';
 
-        if( $node->isLeaf() )
-        {
+        if( $node->isLeaf() ) {
             return '<li class="'.(\Request::is($url.$node->slug) ? 'is-active selected' : '').'">
                 <a href="'.url($url.$node->slug).'" title="'.$node->title.'"><span class="one-page-nav-icon"><i class="fa fa-angle-right "></i></span>' . $node->title . '</a>
                 </li>';
@@ -22,8 +21,7 @@ class Helper{
                 <a href="'.url($url.$node->slug).'"><span class="one-page-nav-icon"><i class="fa fa-cube"></i></span>' . $node->title .'</a>';
             $html .= '<ul>';
 
-            if(!$node->children->isEmpty())
-            {
+            if(!$node->children->isEmpty()) {
                 foreach($node->children as $child){
                     $html .= $this->renderSubMenu($child);
                 }
